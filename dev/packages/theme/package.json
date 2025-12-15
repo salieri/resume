@@ -1,0 +1,50 @@
+{
+  "name": "@faust/theme",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && vite build",
+    "clean": "rm -rf ./dist",
+    "eslint": "eslint . --cache",
+    "lint": "pnpm run eslint && pnpm run stylelint",
+    "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
+    "lint:fix": "pnpm run eslint -- --fix && pnpm run stylelint -- --fix",
+    "prepublishOnly": "pnpm run build",
+    "stylelint": "stylelint '**/*.css' --cache",
+    "test": "exit 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "@mantine/core": "catalog:"
+  },
+  "devDependencies": {
+    "@faust/eslint-config": "workspace:",
+    "@testing-library/jest-dom": "catalog:",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "globals": "catalog:",
+    "identity-obj-proxy": "catalog:",
+    "jsdom": "catalog:",
+    "postcss": "catalog:",
+    "postcss-preset-mantine": "catalog:",
+    "postcss-simple-vars": "catalog:",
+    "prop-types": "catalog:",
+    "sass-embedded": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-standard-scss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

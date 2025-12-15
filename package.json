@@ -1,0 +1,30 @@
+{
+  "name": "@faust/workspace",
+  "version": "0.1.0",
+  "root": true,
+  "private": true,
+  "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34",
+  "scripts": {
+    "lint": "pnpm run --recursive --aggregate-output lint",
+    "lint:ci": "pnpm run --recursive --aggregate-output lint:ci",
+    "lint:fix": "pnpm run --recursive --aggregate-output lint:fix",
+    "build": "pnpm run --recursive --aggregate-output build",
+    "test": "pnpm run --recursive --aggregate-output test",
+    "test:ci": "pnpm run --recursive --aggregate-output test:ci",
+    "test:cov": "pnpm run --recursive --aggregate-output test:cov",
+    "clean": "pnpm run --recursive --aggregate-output clean",
+    "clean:pristine": "pnpm run clean && pnpm run clean:node_modules && rm -rf node_modules package-lock.json && pnpm install && pnpm run build",
+    "clean:node_modules": "find . -path '*/node_modules/*' -delete && rm -rf node_modules",
+    "postinstall": "patch-package"
+  },
+  "engines": {
+    "node": "^24.0.0",
+    "pnpm": "10.18.1"
+  },
+  "overrides": {
+  },
+  "dependencies": {
+    "patch-package": "catalog:"
+  },
+  "devDependencies": {}
+}

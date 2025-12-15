@@ -1,0 +1,60 @@
+{
+  "name": "@faust/eslint-config",
+  "version": "0.1.0",
+  "description": "Custom ESLint configuration",
+  "scripts": {
+    "build": "exit 0",
+    "clean": "exit 0",
+    "lint": "exit 0",
+    "lint:ci": "exit 0",
+    "lint:fix": "exit 0",
+    "test": "exit 0",
+    "test:ci": "exit 0",
+    "test:cov": "exit 0"
+  },
+  "main": ".eslintrc.esm.js",
+  "exports": {
+    ".": {
+      "import": "./eslintrc.esm.mjs",
+      "require": "./eslintrc.esm.mjs"
+    },
+    "./prettier": {
+      "import": "./prettier.config.js",
+      "require": "./prettier.config.js"
+    },
+    "./esm": {
+      "import": "./eslintrc.esm.mjs",
+      "require": "./eslintrc.esm.mjs"
+    }
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@eslint/js": "^9.37.0",
+    "@eslint-react/eslint-plugin": "^2.3.0",
+    "@kubit-ui-web/eslint-plugin-no-index-import": "^1.0.2",
+    "@stylistic/eslint-plugin":  "^5.5.0",
+    "eslint": "catalog:",
+    "eslint-config-mantine": "^4.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-kysely": "^1.0.7",
+    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-safe-kysely": "^1.0.1",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "eslint-plugin-validate-filename": "^1.2.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "jiti": "^2.6.1",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.45.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
