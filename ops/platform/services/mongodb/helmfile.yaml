@@ -1,0 +1,21 @@
+repositories:
+ - name: mongodb
+   url: https://charts.bitnami.com/bitnami
+
+releases:
+  - name: mongodb
+    namespace: mongodb
+    chart: mongodb/mongodb
+    version: "18"
+    set:
+      - name: architecture
+        value: standalone
+      - name: persistence.enabled
+        value: true
+      - name: persistence.storageClass
+        value: sata
+      - name: persistence.accessModes
+        values:
+          - ReadWriteOnce
+      - name: persistence.size
+        value: 10Gi

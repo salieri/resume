@@ -1,0 +1,20 @@
+# System manifest
+helmfiles:
+  # secrets
+  - path: ./services/external-secrets/helmfile.yaml
+  - path: ./resources/secrets/helmfile.yaml.gotmpl
+
+  # platform services
+  - path: ./services/grafana/helmfile.yaml
+  - path: ./services/minio/helmfile.yaml
+
+#  - path: ./services/mongodb/helmfile.yaml
+#  - path: ./services/opensearch/helmfile.yaml
+#  - path: ./services/postgresql/helmfile.yaml
+#  - path: ./services/prometheus/helmfile.yaml
+#  - path: ./temporal/helmfile.yaml
+
+  # workers, APIs, and so on
+  # - path: ../../apps/example/helm/helmfile.yaml
+  # - path: ../../workers/helm/helmfile.yaml
+  # - path: ../../services/api/helm/helmfile.yaml

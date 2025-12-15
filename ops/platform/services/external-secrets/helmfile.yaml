@@ -1,0 +1,10 @@
+repositories:
+ - name: external-secrets
+   url: https://charts.external-secrets.io
+
+releases:
+  # Install External Secrets operator
+  - name: external-secrets
+    namespace: external-secrets
+    chart: external-secrets/external-secrets
+    version: "0.20"

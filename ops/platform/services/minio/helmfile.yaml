@@ -1,0 +1,43 @@
+repositories:
+ - name: minio
+   url: https://charts.bitnami.com/bitnami
+
+releases:
+  - name: minio-secrets
+    namespace: minio
+    chart: ../../charts/secret
+    values:
+      - ../../charts/secret/values.yaml.gotmpl
+      - name: minio-admin-credentials
+        data:
+          - key: minio-admin-credentials
+            property: username
+            localKey: admin-user
+          - key: minio-admin-credentials
+            property: password
+            localKey: admin-password
+
+  - name: minio
+    namespace: minio
+    needs:
+      - minio-secrets
+    chart: minio/minio
+    version: "17"
+    set:
+      - name: persistence.enabled
+        value: true
+      - name: persistence.storageClass
+        value: sata
+      - name: persistence.accessModes
+        values:
+          - ReadWriteOnce
+      - name: persistence.size
+        value: 10Gi
+      - name: auth.useSecret
+        value: true
+      - name: auth.existingSecret
+        value: minio-admin-credentials
+      - name: auth.rootUserSecretKey
+        value: admin-user
+      - name: auth.rootPasswordSecretKey
+        value: admin-password

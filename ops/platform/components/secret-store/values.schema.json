@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "Secret store kind - `SecretStore` or `ClusterSecretStore`. Defaults to `ClusterSecretStore` if omitted.",
+      "enum": [
+        "SecretStore",
+        "ClusterSecretStore"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the secret store resource"
+    },
+    "secretProvider": {
+      "type": "string",
+      "description": "Secret store provider. Must be one of External Secrets providers. Defaults to `PLATFORM_SECRET_STORE_PROVIDER` env variable.",
+      "enum": [
+        "onepasswordSDK",
+        "aws",
+        "azurekv",
+        "gcpsm"
+      ]
+    },
+    "onePassword": {
+      "type": "object",
+      "description": "1Password specific configuration",
+      "properties": {
+        "vault": {
+          "type": "string",
+          "description": "Name of the 1Password vault. Defaults to `ONE_PASSWORD_VAULT` env variable."
+        },
+        "secret": {
+          "type": "string",
+          "description": "1Password secret access token. Defaults to `ONE_PASSWORD_SECRET` env variable."
+        },
+        "accessTokenSecretName": {
+          "type": "string",
+          "description": "Name of the secret resource to which the access token will be stored. Defaults to `ONE_PASSWORD_TOKEN_SECRET_NAME` env variable."
+        },
+        "accessTokenSecretKey": {
+          "type": "string",
+          "description": "Name of the key in the secret resource to which the access token will be stored. Defaults to `ONE_PASSWORD_TOKEN_SECRET_KEY` env variable."
+        }
+      }
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

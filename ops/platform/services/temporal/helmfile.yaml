@@ -1,0 +1,9 @@
+repositories:
+ - name: temporal
+   url: https://go.temporal.io/helm-charts
+
+releases:
+  - name: temporal
+    namespace: temporal
+    chart: temporal/temporal
+    version: "0.68"

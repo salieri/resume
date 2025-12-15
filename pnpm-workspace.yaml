@@ -1,0 +1,80 @@
+packages:
+  - dev/packages/*
+  - dev/templates/*/*
+  - dev/workers/*
+  - dev/services/*
+  - dev/apps/*
+
+minimumReleaseAge: 2880
+minimumReleaseAgeExclude:
+  - '@faust/*'
+  - '@internal/*'
+
+onlyBuiltDependencies:
+  - '@faust/*'
+  - '@internal/*'
+
+catalog:
+  "@mantine/code-highlight": ^8.3.7
+  "@mantine/core": ^8.3.7
+  "@mantine/dropzone": ^8.3.7
+  "@mantine/hooks": ^8.3.7
+  "@mantine/notifications": ^8.3.7
+  "@react-router/dev": ^7.9.2
+  "@react-router/node": ^7.9.2
+  "@react-router/serve": ^7.9.2
+  "@storybook/addon-themes": ^10.0.0
+  "@storybook/react": ^10.0.0
+  "@storybook/react-vite": ^10.0.0
+  "@tabler/icons-react": ^3.35.0
+  "@testing-library/dom": ^10.4.1
+  "@testing-library/jest-dom": ^6.9.1
+  "@testing-library/react": ^16.3.0
+  "@testing-library/user-event": ^14.6.1
+  "@types/country-list": ^2.1.4
+  "@types/globule": ^1.1.10
+  "@types/hyphen": ^1.6.7
+  "@types/node": ^24.9.1
+  "@types/js-yaml": ^4.0.9
+  "@types/lodash": ^4.17.20
+  "@types/react": ^19.2.2
+  "@types/react-dom": ^19.2.2
+  "@types/semver": ^7.7.1
+  "@vitejs/plugin-react": ^5.1.0
+  "bignumber.js": ^9.3.1
+  commander: ^14.0.1
+  country-list: ^2.4.1
+  date-fns: ^4.1.0
+  eslint: ^9.38.0
+  globule: ^1.3.4
+  globals: ^16.5.0
+  hyphen: ^1.10.6
+  identity-obj-proxy: ^3.0.0
+  js-yaml: ^4.1.0
+  jsdom: ^27.1.0
+  lodash: ^4.17.21
+  patch-package: ^8.0.1
+  postcss: ^8.5.6
+  postcss-preset-mantine: ^1.18.0
+  postcss-simple-vars: ^7.0.1
+  prettier: ^3.6.2
+  prop-types: ^15.8.1
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  react-markdown: ^10.1.0
+  react-router: ^7.9.5
+  sass-embedded: ^1.93.3
+  semver: ^7.7.3
+  storybook: ^10.0.0
+  stylelint: ^16.25.0
+  stylelint-config-standard-scss: ^16.0.0
+  throat: ^6.0.2
+  tsx: ^4.20.6
+  type-fest: ^5.1.0
+  types-package-json: ^2.0.39
+  typescript: ^5.9.3
+  uuid: ^13.0.0
+  vite: ^7.2.2
+  vite-tsconfig-paths: ^5.1.4
+  vitest: ^4.0.0
+  zod: ^4.1.12
