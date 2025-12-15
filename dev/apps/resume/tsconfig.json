@@ -1,5 +1,5 @@
 {
-  "extends": "../../../config/typescript/tsconfig.react.json",
+  "extends": "../../config/typescript/tsconfig.react.json",
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
