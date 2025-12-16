@@ -6,7 +6,7 @@
   "scripts": {
     "build": "react-router build",
     "clean": "rm -rf ./dist",
-    "dev": "react-router dev",
+    "dev": "react-router dev --port 3030",
     "eslint": "eslint . --cache",
     "lint": "pnpm run eslint && pnpm run stylelint",
     "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
@@ -26,6 +26,7 @@
     "@faust/theme": "workspace:",
     "@mantine/code-highlight": "catalog:",
     "@mantine/core": "catalog:",
+    "@mantine/charts": "catalog:",
     "@mantine/dropzone": "catalog:",
     "@mantine/hooks": "catalog:",
     "@mantine/notifications": "catalog:",
@@ -35,9 +36,11 @@
     "@tabler/icons-react": "catalog:",
     "hyphen": "catalog:",
     "isbot": "^5",
+    "i18next": "catalog:",
     "lodash": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "react-i18next": "catalog:",
     "react-markdown": "catalog:",
     "react-router": "catalog:",
     "zod": "catalog:"

@@ -1,11 +1,11 @@
-import { ColorSchemeToggle } from '@/components/color-scheme-toggle/color-scheme-toggle';
-import { Welcome } from '@/components/welcome/welcome';
+import { ExecutiveSummary } from '@/sections/executive-summary/executive-summary';
+import { WorkHistory } from '@/sections/work-history/work-history';
 
 export default function Home() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <ExecutiveSummary />
+      <WorkHistory />
     </>
   );
 }

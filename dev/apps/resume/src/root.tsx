@@ -1,7 +1,10 @@
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 
 import { theme } from '@faust/theme';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider, Typography } from '@mantine/core';
+import i18n from 'i18next';
+import { I18nextProvider, initReactI18next } from 'react-i18next';
 import {
   isRouteErrorResponse,
   Links,
@@ -27,19 +30,31 @@ export const links: Route.LinksFunction = () => [
   // },
 ];
 
+void i18n.use(initReactI18next).init({
+  fallbackLng: 'en',
+  // debug: true,
+  interpolation: {
+    escapeValue: false, // react already safes from xss
+  },
+});
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang='en' {...mantineHtmlProps}>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
         <ColorSchemeScript />
         <Meta />
         <Links />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <I18nextProvider i18n={i18n}>
+          <MantineProvider theme={theme}>
+            <Typography>{children}</Typography>
+          </MantineProvider>
+        </I18nextProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -66,11 +81,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className='pt-16 p-4 container mx-auto'>
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className='w-full p-4 overflow-x-auto'>
           <code>{stack}</code>
         </pre>
       )}
