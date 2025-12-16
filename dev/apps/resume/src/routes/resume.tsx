@@ -4,13 +4,12 @@ import { ExecutiveSummary } from '@/sections/executive-summary/executive-summary
 import { Projects } from '@/sections/projects/projects';
 import { WorkHistory } from '@/sections/work-history/work-history';
 
-export const meta = (a, b, c) => {
-  console.log('META', a, b, c);
-
-  return [{ title: 'Resume | Aleksi Asikainen | Software Architecture & Development' }];
+export const handle = {
+  title: 'Resume | Aleksi Asikainen | Software Architecture and Development',
+  titleKey: 'resume',
 };
 
-export default function Home() {
+export default function Resume() {
   return (
     <>
       <ExecutiveSummary />

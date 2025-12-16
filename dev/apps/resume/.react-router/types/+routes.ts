@@ -21,13 +21,13 @@ type RouteFiles = {
     id: "root";
     page: "/";
   };
-  "routes/home.tsx": {
-    id: "routes/home";
+  "routes/resume.tsx": {
+    id: "resume";
     page: "/";
   };
 };
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
-  "routes/home": typeof import("./src/routes/home.tsx");
+  "resume": typeof import("./src/routes/resume.tsx");
 };
