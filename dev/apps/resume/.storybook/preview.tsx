@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 
 import { theme } from '@faust/theme';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
