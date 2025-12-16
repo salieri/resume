@@ -26,7 +26,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
         data={translatedData}
         dataKey='label'
         series={[{ name: 'value', color: 'lime.4', opacity: 0.35 }]}
-        h={300}
+        h={{ base: 300, md: 250 }}
         withPolarGrid
         withPolarAngleAxis
         withPolarRadiusAxis

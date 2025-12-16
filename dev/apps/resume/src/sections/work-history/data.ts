@@ -21,7 +21,7 @@ export const workHistoryData: WorkHistory[] = [
   },
   {
     title: 'Chief Technology Officer',
-    company: 'Arena.im',
+    company: 'Arena',
     startDate: '08/2021',
     endDate: '01/2023',
     summary: 'Startup, audience engagement, 50 employees, $13.6M series A',
