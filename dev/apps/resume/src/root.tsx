@@ -14,6 +14,12 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
+import { Body } from '@/components/body/body';
+import { Footer } from '@/components/footer/footer';
+import { Sidebar } from '@/components/sidebar/sidebar';
+import { ContactInfo } from '@/sections/contact-info/contact-info';
+import { I18nTitleManager } from '@/utils/i18n-title-manager';
+
 // @ts-expect-error
 import type { Route } from './+types/root';
 
@@ -51,8 +57,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <I18nextProvider i18n={i18n}>
+          <I18nTitleManager />
           <MantineProvider theme={theme}>
-            <Typography>{children}</Typography>
+            <Typography>
+              <Sidebar>
+                <ContactInfo />
+              </Sidebar>
+
+              <Body>
+                {children}
+
+                <Footer>
+                  <ContactInfo />
+                </Footer>
+              </Body>
+            </Typography>
           </MantineProvider>
         </I18nextProvider>
         <ScrollRestoration />
