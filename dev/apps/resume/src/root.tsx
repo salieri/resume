@@ -2,7 +2,13 @@ import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
 
 import { theme } from '@faust/theme';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider, Typography } from '@mantine/core';
+import {
+  AppShell,
+  ColorSchemeScript,
+  mantineHtmlProps,
+  MantineProvider,
+  Typography,
+} from '@mantine/core';
 import i18n from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import {
@@ -22,6 +28,7 @@ import { I18nTitleManager } from '@/utils/i18n-title-manager';
 
 // @ts-expect-error
 import type { Route } from './+types/root';
+import { ConfigMenu } from './components/config-menu/config-menu';
 
 export const links: Route.LinksFunction = () => [
   // { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -54,24 +61,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ColorSchemeScript />
         <Meta />
         <Links />
+
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'
+          rel='stylesheet'
+        />
       </head>
       <body>
         <I18nextProvider i18n={i18n}>
           <I18nTitleManager />
           <MantineProvider theme={theme}>
-            <Typography>
-              <Sidebar>
-                <ContactInfo />
-              </Sidebar>
-
-              <Body>
-                {children}
-
-                <Footer>
+            <AppShell maw={640} mr='auto' ml='auto' withBorder={false}>
+              <Typography>
+                <Sidebar>
                   <ContactInfo />
-                </Footer>
-              </Body>
-            </Typography>
+                </Sidebar>
+
+                <ConfigMenu />
+
+                <Body>
+                  {children}
+
+                  <Footer>
+                    <ContactInfo />
+                  </Footer>
+                </Body>
+              </Typography>
+            </AppShell>
           </MantineProvider>
         </I18nextProvider>
         <ScrollRestoration />

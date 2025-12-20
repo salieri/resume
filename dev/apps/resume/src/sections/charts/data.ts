@@ -197,7 +197,7 @@ export const industryExperienceData: ChartData[] = [
   },
   {
     label: 'B2B',
-    value: 4,
+    value: 5,
   },
   {
     label: 'Fintech',

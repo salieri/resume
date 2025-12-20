@@ -1,3 +1,4 @@
+import { AppShell } from '@mantine/core';
 import type { ReactNode } from 'react';
 
 export interface BodyProps {
@@ -5,5 +6,5 @@ export interface BodyProps {
 }
 
 export const Body = (props: BodyProps) => {
-  return <>{props.children}</>;
+  return <AppShell.Main>{props.children}</AppShell.Main>;
 };

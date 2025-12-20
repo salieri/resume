@@ -1,7 +1,9 @@
-import { Anchor, Card, Text, Title } from '@mantine/core';
+import { Anchor, Box, Text, Title } from '@mantine/core';
 import { Trans } from 'react-i18next';
 
 import type { WorkHistory } from '@/sections/work-history/data';
+
+import classes from './item.module.css';
 
 export interface WorkHistoryItemProps {
   data: WorkHistory;
@@ -12,11 +14,11 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
   const workKey = `workHistory.${data.company}.${data.title}`;
 
   return (
-    <Card>
+    <Box className={classes.workHistoryItem}>
       <Title order={3}>
         <Trans i18nKey={`${workKey}.title`}>{data.title}</Trans>
       </Title>
-      <Text>
+      <Text className={classes.companyAndDate}>
         {data.url ? (
           <Anchor href={data.url} target='_blank' rel='noreferrer'>
             {data.company}
@@ -27,7 +29,7 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
         | {data.startDate} – {data.endDate}
       </Text>
 
-      <Text>
+      <Text size='sm' className={classes.summary}>
         <Trans i18nKey={`${workKey}.summary`}>{data.summary}</Trans>
       </Text>
 
@@ -42,6 +44,6 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
           </small>
         </Text>
       )}
-    </Card>
+    </Box>
   );
 };

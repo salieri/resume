@@ -1,0 +1,35 @@
+:root {
+  --lineHeight: 110%;
+  --paragraphSpacing: 0.8rem;
+}
+
+.workHistoryItem {
+  p {
+    margin-bottom: var(--paragraphSpacing);
+  }
+
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 2.5rem;
+}
+
+p.companyAndDate {
+  margin-bottom: 0;
+  line-height: var(--lineHeight);
+
+  a {
+    line-height: var(--lineHeight);
+    color: var(--mantine-color-text);
+
+    &:hover {
+      color: var(--mantine-color-anchor);
+    }
+  }
+}
+
+.summary {
+  color: var(--mantine-color-dimmed);
+  margin-bottom: var(--paragraphSpacing);
+}
+

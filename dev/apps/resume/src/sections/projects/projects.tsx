@@ -10,9 +10,7 @@ export const Projects = () => {
   return (
     <Section>
       <Title order={2}>
-        <Trans i18nKey='techStack.title'>
-          And More <small>(hobby projects)</small>
-        </Trans>
+        <Trans i18nKey='techStack.title'>Reference Projects</Trans>
       </Title>
 
       {projectData.map((data) => (

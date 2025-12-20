@@ -15,7 +15,7 @@ export const workHistoryData: WorkHistory[] = [
     company: 'Abridge',
     startDate: '01/2024',
     endDate: 'Present',
-    summary: 'Startup, healthcare, AI, 300 employees, $700M series C-E',
+    summary: 'Healthcare AI startup | 300 employees | $700M series C-E',
     details: '',
     url: 'https://www.abridge.com/',
   },
@@ -24,20 +24,20 @@ export const workHistoryData: WorkHistory[] = [
     company: 'Arena',
     startDate: '08/2021',
     endDate: '01/2023',
-    summary: 'Startup, audience engagement, 50 employees, $13.6M series A',
+    summary: 'Audience engagement startup | 50 employees | $13.6M series A',
     url: 'https://arena.im/',
     details:
-      'Led engineering, architecture, and IT on Arena’s mission to revolutionize audience engagement. Steered technology through Series A round from CRV, Craft Ventures, Artisanal Ventures, and Vela Partners. Reduced technical operations cost by over 40%. Guided team through JS to TS transformation, and adoption of reliable development practices such as code reviews, continuous inspection, planning, data-driven operations, standard processes, and technical policies.',
+      'Owned engineering, architecture, and IT. Scaled the platform through Series A led by CRV, Craft Ventures, Artisanal Ventures, and Vela Partners. Cut technical operations costs 40%+. Led company-wide migration from JavaScript to TypeScript. Established disciplined engineering practices: code reviews, CI, planning, metrics-driven operations, and standardized technical processes.',
   },
   {
     title: 'Chief Technology Officer',
     company: 'Optym',
     startDate: '10/2019',
     endDate: '03/2021',
-    summary: 'Private company, computer science, optimization, 250 employees, $25M revenue',
+    summary: 'B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue',
     url: 'https://www.optym.com/',
     details:
-      'Led Optym’s SaaS technology endeavors. Mentored key engineers in our business units for career, culture, and skillset development. Designed policies, processes, and standardized architectures for rapid deployment of new product lines. Presented Optym’s technology solutions to potential partners. Designed new products and bespoke solutions with customers.',
+      'Supported Optym’s SaaS technology ventures. Established shared architectures, policies, and delivery standards to enable rapid product launches. Mentored senior engineers and technical leaders, reinforcing execution quality and engineering culture. Worked directly with customers, partners, and executives to design new products, deliver bespoke solutions.',
   },
   {
     title: 'Chief Architect',
@@ -46,9 +46,9 @@ export const workHistoryData: WorkHistory[] = [
     startDate: '06/2015',
     endDate: '09/2019',
     summary:
-      'Private multinational, risk management, asset protection, 6,000 employees, $1.1B revenue',
+      'Multinational | Risk management & asset protection | 6,000 employees | $1.1B revenue',
     details:
-      'Ran strategic R&D, innovation, and product incubation projects for the office of the CEO. Evaluated modern and emerging technology trends for enterprise use, including machine learning, blockchain, Internet of things, vehicle telematics, digital ID, location tracking, big data, AWS, SaaS, AR, VR, 3D, and hybrid mobile.',
+      'Led strategic R&D and product incubation initiatives for the office of the CEO. Assessed emerging technologies for enterprise adoption, including ML, blockchain, AR/VR, IoT/telematics, digital identity, large-scale data platforms, and cloud-native SaaS (AWS).',
   },
   {
     title: 'Head of Technology',
@@ -56,9 +56,9 @@ export const workHistoryData: WorkHistory[] = [
     startDate: '11/2013',
     endDate: '05/2015',
     url: 'https://www.hpi.co.uk/',
-    summary: 'Private company, automotive, asset protection, vehicle history, £20M revenue',
+    summary: 'Private company | Automotive data & asset protection | £20M revenue',
     details:
-      'Spearheaded product development, conceptualization, and solution development for new consumer-focused products and services at UK’s leading provider of vehicle history checks.',
+      'Led end-to-end product development and delivery for new consumer products, from concept through launch. UK market leader in vehicle history checks.',
     notes: '(Subsidiary of Solera Holdings)',
   },
   {
@@ -66,9 +66,9 @@ export const workHistoryData: WorkHistory[] = [
     company: 'TalMix',
     startDate: '01/2013',
     endDate: '10/2013',
-    summary: 'Startup, management consulting, talent search, £2M series A.',
+    summary: 'Management consulting startup | Talent search | £2M series A',
     details:
-      'Built a marketplace for consultants and businesses looking to find qualified talent for projects. Key focus on turning around an outdated technology platform and improving search results on ideal candidates.',
+      'Rebuilt a legacy platform into a scalable two-sided marketplace. Led search and matching improvements to increase relevance of consultant recommendations.',
     notes: '(Previously known as MBA & Company)',
   },
   {
@@ -76,8 +76,8 @@ export const workHistoryData: WorkHistory[] = [
     company: 'MadBid.com',
     startDate: '06/2008',
     endDate: '12/2012',
-    summary: 'Startup, entertainment shopping for consumers, £4M series A, £10M revenue.',
+    summary: 'Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue',
     details:
-      'One of the founders of an entertainment-shopping startup MadBid.com. Backed by £4M investment from Atomico Ventures. In charge of all tech and software development, from the bootstrap phase through rapid growth to £10M+ annual turnover.',
+      'Co-founded MadBid.com and led all technology and software development from bootstrap to scale. Built and ran the entire engineering organization through rapid growth.',
   },
 ];

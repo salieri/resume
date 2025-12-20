@@ -1,4 +1,4 @@
-import { Anchor, Card, Text, Title } from '@mantine/core';
+import { Anchor, Box, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
 import type { Project } from './data';
@@ -13,7 +13,7 @@ export const TranslatedProjectItem = (props: ProjectItemProps) => {
   const { t } = useTranslation();
 
   return (
-    <Card>
+    <Box>
       <Title order={3}>{t(`${projectKey}.name`, data.name)}</Title>
 
       <Text>
@@ -21,6 +21,6 @@ export const TranslatedProjectItem = (props: ProjectItemProps) => {
       </Text>
 
       <Text>{t(`${projectKey}.description`, data.description)}</Text>
-    </Card>
+    </Box>
   );
 };

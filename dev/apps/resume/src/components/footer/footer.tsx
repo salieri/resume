@@ -1,3 +1,4 @@
+import { AppShell } from '@mantine/core';
 import type { ReactNode } from 'react';
 
 export interface FooterProps {
@@ -5,5 +6,6 @@ export interface FooterProps {
 }
 
 export const Footer = (props: FooterProps) => {
-  return <>{props.children}</>;
+  return <></>;
+  // return <AppShell.Footer>{props.children}</AppShell.Footer>;
 };
