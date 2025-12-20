@@ -38,6 +38,7 @@
     "isbot": "^5",
     "i18next": "catalog:",
     "lodash": "catalog:",
+    "recharts": "^3.6.0",
     "react": "catalog:",
     "react-dom": "catalog:",
     "react-i18next": "catalog:",

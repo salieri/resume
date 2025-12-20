@@ -1,0 +1,19 @@
+
+.chart {
+
+  :global(.recharts-polar-radius-axis-tick-value) {
+    display: none;
+  }
+
+  :global(.recharts-polar-angle-axis-tick-value) {
+    font-family: var(--mantine-font-family-headings);
+    text-transform: none;
+  }
+}
+
+
+.title {
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+}
