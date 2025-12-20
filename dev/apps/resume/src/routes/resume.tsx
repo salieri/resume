@@ -1,6 +1,9 @@
 import { Box, Title } from '@mantine/core';
 
+import { Page } from '@/components/page/page';
+import { PrintOnly } from '@/components/print-only/print-only';
 import { Charts } from '@/sections/charts/charts';
+import { ContactInfo } from '@/sections/contact-info/contact-info';
 import { ExecutiveSummary } from '@/sections/executive-summary/executive-summary';
 import { Projects } from '@/sections/projects/projects';
 import { WorkHistory } from '@/sections/work-history/work-history';
@@ -16,12 +19,22 @@ export const handle: TranslatableHandle = {
 export default function Resume() {
   return (
     <Box className={classes.resume}>
-      <Title order={1}>Aleksi Asikainen</Title>
+      <Page>
+        <Title order={1}>Aleksi Asikainen</Title>
+        <ExecutiveSummary />
 
-      <ExecutiveSummary />
-      <Charts />
-      <WorkHistory />
-      <Projects />
+        <PrintOnly>
+          <ContactInfo />
+        </PrintOnly>
+
+        <Charts />
+      </Page>
+      <Page>
+        <WorkHistory />
+      </Page>
+      <Page>
+        <Projects />
+      </Page>
     </Box>
   );
 }

@@ -1,4 +1,5 @@
 import { RadarChart } from '@mantine/charts';
+import type { RadarChartProps as MantineRadarChartProps } from '@mantine/charts';
 import { Stack, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { Text as RechartText } from 'recharts';
@@ -10,6 +11,7 @@ import type { ChartData } from './data';
 interface TranslatedChartProps {
   data: ChartData[];
   title: string;
+  radarChartProps?: MantineRadarChartProps['radarChartProps'];
 }
 
 const TickWithWordWrap = (props: RechartTextProps & { payload: { value: string } }) => {
@@ -42,7 +44,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
   const translatedTitle = t([`chartTitles.${props.title}`, props.title]);
 
   return (
-    <Stack gap={0} className={classes.chart}>
+    <Stack gap={0} className={classes.chart} align='center'>
       <Title order={5} component='div' className={classes.title}>
         {translatedTitle}
       </Title>
@@ -50,7 +52,9 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
         data={translatedData}
         dataKey='label'
         series={[{ name: 'value', color: 'lime.4', opacity: 0.35 }]}
-        h={{ base: 300, md: 200 }}
+        h={{ base: 300, md: 240 }}
+        w={{ base: 400, md: 325 }}
+        radarChartProps={props.radarChartProps}
         withPolarGrid
         withPolarAngleAxis
         withPolarRadiusAxis
