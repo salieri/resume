@@ -208,7 +208,7 @@ export const industryExperienceData: ChartData[] = [
     value: 3.5,
   },
   {
-    label: 'HW/Embedded',
+    label: 'HW & Embedded',
     value: 2,
   },
   {

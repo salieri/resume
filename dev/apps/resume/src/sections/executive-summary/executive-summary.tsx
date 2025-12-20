@@ -18,8 +18,7 @@ export const ExecutiveSummary = () => {
 
       <Text>
         <Trans i18nKey='exsum.creativeTechnologist'>
-          Senior technologist who <strong>delivers complex technology initiatives</strong>. Deep
-          expertise across <strong>software engineering, architecture, and team leadership</strong>.
+          Senior technologist who <strong>delivers complex technology initiatives</strong>.
           Translates vague ideas into <strong>scalable, production-grade platforms</strong>.
         </Trans>
       </Text>

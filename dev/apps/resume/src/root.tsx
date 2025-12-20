@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
+import './print/styles.css';
 
 import { theme } from '@faust/theme';
 import {
@@ -73,7 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <I18nextProvider i18n={i18n}>
           <I18nTitleManager />
           <MantineProvider theme={theme}>
-            <AppShell maw={640} mr='auto' ml='auto' withBorder={false}>
+            <AppShell maw={640} mr='auto' ml='auto' p='md' withBorder={false}>
               <Typography>
                 <Sidebar>
                   <ContactInfo />

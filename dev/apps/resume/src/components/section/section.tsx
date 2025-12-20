@@ -6,5 +6,5 @@ export interface SectionProps {
 }
 
 export const Section = (props: SectionProps) => {
-  return <div>{props.children}</div>;
+  return <Box>{props.children}</Box>;
 };

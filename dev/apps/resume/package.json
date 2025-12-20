@@ -6,7 +6,7 @@
   "scripts": {
     "build": "react-router build",
     "clean": "rm -rf ./dist",
-    "dev": "react-router dev --port 3030",
+    "dev": "react-router dev --port 3030 --host 0.0.0.0",
     "eslint": "eslint . --cache",
     "lint": "pnpm run eslint && pnpm run stylelint",
     "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
