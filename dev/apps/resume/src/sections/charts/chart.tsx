@@ -1,26 +1,42 @@
-import { RadarChart } from '@mantine/charts';
-import type { RadarChartProps as MantineRadarChartProps } from '@mantine/charts';
-import { Box, Stack, Title } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { Stack, Title } from '@mantine/core';
+import _ from 'lodash';
 import { useTranslation } from 'react-i18next';
-import { Text as RechartText } from 'recharts';
+import {
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar,
+  RadarChart,
+  Text as RechartText,
+} from 'recharts';
 import type { TextProps as RechartTextProps } from 'recharts';
 
+import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
 import { useIsPrint } from '@/utils/use-is-print';
 
 import classes from './chart.module.css';
 import type { ChartData } from './data';
 
+type RadarChartOverrides = Parameters<typeof RadarChart>[0];
+
 interface TranslatedChartProps {
   data: ChartData[];
   title: string;
-  radarChartProps?: MantineRadarChartProps['radarChartProps'];
+  radarChartProps?: RadarChartOverrides;
 }
 
-const TickWithWordWrap = (props: RechartTextProps & { payload: { value: string } }) => {
-  const { x, y, textAnchor, verticalAnchor, payload } = props;
+const chartSizing = {
+  base: { height: 300, width: 400 },
+  md: { height: 240, width: 325 },
+  print: { height: 180, width: 300 },
+};
 
-  // const fontSize = useIsPrint() ? '8px' : '12px';
+const TickWithWordWrap = (
+  props: RechartTextProps & { payload: { value: string }; isPrint: boolean },
+) => {
+  const { x, y, textAnchor, verticalAnchor, payload } = props;
+  const fontSize = props.isPrint ? '10px' : '12px';
+  const textWidth = props.isPrint ? 150 : 100;
 
   return (
     <RechartText
@@ -29,10 +45,10 @@ const TickWithWordWrap = (props: RechartTextProps & { payload: { value: string }
       className='recharts-text recharts-polar-angle-axis-tick-value'
       textAnchor={textAnchor}
       verticalAnchor={verticalAnchor}
-      width={100}
+      width={textWidth}
       breakAll={false}
       lineHeight='1.25em'
-      // style={{ fontSize }}
+      fontSize={fontSize}
     >
       {payload.value}
     </RechartText>
@@ -49,12 +65,42 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
 
   const translatedTitle = t([`chartTitles.${props.title}`, props.title]);
 
-  const isPrint = useMediaQuery('print', false, {
-    getInitialValueInEffect: false,
-  });
+  const isPrint = useIsPrint();
+  const isMdOrUp = useIsMdOrUp();
 
-  const h = isPrint ? 140 : { base: 300, md: 240 };
-  const w = isPrint ? 300 : { base: 400, md: 325 };
+  // eslint-disable-next-line prettier/prettier
+  const sizeKey = isPrint ? 'print' : (isMdOrUp ? 'md' : 'base');
+  const width = chartSizing[sizeKey].width;
+  const height = chartSizing[sizeKey].height;
+
+  const chartColor = 'var(--mantine-color-lime-4)';
+
+  const chart = (
+    <RadarChart
+      data={translatedData}
+      height={height}
+      width={width}
+      {..._.omit(props.radarChartProps, 'width', 'height', 'data', 'ref', 'children')}
+      responsive={false}
+      style={{ width, height }}
+    >
+      <PolarGrid />
+      <PolarAngleAxis
+        dataKey='label'
+        tick={(tickProps) => <TickWithWordWrap isPrint={isPrint} {...tickProps} />}
+      />
+      <PolarRadiusAxis domain={[0, 5]} axisLine={false} />
+      <Radar
+        name='value'
+        dataKey='value'
+        stroke={chartColor}
+        fill={chartColor}
+        fillOpacity={0.35}
+        dot
+        isAnimationActive={false}
+      />
+    </RadarChart>
+  );
 
   return (
     <Stack gap={0} className={classes.chart} align='center'>
@@ -62,25 +108,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
         {translatedTitle}
       </Title>
 
-      <Box h={h} w={w} pos='relative'>
-        <RadarChart
-          bd='1px solid grey'
-          data={translatedData}
-          dataKey='label'
-          series={[{ name: 'value', color: 'lime.4', opacity: 0.35 }]}
-          h={h}
-          w={w}
-          style={{ overflow: 'hidden' }}
-          radarChartProps={props.radarChartProps}
-          withPolarGrid
-          withPolarAngleAxis
-          withPolarRadiusAxis
-          withTooltip={false}
-          withDots
-          polarAngleAxisProps={{ tick: TickWithWordWrap }}
-          polarRadiusAxisProps={{ domain: [0, 5], axisLine: false }}
-        />
-      </Box>
+      {chart}
     </Stack>
   );
 };
