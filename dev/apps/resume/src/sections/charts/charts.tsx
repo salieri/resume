@@ -3,6 +3,7 @@ import { useMediaQuery } from '@mantine/hooks';
 import { Trans } from 'react-i18next';
 
 import { Section } from '@/components/section/section';
+import { useIsPrint } from '@/utils/use-is-print';
 
 import { TranslatedChart } from './chart';
 import {
@@ -21,9 +22,7 @@ export const Charts = () => {
     getInitialValueInEffect: false,
   });
 
-  const isPrint = useMediaQuery('print', false, {
-    getInitialValueInEffect: false,
-  });
+  const isPrint = useIsPrint();
 
   const chartAdjuster = isMdOrUp || isPrint ? { cy: 125 } : {};
 
