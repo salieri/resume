@@ -1,9 +1,9 @@
-// import { RadarChart } from '@mantine/charts';
+import { RadarChart } from '@mantine/charts';
 import type { RadarChartProps as MantineRadarChartProps } from '@mantine/charts';
 import { Box, Stack, Title } from '@mantine/core';
-import { useIsFirstRender, useMediaQuery } from '@mantine/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
-import { PolarGrid, RadarChart, Text as RechartText } from 'recharts';
+import { Text as RechartText } from 'recharts';
 import type { TextProps as RechartTextProps } from 'recharts';
 
 import { useIsPrint } from '@/utils/use-is-print';
@@ -20,7 +20,7 @@ interface TranslatedChartProps {
 const TickWithWordWrap = (props: RechartTextProps & { payload: { value: string } }) => {
   const { x, y, textAnchor, verticalAnchor, payload } = props;
 
-  const fontSize = useIsPrint() ? '8px' : '12px';
+  // const fontSize = useIsPrint() ? '8px' : '12px';
 
   return (
     <RechartText
