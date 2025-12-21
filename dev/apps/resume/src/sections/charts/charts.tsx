@@ -3,6 +3,7 @@ import { useMediaQuery } from '@mantine/hooks';
 import { Trans } from 'react-i18next';
 
 import { Section } from '@/components/section/section';
+import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
 import { useIsPrint } from '@/utils/use-is-print';
 
 import { TranslatedChart } from './chart';
@@ -16,15 +17,11 @@ import {
 } from './data';
 
 export const Charts = () => {
-  const theme = useMantineTheme();
-
-  const isMdOrUp = useMediaQuery(`(min-width: ${theme.breakpoints.md})`, false, {
-    getInitialValueInEffect: false,
-  });
-
+  const isMdOrUp = useIsMdOrUp();
   const isPrint = useIsPrint();
 
-  const chartAdjuster = isMdOrUp || isPrint ? { cy: 125 } : {};
+  // eslint-disable-next-line prettier/prettier
+  const chartAdjuster = isMdOrUp ? { cy: 125 } : (isPrint ? {} : {});
 
   return (
     <Section>
