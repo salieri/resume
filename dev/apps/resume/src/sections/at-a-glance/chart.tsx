@@ -68,7 +68,6 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
   const isPrint = useIsPrint();
   const isMdOrUp = useIsMdOrUp();
 
-  // eslint-disable-next-line prettier/prettier
   const sizeKey = isPrint ? 'print' : (isMdOrUp ? 'md' : 'base');
   const width = chartSizing[sizeKey].width;
   const height = chartSizing[sizeKey].height;
