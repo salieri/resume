@@ -1,5 +1,42 @@
+@media display {
+  @mixin light {
+    body {
+      background-color: whitesmoke;
+    }
 
+    strong {
+      color: #1f6964; /* #2d8e7d */ /* #1f6964 */ /* 1f791f */
+    }
+  }
+
+  @mixin dark {
+    strong {
+      color: #e4e4e4
+    }
+  }
+}
 
 @media print {
+  body {
+    background-color: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+  }
 
+  p, strong, h1, h2, h3, h4, h5, h6, li {
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  a {
+
+  }
 }
+
+p {
+  text-wrap-style: pretty;
+}
+
+h1 {
+  margin-bottom: 0 !important;
+}
+

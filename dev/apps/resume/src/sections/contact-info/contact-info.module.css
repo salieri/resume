@@ -1,0 +1,14 @@
+
+.list {
+  &:global(.mantine-List-root) {
+    padding-left: 0;
+  }
+
+  :global(.mantine-List-itemIcon) {
+    margin-right: 0.2rem;
+  }
+
+  :global(.mantine-ThemeIcon-root) {
+    border: none;
+  }
+}

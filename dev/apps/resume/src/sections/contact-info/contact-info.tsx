@@ -1,50 +1,56 @@
-import { Anchor, Stack, Text, Title } from '@mantine/core';
-import { Trans } from 'react-i18next';
+import { Anchor, List, ThemeIcon } from '@mantine/core';
 
 import { Section } from '@/components/section/section';
 
+import classes from './contact-info.module.css';
+import { contactInfoData, migrationData } from './data';
+
 export const ContactInfo = () => {
+  const iconSize = '70%';
+  const iconStyle = { width: iconSize, height: iconSize };
+
+  const themeVariant = 'outline';
+  const themeColor = 'gray';
+
+  const themeProps = {
+    variant: themeVariant,
+    color: themeColor,
+    // display: { base: 'none' },
+  };
+
   return (
     <Section>
-      <Title order={1}>Aleksi Asikainen</Title>
+      <List spacing={0} center className={classes.list}>
+        {contactInfoData.map(({ caption, url, Icon }) => (
+          <List.Item
+            key={caption}
+            icon={
+              <ThemeIcon {...themeProps} mr={0}>
+                <Icon style={iconStyle} />
+              </ThemeIcon>
+            }
+          >
+            <Anchor href={url} target='_blank'>
+              {caption}
+            </Anchor>
+          </List.Item>
+        ))}
+      </List>
 
-      <Text>
-        <Trans>
-          CTO, Chief Architect, Principal Engineer, Founding Engineer, Senior Staff Engineer
-        </Trans>
-      </Text>
-
-      <Text>
-        <Trans>I build concrete solutions.</Trans>
-      </Text>
-
-      <Stack gap={0}>
-        <Anchor href='tel:+1817247023'>+1 (817) 247-0723</Anchor>
-        <Anchor href='email:ping@getsalieri.com'>ping@getsalieri.com</Anchor>
-      </Stack>
-
-      <Stack gap={0}>
-        <Anchor href='https://linkedin.com/in/aleksiasikainen'>
-          linkedin.com/in/aleksiasikainen
-        </Anchor>
-        <Anchor href='https://github.com/salieri'>github.com/salieri</Anchor>
-      </Stack>
-
-      <Text>
-        <Trans>
-          US permanent resident
-          <br />
-          <small>(no employer obligations)</small>
-        </Trans>
-      </Text>
-
-      <Text>
-        <Trans>EU Citizen</Trans>
-      </Text>
-
-      <Text>
-        <Trans>Can relocate</Trans>
-      </Text>
+      <List spacing={0} center className={classes.list}>
+        {migrationData.map(({ caption, Icon }) => (
+          <List.Item
+            key={caption}
+            icon={
+              <ThemeIcon {...themeProps} mr={0}>
+                <Icon style={iconStyle} />
+              </ThemeIcon>
+            }
+          >
+            {caption}
+          </List.Item>
+        ))}
+      </List>
     </Section>
   );
 };
