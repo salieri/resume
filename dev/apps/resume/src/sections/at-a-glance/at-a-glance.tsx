@@ -19,7 +19,6 @@ export const AtAGlance = () => {
   const isMdOrUp = useIsMdOrUp();
   const isPrint = useIsPrint();
 
-  // eslint-disable-next-line prettier/prettier
   const chartAdjuster = isMdOrUp ? { cy: 125 } : (isPrint ? {} : {});
 
   return (

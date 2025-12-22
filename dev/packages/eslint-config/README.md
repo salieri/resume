@@ -1,1 +1,1 @@
-# ESLint & Prettier Configurations
+# ESLint Configuration

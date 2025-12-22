@@ -3,7 +3,6 @@ import { defineConfig } from "eslint/config";
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
-import prettier from 'eslint-plugin-prettier/recommended';
 import unicorn from 'eslint-plugin-unicorn';
 import promisePlugin from 'eslint-plugin-promise';
 import noIndexImportPlugin from '@kubit-ui-web/eslint-plugin-no-index-import';
@@ -48,7 +47,6 @@ export default (basePath) => defineConfig(
   importPlugin.flatConfigs.errors,
   importPlugin.flatConfigs.warnings,
   importPlugin.flatConfigs.typescript,
-  prettier,
   unicorn.configs.recommended,
   promisePlugin.configs['flat/recommended'],
   {
@@ -108,10 +106,9 @@ export default (basePath) => defineConfig(
           },
           multilineDetection: 'brackets'
         }],
-      '@stylistic/multiline-ternary': 'off',
-      '@stylistic/operator-linebreak': 'off',
+      '@stylistic/multiline-ternary': ['error', 'always-multiline'],
       '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
-      '@stylistic/semi': 'off',
+      '@stylistic/semi': ['error', 'always'],
 
       // force type imports where possible; this helps with avoiding circular dependencies
       // and reduces the amount of JS imported at production runtime
