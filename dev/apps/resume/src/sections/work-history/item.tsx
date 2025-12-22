@@ -19,13 +19,15 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
         <Trans i18nKey={`${workKey}.title`}>{data.title}</Trans>
       </Title>
       <Text className={classes.companyAndDate}>
-        {data.url ? (
-          <Anchor href={data.url} target='_blank' rel='noreferrer'>
-            {data.company}
-          </Anchor>
-        ) : (
-          data.company
-        )}{' '}
+        <span className={classes.company}>
+          {data.url ? (
+            <Anchor href={data.url} target='_blank' rel='noreferrer'>
+              {data.company}
+            </Anchor>
+          ) : (
+            data.company
+          )}{' '}
+        </span>
         | {data.startDate} – {data.endDate}
       </Text>
 

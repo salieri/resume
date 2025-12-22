@@ -1,5 +1,4 @@
-import { SimpleGrid, Title, useMantineTheme } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { SimpleGrid, Title } from '@mantine/core';
 import { Trans } from 'react-i18next';
 
 import { Section } from '@/components/section/section';
@@ -16,7 +15,7 @@ import {
   technologyFitData,
 } from './data';
 
-export const Charts = () => {
+export const AtAGlance = () => {
   const isMdOrUp = useIsMdOrUp();
   const isPrint = useIsPrint();
 

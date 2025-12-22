@@ -15,10 +15,19 @@
 }
 
 p.companyAndDate {
+  font-weight: 500;
+  font-family: var(--mantine-font-family-headings);
+
   margin-bottom: 0;
   line-height: var(--lineHeight);
 
+  .company {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   a {
+    font-weight: 600;
     line-height: var(--lineHeight);
     color: var(--mantine-color-text);
 
@@ -31,5 +40,9 @@ p.companyAndDate {
 .summary {
   color: var(--mantine-color-dimmed);
   margin-bottom: var(--paragraphSpacing);
+  margin-top: 0.2rem;
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 500;
+  line-height: 125%;
 }
 

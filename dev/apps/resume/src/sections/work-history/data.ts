@@ -73,11 +73,11 @@ export const workHistoryData: WorkHistory[] = [
   },
   {
     title: 'Technical Director',
-    company: 'MadBid.com',
+    company: 'MadBid',
     startDate: '06/2008',
     endDate: '12/2012',
     summary: 'Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue',
     details:
-      'Co-founded MadBid.com and led all technology and software development from bootstrap to scale. Built and ran the entire engineering organization through rapid growth.',
+      'Co-founded MadBid and led all technology and software development from bootstrap to scale. Built and ran the entire engineering organization through rapid growth.',
   },
 ];
