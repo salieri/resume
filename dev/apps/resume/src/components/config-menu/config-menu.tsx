@@ -1,7 +1,8 @@
 import { Burger, Menu, Radio, useMantineColorScheme } from '@mantine/core';
+import type { MantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-const colorSchemes = [
+const colorSchemes: { value: MantineColorScheme; label: string }[] = [
   { value: 'light', label: 'Light' },
   { value: 'dark', label: 'Dark' },
   { value: 'auto', label: 'Auto' },

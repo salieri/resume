@@ -9,7 +9,6 @@ For example:
 * AI/LLM
 * Frontend and user experience
 
-
 ## Architecture
 * Scalable monorepo model
 * Templates
@@ -36,3 +35,6 @@ For example:
 
 ## Code Quality
 * Complex ESLint configuration
+* Stylelint for CSS
+
+## AI/ML/LLM
