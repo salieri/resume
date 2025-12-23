@@ -18,8 +18,4 @@
   text-transform: uppercase;
   font-family: var(--mantine-font-family-headings);
   color: var(--mantine-primary-color-contrast);
-
-  @mixin dark {
-
-  }
 }

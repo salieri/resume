@@ -18,7 +18,7 @@
     "docs": "rm -rf docs && npx typedoc --out docs --tsconfig ./tsconfig.build.json",
     "lint": "eslint --ext .js,.ts .",
     "lint:ci": "npm run lint -- --quiet",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint --fix",
     "prepublishOnly": "npm run build",
     "test": "vitest run",
     "test:ci": "npm run test:cov --",

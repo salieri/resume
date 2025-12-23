@@ -6,7 +6,8 @@ const betterMediaQuery = (mediaQueryString: string) => {
 
   useEffect(() => {
     const mediaQueryList = globalThis.matchMedia(mediaQueryString);
-    const listener = () => setMatches(!!mediaQueryList.matches);
+    // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
+    const listener = () => setMatches(mediaQueryList.matches);
 
     listener();
     mediaQueryList.addEventListener('change', listener);
@@ -21,10 +22,4 @@ export const useIsMdOrUp = () => {
   const theme = useMantineTheme();
 
   return betterMediaQuery(`(min-width: ${theme.breakpoints.md})`);
-
-  // const theme = useMantineTheme();
-  //
-  // return useMediaQuery(`(min-width: ${theme.breakpoints.md})`, false, {
-  //   getInitialValueInEffect: false,
-  // });
 };

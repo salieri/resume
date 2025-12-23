@@ -10,7 +10,7 @@
     "eslint": "eslint . --cache",
     "lint": "pnpm run eslint && pnpm run stylelint",
     "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
-    "lint:fix": "pnpm run eslint -- --fix && pnpm run stylelint -- --fix",
+    "lint:fix": "pnpm run eslint --fix && pnpm run stylelint --fix",
     "prepublishOnly": "pnpm run build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

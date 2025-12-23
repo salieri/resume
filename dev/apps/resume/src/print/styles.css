@@ -32,7 +32,7 @@
   }
 
   p, strong, h1, h2, h3, h4, h5, h6, li, .mantine-Title-root, .workHistoryItem a {
-    color: #000000 !important;
+    color: #000 !important;
     -webkit-print-color-adjust: exact;
   }
 
@@ -49,12 +49,12 @@
   }
 
   .mantine-List-root a, a {
-    /*color: var(--mantine-color-blue-6) !important;*/
+    /* color: var(--mantine-color-blue-6) !important; */
     color: black !important;
   }
 
   .mantine-ThemeIcon-root {
-    /*color: var(--mantine-color-gray-6) !important;*/
+    /* color: var(--mantine-color-gray-6) !important; */
     color: black !important;
   }
 

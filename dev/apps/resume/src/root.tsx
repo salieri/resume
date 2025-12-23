@@ -10,7 +10,7 @@ import {
   MantineProvider,
   Typography,
 } from '@mantine/core';
-import i18n from 'i18next';
+import i18n, { use } from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import {
   isRouteErrorResponse,
@@ -21,11 +21,7 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
-import { Body } from '@/components/body/body';
 import { DisplayOnly } from '@/components/display-only/display-only';
-import { Footer } from '@/components/footer/footer';
-import { Sidebar } from '@/components/sidebar/sidebar';
-import { ContactInfo } from '@/sections/contact-info/contact-info';
 import { I18nTitleManager } from '@/utils/i18n-title-manager';
 
 // @ts-expect-error
@@ -45,7 +41,7 @@ export const links: Route.LinksFunction = () => [
   // },
 ];
 
-void i18n.use(initReactI18next).init({
+void use(initReactI18next).init({
   fallbackLng: 'en',
   // debug: true,
   interpolation: {
@@ -77,21 +73,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <MantineProvider theme={theme}>
             <AppShell maw={640} mr='auto' ml='auto' p='md' withBorder={false}>
               <Typography>
-                <Sidebar>
-                  <ContactInfo />
-                </Sidebar>
+                <AppShell.Main>
+                  <DisplayOnly>
+                    <ConfigMenu />
+                  </DisplayOnly>
 
-                <DisplayOnly>
-                  <ConfigMenu />
-                </DisplayOnly>
-
-                <Body>
                   {children}
-
-                  <Footer>
-                    <ContactInfo />
-                  </Footer>
-                </Body>
+                </AppShell.Main>
               </Typography>
             </AppShell>
           </MantineProvider>
@@ -114,6 +102,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? '404' : 'Error';
+
     details
       = error.status === 404 ? 'The requested page could not be found.' : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {

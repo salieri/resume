@@ -4,7 +4,7 @@ import { spawn } from 'node:child_process';
 import type { ChildProcess } from 'node:child_process';
 import process from 'node:process';
 
-import puppeteer from 'puppeteer';
+import { launch } from 'puppeteer';
 
 const [url, out = 'out.pdf'] = process.argv.slice(2);
 
@@ -87,7 +87,7 @@ async function main(): Promise<void> {
   try {
     await waitForHttpOk(url);
 
-    const browser = await puppeteer.launch({
+    const browser = await launch({
       headless: true,
       // In CI/docker you may need:
       // args: ["--no-sandbox", "--disable-setuid-sandbox"],
