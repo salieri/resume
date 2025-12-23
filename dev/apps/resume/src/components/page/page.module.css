@@ -4,6 +4,6 @@
   }
 
   .page:last-of-type {
-    break-after: avoid;
+    break-after: initial;
   }
 }

@@ -109,21 +109,26 @@ async function main(): Promise<void> {
         waitForFonts: true,
       });
 
-      console.log(out);
+      console.log('PDF saved to', out);
     } finally {
       await browser.close();
     }
   } finally {
+    console.log('Shutting down dev server...');
     killDev();
 
     if (devProc) {
+      console.log('Waiting for close...');
       await waitForClose(devProc);
+      console.log('Closed; ELIFECYCLE 143 expected.');
     }
   }
 }
 
 try {
   await main();
+
+  console.log('Done, all OK');
 } catch (error) {
   const msg = error instanceof Error ? error.stack ?? error.message : String(error);
   console.error(msg);

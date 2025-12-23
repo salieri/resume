@@ -8,7 +8,7 @@
     "clean": "rm -rf ./dist",
     "dev": "react-router dev --port 3030 --host 0.0.0.0",
     "eslint": "eslint . --cache",
-    "generate:pdf": "tsx ./scripts/to-pdf.ts 'http://localhost:3030/' './resources/aleksi-asikainen-resume.pdf'",
+    "generate:pdf": "./scripts/generate-pdf.sh",
     "lint": "pnpm run eslint && pnpm run stylelint",
     "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
     "lint:fix": "pnpm run eslint -- --fix && pnpm run stylelint -- --fix",

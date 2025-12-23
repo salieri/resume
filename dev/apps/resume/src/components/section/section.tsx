@@ -7,5 +7,5 @@ export interface SectionProps {
 }
 
 export const Section = (props: SectionProps) => {
-  return <Box className={props.className}>{props.children}</Box>;
+  return <Box className={`${props.className || ''} section`}>{props.children}</Box>;
 };
