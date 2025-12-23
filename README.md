@@ -8,3 +8,31 @@ For example:
 * Middleware and backend
 * AI/LLM
 * Frontend and user experience
+
+
+## Architecture
+* Scalable monorepo model
+* Templates
+  * NestJS
+  * React
+  * React-Router
+  * React pacakge
+  * NodeJS package
+
+## Platform & Infrastructure
+
+## Middleware & Backend
+
+## Frontend
+* React with Mantine
+* Vite
+* TypeScript
+* Featuring:
+  * Responsive design for mobile and desktop
+  * `@media print` styles for convenient printing
+  * PDF generation
+  * I18N and A11Y
+  * Dark/light mode
+
+## Code Quality
+* Complex ESLint configuration
