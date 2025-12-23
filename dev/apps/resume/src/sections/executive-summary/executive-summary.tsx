@@ -5,7 +5,7 @@ import { Section } from '@/components/section/section';
 
 export const ExecutiveSummary = () => {
   return (
-    <Section>
+    <Section className='executiveSummarySection'>
       <Title order={2}>
         <Trans i18nKey='title.executiveSummary'>Executive Summary</Trans>
       </Title>

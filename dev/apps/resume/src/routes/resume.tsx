@@ -1,8 +1,7 @@
-import { Box, Text, Title } from '@mantine/core';
+import { Box, Title } from '@mantine/core';
 import { Trans } from 'react-i18next';
 
 import { Page } from '@/components/page/page';
-import { PrintOnly } from '@/components/print-only/print-only';
 import { AtAGlance } from '@/sections/at-a-glance/at-a-glance';
 import { ContactInfo } from '@/sections/contact-info/contact-info';
 import { ExecutiveSummary } from '@/sections/executive-summary/executive-summary';
@@ -24,24 +23,21 @@ export default function Resume() {
         <Title order={1}>Aleksi Asikainen</Title>
 
         <Title order={5} component='p'>
-          <Trans>
+          <Trans i18nKey='resume.professionalTitles'>
             CTO, Chief Architect, Principal Engineer, <wbr />
             Founding Engineer, Senior Staff Engineer
           </Trans>
         </Title>
 
         <ContactInfo />
-
         <ExecutiveSummary />
-      </Page>
-
-      <Page>
         <AtAGlance />
       </Page>
 
       <Page>
         <WorkHistory />
       </Page>
+
       <Page>
         <Projects />
       </Page>

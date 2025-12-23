@@ -3,8 +3,9 @@ import type { ReactNode } from 'react';
 
 export interface SectionProps {
   children?: ReactNode;
+  className?: string;
 }
 
 export const Section = (props: SectionProps) => {
-  return <Box>{props.children}</Box>;
+  return <Box className={props.className}>{props.children}</Box>;
 };

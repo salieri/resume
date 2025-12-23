@@ -16,19 +16,87 @@
   }
 }
 
+@page {
+  size: letter portrait;
+  margin: 20mm;
+}
+
 @media print {
+  html {
+    font-size: 12pt; /* manages rem */
+  }
+
   body {
-    background-color: #ffffff !important;
+    background-color: transparent !important;
     -webkit-print-color-adjust: exact;
   }
 
-  p, strong, h1, h2, h3, h4, h5, h6, li {
+  p, strong, h1, h2, h3, h4, h5, h6, li, .mantine-Title-root, .workHistoryItem a {
     color: #000000 !important;
     -webkit-print-color-adjust: exact;
   }
 
-  a {
 
+  h1 {
+    font-size: 2.75rem !important;
+  }
+
+  h2 {
+    margin-top: var(--mantine-spacing-sm) !important;
+    font-size: 1.9rem !important;
+  }
+
+  .mantine-List-root a, a {
+    /*color: var(--mantine-color-blue-6) !important;*/
+    color: black !important;
+  }
+
+  .mantine-ThemeIcon-root {
+    /*color: var(--mantine-color-gray-6) !important;*/
+    color: black !important;
+  }
+
+  .recharts-text {
+    color: black !important;
+    fill: black;
+  }
+
+  p, a {
+    font-size: 75% !important;
+    line-height: 155% !important;
+    margin-bottom: var(--mantine-spacing-sm) !important;
+  }
+
+  .mantine-List-item {
+    .mantine-ThemeIcon-root {
+      --ti-size: var(--ti-size-sm);
+    }
+
+    .mantine-List-itemLabel {
+      font-size: var(--mantine-font-size-xs) !important;
+
+      a {
+        font-size: var(--mantine-font-size-xs) !important;
+      }
+    }
+  }
+
+  .workHistoryItem {
+    margin-bottom: 1.5rem !important;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .projectItem {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .atAGlanceSection {
+    .title {
+      font-size: 80% !important;
+    }
   }
 }
 

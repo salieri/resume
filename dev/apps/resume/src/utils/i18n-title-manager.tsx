@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import get from 'lodash/get';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMatches } from 'react-router';
@@ -30,8 +30,8 @@ export function I18nTitleManager() {
 
     if (last) {
       document.title = t(
-        `page.${_.get(last, 'handle.titleKey', 'untitled')}`,
-        _.get(last, 'handle.title', 'Untitled Page'),
+        `page.${get(last, 'handle.titleKey', 'untitled')}`,
+        get(last, 'handle.title', 'Untitled Page'),
       );
     }
   }, [matches, t]);
