@@ -11,5 +11,5 @@ export interface PageProps {
  * Pagination for print media
  */
 export const Page = (props: PageProps) => {
-  return <Box className={classes.page}>{props.children}</Box>;
+  return <Box className={`${classes.page} page`}>{props.children}</Box>;
 };
