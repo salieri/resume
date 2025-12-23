@@ -1,5 +1,5 @@
 import { Stack, Title } from '@mantine/core';
-import _ from 'lodash';
+import omit from 'lodash/omit';
 import { useTranslation } from 'react-i18next';
 import {
   PolarAngleAxis,
@@ -28,14 +28,14 @@ interface TranslatedChartProps {
 const chartSizing = {
   base: { height: 300, width: 400 },
   md: { height: 240, width: 325 },
-  print: { height: 180, width: 300 },
+  print: { height: 120, width: 240 },
 };
 
 const TickWithWordWrap = (
   props: RechartTextProps & { payload: { value: string }; isPrint: boolean },
 ) => {
   const { x, y, textAnchor, verticalAnchor, payload } = props;
-  const fontSize = props.isPrint ? '10px' : '12px';
+  const fontSize = props.isPrint ? '8.5px' : '12px';
   const textWidth = props.isPrint ? 150 : 100;
 
   return (
@@ -79,7 +79,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
       data={translatedData}
       height={height}
       width={width}
-      {..._.omit(props.radarChartProps, 'width', 'height', 'data', 'ref', 'children')}
+      {...omit(props.radarChartProps, 'width', 'height', 'data', 'ref', 'children')}
       responsive={false}
       style={{ width, height }}
     >
@@ -103,7 +103,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
 
   return (
     <Stack gap={0} className={classes.chart} align='center'>
-      <Title order={5} component='div' className={classes.title}>
+      <Title order={5} component='div' className={`${classes.title} title`}>
         {translatedTitle}
       </Title>
 

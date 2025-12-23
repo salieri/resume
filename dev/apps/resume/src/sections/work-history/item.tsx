@@ -14,33 +14,35 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
   const workKey = `workHistory.${data.company}.${data.title}`;
 
   return (
-    <Box className={classes.workHistoryItem}>
+    <Box className={`${classes.workHistoryItem} workHistoryItem`}>
       <Title order={3}>
         <Trans i18nKey={`${workKey}.title`}>{data.title}</Trans>
       </Title>
       <Text className={classes.companyAndDate}>
         <span className={classes.company}>
-          {data.url ? (
-            <Anchor href={data.url} target='_blank' rel='noreferrer'>
-              {data.company}
-            </Anchor>
-          ) : (
-            data.company
-          )}{' '}
+          {data.url
+            ? (
+                <Anchor href={data.url} target='_blank' rel='noreferrer'>
+                  {data.company}
+                </Anchor>
+              )
+            : (
+                data.company
+              )}{' '}
         </span>
         | {data.startDate} – {data.endDate}
       </Text>
 
-      <Text size='sm' className={classes.summary}>
+      <Text size='sm' className={`${classes.summary} summary`}>
         <Trans i18nKey={`${workKey}.summary`}>{data.summary}</Trans>
       </Text>
 
-      <Text>
+      <Text className={`${classes.details} details`}>
         <Trans i18nKey={`${workKey}.details`}>{data.details}</Trans>
       </Text>
 
       {data.notes && (
-        <Text>
+        <Text className={`${classes.notes} notes`}>
           <small>
             <Trans i18nKey={`${workKey}.notes`}>{data.notes}</Trans>
           </small>

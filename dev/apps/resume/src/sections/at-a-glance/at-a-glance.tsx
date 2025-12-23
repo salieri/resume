@@ -1,6 +1,7 @@
 import { SimpleGrid, Title } from '@mantine/core';
 import { Trans } from 'react-i18next';
 
+import { DisplayOnly } from '@/components/display-only/display-only';
 import { Section } from '@/components/section/section';
 import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
 import { useIsPrint } from '@/utils/use-is-print';
@@ -18,16 +19,17 @@ import {
 export const AtAGlance = () => {
   const isMdOrUp = useIsMdOrUp();
   const isPrint = useIsPrint();
-
-  const chartAdjuster = isMdOrUp ? { cy: 125 } : (isPrint ? {} : {});
+  const chartAdjuster = isPrint ? {} : (isMdOrUp ? { cy: 125 } : {});
 
   return (
-    <Section>
-      <Title order={2}>
-        <Trans>At a Glance</Trans>
-      </Title>
+    <Section className='atAGlanceSection'>
+      <DisplayOnly>
+        <Title order={2}>
+          <Trans>At a Glance</Trans>
+        </Title>
+      </DisplayOnly>
 
-      <SimpleGrid cols={isPrint ? 2 : { base: 1, md: 2 }}>
+      <SimpleGrid cols={isPrint ? 3 : { base: 1, md: 2 }} verticalSpacing={isPrint ? 0 : 'md'}>
         <TranslatedChart data={technicalExperienceData} title='Technical Strengths' />
         <TranslatedChart
           data={leadershipExperienceData}

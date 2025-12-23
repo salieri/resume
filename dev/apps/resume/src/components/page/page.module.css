@@ -1,5 +1,9 @@
 @media print {
   .page {
-    break-before: page;
+    break-after: page;
+  }
+
+  .page:last-of-type {
+    break-after: avoid;
   }
 }

@@ -8,7 +8,7 @@ import { TranslatedProjectItem } from './item';
 
 export const Projects = () => {
   return (
-    <Section>
+    <Section className='projects'>
       <Title order={2}>
         <Trans i18nKey='techStack.title'>Reference Projects</Trans>
       </Title>
