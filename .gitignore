@@ -397,3 +397,5 @@ dist
 .stylelintcache
 
 storybook-static
+.react-router
+
