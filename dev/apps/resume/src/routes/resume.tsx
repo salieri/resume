@@ -20,7 +20,7 @@ export default function Resume() {
   return (
     <Box className={classes.resume}>
       <Page>
-        <Title order={1}>Aleksi Asikainen</Title>
+        <Title order={1}><Trans i18nKey='name'>Aleksi Asikainen</Trans></Title>
 
         <Title order={5} component='p'>
           <Trans i18nKey='resume.professionalTitles'>
