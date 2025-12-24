@@ -1,5 +1,6 @@
 import { Anchor, Button, List, Space, ThemeIcon } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { DisplayOnly } from '@/components/display-only/display-only';
 import { Section } from '@/components/section/section';
@@ -16,12 +17,14 @@ export const ContactInfo = () => {
     color: 'gray',
   };
 
+  const { t } = useTranslation();
+
   return (
     <Section className={`${classes.section} contactInfoSection`}>
       <List spacing={0} center className={classes.list}>
-        {contactInfoData.map(({ caption, url, Icon }) => (
+        {contactInfoData(t).map(({ caption, url, Icon, id }) => (
           <List.Item
-            key={caption}
+            key={id}
             icon={(
               <ThemeIcon {...themeProps} mr={0}>
                 <Icon style={iconStyle} />
@@ -36,9 +39,9 @@ export const ContactInfo = () => {
       </List>
 
       <List spacing={0} center className={classes.list}>
-        {migrationData.map(({ caption, Icon }) => (
+        {migrationData(t).map(({ caption, Icon, id }) => (
           <List.Item
-            key={caption}
+            key={id}
             icon={(
               <ThemeIcon {...themeProps} mr={0}>
                 <Icon style={iconStyle} />
@@ -52,7 +55,7 @@ export const ContactInfo = () => {
 
       <DisplayOnly>
         <Space h='xs' />
-        <Button component='a' className={classes.download} href='/aleksi-asikainen-resume.pdf' download rightSection={<IconDownload size={14} />}>Download as PDF</Button>
+        <Button component='a' className={classes.download} href='/aleksi-asikainen-resume.pdf' download rightSection={<IconDownload size={14} />}><Trans i18nKey='contactInfo.download'>Download</Trans></Button>
       </DisplayOnly>
 
     </Section>

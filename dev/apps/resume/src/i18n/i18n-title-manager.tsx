@@ -1,11 +1,12 @@
-import get from 'lodash/get';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMatches } from 'react-router';
+import type { UIMatch } from 'react-router';
+
+import type { TranslatorFn } from '@/utils/translator.type';
 
 export interface TranslatableHandle {
-  title?: string;
-  titleKey?: string;
+  title?: (t: TranslatorFn) => string;
 }
 
 /**
@@ -26,13 +27,10 @@ export function I18nTitleManager() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const last = matches.findLast((m) => m.id);
+    const last = matches.findLast((m) => m.id) as UIMatch<unknown, TranslatableHandle> | undefined;
 
     if (last) {
-      document.title = t(
-        `page.${get(last, 'handle.titleKey', 'untitled')}`,
-        get(last, 'handle.title', 'Untitled Page'),
-      );
+      document.title = last.handle.title ? last.handle.title(t) : t('page.untitled', 'Untitled Page');
     }
   }, [matches, t]);
 

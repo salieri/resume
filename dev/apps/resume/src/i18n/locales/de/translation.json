@@ -1,0 +1,156 @@
+{
+  "atAGlance": {
+    "focusFit": {
+      "architecture": "",
+      "collaboration": "",
+      "deepWork": "",
+      "devops": "",
+      "mgmtAdmin": "",
+      "programming": "",
+      "strategy": "",
+      "title": ""
+    },
+    "industryExperience": {
+      "automotive": "",
+      "b2b": "",
+      "b2c": "",
+      "fintech": "",
+      "healthcare": "",
+      "homeAutomation": "",
+      "hwEmbedded": "",
+      "paymentSolutions": "",
+      "realtime": "",
+      "talentSearch": "",
+      "title": "",
+      "videoGames": ""
+    },
+    "leadershipExperience": {
+      "mentoringTraining": "",
+      "MgmtAdmin": "",
+      "planning": "",
+      "productDevelopment": "",
+      "recruitment": "",
+      "techLeadership": "",
+      "techStrategy": "",
+      "title": ""
+    },
+    "missionFit": {
+      "devInfraTooling": "",
+      "fixProjects": "",
+      "fixTeams": "",
+      "greenField": "",
+      "maintenance": "",
+      "nextGen20": "",
+      "rnd": "",
+      "scaling": "",
+      "title": ""
+    },
+    "technicalExperience": {
+      "architecture": "",
+      "backend": "",
+      "devops": "",
+      "frontend": "",
+      "mobile": "",
+      "technicalWriting": "",
+      "testingQa": "",
+      "title": ""
+    },
+    "technologyFit": {
+      "angular": "",
+      "aws": "",
+      "azure": "",
+      "docker": "",
+      "electron": "",
+      "gcp": "",
+      "linux": "",
+      "mongoDb": "",
+      "nestJS": "",
+      "python": "",
+      "react": "",
+      "sql": "",
+      "title": "",
+      "typeScript": "",
+      "vue": ""
+    },
+    "title": ""
+  },
+  "contactInfo": {
+    "download": "",
+    "reloaction": "",
+    "residency": ""
+  },
+  "exsum": {
+    "20YearsOfExperience": "",
+    "creativeTechnologist": "",
+    "engagement": "",
+    "managementResource": "",
+    "practicalExperienceOnAllLayers": "",
+    "problemSolver": "",
+    "title": ""
+  },
+  "page": {
+    "resume": "",
+    "untitled": ""
+  },
+  "projects": {
+    "jsvfx": {
+      "description": "",
+      "name": ""
+    },
+    "resume": {
+      "description": "",
+      "name": ""
+    },
+    "tartarus": {
+      "description": "",
+      "name": ""
+    }
+  },
+  "resume": {
+    "professionalTitles": ""
+  },
+  "techStack": {
+    "title": ""
+  },
+  "workHistory": {
+    "abridge": {
+      "details": "",
+      "summary": "",
+      "title": ""
+    },
+    "arena": {
+      "details": "",
+      "summary": "",
+      "title": ""
+    },
+    "hpi": {
+      "details": "",
+      "notes": "",
+      "summary": "",
+      "title": ""
+    },
+    "madbid": {
+      "details": "",
+      "summary": "",
+      "title": ""
+    },
+    "optym": {
+      "details": "",
+      "summary": "",
+      "title": ""
+    },
+    "present": "",
+    "solera": {
+      "details": "",
+      "summary": "",
+      "title": ""
+    },
+    "talmix": {
+      "details": "",
+      "notes": "",
+      "summary": "",
+      "title": ""
+    },
+    "title": ""
+  }
+}

@@ -1,17 +1,30 @@
-import { Burger, Menu, Radio, useMantineColorScheme } from '@mantine/core';
-import type { MantineColorScheme } from '@mantine/core';
+import { Burger, Menu, NativeSelect, Radio, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const colorSchemes: { value: MantineColorScheme; label: string }[] = [
-  { value: 'light', label: 'Light' },
-  { value: 'dark', label: 'Dark' },
-  { value: 'auto', label: 'Auto' },
-];
+import { languages } from '@/i18n/i18n';
+
+import { colorSchemes } from './data';
 
 export const ConfigMenu = () => {
   const [opened, { toggle }] = useDisclosure();
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language || 'en');
 
   const { setColorScheme } = useMantineColorScheme();
+
+  const languageOptions = languages.map((lang) => ({
+    value: lang.value,
+    label: `${lang.flag} ${lang.label}`,
+    name: lang.label,
+  })).toSorted((a, b) => a.name.localeCompare(b.name));
+
+  useEffect(() => {
+    if (i18n.language !== language) {
+      void i18n.changeLanguage(language);
+    }
+  }, [language]);
 
   return (
     <>
@@ -20,6 +33,7 @@ export const ConfigMenu = () => {
           <Burger onClick={toggle} opened={opened} />
         </Menu.Target>
         <Menu.Dropdown>
+
           <Radio.Group>
             {colorSchemes.map((scheme) => (
               <Radio
@@ -30,6 +44,8 @@ export const ConfigMenu = () => {
               />
             ))}
           </Radio.Group>
+
+          <NativeSelect value={language} data={languageOptions} onChange={(e) => setLanguage(e.currentTarget.value)}></NativeSelect>
         </Menu.Dropdown>
       </Menu>
     </>
