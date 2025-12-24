@@ -4,14 +4,12 @@ import './print/styles.css';
 
 import { theme } from '@faust/theme';
 import {
-  AppShell,
   ColorSchemeScript,
   mantineHtmlProps,
   MantineProvider,
-  Typography,
 } from '@mantine/core';
-import i18n, { use } from 'i18next';
-import { I18nextProvider, initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
+import { I18nextProvider } from 'react-i18next';
 import {
   isRouteErrorResponse,
   Links,
@@ -21,12 +19,12 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
-import { DisplayOnly } from '@/components/display-only/display-only';
-import { I18nTitleManager } from '@/utils/i18n-title-manager';
+import { initI18n } from '@/i18n/i18n';
+import { I18nTitleManager } from '@/i18n/i18n-title-manager';
 
 // @ts-expect-error
 import type { Route } from './+types/root';
-import { ConfigMenu } from './components/config-menu/config-menu';
+import { ResumeAppShell } from './components/app-shell/app-shell';
 
 export const links: Route.LinksFunction = () => [
   // { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -41,13 +39,7 @@ export const links: Route.LinksFunction = () => [
   // },
 ];
 
-void use(initReactI18next).init({
-  fallbackLng: 'en',
-  // debug: true,
-  interpolation: {
-    escapeValue: false, // react already safes from xss
-  },
-});
+void initI18n();
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -63,27 +55,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
           rel='stylesheet'
         />
       </head>
       <body>
         <I18nextProvider i18n={i18n}>
-          <I18nTitleManager />
-          <MantineProvider theme={theme}>
-            <AppShell maw={640} mr='auto' ml='auto' p='md' withBorder={false}>
-              <Typography>
-                <AppShell.Main>
-                  <DisplayOnly>
-                    <ConfigMenu />
-                  </DisplayOnly>
-
-                  {children}
-                </AppShell.Main>
-              </Typography>
-            </AppShell>
-          </MantineProvider>
+          {i18n.isInitialized && (
+            <>
+              <I18nTitleManager />
+              <MantineProvider theme={theme}>
+                <ResumeAppShell>{children}</ResumeAppShell>
+              </MantineProvider>)
+            </>
+          )}
         </I18nextProvider>
+
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -1,6 +1,5 @@
 import { Stack, Title } from '@mantine/core';
 import omit from 'lodash/omit';
-import { useTranslation } from 'react-i18next';
 import {
   PolarAngleAxis,
   PolarGrid,
@@ -15,13 +14,12 @@ import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
 import { useIsPrint } from '@/utils/use-is-print';
 
 import classes from './chart.module.css';
-import type { ChartData } from './data';
+import type { Chart } from './data';
 
 type RadarChartOverrides = Parameters<typeof RadarChart>[0];
 
 interface TranslatedChartProps {
-  data: ChartData[];
-  title: string;
+  data: Chart;
   radarChartProps?: RadarChartOverrides;
 }
 
@@ -56,14 +54,7 @@ const TickWithWordWrap = (
 };
 
 export const TranslatedChart = (props: TranslatedChartProps) => {
-  const { t } = useTranslation();
-
-  const translatedData = props.data.map((item) => ({
-    label: t([`chartLabels.${item.label}`, item.label]),
-    value: item.value,
-  }));
-
-  const translatedTitle = t([`chartTitles.${props.title}`, props.title]);
+  const chartData = props.data.data;
 
   const isPrint = useIsPrint();
   const isMdOrUp = useIsMdOrUp();
@@ -76,7 +67,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
 
   const chart = (
     <RadarChart
-      data={translatedData}
+      data={chartData}
       height={height}
       width={width}
       {...omit(props.radarChartProps, 'width', 'height', 'data', 'ref', 'children')}
@@ -104,7 +95,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
   return (
     <Stack gap={0} className={classes.chart} align='center'>
       <Title order={5} component='div' className={`${classes.title} title`}>
-        {translatedTitle}
+        {props.data.title}
       </Title>
 
       {chart}

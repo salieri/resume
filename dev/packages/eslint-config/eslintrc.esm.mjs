@@ -127,7 +127,7 @@ export default (basePath) => defineConfig(
           { blankLine: "always", prev: "*", next: "multiline-expression" },
           { blankLine: "always", prev: "multiline-expression", next: "*" },
       ],
-      '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+      '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'never' }],
       '@stylistic/semi': ['error', 'always'],
 
       // force type imports where possible; this helps with avoiding circular dependencies

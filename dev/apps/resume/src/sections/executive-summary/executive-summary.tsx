@@ -7,7 +7,7 @@ export const ExecutiveSummary = () => {
   return (
     <Section className='executiveSummarySection'>
       <Title order={2}>
-        <Trans i18nKey='title.executiveSummary'>Executive Summary</Trans>
+        <Trans i18nKey='exsum.title'>Executive Summary</Trans>
       </Title>
 
       <Text>

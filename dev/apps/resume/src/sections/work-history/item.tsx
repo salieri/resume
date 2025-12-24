@@ -1,5 +1,4 @@
 import { Anchor, Box, Text, Title } from '@mantine/core';
-import { Trans } from 'react-i18next';
 
 import type { WorkHistory } from '@/sections/work-history/data';
 
@@ -9,14 +8,13 @@ export interface WorkHistoryItemProps {
   data: WorkHistory;
 }
 
-export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
+export const WorkHistoryItem = (props: WorkHistoryItemProps) => {
   const { data } = props;
-  const workKey = `workHistory.${data.company}.${data.title}`;
 
   return (
     <Box className={`${classes.workHistoryItem} workHistoryItem`}>
       <Title order={3}>
-        <Trans i18nKey={`${workKey}.title`}>{data.title}</Trans>
+        {data.title}
       </Title>
       <Text className={classes.companyAndDate}>
         <span className={classes.company}>
@@ -34,17 +32,17 @@ export const TranslatedWorkHistoryItem = (props: WorkHistoryItemProps) => {
       </Text>
 
       <Text size='sm' className={`${classes.summary} summary`}>
-        <Trans i18nKey={`${workKey}.summary`}>{data.summary}</Trans>
+        {data.summary}
       </Text>
 
       <Text className={`${classes.details} details`}>
-        <Trans i18nKey={`${workKey}.details`}>{data.details}</Trans>
+        {data.details}
       </Text>
 
       {data.notes && (
         <Text className={`${classes.notes} notes`}>
           <small>
-            <Trans i18nKey={`${workKey}.notes`}>{data.notes}</Trans>
+            {data.notes}
           </small>
         </Text>
       )}

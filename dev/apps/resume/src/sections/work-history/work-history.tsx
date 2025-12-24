@@ -1,20 +1,22 @@
 import { Title } from '@mantine/core';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { Section } from '@/components/section/section';
-import { TranslatedWorkHistoryItem } from '@/sections/work-history/item';
+import { WorkHistoryItem } from '@/sections/work-history/item';
 
-import { workHistoryData } from './data';
+import { data } from './data';
 
 export const WorkHistory = () => {
+  const { t } = useTranslation();
+
   return (
     <Section>
       <Title order={2}>
-        <Trans i18nKey='workHistory.workHistoryTitle'>Work History</Trans>
+        <Trans i18nKey='workHistory.title'>Work History</Trans>
       </Title>
 
-      {workHistoryData.map((data) => (
-        <TranslatedWorkHistoryItem data={data} key={`${data.company}:${data.title}`} />
+      {data(t).map((item) => (
+        <WorkHistoryItem data={item} key={item.id} />
       ))}
     </Section>
   );
