@@ -1,5 +1,5 @@
 import { Box, Title } from '@mantine/core';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { Page } from '@/components/page/page';
 import type { TranslatableHandle } from '@/i18n/i18n-title-manager';
@@ -17,13 +17,15 @@ export const handle: TranslatableHandle = {
 };
 
 export default function Resume() {
+  const { t } = useTranslation();
+
   return (
     <Box className={classes.resume}>
       <Page>
-        <Title order={1}><Trans i18nKey='name'>Aleksi Asikainen</Trans></Title>
+        <Title order={1}>{t('contactInfo.name', 'Aleksi Asikainen')}</Title>
 
         <Title order={5} component='p'>
-          <Trans i18nKey='resume.professionalTitles'>
+          <Trans i18nKey='contactInfo.professionalTitles' t={t}>
             CTO, Chief Architect, Principal Engineer, <wbr />
             Founding Engineer, Senior Staff Engineer
           </Trans>

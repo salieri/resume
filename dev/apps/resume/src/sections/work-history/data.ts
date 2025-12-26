@@ -29,9 +29,9 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       title: t(`${baseKey}.abridge.title`, 'Senior Staff Software Engineer'),
       company: 'Abridge',
       startDate: '01/2024',
-      endDate: t(`${baseKey}.present`, 'Present'),
+      endDate: t(`${baseKey}.presentlyWorkingHere`, 'Present'),
       summary: t(`${baseKey}.abridge.summary`, 'Healthcare AI startup | 300 employees | $700M series C-E'),
-      details: t(`${baseKey}.abridge.details`, 'Joined Abridge at ~30 employees. First senior staff engineer. Operated through hyper-growth and multiple funding stages (A16Z, Khosla Ventures, Elad Gil, IVP). Drove core technical direction by leading architecture decisions and selecting foundational technologies (e.g., Temporal) that scaled with the business. Proposed, architected, and implemented mission-critical systems, including large-scale orchestration of audio into structured clinical notes. Led high-risk, high-precision internal initiatives such as major database migrations, owning design, execution, and reliability outcomes end to end.'),
+      details: t(`${baseKey}.abridge.details`, 'Joined Abridge at ~30 employees. Company\'s first senior staff engineer. Operated through hyper-growth and multiple funding stages (A16Z, Khosla Ventures, Elad Gil, IVP). Drove core technical direction by leading architecture decisions and selecting foundational technologies (e.g., Temporal) that scaled with the business. Proposed, architected, and implemented mission-critical systems, including large-scale orchestration of audio into structured clinical notes. Led high-risk, high-precision internal initiatives such as major database migrations, owning design, execution, and reliability outcomes end to end.'),
       url: 'https://www.abridge.com/',
     },
     {
