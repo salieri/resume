@@ -55,7 +55,7 @@ export const ContactInfo = () => {
 
       <DisplayOnly>
         <Space h='xs' />
-        <Button component='a' className={classes.download} href='/aleksi-asikainen-resume.pdf' download rightSection={<IconDownload size={14} />}><Trans i18nKey='contactInfo.download'>Download</Trans></Button>
+        <Button component='a' className={classes.download} href='/aleksi-asikainen-resume.pdf' download rightSection={<IconDownload size={14} />}><Trans i18nKey='contactInfo.download'>Download PDF</Trans></Button>
       </DisplayOnly>
 
     </Section>
