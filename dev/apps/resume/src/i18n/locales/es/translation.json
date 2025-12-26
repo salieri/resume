@@ -1,0 +1,156 @@
+{
+  "atAGlance": {
+    "focusFit": {
+      "architecture": "Arquitectura",
+      "collaboration": "Colaboración",
+      "deepWork": "Trabajo Profundo",
+      "devops": "DevOps",
+      "mgmtAdmin": "Gestión y Admin",
+      "programming": "Programación",
+      "strategy": "Estrategia",
+      "title": "Enfoque"
+    },
+    "industryExperience": {
+      "automotive": "Automoción",
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "fintech": "Fintech",
+      "healthcare": "Atención médica",
+      "homeAutomation": "Automatización del hogar",
+      "hwEmbedded": "HW y Embebido",
+      "paymentSolutions": "Soluciones de pago",
+      "realtime": "Tiempo real",
+      "talentSearch": "Búsqueda de talento",
+      "title": "Experiencia industrial",
+      "videoGames": "Videojuegos"
+    },
+    "leadershipExperience": {
+      "mentoringTraining": "Mentoría y Capacitación",
+      "MgmtAdmin": "Gestión y Adm.",
+      "planning": "Planificación",
+      "productDevelopment": "Desarrollo de producto",
+      "recruitment": "Reclutamiento",
+      "techLeadership": "Liderazgo técnico",
+      "techStrategy": "Estrategia tecnológica",
+      "title": "Liderazgo"
+    },
+    "missionFit": {
+      "devInfraTooling": "Dev. Infra y Herramientas",
+      "fixProjects": "Corregir proyectos",
+      "fixTeams": "Corregir Teams",
+      "greenField": "Campo verde",
+      "maintenance": "Mantenimiento",
+      "nextGen20": "Próxima Generación y 2.0",
+      "rnd": "I+D",
+      "scaling": "Escalado",
+      "title": "Misión en Forma"
+    },
+    "technicalExperience": {
+      "architecture": "Arquitectura",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "frontend": "Frontend",
+      "mobile": "Móvil",
+      "technicalWriting": "Escritura técnica",
+      "testingQa": "Pruebas/Control de calidad",
+      "title": "Fortalezas Técnicas"
+    },
+    "technologyFit": {
+      "angular": "Angular",
+      "aws": "AWS",
+      "azure": "Azure",
+      "docker": "Docker",
+      "electron": "Electron",
+      "gcp": "GCP",
+      "linux": "Linux",
+      "mongoDb": "MongoDB",
+      "nestJS": "NestJS",
+      "python": "Python",
+      "react": "React",
+      "sql": "SQL",
+      "title": "Experiencia Reciente",
+      "typeScript": "TypeScript",
+      "vue": "Vue"
+    },
+    "title": "De un vistazo"
+  },
+  "contactInfo": {
+    "download": "Descargar",
+    "reloaction": "Puede reubicar",
+    "residency": "Residente permanente de EE. UU., ciudadano de la UE"
+  },
+  "exsum": {
+    "20YearsOfExperience": "<strong>Más de 25 años</strong> de liderazgo de software <strong>práctico</strong>.",
+    "creativeTechnologist": "Tecnólogo senior que <strong>ejecuta iniciativas tecnológicas complejas</strong>. Traduce ideas vagas en <strong>plataformas escalables y listas para producción</strong>.",
+    "engagement": "Demostrado en los **puntos de inflexión de 0 a 1, de 1 a N y de escalado**. Recientemente, construí un sistema que transforma **más de 100 horas de audio** en inferencias estructuradas **cada minuto**.",
+    "managementResource": "Introducido para <strong>reducir el riesgo de ejecución, acelerar la entrega y escalar equipos y sistemas</strong>. Asesor de <strong>fundadores, directores ejecutivos y vicepresidentes</strong>.",
+    "practicalExperienceOnAllLayers": "Generalista a nivel de fundador: backend, web, móvil, escritorio, datos, ML, QA, plataforma, infraestructura y DevOps. Trabaja un poco en producto, diseño y UX. Le encanta **construir**.",
+    "problemSolver": "Tu solución a: <i>\"¿Cómo construimos esto?\"</i>",
+    "title": "Resumen ejecutivo"
+  },
+  "page": {
+    "resume": "Currículum | Aleksi Asikainen | Arquitectura y Desarrollo de Software",
+    "untitled": "Página sin título"
+  },
+  "projects": {
+    "jsvfx": {
+      "description": "Efectos visuales escritos en JavaScript puro.",
+      "name": "EFX de JS"
+    },
+    "resume": {
+      "description": "Este currículum como código. Extremadamente sobrediseñado. Empieza aquí.",
+      "name": "Reanudar"
+    },
+    "tartarus": {
+      "description": "Marco de aprendizaje profundo desde cero para TypeScript.",
+      "name": "Marco de aprendizaje profundo de Tártaro"
+    }
+  },
+  "resume": {
+    "professionalTitles": "Director/a de Tecnología, Arquitecto/a Jefe/a, Ingeniero/a Principal, <1></1>Ingeniero/a Fundador/a, Ingeniero/a Senior Staff"
+  },
+  "techStack": {
+    "title": "Proyectos de Referencia"
+  },
+  "workHistory": {
+    "abridge": {
+      "details": "Me uní a Abridge con ~30 empleados. Primer ingeniero de personal sénior. Operé durante el hipercrecimiento y múltiples rondas de financiación (A16Z, Khosla Ventures, Elad Gil, IVP). Impulsé la dirección técnica central liderando decisiones de arquitectura y seleccionando tecnologías fundamentales (por ejemplo, Temporal) que escalaron con el negocio. Propuse, diseñé e implementé sistemas de misión crítica, incluida la orquestación a gran escala de audio en notas clínicas estructuradas. Lideré iniciativas internas de alto riesgo y alta precisión, como migraciones importantes de bases de datos, siendo el propietario del diseño, la ejecución y los resultados de confiabilidad de principio a fin.",
+      "summary": "Startup de IA en el sector salud | 300 empleados | $700M de serie C-E",
+      "title": "Ingeniero de software sénior"
+    },
+    "arena": {
+      "details": "Ingeniería, arquitectura y TI propias. Amplió la plataforma a través de la Serie A liderada por CRV, Craft Ventures, Artisanal Ventures y Vela Partners. Redujo los costos de operaciones técnicas en más de un 40%. Lideró la migración de toda la empresa de JavaScript a TypeScript. Estableció prácticas de ingeniería disciplinadas: revisiones de código, CI, planificación, operaciones basadas en métricas y procesos técnicos estandarizados.",
+      "summary": "Startup de interacción con la audiencia | 50 empleados | Serie A de $13.6M",
+      "title": "Director de Tecnología"
+    },
+    "hpi": {
+      "details": "Dirigí el desarrollo y la entrega de productos de principio a fin para nuevos productos de consumo, desde el concepto hasta el lanzamiento. Líder del mercado en el Reino Unido en verificaciones del historial de vehículos.",
+      "notes": "(Filial de Solera Holdings)",
+      "summary": "Empresa privada | Protección de datos y activos automotrices | Ingresos de £20M",
+      "title": "Jefe de Tecnología"
+    },
+    "madbid": {
+      "details": "Co-fundó MadBid y dirigió todo el desarrollo tecnológico y de software, desde el inicio hasta la escala. Construyó y dirigió toda la organización de ingeniería a través de un rápido crecimiento.",
+      "summary": "Startup de compras de entretenimiento | 75 empleados | Serie A de £4M | Ingresos de £10M",
+      "title": "Director Técnico"
+    },
+    "optym": {
+      "details": "Admitió las empresas tecnológicas SaaS de Optym. Estableció arquitecturas, políticas y estándares de entrega compartidos para permitir lanzamientos rápidos de productos. Asesoró a ingenieros sénior y líderes técnicos, reforzando la calidad de la ejecución y la cultura de ingeniería. Trabajó directamente con clientes, socios y ejecutivos para diseñar nuevos productos y entregar soluciones a medida.",
+      "summary": "B2B SaaS | Optimización y Ciencia de la Decisión | 250 empleados | Ingresos de 25 millones de dólares",
+      "title": "Director/a de Tecnología"
+    },
+    "present": "Presente",
+    "solera": {
+      "details": "Lideré iniciativas estratégicas de I+D e incubación de productos para la oficina del CEO. Evalué tecnologías emergentes para la adopción empresarial, incluyendo ML, blockchain, AR/VR, IoT/telemática, identidad digital, plataformas de datos a gran escala y SaaS nativo de la nube (AWS).",
+      "summary": "Multinacional | Gestión de riesgos y protección de activos | 6.000 empleados | 1.100 millones de dólares de ingresos",
+      "title": "Arquitecto principal"
+    },
+    "talmix": {
+      "details": "Reconstruí una plataforma heredada en un mercado escalable de dos lados. Lideré mejoras en la búsqueda y la correspondencia para aumentar la relevancia de las recomendaciones de consultores.",
+      "notes": "(Anteriormente conocido como MBA & Company)",
+      "summary": "Consultoría de gestión startup | Búsqueda de talento | Serie A de £2M",
+      "title": "Director/a de Tecnología"
+    },
+    "title": "Historial laboral"
+  }
+}

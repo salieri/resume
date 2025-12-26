@@ -1,0 +1,156 @@
+{
+  "atAGlance": {
+    "focusFit": {
+      "architecture": "建筑",
+      "collaboration": "合作",
+      "deepWork": "深度工作",
+      "devops": "DevOps",
+      "mgmtAdmin": "管理与行政",
+      "programming": "编程",
+      "strategy": "策略",
+      "title": "焦点"
+    },
+    "industryExperience": {
+      "automotive": "汽车",
+      "b2b": "企业对企业",
+      "b2c": "企业对消费者",
+      "fintech": "金融科技",
+      "healthcare": "医疗保健",
+      "homeAutomation": "家庭自动化",
+      "hwEmbedded": "硬件和嵌入式",
+      "paymentSolutions": "支付解决方案",
+      "realtime": "实时",
+      "talentSearch": "人才搜索",
+      "title": "行业经验",
+      "videoGames": "电子游戏"
+    },
+    "leadershipExperience": {
+      "mentoringTraining": "指导与培训",
+      "MgmtAdmin": "管理和行政",
+      "planning": "规划",
+      "productDevelopment": "产品开发",
+      "recruitment": "招聘",
+      "techLeadership": "技术领导力",
+      "techStrategy": "技术战略",
+      "title": "领导力"
+    },
+    "missionFit": {
+      "devInfraTooling": "开发基础架构和工具",
+      "fixProjects": "修复项目",
+      "fixTeams": "修复 Teams",
+      "greenField": "绿野",
+      "maintenance": "维修",
+      "nextGen20": "下一代和 2.0",
+      "rnd": "研发",
+      "scaling": "缩放",
+      "title": "任务健身"
+    },
+    "technicalExperience": {
+      "architecture": "建筑",
+      "backend": "后端",
+      "devops": "DevOps",
+      "frontend": "前端",
+      "mobile": "移动",
+      "technicalWriting": "技术写作",
+      "testingQa": "测试/质量保证",
+      "title": "技术优势"
+    },
+    "technologyFit": {
+      "angular": "Angular",
+      "aws": "AWS",
+      "azure": "Azure",
+      "docker": "Docker",
+      "electron": "Electron",
+      "gcp": "GCP",
+      "linux": "Linux",
+      "mongoDb": "MongoDB",
+      "nestJS": "NestJS",
+      "python": "Python",
+      "react": "React",
+      "sql": "SQL",
+      "title": "近期经验",
+      "typeScript": "TypeScript",
+      "vue": "Vue"
+    },
+    "title": "概览"
+  },
+  "contactInfo": {
+    "download": "下载",
+    "reloaction": "可以搬迁",
+    "residency": "美国永久居民，欧盟公民"
+  },
+  "exsum": {
+    "20YearsOfExperience": "<strong>25+ 年</strong>的<strong>实践</strong>软件领导经验。",
+    "creativeTechnologist": "资深技术专家，**交付复杂的科技项目**。将模糊的想法转化为**可扩展、生产级的平台**。",
+    "engagement": "在<strong>0到1、1到N以及规模扩张的转折点</strong>得到验证。最近建立了一个系统，该系统<strong>每分钟</strong>将<strong>100多个小时的音频</strong>转换为结构化推论。",
+    "managementResource": "为<strong>降低执行风险、加速交付并扩展团队和系统</strong>而引入。<strong>创始人、C 级高管和副总裁</strong>的顾问。",
+    "practicalExperienceOnAllLayers": "创始人级别的通才：后端、Web、移动端、桌面端、数据、机器学习、QA、平台、基础设施和 DevOps。涉猎产品、设计和用户体验。热爱**构建**。",
+    "problemSolver": "您的解决方案：<i>“我们该如何建造这个？”</i>",
+    "title": "执行摘要"
+  },
+  "page": {
+    "resume": "简历 | Aleksi Asikainen | 软件架构与开发",
+    "untitled": "未命名页面"
+  },
+  "projects": {
+    "jsvfx": {
+      "description": "用纯 JavaScript 编写的视觉效果。",
+      "name": "JS VFX"
+    },
+    "resume": {
+      "description": "这份简历即代码。极其过度设计。从这里开始。",
+      "name": "简历"
+    },
+    "tartarus": {
+      "description": "专为 TypeScript 从头开始构建的深度学习框架。",
+      "name": "Tartarus 深度学习框架"
+    }
+  },
+  "resume": {
+    "professionalTitles": "首席技术官、首席架构师、首席工程师、<1></1>创始工程师、高级技术工程师"
+  },
+  "techStack": {
+    "title": "参考项目"
+  },
+  "workHistory": {
+    "abridge": {
+      "details": "加入 Abridge 时，公司约有 30 名员工。担任首位高级软件工程师。经历了超高速增长和多个融资阶段（A16Z、Khosla Ventures、Elad Gil、IVP）。通过领导架构决策和选择支持业务扩展的基础技术（例如 Temporal）来推动核心技术方向。提出了、设计并实施了关键任务系统，包括将大量音频整合为结构化临床记录。领导了高风险、高精度的内部项目，如主要数据库迁移，并全程负责设计、执行和可靠性成果。",
+      "summary": "医疗保健人工智能初创公司 | 300名员工 | 7亿美元C轮至E轮融资",
+      "title": "高级软件工程师"
+    },
+    "arena": {
+      "details": "负责工程、建筑和 IT。通过 CRV、Craft Ventures、Artisanal Ventures 和 Vela Partners 领投的 A 轮融资扩展了平台。将技术运营成本降低了 40% 以上。领导了公司从 JavaScript 到 TypeScript 的全面迁移。建立了严谨的工程实践：代码审查、CI、规划、指标驱动运营和标准化的技术流程。",
+      "summary": "受众参与初创公司 | 50 名员工 | 1360 万美元 A 轮融资",
+      "title": "首席技术官"
+    },
+    "hpi": {
+      "details": "领导新消费者产品端到端产品开发和交付，从概念到发布。英国车辆历史查询市场领导者。",
+      "notes": "（Solera Holdings 的子公司）",
+      "summary": "私营公司 | 汽车数据和资产保护 | 2000万英镑收入",
+      "title": "技术主管"
+    },
+    "madbid": {
+      "details": "联合创办了 MadBid，并负责从零开始到规模化的所有技术和软件开发。在快速增长期间，组建并管理了整个工程组织。",
+      "summary": "娱乐购物初创公司 | 75 名员工 | 400 万英镑 A 轮融资 | 1000 万英镑收入",
+      "title": "技术总监"
+    },
+    "optym": {
+      "details": "支持 Optym 的 SaaS 技术项目。建立了共享架构、策略和交付标准，以实现产品的快速发布。指导了高级工程师和技术负责人，强化了执行质量和工程文化。直接与客户、合作伙伴和高管合作，设计新产品，交付定制化解决方案。",
+      "summary": "B2B 软件即服务 | 优化与决策科学 | 250 名员工 | 2500 万美元收入",
+      "title": "首席技术官"
+    },
+    "present": "现在",
+    "solera": {
+      "details": "领导了CEO办公室的战略研发和产品孵化计划。评估了用于企业采用的新兴技术，包括机器学习、区块链、增强现实/虚拟现实、物联网/远程信息处理、数字身份、大规模数据平台和云原生SaaS（AWS）。",
+      "summary": "跨国 | 风险管理与资产保护 | 6000名员工 | 11亿美元收入",
+      "title": "首席架构师"
+    },
+    "talmix": {
+      "details": "将遗留平台重建为可扩展的双边市场。领导了搜索和匹配改进，以提高顾问推荐的相关性。",
+      "notes": "（前身为 MBA & Company）",
+      "summary": "管理咨询初创公司 | 人才搜索 | 200万英镑 A 轮融资",
+      "title": "首席技术官"
+    },
+    "title": "工作经历"
+  }
+}

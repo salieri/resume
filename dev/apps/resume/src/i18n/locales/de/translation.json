@@ -1,156 +1,156 @@
 {
   "atAGlance": {
     "focusFit": {
-      "architecture": "",
-      "collaboration": "",
-      "deepWork": "",
-      "devops": "",
-      "mgmtAdmin": "",
-      "programming": "",
-      "strategy": "",
-      "title": ""
+      "architecture": "Architektur",
+      "collaboration": "Zusammenarbeit",
+      "deepWork": "Deep Work",
+      "devops": "DevOps",
+      "mgmtAdmin": "Verwaltung",
+      "programming": "Programmieren",
+      "strategy": "Strategie",
+      "title": "Fokus"
     },
     "industryExperience": {
-      "automotive": "",
-      "b2b": "",
-      "b2c": "",
-      "fintech": "",
-      "healthcare": "",
-      "homeAutomation": "",
-      "hwEmbedded": "",
-      "paymentSolutions": "",
-      "realtime": "",
-      "talentSearch": "",
-      "title": "",
-      "videoGames": ""
+      "automotive": "Automobil",
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "fintech": "Fintech",
+      "healthcare": "Gesundheitswesen",
+      "homeAutomation": "Hausautomation",
+      "hwEmbedded": "HW & Embedded",
+      "paymentSolutions": "Zahlungslösungen",
+      "realtime": "Echtzeit",
+      "talentSearch": "Talentsuche",
+      "title": "Branchenerfahrung",
+      "videoGames": "Videospiele"
     },
     "leadershipExperience": {
-      "mentoringTraining": "",
-      "MgmtAdmin": "",
-      "planning": "",
-      "productDevelopment": "",
-      "recruitment": "",
-      "techLeadership": "",
-      "techStrategy": "",
-      "title": ""
+      "mentoringTraining": "Mentoring & Schulungen",
+      "MgmtAdmin": "Verwaltung & Admin",
+      "planning": "Planung",
+      "productDevelopment": "Produktentwicklung",
+      "recruitment": "Rekrutierung",
+      "techLeadership": "Tech. Führung",
+      "techStrategy": "Tech. Strategie",
+      "title": "Führung"
     },
     "missionFit": {
-      "devInfraTooling": "",
-      "fixProjects": "",
-      "fixTeams": "",
-      "greenField": "",
-      "maintenance": "",
-      "nextGen20": "",
-      "rnd": "",
-      "scaling": "",
-      "title": ""
+      "devInfraTooling": "Dev. Infra & Tooling",
+      "fixProjects": "Projekte reparieren",
+      "fixTeams": "Teams reparieren",
+      "greenField": "Grünes Feld",
+      "maintenance": "Wartung",
+      "nextGen20": "Nächste Generation & 2.0",
+      "rnd": "F&E",
+      "scaling": "Skalierung",
+      "title": "Mission Fit"
     },
     "technicalExperience": {
-      "architecture": "",
-      "backend": "",
-      "devops": "",
-      "frontend": "",
-      "mobile": "",
-      "technicalWriting": "",
-      "testingQa": "",
-      "title": ""
+      "architecture": "Architektur",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "frontend": "Frontend",
+      "mobile": "Mobil",
+      "technicalWriting": "Technische Redaktion",
+      "testingQa": "Testen/QA",
+      "title": "Technische Stärken"
     },
     "technologyFit": {
-      "angular": "",
-      "aws": "",
-      "azure": "",
-      "docker": "",
-      "electron": "",
-      "gcp": "",
-      "linux": "",
-      "mongoDb": "",
-      "nestJS": "",
-      "python": "",
-      "react": "",
-      "sql": "",
-      "title": "",
-      "typeScript": "",
-      "vue": ""
+      "angular": "Angular",
+      "aws": "AWS",
+      "azure": "Azure",
+      "docker": "Docker",
+      "electron": "Elektron",
+      "gcp": "GCP",
+      "linux": "Linux",
+      "mongoDb": "MongoDB",
+      "nestJS": "NestJS",
+      "python": "Python",
+      "react": "React",
+      "sql": "SQL",
+      "title": "Letzte Erfahrungen",
+      "typeScript": "TypeScript",
+      "vue": "Vue"
     },
-    "title": ""
+    "title": "Im Überblick"
   },
   "contactInfo": {
-    "download": "",
-    "reloaction": "",
-    "residency": ""
+    "download": "Herunterladen",
+    "reloaction": "Umziehen",
+    "residency": "US-Dauerhafter Wohnsitz, EU-Bürger"
   },
   "exsum": {
-    "20YearsOfExperience": "",
-    "creativeTechnologist": "",
-    "engagement": "",
-    "managementResource": "",
-    "practicalExperienceOnAllLayers": "",
-    "problemSolver": "",
-    "title": ""
+    "20YearsOfExperience": "<strong>25+ Jahre</strong> <strong>praktische</strong> Software-Führungserfahrung.",
+    "creativeTechnologist": "Senior Technologe, der <strong>komplexe Technologieinitiativen umsetzt</strong>. Übersetzt vage Ideen in <strong>skalierbare Plattformen für den Produktionseinsatz</strong>.",
+    "engagement": "Bewährt bei **0→1, 1→N und Skalierungswendepunkten**. Kürzlich wurde ein System aufgebaut, das **jede Minute über 100 Stunden Audio** in strukturierte Inferenz umwandelt.",
+    "managementResource": "Um die <strong>Ausführung zu entriskieren, die Bereitstellung zu beschleunigen und Teams und Systeme zu skalieren</strong>. Berater für <strong>Gründer, C-Level und VPs</strong>.",
+    "practicalExperienceOnAllLayers": "Gründer-Level Generalist: Backend, Web, Mobile, Desktop, Daten, ML, QA, Plattform, Infrastruktur und DevOps. Beschäftigt sich mit Produkt, Design und UX. Liebt das <strong>Bauen</strong>.",
+    "problemSolver": "Ihre Lösung für: <i>\"Wie bauen wir das?\"</i>",
+    "title": "Zusammenfassung"
   },
   "page": {
-    "resume": "",
-    "untitled": ""
+    "resume": "Lebenslauf | Aleksi Asikainen | Softwarearchitektur und -entwicklung",
+    "untitled": "Unbenannte Seite"
   },
   "projects": {
     "jsvfx": {
-      "description": "",
-      "name": ""
+      "description": "Visuelle Effekte, geschrieben in reinem JavaScript.",
+      "name": "JS VFX"
     },
     "resume": {
-      "description": "",
-      "name": ""
+      "description": "Diese Lebenslauf als Code. Extrem überkonstruiert. Hier anfangen.",
+      "name": "Fortsetzen"
     },
     "tartarus": {
-      "description": "",
-      "name": ""
+      "description": "Deep-Learning-Framework von Grund auf für TypeScript.",
+      "name": "Tartarus Deep Learning Framework"
     }
   },
   "resume": {
-    "professionalTitles": ""
+    "professionalTitles": "CTO, Chefarchitekt, Principal Engineer, <1></1>Gründungsingenieur, Senior Staff Engineer"
   },
   "techStack": {
-    "title": ""
+    "title": "Referenzprojekte"
   },
   "workHistory": {
     "abridge": {
-      "details": "",
-      "summary": "",
-      "title": ""
+      "details": "Bei ~30 Mitarbeitern zu Abridge gekommen. Erster Senior Staff Engineer. Habe Hyper-Growth und mehrere Finanzierungsrunden (A16Z, Khosla Ventures, Elad Gil, IVP) durchlaufen. Habe die technische Kernausrichtung vorangetrieben, indem ich Architektur entscheidungen getroffen und grundlegende Technologien (z.B. Temporal) ausgewählt habe, die mit dem Unternehmen skaliert haben. Habe missionskritische Systeme vorgeschlagen, architektonisch entworfen und implementiert, einschließlich der groß angelegten Orchestrierung von Audio in strukturierte klinische Notizen. Habe risikoreiche, hochpräzise interne Initiativen wie große Datenbankmigrationen geleitet und dabei Design, Ausführung und Zuverlässigkeitsergebnisse durchgängig verantwortet.",
+      "summary": "KI-Startup im Gesundheitswesen | 300 Mitarbeiter | 700 Mio. USD Serie C-E",
+      "title": "Senior Staff Softwareentwickler"
     },
     "arena": {
-      "details": "",
-      "summary": "",
-      "title": ""
+      "details": "Betriebenes Engineering, Architektur und IT. Skalierte die Plattform durch Serie A unter der Leitung von CRV, Craft Ventures, Artisanal Ventures und Vela Partners. Reduzierte die technischen Betriebskosten um über 40 %. Führte die unternehmensweite Migration von JavaScript zu TypeScript an. Etablierte disziplinierte Engineering-Praktiken: Code-Reviews, CI, Planung, metrikgesteuerter Betrieb und standardisierte technische Prozesse.",
+      "summary": "Publikumsinteraktions-Startup | 50 Mitarbeiter | 13,6 Mio. USD Serie A",
+      "title": "Technischer Leiter"
     },
     "hpi": {
-      "details": "",
-      "notes": "",
-      "summary": "",
-      "title": ""
+      "details": "Leitete die End-to-End-Produktentwicklung und -lieferung für neue Konsumgüter, vom Konzept bis zur Markteinführung. Marktführer im Vereinigten Königreich für Fahrzeughistorienprüfungen.",
+      "notes": "(Tochtergesellschaft von Solera Holdings)",
+      "summary": "Privates Unternehmen | Automotive-Daten- und Vermögensschutz | 20 Mio. £ Umsatz",
+      "title": "Leiter der Technologie"
     },
     "madbid": {
-      "details": "",
-      "summary": "",
-      "title": ""
+      "details": "Mitbegründete MadBid und leitete die gesamte Technologie- und Softwareentwicklung vom Start bis zur Skalierung. Baute und leitete die gesamte Engineering-Organisation durch schnelles Wachstum.",
+      "summary": "Unterhaltungseinkaufs-Startup | 75 Mitarbeiter | 4 Mio. £ Serie A | 10 Mio. £ Umsatz",
+      "title": "Technischer Direktor"
     },
     "optym": {
-      "details": "",
-      "summary": "",
-      "title": ""
+      "details": "Unterstützte SaaS-Technologie-Ventures von Optym. Etablierte gemeinsame Architekturen, Richtlinien und Lieferstandards, um schnelle Produkteinführungen zu ermöglichen. Betreute leitende Ingenieure und technische Führungskräfte, um die Ausführungsqualität und Ingenieurskultur zu stärken. Arbeitete direkt mit Kunden, Partnern und Führungskräften zusammen, um neue Produkte zu entwerfen und maßgeschneiderte Lösungen zu liefern.",
+      "summary": "B2B SaaS | Optimierung & Entscheidungsfindung | 250 Mitarbeiter | 25 Mio. USD Umsatz",
+      "title": "Chief Technology Officer"
     },
-    "present": "",
+    "present": "Anwesend",
     "solera": {
-      "details": "",
-      "summary": "",
-      "title": ""
+      "details": "Led strategische F&E- und Produktinkubationsinitiativen für das Büro des CEOs. Bewertung aufkommender Technologien für die Einführung in Unternehmen, einschließlich ML, Blockchain, AR/VR, IoT/Telematik, digitale Identität, groß angelegte Datenplattformen und Cloud-native SaaS (AWS).",
+      "summary": "Multinational | Risikomanagement & Vermögensschutz | 6.000 Mitarbeiter | 1,1 Mrd. USD Umsatz",
+      "title": "Hauptarchitekt"
     },
     "talmix": {
-      "details": "",
-      "notes": "",
-      "summary": "",
-      "title": ""
+      "details": "Eine Legacy-Plattform zu einem skalierbaren Marktplatz für beide Seiten umgebaut. Such- und Matching-Verbesserungen geleitet, um die Relevanz von Beraterempfehlungen zu erhöhen.",
+      "notes": "(Früher bekannt als MBA & Company)",
+      "summary": "Managementberatungs-Startup | Talentsuche | 2 Mio. £ Serie A",
+      "title": "Technischer Geschäftsführer"
     },
-    "title": ""
+    "title": "Berufserfahrung"
   }
 }
