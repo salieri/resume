@@ -90,12 +90,20 @@ pnpm --workspace-root build
 wrangler pages deploy ./dist/client --project-name=your-project-name --branch=main
 ```
 
-## Environment Variables
+### Environment Variables
 
 | **Name**                | **Scope** | **Description**                                    |
 |-------------------------|-----------|----------------------------------------------------|
 | `OPENROUTER_API_KEY`    | build     | API key for OpenRouter to use LLM for translations |
-| `AWS_ENDPOINT_URL_S3`   | terraform | Endpoint URL for S3-compatible storage             |
-| `AWS_ACCESS_KEY_ID`     | terraform | Access key ID for S3-compatible storage            |
-| `AWS_SECRET_ACCESS_KEY` | terraform | Secret access key for S3-compatible storage        |
+| `AWS_ENDPOINT_URL_S3`   | terraform | Endpoint URL for Cloudflare R2 bucket              |
+| `AWS_ACCESS_KEY_ID`     | terraform | Access key ID for Cloudflare R2 bucket             |
+| `AWS_SECRET_ACCESS_KEY` | terraform | Secret access key for Cloudflare R2 bucket         |
 
+
+## Infrastructure
+
+### API Token
+The Terraform setup relies on a Cloudflare API token with the following permissions:
+
+* Account – Cloudflare Pages:Edit, Workers R2 Storage:Edit
+* Zone - Zone:Read, DNS:Edit

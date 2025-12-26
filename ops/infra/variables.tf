@@ -1,9 +1,3 @@
-
-variable "env" {
-  type        = string
-  description = "The deployment environment (e.g., production, staging, development)."
-}
-
 variable "project_name" {
   type        = string
   description = "The name of the project."
@@ -24,8 +18,4 @@ variable "cloudflare_api_token" {
   type        = string
   description = "Cloudflare API token."
   sensitive   = true
-}
-
-locals {
-  r2_state_bucket_name = "${var.project_name}-terraform-state"
 }
