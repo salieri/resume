@@ -78,9 +78,9 @@ cd dev/apps/resume
 pnpm i18n:extract
 
 # Translate to all languages
-OPENROUTER_API_KEY="asdf" pnpm i18n:translate
+OPENROUTER_API_KEY="sk-or-v1-..." pnpm i18n:translate
 
-# Generate PDF versions of the resume
+# Generate a PDF version of the resume
 pnpm generate:pdf
 
 # Build for production

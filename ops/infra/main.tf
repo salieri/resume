@@ -1,5 +1,7 @@
 # Configure Terraform to use Cloudflare R2 as the backend for storing state files.
 terraform {
+  required_version = ">= 1.14"
+
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"

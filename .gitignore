@@ -397,5 +397,6 @@ dist
 .stylelintcache
 
 storybook-static
-.react-router
-.claude
+.react-router/
+.claude/
+**/*.tfvars
