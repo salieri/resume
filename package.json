@@ -6,9 +6,9 @@
   "license": "MIT",
   "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34",
   "scripts": {
-    "lint": "pnpm run --recursive --aggregate-output lint",
-    "lint:ci": "pnpm run --recursive --aggregate-output lint:ci",
-    "lint:fix": "pnpm run --recursive --aggregate-output lint:fix",
+    "lint": "pnpm run --recursive --aggregate-output lint && tflint --chdir ./ops/infra",
+    "lint:ci": "pnpm run --recursive --aggregate-output lint:ci && tflint --chdir ./ops/infra",
+    "lint:fix": "pnpm run --recursive --aggregate-output lint:fix && terraform -chdir=./ops/infra fmt && tflint --chdir ./ops/infra --fix",
     "build": "pnpm run --recursive --aggregate-output build",
     "test": "pnpm run --recursive --aggregate-output test",
     "test:ci": "pnpm run --recursive --aggregate-output test:ci",
