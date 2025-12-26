@@ -4,7 +4,7 @@ import './print/styles.css';
 
 import { theme } from '@faust/theme';
 import {
-  ColorSchemeScript,
+  ColorSchemeScript, DirectionProvider,
   mantineHtmlProps,
   MantineProvider,
 } from '@mantine/core';
@@ -64,9 +64,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {i18n.isInitialized && (
             <>
               <I18nTitleManager />
-              <MantineProvider theme={theme}>
-                <ResumeAppShell>{children}</ResumeAppShell>
-              </MantineProvider>)
+              <DirectionProvider initialDirection='ltr' detectDirection={false}>
+                <MantineProvider theme={theme}>
+                  <ResumeAppShell>{children}</ResumeAppShell>
+                </MantineProvider>
+              </DirectionProvider>
             </>
           )}
         </I18nextProvider>

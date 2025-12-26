@@ -1,5 +1,5 @@
 import { Title } from '@mantine/core';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import { Section } from '@/components/section/section';
 
@@ -13,7 +13,7 @@ export const Projects = () => {
   return (
     <Section className='projects'>
       <Title order={2}>
-        <Trans i18nKey='techStack.title'>Reference Projects</Trans>
+        {t('projects.title', 'Reference Projects')}
       </Title>
 
       {translated.map((item) => (

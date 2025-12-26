@@ -9,7 +9,7 @@ const translateSection = async (sectionData: Record<string, unknown>, sectionKey
   const result // await params.openRouter.completions.generate({
     = await params.openRouter.chat.send({
       messages: [
-        { role: 'user', content: prompt },
+        { role: 'user', content: prompt.replace('{{OUTPUT_FORMAT}}', JSON.stringify(sectionData, null, 2)) },
       ],
       ...params.modelParams,
 
@@ -40,9 +40,9 @@ const translateSection = async (sectionData: Record<string, unknown>, sectionKey
 
 export const translate = async (params: TranslateParams) => {
   const replacements = {
-    SOURCE_LANGUAGE: languageMap[params.sourceLanguage],
-    TARGET_LANGUAGE: languageMap[params.targetLanguage],
-    INPUT_CONTENT: JSON.stringify(params.inputData, null, 2),
+    '{{SOURCE_LANGUAGE}}': languageMap[params.sourceLanguage],
+    '{{TARGET_LANGUAGE}}': languageMap[params.targetLanguage],
+    '{{INPUT_CONTENT}}': JSON.stringify(params.inputData, null, 2),
   };
 
   // eslint-disable-next-line unicorn/no-array-reduce

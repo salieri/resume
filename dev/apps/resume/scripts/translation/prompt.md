@@ -11,6 +11,7 @@ while maintaining the original tone and context.
 * The JSON structure may be nested.
 * The input JSON contains a STRUCTURED content of a resume/CV.
 * Use the nested structure in the JSON (i.e. the nested key names) to understand the context of each value.
+* The input JSON object will contain more fields than the output JSON. Use these fields for context clues only.
 
 ## Output
 * Maintain the same structure in the output as in the input EXACTLY.
@@ -20,7 +21,7 @@ while maintaining the original tone and context.
 * Do not invent, expand, or embellish content:
    * No new achievements, claims, metrics, employers, dates, responsibilities, or skills.
    * Do not "improve," clarify, or elaborate on the resume; perform literal semantic translation only.
-* Return ONLY the translated JSON object. Do not include any explanations, commentary, or markdown code fences in your response.
+* Return ONLY the translated JSON object. The translated JSON object must be in the format described in the "Output Format (JSON)" section. Do not include any explanations, commentary, or markdown code fences in your response.
 * **The output must be valid, parseable JSON.**
 
 ## Critical Output Requirement
@@ -137,6 +138,7 @@ or specific technologies unless there is a widely accepted equivalent in the tar
 * "Temporal" → kept as "Temporal" (technology name)
 * "senior staff engineer" → "vanhempi henkilöstöinsinööri" (translated job title)
 * "Resume" → "Ansioluettelo" (translated section label)
+* If arrows or other symbols are present, pay attention to the reading direction of the target language; the arrow direction may need to change.
 * Kept `<strong>` HTML tags unchanged and at a semantically correct position for formatting.
 * Kept `<1></1>` placeholder unchanged and at a semantically correct position for formatting.
 * "e.g." → "esim." (translated to target language equivalent)
@@ -168,4 +170,11 @@ Before outputting the JSON, mentally verify the following:
 ## Resume Content to Translate (Input)
 ```json
 {{INPUT_CONTENT}}
+```
+
+## Output JSON
+Only fill out the translated JSON object fields listed below:
+
+```json
+{{OUTPUT_FORMAT}}
 ```

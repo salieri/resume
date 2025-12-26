@@ -1,4 +1,4 @@
-import { Burger, Menu, NativeSelect, Radio, useMantineColorScheme } from '@mantine/core';
+import { Burger, Menu, NativeSelect, Radio, useDirection, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +13,7 @@ export const ConfigMenu = () => {
   const [language, setLanguage] = useState(i18n.language || 'en');
 
   const { setColorScheme } = useMantineColorScheme();
+  const { setDirection } = useDirection();
 
   const languageOptions = languages.map((lang) => ({
     value: lang.value,
@@ -23,6 +24,10 @@ export const ConfigMenu = () => {
   useEffect(() => {
     if (i18n.language !== language) {
       void i18n.changeLanguage(language);
+
+      const lang = languages.find((l) => l.value === language);
+
+      setDirection(lang?.rtl ? 'rtl' : 'ltr');
     }
   }, [language]);
 
