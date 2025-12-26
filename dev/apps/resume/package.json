@@ -8,7 +8,7 @@
     "clean": "rm -rf ./dist",
     "dev": "react-router dev --port 3030 --host 0.0.0.0",
     "eslint": "eslint . --cache",
-    "generate:pdf": "./scripts/generate-pdf.sh",
+    "generate:pdf": "./scripts/pdf/generate-pdf.sh",
     "i18n:extract": "i18next-cli extract",
     "i18n:translate": "tsx ./scripts/translation/cli.ts",
     "lint": "pnpm run eslint && pnpm run stylelint && i18next-cli lint",
