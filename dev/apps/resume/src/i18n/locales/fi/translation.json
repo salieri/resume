@@ -1,0 +1,156 @@
+{
+  "atAGlance": {
+    "focusFit": {
+      "architecture": "Arkkitehtuuri",
+      "collaboration": "Kollaboraatio",
+      "deepWork": "Syvä työ",
+      "devops": "DevOps",
+      "mgmtAdmin": "Johto & hallinto",
+      "programming": "Ohjelmointi",
+      "strategy": "Strategia",
+      "title": "Painopiste"
+    },
+    "industryExperience": {
+      "automotive": "Autoteollisuus",
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "fintech": "Fintech",
+      "healthcare": "Terveydenhuolto",
+      "homeAutomation": "Kotiautomaatio",
+      "hwEmbedded": "Sulautetut järjestelmät",
+      "paymentSolutions": "Maksujärjestelmät",
+      "realtime": "Reaaliaikainen",
+      "talentSearch": "Rekrytointi",
+      "title": "Toimialakokemus",
+      "videoGames": "Videopelit"
+    },
+    "leadershipExperience": {
+      "mentoringTraining": "Mentorointi ja koulutus",
+      "MgmtAdmin": "Johto & Hallinto",
+      "planning": "Suunnittelu",
+      "productDevelopment": "Tuotekehitys",
+      "recruitment": "Rekrytointi",
+      "techLeadership": "Tekninen johto",
+      "techStrategy": "Tekn. Strategia",
+      "title": "Johtajuus"
+    },
+    "missionFit": {
+      "devInfraTooling": "Dev. Infra & Työkalut",
+      "fixProjects": "Projektien korjaus",
+      "fixTeams": "Tiimien korjaus",
+      "greenField": "Vihreä kenttä",
+      "maintenance": "Huolto",
+      "nextGen20": "Seuraava sukupolvi & 2.0",
+      "rnd": "T&K",
+      "scaling": "Skaalautuvuus",
+      "title": "Soveltuvuus"
+    },
+    "technicalExperience": {
+      "architecture": "Arkkitehtuuri",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "frontend": "Frontend",
+      "mobile": "Mobiili",
+      "technicalWriting": "Tekninen kirjoittaminen",
+      "testingQa": "Testaus/QA",
+      "title": "Tekniset vahvuudet"
+    },
+    "technologyFit": {
+      "angular": "Angular",
+      "aws": "AWS",
+      "azure": "Azure",
+      "docker": "Docker",
+      "electron": "Elektroni",
+      "gcp": "GCP",
+      "linux": "Linux",
+      "mongoDb": "MongoDB",
+      "nestJS": "NestJS",
+      "python": "Python",
+      "react": "React",
+      "sql": "SQL",
+      "title": "Viimeaikainen kokemus",
+      "typeScript": "TypeScript",
+      "vue": "Vue"
+    },
+    "title": "Yleiskatsaus"
+  },
+  "contactInfo": {
+    "download": "Lataa",
+    "reloaction": "Voi muuttaa",
+    "residency": "Yhdysvaltain pysyvä asukas, EU-kansalainen"
+  },
+  "exsum": {
+    "20YearsOfExperience": "<strong>25+ vuotta</strong> <strong>käytännönläheistä</strong> ohjelmistojohtamista.",
+    "creativeTechnologist": "Kokenut teknologi, joka <strong>toteuttaa monimutkaisia teknologiainitiatiiveja</strong>. Muuntaa epämääräiset ideat <strong>skaalautuviksi, tuotantovalmiiksi alustoiksi</strong>.",
+    "engagement": "Todistettu <strong>0→1, 1→N ja skaalautumisen käännekohdissa</strong>. Rakensin äskettäin järjestelmän, joka muuntaa <strong>yli 100 tuntia ääntä</strong> strukturoiduksi päättelyksi <strong>joka minuutti</strong>.",
+    "managementResource": "Tuotu sisään **vähentämään suoritusriskiä, nopeuttamaan toimitusta sekä skaalaamaan tiimejä ja järjestelmiä**. Neuvoja **perustajille, johtoryhmälle ja varatoimitusjohtajille**.",
+    "practicalExperienceOnAllLayers": "Founder-tason yleismies: taustajärjestelmät, web, mobiili, työpöytä, data, ML, QA, alusta, infrastruktuuri ja DevOps. Hieman tuotteen, suunnittelun ja UX:n parissa. Rakastaa **rakentamista**.",
+    "problemSolver": "Ratkaisu kysymykseen: <i>\"Miten rakennamme tämän?\"</i>",
+    "title": "Tiivistelmä"
+  },
+  "page": {
+    "resume": "Ansioluettelo | Aleksi Asikainen | Ohjelmistoarkkitehtuuri ja kehitys",
+    "untitled": "Nimeämätön sivu"
+  },
+  "projects": {
+    "jsvfx": {
+      "description": "Visuaaliset tehosteet kirjoitettuna puhtaalla JavaScriptillä.",
+      "name": "JS VFX"
+    },
+    "resume": {
+      "description": "Tämä ansioluettelo koodina. Erittäin yli-suunniteltu. Aloita tästä.",
+      "name": "Jatka"
+    },
+    "tartarus": {
+      "description": "Syväoppimiskehys TypeScriptille alusta asti.",
+      "name": "Tartarus Deep Learning Framework"
+    }
+  },
+  "resume": {
+    "professionalTitles": "CTO, Chief Architect, Principal Engineer, <1></1>Founding Engineer, Senior Staff Engineer"
+  },
+  "techStack": {
+    "title": "Referenssiprojektit"
+  },
+  "workHistory": {
+    "abridge": {
+      "details": "Liityin Abridgeen noin 30 työntekijän yritykseen. Ensimmäinen vanhempi järjestelmäinsinööri. Toimin hyperkasvun ja useiden rahoituskierrosten (A16Z, Khosla Ventures, Elad Gil, IVP) aikana. Vaikutin yrityksen tekniseen suuntaan johtamalla arkkitehtuuripäätöksiä ja valitsemalla perusteknologioita (esim. Temporal), jotka skaalautuivat liiketoiminnan mukana. Ehdotin, suunnittelin ja toteutin kriittisen tärkeitä järjestelmiä, mukaan lukien äänen laajamittainen orkestrointi strukturoiduiksi kliinisiksi muistiinpanoiksi. Johdin korkean riskin ja suuren tarkkuuden sisäisiä hankkeita, kuten suuria tietokantojen siirtoja, vastaten suunnittelusta, toteutuksesta ja luotettavuustuloksista alusta loppuun.",
+      "summary": "Terveydenhuollon tekoälystartup | 300 työntekijää | 700 miljoonaa dollaria sarjoissa C–E",
+      "title": "Vanhempi ohjelmistotuotannon pääinsinööri"
+    },
+    "arena": {
+      "details": "Omistettu insinööritoiminta, arkkitehtuuri ja IT. Skaalasi alustaa Series A -rahoituskierroksella, jota johtivat CRV, Craft Ventures, Artisanal Ventures ja Vela Partners. Leikkasi teknisiä operointikustannuksia yli 40 %. Johti koko yrityksen kattavaa siirtymistä JavaScriptistä TypeScriptiin. Perusti kurinalaiset insinöörikäytännöt: koodikatselmukset, CI, suunnittelu, mittaripohjainen toiminta ja standardoidut tekniset prosessit.",
+      "summary": "Yleisön sitouttamisen startup | 50 työntekijää | 13,6 milj. dollarin Series A",
+      "title": "Teknologiajohtaja"
+    },
+    "hpi": {
+      "details": "Johdin uusien kuluttajatuotteiden tuotekehitystä ja toimitusta konseptista lanseeraukseen. Ajoneuvohistorian tarkistusten markkinajohtaja Isossa-Britanniassa.",
+      "notes": "(Solera Holdingsin tytäryhtiö)",
+      "summary": "Yksityinen yritys | Autoteollisuuden data- ja omaisuudensuoja | 20 milj. punnan liikevaihto",
+      "title": "Teknologiajohtaja"
+    },
+    "madbid": {
+      "details": "Perusti MadBidin ja johti kaikkea teknologiaa ja ohjelmistokehitystä aloituksesta skaalautumiseen. Rakensi ja johti koko insinööriorganisaatiota nopean kasvun aikana.",
+      "summary": "Viihdeostosten startup | 75 työntekijää | 4 milj. punnan Series A -kierros | 10 milj. punnan liikevaihto",
+      "title": "Tekninen johtaja"
+    },
+    "optym": {
+      "details": "Tuki Optym’n SaaS-teknologiayrityksiä. Perusti jaettuja arkkitehtuureja, käytäntöjä ja toimitusstandardeja nopeiden tuotelanseerausten mahdollistamiseksi. Mentoroi kokeneita insinöörejä ja teknisiä johtajia vahvistaen toteutuksen laatua ja insinöörikulttuuria. Työskenteli suoraan asiakkaiden, kumppaneiden ja johtajien kanssa uusien tuotteiden suunnittelussa ja räätälöityjen ratkaisujen toimittamisessa.",
+      "summary": "B2B SaaS | Optimointi & Päätöksenteko | 250 työntekijää | 25 milj. dollarin liikevaihto",
+      "title": "Teknologiajohtaja"
+    },
+    "present": "Läsnä",
+    "solera": {
+      "details": "Johdin strategisia T&K- ja tuotehautumishankkeita toimitusjohtajan toimistolle. Arvioin uusia teknologioita yrityskäyttöön, mukaan lukien ML, lohkoketju, AR/VR, IoT/telemetiikka, digitaalinen identiteetti, suuren mittakaavan data-alustat ja pilvinatiivit SaaS-ratkaisut (AWS).",
+      "summary": "Monikansallinen | Riskienhallinta ja omaisuuden suojaus | 6 000 työntekijää | 1,1 miljardin dollarin liikevaihto",
+      "title": "Pääarkkitehti"
+    },
+    "talmix": {
+      "details": "Rakennettiin vanha alusta skaalautuvaksi kaksipuoliseksi markkinapaikaksi. Johdettiin haku- ja täsmäytysparannuksia konsulttisuositusten relevanssin lisäämiseksi.",
+      "notes": "(Aiemmin tunnettu nimellä MBA & Company)",
+      "summary": "Hallituskonsultointiyritys | Rekrytointi | 2 miljoonan punnan Series A",
+      "title": "Teknologiajohtaja"
+    },
+    "title": "Työhistoria"
+  }
+}

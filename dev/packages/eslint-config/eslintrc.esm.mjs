@@ -95,6 +95,7 @@ export default (basePath) => defineConfig(
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false } ],
       '@stylistic/jsx-one-expression-per-line': 'off',
       '@stylistic/jsx-quotes': ['error', 'prefer-single'],
+      '@stylistic/max-len': ['error', { code: 140, ignoreUrls: true, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreRegExpLiterals: true }],
       '@stylistic/member-delimiter-style': ['error', {
           multiline: {
             delimiter: 'semi',
@@ -224,7 +225,7 @@ export default (basePath) => defineConfig(
             '**/__tests?__/*.+(js|ts|tsx|jsx)',
             '**/*.+(test|spec).+(js|ts|tsx|jsx)',
             'tests?/**/*.+(js|ts|tsx|jsx)',
-            'scripts/*.+(js|ts|tsx|jsx)',
+            'scripts/**/*.+(js|ts|tsx|jsx)',
             '.*.{js,cjs,mjs,ts,cts,mts}',
             '*.{config,setup}.{js,cjs,mjs,ts,cts,mts}',
           ],
