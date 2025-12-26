@@ -78,7 +78,8 @@ cd dev/apps/resume
 pnpm i18n:extract
 
 # Translate to all languages
-OPENROUTER_API_KEY="sk-or-v1-..." pnpm i18n:translate
+OPENROUTER_API_KEY="sk-or-v1-..." \
+  pnpm i18n:translate
 
 # Generate a PDF version of the resume
 pnpm generate:pdf
@@ -87,18 +88,20 @@ pnpm generate:pdf
 pnpm --workspace-root build
 
 # Deploy to CloudFlare Pages
-wrangler pages deploy ./dist/client --project-name=your-project-name --branch=main
+CLOUDFLARE_API_TOKEN="..." CLOUDFLARE_ACCOUNT_ID="..." \
+  wrangler pages deploy ./dist/client --project-name resume --branch main
 ```
 
 ### Environment Variables
 
-| **Name**                | **Scope** | **Description**                                    |
-|-------------------------|-----------|----------------------------------------------------|
-| `OPENROUTER_API_KEY`    | build     | API key for OpenRouter to use LLM for translations |
-| `AWS_ENDPOINT_URL_S3`   | terraform | Endpoint URL for Cloudflare R2 bucket              |
-| `AWS_ACCESS_KEY_ID`     | terraform | Access key ID for Cloudflare R2 bucket             |
-| `AWS_SECRET_ACCESS_KEY` | terraform | Secret access key for Cloudflare R2 bucket         |
-
+| **Name**                | **Scope**  | **Description**                                    |
+|-------------------------|------------|----------------------------------------------------|
+| `OPENROUTER_API_KEY`    | build      | API key for OpenRouter to use LLM for translations |
+| `AWS_ENDPOINT_URL_S3`   | terraform  | Endpoint URL for Cloudflare R2 bucket              |
+| `AWS_ACCESS_KEY_ID`     | terraform  | Access key ID for Cloudflare R2 bucket             |
+| `AWS_SECRET_ACCESS_KEY` | terraform  | Secret access key for Cloudflare R2 bucket         |
+| `CLOUDFLARE_API_TOKEN`  | deployment | Cloudflare API token                               |
+| `CLOUDFLARE_ACCOUNT_ID` | deployment | Cloudflare account ID                              |
 
 ## Infrastructure
 
