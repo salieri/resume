@@ -8,20 +8,20 @@
       "mgmtAdmin": "الإدارة والشؤون الإدارية",
       "programming": "البرمجة",
       "strategy": "الاستراتيجية",
-      "title": "مجالات التركيز"
+      "title": "التركيز"
     },
     "industryExperience": {
-      "automotive": "صناعة السيارات",
+      "automotive": "السيارات",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "التقنية المالية",
+      "fintech": "التكنولوجيا المالية",
       "healthcare": "الرعاية الصحية",
       "homeAutomation": "أتمتة المنازل",
       "hwEmbedded": "الأجهزة والأنظمة المضمنة",
       "paymentSolutions": "حلول الدفع",
-      "realtime": "الزمن الحقيقي",
+      "realtime": "الوقت الحقيقي",
       "talentSearch": "البحث عن المواهب",
-      "title": "الخبرة القطاعية",
+      "title": "الخبرة في القطاعات",
       "videoGames": "ألعاب الفيديو"
     },
     "leadershipExperience": {
@@ -35,14 +35,14 @@
       "title": "القيادة"
     },
     "missionFit": {
-      "devInfraTooling": "البنية التحتية والأدوات التطويرية",
+      "devInfraTooling": "بنية التطوير التحتية والأدوات",
       "fixProjects": "إصلاح المشاريع",
       "fixTeams": "إصلاح الفرق",
-      "greenField": "مشاريع من الصفر",
+      "greenField": "من الصفر",
       "maintenance": "الصيانة",
       "nextGen20": "الجيل التالي و2.0",
       "rnd": "البحث والتطوير",
-      "scaling": "التوسع",
+      "scaling": "التوسّع",
       "title": "ملاءمة المهمة"
     },
     "technicalExperience": {
@@ -72,25 +72,27 @@
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "لمحة سريعة"
+    "title": "نظرة سريعة"
   },
   "contactInfo": {
-    "download": "تنزيل",
-    "reloaction": "يمكن الانتقال",
+    "download": "تنزيل PDF",
+    "name": "Aleksi Asikainen",
+    "professionalTitles": "CTO، كبير المعماريين، المهندس الرئيسي، <1></1>مهندس مؤسِّس، مهندس طاقم أول",
+    "relocation": "يمكنني الانتقال",
     "residency": "مقيم دائم في الولايات المتحدة، مواطن في الاتحاد الأوروبي"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ سنة</strong> من القيادة البرمجية <strong>العملية</strong>.",
-    "creativeTechnologist": "تقني أول يقوم <strong>بتنفيذ مبادرات تقنية معقدة</strong>. يحوّل الأفكار الغامضة إلى <strong>منصات قابلة للتوسّع وبجودة جاهزة للإنتاج</strong>.",
-    "engagement": "سجل مثبت عند <strong>0→1، و1→N، ونقاط التحول في التوسّع</strong>. أنشأ مؤخرًا نظامًا يحوّل <strong>100+ ساعة من الصوت</strong> إلى استنتاجات مُنظَّمة <strong>كل دقيقة</strong>.",
-    "managementResource": "يُستعان به من أجل <strong>تقليل مخاطر التنفيذ، وتسريع التسليم، وتوسيع الفرق والأنظمة</strong>. مستشار لـ <strong>المؤسسين، والإدارة التنفيذية (C-level)، ونواب الرئيس (VPs)</strong>.",
-    "practicalExperienceOnAllLayers": "عمومي بمستوى مؤسس: backend، web، mobile، desktop، data، ML، QA، platform، infrastructure، وDevOps. يلمّ بالمنتج والتصميم وUX. يحب <strong>البناء</strong>.",
-    "problemSolver": "حلّك لسؤال: <i>\"كيف نبني هذا؟\"</i>",
+    "20YearsOfExperience": "<strong>25+ سنة</strong> من قيادة البرمجيات <strong>عمليًا</strong>.",
+    "creativeTechnologist": "تقنيٌّ أول يقدّم <strong>مبادرات تقنية معقّدة</strong>. يحوّل الأفكار غير الواضحة إلى <strong>منصات قابلة للتوسّع وجاهزة للإنتاج</strong>.",
+    "engagement": "خبرة مثبتة في <strong>0→1 و1→N ونقاط التحوّل في التوسّع</strong>. بنى مؤخرًا نظامًا يحوّل <strong>100+ ساعة من الصوت</strong> إلى استدلال مُهيكل <strong>كل دقيقة</strong>.",
+    "managementResource": "يُستعان به <strong>لتقليل مخاطر التنفيذ، وتسريع التسليم، وتوسيع الفرق والأنظمة</strong>. مستشار لـ<strong>المؤسسين وقيادات C-level ونواب الرئيس</strong>.",
+    "practicalExperienceOnAllLayers": "عامّي متعدد المهارات بمستوى مؤسس: backend وweb وmobile وdesktop وdata وML وQA وplatform وinfrastructure وDevOps. يعمل أيضًا في product وdesign وUX. يحبّ <strong>البناء</strong>.",
+    "problemSolver": "حلّك لـ: <i>\"كيف نبني هذا؟\"</i>",
     "title": "الملخص التنفيذي"
   },
   "page": {
-    "resume": "{{{\n  \"atAGlance\": {\n    \"focusFit\": {\n      \"architecture\": \"الهندسة المعمارية\",\n      \"collaboration\": \"التعاون\",\n      \"deepWork\": \"العمل العميق\",\n      \"devops\": \"DevOps\",\n      \"mgmtAdmin\": \"الإدارة والشؤون الإدارية\",\n      \"programming\": \"البرمجة\",\n      \"strategy\": \"الاستراتيجية\",\n      \"title\": \"التركيز\"\n    },\n    \"industryExperience\": {\n      \"automotive\": \"السيارات\",\n      \"b2b\": \"B2B\",\n      \"b2c\": \"B2C\",\n      \"fintech\": \"التكنولوجيا المالية\",\n      \"healthcare\": \"الرعاية الصحية\",\n      \"homeAutomation\": \"أتمتة المنازل\",\n      \"hwEmbedded\": \"الأجهزة والأنظمة المضمنة\",\n      \"paymentSolutions\": \"حلول الدفع\",\n      \"realtime\": \"الوقت الحقيقي\",\n      \"talentSearch\": \"البحث عن المواهب\",\n      \"title\": \"الخبرة الصناعية\",\n      \"videoGames\": \"ألعاب الفيديو\"\n    },\n    \"leadershipExperience\": {\n      \"mentoringTraining\": \"الإرشاد والتدريب\",\n      \"MgmtAdmin\": \"الإدارة والشؤون الإدارية\",\n      \"planning\": \"التخطيط\",\n      \"productDevelopment\": \"تطوير المنتجات\",\n      \"recruitment\": \"التوظيف\",\n      \"techLeadership\": \"القيادة التقنية\",\n      \"techStrategy\": \"الاستراتيجية التقنية\",\n      \"title\": \"القيادة\"\n    },\n    \"missionFit\": {\n      \"devInfraTooling\": \"البنية التحتية والأدوات للتطوير\",\n      \"fixProjects\": \"إصلاح المشاريع\",\n      \"fixTeams\": \"إصلاح الفرق\",\n      \"greenField\": \"مشاريع جديدة من الصفر\",\n      \"maintenance\": \"الصيانة\",\n      \"nextGen20\": \"الجيل التالي و2.0\",\n      \"rnd\": \"البحث والتطوير\",\n      \"scaling\": \"التوسّع\",\n      \"title\": \"ملاءمة المهمة\"\n    },\n    \"technicalExperience\": {\n      \"architecture\": \"الهندسة المعمارية\",\n      \"backend\": \"الواجهة الخلفية\",\n      \"devops\": \"DevOps\",\n      \"frontend\": \"الواجهة الأمامية\",\n      \"mobile\": \"الهواتف المحمولة\",\n      \"technicalWriting\": \"الكتابة التقنية\",\n      \"testingQa\": \"الاختبار/ضمان الجودة\",\n      \"title\": \"نقاط القوة التقنية\"\n    },\n    \"technologyFit\": {\n      \"angular\": \"Angular\",\n      \"aws\": \"AWS\",\n      \"azure\": \"Azure\",\n      \"docker\": \"Docker\",\n      \"electron\": \"Electron\",\n      \"gcp\": \"GCP\",\n      \"linux\": \"Linux\",\n      \"mongoDb\": \"MongoDB\",\n      \"nestJS\": \"NestJS\",\n      \"python\": \"Python\",\n      \"react\": \"React\",\n      \"sql\": \"SQL\",\n      \"title\": \"الخبرة الحديثة\",\n      \"typeScript\": \"TypeScript\",\n      \"vue\": \"Vue\"\n    },\n    \"title\": \"لمحة سريعة\"\n  },\n  \"contactInfo\": {\n    \"download\": \"تنزيل\",\n    \"reloaction\": \"يمكن الانتقال\",\n    \"residency\": \"مقيم دائم في الولايات المتحدة، مواطن في الاتحاد الأوروبي\"\n  },\n  \"exsum\": {\n    \"20YearsOfExperience\": \"<strong>25+ سنة</strong> من القيادة البرمجية <strong>العملية</strong>.\",\n    \"creativeTechnologist\": \"خبير تقني رفيع يقوم <strong>بتنفيذ مبادرات تقنية معقدة</strong>. يحوّل الأفكار غير الواضحة إلى <strong>منصات قابلة للتوسّع وبمستوى إنتاج</strong>.\",\n    \"engagement\": \"خبرة مثبتة في <strong>0→1، و1→N، ونقاط الانعطاف عند التوسّع</strong>. أنشأ مؤخراً نظاماً يحوّل <strong>أكثر من 100 ساعة من الصوت</strong> إلى استدلال منظّم <strong>كل دقيقة</strong>.\",\n    \"managementResource\": \"يُستعان به من أجل <strong>تقليل مخاطر التنفيذ، وتسريع التسليم، وتوسيع الفرق والأنظمة</strong>. مستشار لـ <strong>المؤسسين، والإدارة العليا، ونواب الرئيس</strong>.\",\n    \"practicalExperienceOnAllLayers\": \"شخص عامّ بمستوى المؤسس: الواجهة الخلفية، الويب، الجوال، سطح المكتب، البيانات، ML، QA، المنصات، البنية التحتية، وDevOps. يشارك أيضاً في المنتج، والتصميم، وتجربة المستخدم. يحب <strong>البناء</strong>.\",\n    \"problemSolver\": \"حلك لـ: <i>\\\"كيف نبني هذا؟\\\"</i>\",\n    \"title\": \"الملخص التنفيذي\"\n  },\n  \"page\": {\n    \"resume\": \"السيرة الذاتية | Aleksi Asikainen | هندسة البرمجيات وتطويرها\",\n    \"untitled\": \"صفحة بلا عنوان\"\n  },\n  \"projects\": {\n    \"jsvfx\": {\n      \"description\": \"مؤثرات بصرية مكتوبة بـ JavaScript خالص.\",\n      \"name\": \"JS VFX\"\n    },\n    \"resume\": {\n      \"description\": \"هذه السيرة الذاتية ككود. مبالغ في هندستها بشكل كبير. ابدأ من هنا.\",\n      \"name\": \"السيرة الذاتية\"\n    },\n    \"tartarus\": {\n      \"description\": \"إطار عمل للتعلّم العميق من الصفر لـ TypeScript.\",\n      \"name\": \"Tartarus Deep Learning Framework\"\n    }\n  },\n  \"resume\": {\n    \"professionalTitles\": \"CTO، كبير المعماريين، مهندس رئيسي، <1></1>مهندس مؤسس، مهندس برمجيات Senior Staff\"\n  },\n  \"techStack\": {\n    \"title\": \"مشاريع مرجعية\"\n  },\n  \"workHistory\": {\n    \"abridge\": {\n      \"details\": \"انضم إلى Abridge عندما كان عدد الموظفين ~30. أول مهندس Senior Staff. عمل خلال مرحلة نمو مفرط وعدة جولات تمويل (A16Z، Khosla Ventures، Elad Gil، IVP). قاد التوجه التقني الأساسي عبر قيادة قرارات الهندسة المعمارية واختيار تقنيات تأسيسية (مثل Temporal) تتوسع مع نمو الأعمال. اقترح وصمّم ونفّذ أنظمة بالغة الأهمية، بما في ذلك تنسيق واسع النطاق للصوت إلى ملاحظات سريرية منظّمة. قاد مبادرات داخلية عالية المخاطر وعالية الدقة مثل عمليات ترحيل قواعد البيانات الكبرى، متحمّلاً مسؤولية التصميم والتنفيذ ونتائج الاعتمادية من البداية إلى النهاية.\",\n      \"summary\": \"شركة ناشئة في الذكاء الاصطناعي للرعاية الصحية | 300 موظف | $700M السلسلة C-E\",\n      \"title\": \"مهندس برمجيات Senior Staff\"\n    },\n    \"arena\": {\n      \"details\": \"تولّى مسؤولية الهندسة، والهندسة المعمارية، وتقنية المعلومات. وسّع المنصة عبر جولة Series A بقيادة CRV وCraft Ventures وArtisanal Ventures وVela Partners. خفّض تكاليف العمليات التقنية بأكثر من 40%. قاد ترحيل الشركة بالكامل من JavaScript إلى TypeScript. أسّس ممارسات هندسية منضبطة: مراجعات الكود، وCI، والتخطيط، والعمليات القائمة على المقاييس، والعمليات التقنية المعيارية.\",\n      \"summary\": \"شركة ناشئة لتفاعل الجمهور | 50 موظف | $13.6M السلسلة A\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"hpi\": {\n      \"details\": \"قاد تطوير المنتج وتسليمه من البداية إلى النهاية لمنتجات استهلاكية جديدة، من الفكرة حتى الإطلاق. رائد سوق المملكة المتحدة في فحوصات تاريخ المركبات.\",\n      \"notes\": \"(شركة تابعة لـ Solera Holdings)\",\n      \"summary\": \"شركة خاصة | بيانات السيارات وحماية الأصول | £20M إيرادات\",\n      \"title\": \"رئيس قسم التكنولوجيا\"\n    },\n    \"madbid\": {\n      \"details\": \"شارك في تأسيس MadBid وقاد جميع أعمال التكنولوجيا وتطوير البرمجيات من التمويل الذاتي إلى التوسّع. بنى وأدار مؤسسة الهندسة بالكامل خلال نمو سريع.\",\n      \"summary\": \"شركة ناشئة للتسوق الترفيهي | 75 موظف | £4M Series A | £10M إيرادات\",\n      \"title\": \"المدير التقني\"\n    },\n    \"optym\": {\n      \"details\": \"دعم مشاريع Optym التقنية بنموذج SaaS. أسّس معماريات وسياسات ومعايير تسليم مشتركة لتمكين إطلاق المنتجات بسرعة. أرشد مهندسين كباراً وقادة تقنيين، مع تعزيز جودة التنفيذ والثقافة الهندسية. عمل مباشرة مع العملاء والشركاء والتنفيذيين لتصميم منتجات جديدة وتسليم حلول مخصصة.\",\n      \"summary\": \"B2B SaaS | التحسين وعلوم القرار | 250 موظف | $25M إيرادات\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"present\": \"حتى الآن\",\n    \"solera\": {\n      \"details\": \"قاد مبادرات استراتيجية للبحث والتطوير وحاضنة منتجات لمكتب الرئيس التنفيذي. قيّم التقنيات الناشئة لاعتمادها على مستوى المؤسسة، بما في ذلك ML، وblockchain، وAR/VR، وIoT/telematics، والهوية الرقمية، ومنصات البيانات واسعة النطاق، وSaaS السحابي الأصلي (AWS).\",\n      \"summary\": \"شركة متعددة الجنسيات | إدارة المخاطر وحماية الأصول | 6,000 موظف | $1.1B إيرادات\",\n      \"title\": \"Chief Architect\"\n    },\n    \"talmix\": {\n      \"details\": \"أعاد بناء منصة قديمة لتصبح سوقاً ثنائياً قابلاً للتوسّع. قاد تحسينات البحث والمطابقة لزيادة ملاءمة توصيات المستشارين.\",\n      \"notes\": \"(المعروفة سابقاً باسم MBA & Company)\",\n      \"summary\": \"شركة ناشئة للاستشارات الإدارية | البحث عن المواهب | £2M السلسلة A\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"title\": \"الخبرة العملية\"\n  }\n}}}",
-    "untitled": ""
+    "resume": "السيرة الذاتية | Aleksi Asikainen | هندسة البرمجيات والتطوير",
+    "untitled": "صفحة بدون عنوان"
   },
   "projects": {
     "jsvfx": {
@@ -98,59 +100,54 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "هذه السيرة الذاتية ككود. مُفرِط في الهندسة بشكل كبير. ابدأ من هنا.",
+      "description": "هذه السيرة الذاتية ككود. مُبالغ في هندستها بشكل كبير. ابدأ هنا.",
       "name": "السيرة الذاتية"
     },
     "tartarus": {
-      "description": "إطار عمل للتعلّم العميق من الصفر لـ TypeScript.",
+      "description": "إطار عمل للتعلّم العميق لـ TypeScript مُنشأ من الصفر.",
       "name": "إطار عمل Tartarus للتعلّم العميق"
-    }
-  },
-  "resume": {
-    "professionalTitles": "CTO، كبير المعماريين، مهندس رئيسي، <1></1>مهندس مؤسس، مهندس طاقم أول"
-  },
-  "techStack": {
-    "title": "{{{  \"atAGlance\": {    \"focusFit\": {      \"architecture\": \"Architecture\",      \"collaboration\": \"Collaboration\",      \"deepWork\": \"Deep Work\",      \"devops\": \"DevOps\",      \"mgmtAdmin\": \"Mgmt & Admin\",      \"programming\": \"Programming\",      \"strategy\": \"Strategy\",      \"title\": \"Focus\"    },    \"industryExperience\": {      \"automotive\": \"Automotive\",      \"b2b\": \"B2B\",      \"b2c\": \"B2C\",      \"fintech\": \"Fintech\",      \"healthcare\": \"Healthcare\",      \"homeAutomation\": \"Home Automation\",      \"hwEmbedded\": \"HW & Embedded\",      \"paymentSolutions\": \"Payment Solutions\",      \"realtime\": \"Real-Time\",      \"talentSearch\": \"Talent Search\",      \"title\": \"Industry Experience\",      \"videoGames\": \"Video Games\"    },    \"leadershipExperience\": {      \"mentoringTraining\": \"Mentoring & Training\",      \"MgmtAdmin\": \"Mgmt & Admin\",      \"planning\": \"Planning\",      \"productDevelopment\": \"Product Development\",      \"recruitment\": \"Recruitment\",      \"techLeadership\": \"Tech. Leadership\",      \"techStrategy\": \"Tech. Strategy\",      \"title\": \"Leadership\"    },    \"missionFit\": {      \"devInfraTooling\": \"Dev. Infra & Tooling\",      \"fixProjects\": \"Fix Projects\",      \"fixTeams\": \"Fix Teams\",      \"greenField\": \"Green-Field\",      \"maintenance\": \"Maintenance\",      \"nextGen20\": \"Next-Gen & 2.0\",      \"rnd\": \"R&D\",      \"scaling\": \"Scaling\",      \"title\": \"Mission Fit\"    },    \"technicalExperience\": {      \"architecture\": \"Architecture\",      \"backend\": \"Backend\",      \"devops\": \"DevOps\",      \"frontend\": \"Frontend\",      \"mobile\": \"Mobile\",      \"technicalWriting\": \"Technical Writing\",      \"testingQa\": \"Testing/QA\",      \"title\": \"Technical Strengths\"    },    \"technologyFit\": {      \"angular\": \"Angular\",      \"aws\": \"AWS\",      \"azure\": \"Azure\",      \"docker\": \"Docker\",      \"electron\": \"Electron\",      \"gcp\": \"GCP\",      \"linux\": \"Linux\",      \"mongoDb\": \"MongoDB\",      \"nestJS\": \"NestJS\",      \"python\": \"Python\",      \"react\": \"React\",      \"sql\": \"SQL\",      \"title\": \"Recent Experience\",      \"typeScript\": \"TypeScript\",      \"vue\": \"Vue\"    },    \"title\": \"At a Glance\"  },  \"contactInfo\": {    \"download\": \"Download\",    \"reloaction\": \"Can relocate\",    \"residency\": \"US permanent resident, EU citizen\"  },  \"exsum\": {    \"20YearsOfExperience\": \"<strong>25+ years</strong> of <strong>hands-on</strong> software leadership.\",    \"creativeTechnologist\": \"Senior technologist who <strong>delivers complex technology initiatives</strong>. Translates vague ideas into <strong>scalable, production-grade platforms</strong>.\",    \"engagement\": \"Proven at <strong>0→1, 1→N, and scale-up inflection points</strong>. Recently built a system that transforms <strong>100+ hours of audio</strong> into structured inference <strong>every minute</strong>.\",    \"managementResource\": \"Brought in to <strong>de-risk execution, accelerate delivery, and scale teams and systems</strong>. Advisor to <strong>founders, C-level, and VPs</strong>.\",    \"practicalExperienceOnAllLayers\": \"Founder-level generalist: backend, web, mobile, desktop, data, ML, QA, platform, infrastructure, and DevOps. Dabbles in product, design, and UX. Loves <strong>building</strong>.\",    \"problemSolver\": \"Your solution to: <i>\\\"How do we build this?\\\"</i>\",    \"title\": \"Executive Summary\"  },  \"page\": {    \"resume\": \"Resume | Aleksi Asikainen | Software Architecture and Development\",    \"untitled\": \"Untitled Page\"  },  \"projects\": {    \"jsvfx\": {      \"description\": \"Visual effects written in pure JavaScript.\",      \"name\": \"JS VFX\"    },    \"resume\": {      \"description\": \"This resume as code. Extremely over-engineered. Start here.\",      \"name\": \"Resume\"    },    \"tartarus\": {      \"description\": \"From-the-ground-up deep learning framework for TypeScript.\",      \"name\": \"Tartarus Deep Learning Framework\"    }  },  \"resume\": {    \"professionalTitles\": \"CTO, Chief Architect, Principal Engineer, <1></1>Founding Engineer, Senior Staff Engineer\"  },  \"techStack\": {    \"title\": \"Reference Projects\"  },  \"workHistory\": {    \"abridge\": {      \"details\": \"Joined Abridge at ~30 employees. First senior staff engineer. Operated through hyper-growth and multiple funding stages (A16Z, Khosla Ventures, Elad Gil, IVP). Drove core technical direction by leading architecture decisions and selecting foundational technologies (e.g., Temporal) that scaled with the business. Proposed, architected, and implemented mission-critical systems, including large-scale orchestration of audio into structured clinical notes. Led high-risk, high-precision internal initiatives such as major database migrations, owning design, execution, and reliability outcomes end to end.\",      \"summary\": \"Healthcare AI startup | 300 employees | $700M series C-E\",      \"title\": \"Senior Staff Software Engineer\"    },    \"arena\": {      \"details\": \"Owned engineering, architecture, and IT. Scaled the platform through Series A led by CRV, Craft Ventures, Artisanal Ventures, and Vela Partners. Cut technical operations costs 40%+. Led company-wide migration from JavaScript to TypeScript. Established disciplined engineering practices: code reviews, CI, planning, metrics-driven operations, and standardized technical processes.\",      \"summary\": \"Audience engagement startup | 50 employees | $13.6M series A\",      \"title\": \"Chief Technology Officer\"    },    \"hpi\": {      \"details\": \"Led end-to-end product development and delivery for new consumer products, from concept through launch. UK market leader in vehicle history checks.\",      \"notes\": \"(Subsidiary of Solera Holdings)\",      \"summary\": \"Private company | Automotive data & asset protection | £20M revenue\",      \"title\": \"Head of Technology\"    },    \"madbid\": {      \"details\": \"Co-founded MadBid and led all technology and software development from bootstrap to scale. Built and ran the entire engineering organization through rapid growth.\",      \"summary\": \"Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue\",      \"title\": \"Technical Director\"    },    \"optym\": {      \"details\": \"Supported Optym’s SaaS technology ventures. Established shared architectures, policies, and delivery standards to enable rapid product launches. Mentored senior engineers and technical leaders, reinforcing execution quality and engineering culture. Worked directly with customers, partners, and executives to design new products, deliver bespoke solutions.\",      \"summary\": \"B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue\",      \"title\": \"Chief Technology Officer\"    },    \"present\": \"Present\",    \"solera\": {      \"details\": \"Led strategic R&D and product incubation initiatives for the office of the CEO. Assessed emerging technologies for enterprise adoption, including ML, blockchain, AR/VR, IoT/telematics, digital identity, large-scale data platforms, and cloud-native SaaS (AWS).\",      \"summary\": \"Multinational | Risk management & asset protection | 6,000 employees | $1.1B revenue\",      \"title\": \"Chief Architect\"    },    \"talmix\": {      \"details\": \"Rebuilt a legacy platform into a scalable two-sided marketplace. Led search and matching improvements to increase relevance of consultant recommendations.\",      \"notes\": \"(Previously known as MBA & Company)\",      \"summary\": \"Management consulting startup | Talent search | £2M series A\",      \"title\": \"Chief Technology Officer\"    },    \"title\": \"Work History\"  }}}}"
+    },
+    "title": "مشاريع مرجعية"
   },
   "workHistory": {
     "abridge": {
-      "details": "انضممت إلى Abridge عندما كان عدد الموظفين حوالي 30 موظفًا. أول مهندس برمجيات كبير من فئة Senior Staff. عملت خلال مرحلة نمو مفرط وعدة جولات تمويل (A16Z, Khosla Ventures, Elad Gil, IVP). قدت الاتجاه التقني الأساسي عبر قيادة قرارات المعمارية واختيار التقنيات التأسيسية (مثل Temporal) التي توسعت مع نمو الأعمال. اقترحت وصمّمت ونفّذت أنظمة بالغة الأهمية للمهام، بما في ذلك تنسيق واسع النطاق للصوت لتحويله إلى ملاحظات سريرية مُنظمة. قدت مبادرات داخلية عالية المخاطر وعالية الدقة مثل عمليات ترحيل قواعد بيانات كبيرة، مع تولّي مسؤولية التصميم والتنفيذ ونتائج الموثوقية من البداية إلى النهاية.",
-      "summary": "شركة ناشئة في ذكاء اصطناعي للرعاية الصحية | 300 موظف | $700M جولات C-E",
+      "details": "التحق بـ Abridge عندما كان عدد الموظفين ~30. أول مهندس برمجيات Senior Staff في الشركة. عمل خلال مرحلة نمو فائق وعدة جولات تمويل (A16Z, Khosla Ventures, Elad Gil, IVP). قاد التوجه التقني الأساسي عبر قيادة قرارات المعمارية واختيار التقنيات التأسيسية (مثل Temporal) التي توسّعت مع نمو الأعمال. اقترح وصمّم ونفّذ أنظمة بالغة الأهمية للمهمة، بما في ذلك تنظيم واسع النطاق للصوت إلى ملاحظات سريرية مُهيكلة. قاد مبادرات داخلية عالية المخاطر وعالية الدقة مثل ترحيلات قواعد البيانات الكبرى، مع تملك التصميم والتنفيذ ونتائج الاعتمادية من البداية إلى النهاية.",
+      "summary": "شركة ناشئة في ذكاء اصطناعي للرعاية الصحية | 300 موظف | $700M السلسلة C-E",
       "title": "مهندس برمجيات Senior Staff"
     },
     "arena": {
-      "details": "تولّيت مسؤولية الهندسة والمعمارية وتقنية المعلومات. وسّعت المنصة عبر جولة Series A بقيادة CRV وCraft Ventures وArtisanal Ventures وVela Partners. خفّضت تكاليف العمليات التقنية بأكثر من 40%. قدت ترحيلًا على مستوى الشركة من JavaScript إلى TypeScript. أرسيت ممارسات هندسية منضبطة: مراجعات الشفرة، CI، التخطيط، العمليات المبنية على المقاييس، والعمليات التقنية المعيارية.",
-      "summary": "شركة ناشئة لتفاعل الجمهور | 50 موظفًا | $13.6M جولة Series A",
+      "details": "تملّك الهندسة والمعمارية وتقنية المعلومات. وسّع المنصة عبر جولة Series A بقيادة CRV وCraft Ventures وArtisanal Ventures وVela Partners. خفّض تكاليف العمليات التقنية بأكثر من 40%. قاد انتقالًا على مستوى الشركة من JavaScript إلى TypeScript. أرسى ممارسات هندسية منضبطة: مراجعات الشيفرة، CI، التخطيط، تشغيل قائم على المقاييس، وعمليات تقنية موحّدة.",
+      "summary": "شركة ناشئة لتفاعل الجمهور | 50 موظفًا | $13.6M السلسلة A",
       "title": "الرئيس التنفيذي للتقنية"
     },
     "hpi": {
-      "details": "قدت تطوير المنتج وتسليمه من البداية إلى النهاية لمنتجات استهلاكية جديدة، من الفكرة حتى الإطلاق. رائد سوق المملكة المتحدة في فحوصات تاريخ المركبات.",
+      "details": "قاد تطوير المنتجات وتسليمها من البداية إلى النهاية لمنتجات استهلاكية جديدة، من الفكرة حتى الإطلاق. قائد السوق في المملكة المتحدة في فحوصات تاريخ المركبات.",
       "notes": "(شركة تابعة لـ Solera Holdings)",
       "summary": "شركة خاصة | بيانات السيارات وحماية الأصول | £20M إيرادات",
       "title": "رئيس التقنية"
     },
     "madbid": {
-      "details": "شاركت في تأسيس MadBid وقدت جميع أعمال التقنية وتطوير البرمجيات من التمويل الذاتي حتى التوسع. بنيت ودرت منظمة الهندسة بالكامل خلال نمو سريع.",
-      "summary": "شركة ناشئة للتسوق الترفيهي | 75 موظفًا | £4M جولة Series A | £10M إيرادات",
+      "details": "شارك في تأسيس MadBid وقاد جميع أعمال التقنية وتطوير البرمجيات من التأسيس الذاتي إلى التوسع. بنى وأدار المؤسسة الهندسية بالكامل خلال نمو سريع.",
+      "summary": "شركة ناشئة للتسوق الترفيهي | 75 موظفًا | £4M Series A | £10M إيرادات",
       "title": "المدير التقني"
     },
     "optym": {
-      "details": "دعمت مشاريع Optym التقنية بنموذج SaaS. أسست معماريات وسياسات ومعايير تسليم مشتركة لتمكين إطلاق المنتجات بسرعة. قدّمت الإرشاد لمهندسين كبار وقادة تقنيين، مع تعزيز جودة التنفيذ وثقافة الهندسة. عملت مباشرة مع العملاء والشركاء والتنفيذيين لتصميم منتجات جديدة وتقديم حلول مُخصصة.",
+      "details": "دعم مشاريع Optym التقنية في مجال SaaS. أسّس معماريات وسياسات ومعايير تسليم مشتركة لتمكين إطلاق المنتجات بسرعة. درّب مهندسين كبارًا وقادة تقنيين، مع تعزيز جودة التنفيذ والثقافة الهندسية. عمل مباشرة مع العملاء والشركاء والتنفيذيين لتصميم منتجات جديدة وتقديم حلول مخصصة.",
       "summary": "B2B SaaS | التحسين وعلوم القرار | 250 موظفًا | $25M إيرادات",
       "title": "الرئيس التنفيذي للتقنية"
     },
-    "present": "الحاضر",
+    "presentlyWorkingHere": "الحاضر",
     "solera": {
-      "details": "قدت مبادرات استراتيجية للبحث والتطوير واحتضان المنتجات لمكتب الرئيس التنفيذي. قيّمت تقنيات ناشئة لاعتمادها على مستوى المؤسسة، بما في ذلك ML وblockchain وAR/VR وIoT/telematics والهوية الرقمية ومنصات البيانات واسعة النطاق وSaaS السحابي الأصلي (AWS).",
+      "details": "قاد مبادرات استراتيجية للبحث والتطوير واحتضان المنتجات لمكتب الرئيس التنفيذي. قيّم التقنيات الناشئة لاعتمادها على مستوى المؤسسة، بما في ذلك ML وblockchain وAR/VR وIoT/telematics والهوية الرقمية ومنصات البيانات واسعة النطاق وSaaS السحابي الأصلي (AWS).",
       "summary": "شركة متعددة الجنسيات | إدارة المخاطر وحماية الأصول | 6,000 موظف | $1.1B إيرادات",
       "title": "كبير المعماريين"
     },
     "talmix": {
-      "details": "أعدت بناء منصة قديمة إلى سوق ثنائي الجانب قابل للتوسع. قدت تحسينات البحث والمطابقة لزيادة ملاءمة توصيات المستشارين.",
+      "details": "أعاد بناء منصة قديمة إلى سوق ثنائي الجانب قابل للتوسع. قاد تحسينات البحث والمطابقة لزيادة ملاءمة توصيات المستشارين.",
       "notes": "(كانت تُعرف سابقًا باسم MBA & Company)",
-      "summary": "شركة ناشئة للاستشارات الإدارية | البحث عن المواهب | £2M جولة Series A",
+      "summary": "شركة ناشئة للاستشارات الإدارية | البحث عن المواهب | £2M السلسلة A",
       "title": "الرئيس التنفيذي للتقنية"
     },
-    "title": "الخبرة العملية"
+    "title": "الخبرات العملية"
   }
 }
