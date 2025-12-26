@@ -51,7 +51,7 @@ export const migrationData = (t: TranslatorFn) => {
     },
     {
       id: 'relocation',
-      caption: t(`${baseKey}.reloaction`, 'Can relocate'),
+      caption: t(`${baseKey}.relocation`, 'Can relocate'),
       Icon: IconPlaneDeparture,
     },
   ];
