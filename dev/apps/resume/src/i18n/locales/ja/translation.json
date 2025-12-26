@@ -1,14 +1,14 @@
 {
   "atAGlance": {
     "focusFit": {
-      "architecture": "建築",
+      "architecture": "アーキテクチャ",
       "collaboration": "コラボレーション",
-      "deepWork": "ディープ・ワーク",
+      "deepWork": "ディープワーク",
       "devops": "DevOps",
-      "mgmtAdmin": "経営・管理",
+      "mgmtAdmin": "マネジメント／管理",
       "programming": "プログラミング",
       "strategy": "戦略",
-      "title": "フォーカス"
+      "title": "注力領域"
     },
     "industryExperience": {
       "automotive": "自動車",
@@ -17,42 +17,42 @@
       "fintech": "フィンテック",
       "healthcare": "ヘルスケア",
       "homeAutomation": "ホームオートメーション",
-      "hwEmbedded": "HW & 組み込み",
-      "paymentSolutions": "お支払いソリューション",
+      "hwEmbedded": "HW／組込み",
+      "paymentSolutions": "決済ソリューション",
       "realtime": "リアルタイム",
-      "talentSearch": "タレント検索",
+      "talentSearch": "タレントサーチ",
       "title": "業界経験",
       "videoGames": "ビデオゲーム"
     },
     "leadershipExperience": {
-      "mentoringTraining": "メンタリング＆トレーニング",
-      "MgmtAdmin": "経営・管理",
-      "planning": "計画",
-      "productDevelopment": "製品開発",
+      "mentoringTraining": "メンタリング／トレーニング",
+      "MgmtAdmin": "マネジメント／管理",
+      "planning": "企画・計画",
+      "productDevelopment": "プロダクト開発",
       "recruitment": "採用",
-      "techLeadership": "テクノロジーリーダーシップ",
-      "techStrategy": "テック・ストラテジー",
+      "techLeadership": "技術リーダーシップ",
+      "techStrategy": "技術戦略",
       "title": "リーダーシップ"
     },
     "missionFit": {
-      "devInfraTooling": "開発インフラストラクチャとツール",
-      "fixProjects": "プロジェクトの修正",
-      "fixTeams": "Teamsを修正",
+      "devInfraTooling": "開発インフラ／ツール",
+      "fixProjects": "プロジェクト立て直し",
+      "fixTeams": "チーム立て直し",
       "greenField": "グリーンフィールド",
-      "maintenance": "メンテナンス",
-      "nextGen20": "次世代 & 2.0",
-      "rnd": "研究開発",
+      "maintenance": "保守",
+      "nextGen20": "次世代／2.0",
+      "rnd": "R&D",
       "scaling": "スケーリング",
-      "title": "ミッションフィット"
+      "title": "ミッション適合"
     },
     "technicalExperience": {
-      "architecture": "建築",
+      "architecture": "アーキテクチャ",
       "backend": "バックエンド",
       "devops": "DevOps",
       "frontend": "フロントエンド",
       "mobile": "モバイル",
       "technicalWriting": "テクニカルライティング",
-      "testingQa": "テスト/QA",
+      "testingQa": "テスト／QA",
       "title": "技術的強み"
     },
     "technologyFit": {
@@ -68,7 +68,7 @@
       "python": "Python",
       "react": "React",
       "sql": "SQL",
-      "title": "最近の経験",
+      "title": "直近の経験",
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
@@ -76,80 +76,80 @@
   },
   "contactInfo": {
     "download": "ダウンロード",
-    "reloaction": "移動可能",
-    "residency": "米国永住権保持者、EU市民"
+    "reloaction": "転居可能",
+    "residency": "米国永住権保持、EU市民"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25年以上</strong>の<strong>実践的</strong>なソフトウェアリーダーシップ。",
-    "creativeTechnologist": "複雑なテクノロジーイニシアチブを実行するシニアテクノロジスト。曖昧なアイデアをスケーラブルで本番環境に適したプラットフォームに転換します。",
-    "engagement": "**0→1、1→N、そしてスケールアップのインフレクションポイント**で実証済み。最近、**100時間以上の音声**を構造化された推論に**毎分**変換するシステムを構築しました。",
-    "managementResource": "実行リスクの低減、デリバリーの加速、チームとシステムの拡大のために導入されました。創業者、Cレベル、VPへのアドバイザー。",
-    "practicalExperienceOnAllLayers": "設立レベルのジェネラリスト：バックエンド、Web、モバイル、デスクトップ、データ、ML、QA、プラットフォーム、インフラストラクチャ、DevOps。プロダクト、デザイン、UXにも手を出す。<strong>構築</strong>することに情熱を燃やしている。",
-    "problemSolver": "「これをどうやって作りましょうか？」という疑問に対するあなたのソリューション",
-    "title": "エグゼクティブサマリー"
+    "20YearsOfExperience": "<strong>25年以上</strong>の<strong>ハンズオン</strong>によるソフトウェア・リーダーシップ経験。",
+    "creativeTechnologist": "複雑なテクノロジー施策を<strong>遂行</strong>するシニア・テクノロジスト。曖昧なアイデアを<strong>スケーラブルで本番運用可能なプラットフォーム</strong>へ落とし込む。",
+    "engagement": "<strong>0→1、1→N、およびスケールアップの転換点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化推論へ変換するシステムを構築。",
+    "managementResource": "<strong>実行リスクの低減、デリバリーの加速、チームおよびシステムのスケール</strong>のために参画。<strong>創業者、Cレベル、VP</strong>のアドバイザー。",
+    "practicalExperienceOnAllLayers": "創業者レベルのジェネラリスト：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure、DevOps。プロダクト、デザイン、UXにも関与。<strong>作ること</strong>が好き。",
+    "problemSolver": "あなたの課題に対する解決策：<i>\"どうやってこれを作る？\"</i>",
+    "title": "エグゼクティブ・サマリー"
   },
   "page": {
-    "resume": "履歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発",
-    "untitled": "無題のページ"
+    "resume": "{{{\n  \"atAGlance\": {\n    \"focusFit\": {\n      \"architecture\": \"アーキテクチャ\",\n      \"collaboration\": \"コラボレーション\",\n      \"deepWork\": \"深い集中\",\n      \"devops\": \"DevOps\",\n      \"mgmtAdmin\": \"マネジメント＆管理\",\n      \"programming\": \"プログラミング\",\n      \"strategy\": \"戦略\",\n      \"title\": \"注力領域\"\n    },\n    \"industryExperience\": {\n      \"automotive\": \"自動車\",\n      \"b2b\": \"B2B\",\n      \"b2c\": \"B2C\",\n      \"fintech\": \"フィンテック\",\n      \"healthcare\": \"ヘルスケア\",\n      \"homeAutomation\": \"ホームオートメーション\",\n      \"hwEmbedded\": \"ハードウェア＆組込み\",\n      \"paymentSolutions\": \"決済ソリューション\",\n      \"realtime\": \"リアルタイム\",\n      \"talentSearch\": \"人材サーチ\",\n      \"title\": \"業界経験\",\n      \"videoGames\": \"ビデオゲーム\"\n    },\n    \"leadershipExperience\": {\n      \"mentoringTraining\": \"メンタリング＆トレーニング\",\n      \"MgmtAdmin\": \"マネジメント＆管理\",\n      \"planning\": \"計画\",\n      \"productDevelopment\": \"プロダクト開発\",\n      \"recruitment\": \"採用\",\n      \"techLeadership\": \"技術リーダーシップ\",\n      \"techStrategy\": \"技術戦略\",\n      \"title\": \"リーダーシップ\"\n    },\n    \"missionFit\": {\n      \"devInfraTooling\": \"開発インフラ＆ツール\",\n      \"fixProjects\": \"プロジェクト立て直し\",\n      \"fixTeams\": \"チーム立て直し\",\n      \"greenField\": \"グリーンフィールド\",\n      \"maintenance\": \"保守\",\n      \"nextGen20\": \"次世代＆2.0\",\n      \"rnd\": \"R&D\",\n      \"scaling\": \"スケーリング\",\n      \"title\": \"ミッション適合\"\n    },\n    \"technicalExperience\": {\n      \"architecture\": \"アーキテクチャ\",\n      \"backend\": \"バックエンド\",\n      \"devops\": \"DevOps\",\n      \"frontend\": \"フロントエンド\",\n      \"mobile\": \"モバイル\",\n      \"technicalWriting\": \"テクニカルライティング\",\n      \"testingQa\": \"テスト/QA\",\n      \"title\": \"技術的強み\"\n    },\n    \"technologyFit\": {\n      \"angular\": \"Angular\",\n      \"aws\": \"AWS\",\n      \"azure\": \"Azure\",\n      \"docker\": \"Docker\",\n      \"electron\": \"Electron\",\n      \"gcp\": \"GCP\",\n      \"linux\": \"Linux\",\n      \"mongoDb\": \"MongoDB\",\n      \"nestJS\": \"NestJS\",\n      \"python\": \"Python\",\n      \"react\": \"React\",\n      \"sql\": \"SQL\",\n      \"title\": \"直近の経験\",\n      \"typeScript\": \"TypeScript\",\n      \"vue\": \"Vue\"\n    },\n    \"title\": \"概要\"\n  },\n  \"contactInfo\": {\n    \"download\": \"ダウンロード\",\n    \"reloaction\": \"転居可能\",\n    \"residency\": \"米国永住権保持、EU市民\"\n  },\n  \"exsum\": {\n    \"20YearsOfExperience\": \"<strong>25年以上</strong>の<strong>実務</strong>ソフトウェア・リーダーシップ経験。\",\n    \"creativeTechnologist\": \"<strong>複雑な技術イニシアチブを実現</strong>するシニア・テクノロジスト。曖昧なアイデアを<strong>スケーラブルで本番品質のプラットフォーム</strong>へ落とし込み。\",\n    \"engagement\": \"<strong>0→1、1→N、およびスケールアップの転換点</strong>での実績。直近では、<strong>100時間超の音声</strong>を構造化推論へ変換するシステムを<strong>毎分</strong>構築。\",\n    \"managementResource\": \"<strong>実行リスクの低減、デリバリーの加速、チームとシステムのスケール</strong>のために参画。<strong>創業者、Cレベル、VP</strong>のアドバイザー。\",\n    \"practicalExperienceOnAllLayers\": \"創業者レベルのジェネラリスト：バックエンド、Web、モバイル、デスクトップ、データ、ML、QA、プラットフォーム、インフラ、DevOps。プロダクト、デザイン、UXにも関与。<strong>ものづくり</strong>が好き。\",\n    \"problemSolver\": \"あなたの答えに：<i>\\\"どうやってこれを作るのか？\\\"</i>\",\n    \"title\": \"エグゼクティブサマリー\"\n  },\n  \"page\": {\n    \"resume\": \"履歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発\",\n    \"untitled\": \"無題ページ\"\n  },\n  \"projects\": {\n    \"jsvfx\": {\n      \"description\": \"純粋なJavaScriptで書かれたビジュアルエフェクト。\",\n      \"name\": \"JS VFX\"\n    },\n    \"resume\": {\n      \"description\": \"この履歴書をコードとして。極度にオーバーエンジニアリング。ここから開始。\",\n      \"name\": \"履歴書\"\n    },\n    \"tartarus\": {\n      \"description\": \"TypeScript向けにゼロから構築したディープラーニングフレームワーク。\",\n      \"name\": \"Tartarus Deep Learning Framework\"\n    }\n  },\n  \"resume\": {\n    \"professionalTitles\": \"CTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業メンバーエンジニア、シニアスタッフエンジニア\"\n  },\n  \"techStack\": {\n    \"title\": \"参考プロジェクト\"\n  },\n  \"workHistory\": {\n    \"abridge\": {\n      \"details\": \"Abridgeに従業員約30名の時点で参画。初のシニアスタッフエンジニア。ハイパーグロースおよび複数の資金調達フェーズ（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。アーキテクチャ意思決定を主導し、事業とともにスケールする基盤技術（例：Temporal）を選定することで、コアな技術的方向性を牽引。音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、ミッションクリティカルなシステムを提案・設計・実装。大規模DB移行など高リスクかつ高精度が求められる社内イニシアチブを主導し、設計・実行・信頼性の成果までエンドツーエンドで担当。\",\n      \"summary\": \"ヘルスケアAIスタートアップ | 従業員300名 | $700M シリーズC-E\",\n      \"title\": \"シニアスタッフソフトウェアエンジニア\"\n    },\n    \"arena\": {\n      \"details\": \"エンジニアリング、アーキテクチャ、ITを統括。CRV、Craft Ventures、Artisanal Ventures、Vela Partners主導のシリーズAを経てプラットフォームをスケール。技術運用コストを40%+削減。全社的なJavaScriptからTypeScriptへの移行を主導。コードレビュー、CI、計画、メトリクス駆動の運用、標準化された技術プロセスなど、規律あるエンジニアリングプラクティスを確立。\",\n      \"summary\": \"オーディエンス・エンゲージメントのスタートアップ | 従業員50名 | $13.6M シリーズA\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"hpi\": {\n      \"details\": \"新規コンシューマープロダクトの企画からローンチまで、エンドツーエンドのプロダクト開発とデリバリーを主導。英国における車両履歴チェックの市場リーダー。\",\n      \"notes\": \"（Solera Holdingsの子会社）\",\n      \"summary\": \"非公開企業 | 自動車データ＆資産保護 | £20M 売上\",\n      \"title\": \"Head of Technology\"\n    },\n    \"madbid\": {\n      \"details\": \"MadBidを共同創業し、ブートストラップからスケールまで、技術およびソフトウェア開発全般を統括。急成長期を通じてエンジニアリング組織全体を構築・運営。\",\n      \"summary\": \"エンタメショッピングのスタートアップ | 従業員75名 | £4M シリーズA | £10M 売上\",\n      \"title\": \"テクニカルディレクター\"\n    },\n    \"optym\": {\n      \"details\": \"OptymのSaaS技術ベンチャーを支援。迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを確立。シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。顧客、パートナー、エグゼクティブと直接協働し、新規プロダクトの設計、個別ソリューションの提供を実施。\",\n      \"summary\": \"B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | $25M 売上\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"present\": \"現在\",\n    \"solera\": {\n      \"details\": \"CEOオフィス向けに、戦略的なR&Dおよびプロダクト・インキュベーションの取り組みを主導。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価。\",\n      \"summary\": \"多国籍企業 | リスク管理＆資産保護 | 従業員6,000名 | $1.1B 売上\",\n      \"title\": \"チーフアーキテクト\"\n    },\n    \"talmix\": {\n      \"details\": \"レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性を高めるため、検索およびマッチングの改善を主導。\",\n      \"notes\": \"（旧称：MBA & Company）\",\n      \"summary\": \"経営コンサルティングのスタートアップ | 人材サーチ | £2M シリーズA\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"title\": \"職務経歴\"\n  }\n}}}",
+    "untitled": "{{{\n  \"atAGlance\": {\n    \"focusFit\": {\n      \"architecture\": \"アーキテクチャ\",\n      \"collaboration\": \"コラボレーション\",\n      \"deepWork\": \"深い集中\",\n      \"devops\": \"DevOps\",\n      \"mgmtAdmin\": \"マネジメント＆管理\",\n      \"programming\": \"プログラミング\",\n      \"strategy\": \"戦略\",\n      \"title\": \"注力領域\"\n    },\n    \"industryExperience\": {\n      \"automotive\": \"自動車\",\n      \"b2b\": \"B2B\",\n      \"b2c\": \"B2C\",\n      \"fintech\": \"フィンテック\",\n      \"healthcare\": \"ヘルスケア\",\n      \"homeAutomation\": \"ホームオートメーション\",\n      \"hwEmbedded\": \"ハードウェア＆組込み\",\n      \"paymentSolutions\": \"決済ソリューション\",\n      \"realtime\": \"リアルタイム\",\n      \"talentSearch\": \"人材サーチ\",\n      \"title\": \"業界経験\",\n      \"videoGames\": \"ビデオゲーム\"\n    },\n    \"leadershipExperience\": {\n      \"mentoringTraining\": \"メンタリング＆トレーニング\",\n      \"MgmtAdmin\": \"マネジメント＆管理\",\n      \"planning\": \"計画\",\n      \"productDevelopment\": \"プロダクト開発\",\n      \"recruitment\": \"採用\",\n      \"techLeadership\": \"技術リーダーシップ\",\n      \"techStrategy\": \"技術戦略\",\n      \"title\": \"リーダーシップ\"\n    },\n    \"missionFit\": {\n      \"devInfraTooling\": \"開発インフラ＆ツール\",\n      \"fixProjects\": \"プロジェクト立て直し\",\n      \"fixTeams\": \"チーム立て直し\",\n      \"greenField\": \"グリーンフィールド\",\n      \"maintenance\": \"保守\",\n      \"nextGen20\": \"次世代＆2.0\",\n      \"rnd\": \"R&D\",\n      \"scaling\": \"スケーリング\",\n      \"title\": \"ミッション適合\"\n    },\n    \"technicalExperience\": {\n      \"architecture\": \"アーキテクチャ\",\n      \"backend\": \"バックエンド\",\n      \"devops\": \"DevOps\",\n      \"frontend\": \"フロントエンド\",\n      \"mobile\": \"モバイル\",\n      \"technicalWriting\": \"テクニカルライティング\",\n      \"testingQa\": \"テスト/QA\",\n      \"title\": \"技術的強み\"\n    },\n    \"technologyFit\": {\n      \"angular\": \"Angular\",\n      \"aws\": \"AWS\",\n      \"azure\": \"Azure\",\n      \"docker\": \"Docker\",\n      \"electron\": \"Electron\",\n      \"gcp\": \"GCP\",\n      \"linux\": \"Linux\",\n      \"mongoDb\": \"MongoDB\",\n      \"nestJS\": \"NestJS\",\n      \"python\": \"Python\",\n      \"react\": \"React\",\n      \"sql\": \"SQL\",\n      \"title\": \"直近の経験\",\n      \"typeScript\": \"TypeScript\",\n      \"vue\": \"Vue\"\n    },\n    \"title\": \"概要\"\n  },\n  \"contactInfo\": {\n    \"download\": \"ダウンロード\",\n    \"reloaction\": \"転居可能\",\n    \"residency\": \"米国永住権保持、EU市民\"\n  },\n  \"exsum\": {\n    \"20YearsOfExperience\": \"<strong>25年以上</strong>の<strong>実務</strong>ソフトウェア・リーダーシップ経験。\",\n    \"creativeTechnologist\": \"<strong>複雑な技術イニシアチブを実現</strong>するシニア・テクノロジスト。曖昧なアイデアを<strong>スケーラブルで本番品質のプラットフォーム</strong>へ落とし込み。\",\n    \"engagement\": \"<strong>0→1、1→N、およびスケールアップの転換点</strong>での実績。直近では、<strong>100時間超の音声</strong>を構造化推論へ変換するシステムを<strong>毎分</strong>構築。\",\n    \"managementResource\": \"<strong>実行リスクの低減、デリバリーの加速、チームとシステムのスケール</strong>のために参画。<strong>創業者、Cレベル、VP</strong>のアドバイザー。\",\n    \"practicalExperienceOnAllLayers\": \"創業者レベルのジェネラリスト：バックエンド、Web、モバイル、デスクトップ、データ、ML、QA、プラットフォーム、インフラ、DevOps。プロダクト、デザイン、UXにも関与。<strong>ものづくり</strong>が好き。\",\n    \"problemSolver\": \"あなたの答えに：<i>\\\"どうやってこれを作るのか？\\\"</i>\",\n    \"title\": \"エグゼクティブサマリー\"\n  },\n  \"page\": {\n    \"resume\": \"履歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発\",\n    \"untitled\": \"無題ページ\"\n  },\n  \"projects\": {\n    \"jsvfx\": {\n      \"description\": \"純粋なJavaScriptで書かれたビジュアルエフェクト。\",\n      \"name\": \"JS VFX\"\n    },\n    \"resume\": {\n      \"description\": \"この履歴書をコードとして。極度にオーバーエンジニアリング。ここから開始。\",\n      \"name\": \"履歴書\"\n    },\n    \"tartarus\": {\n      \"description\": \"TypeScript向けにゼロから構築したディープラーニングフレームワーク。\",\n      \"name\": \"Tartarus Deep Learning Framework\"\n    }\n  },\n  \"resume\": {\n    \"professionalTitles\": \"CTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業メンバーエンジニア、シニアスタッフエンジニア\"\n  },\n  \"techStack\": {\n    \"title\": \"参考プロジェクト\"\n  },\n  \"workHistory\": {\n    \"abridge\": {\n      \"details\": \"Abridgeに従業員約30名の時点で参画。初のシニアスタッフエンジニア。ハイパーグロースおよび複数の資金調達フェーズ（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。アーキテクチャ意思決定を主導し、事業とともにスケールする基盤技術（例：Temporal）を選定することで、コアな技術的方向性を牽引。音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、ミッションクリティカルなシステムを提案・設計・実装。大規模DB移行など高リスクかつ高精度が求められる社内イニシアチブを主導し、設計・実行・信頼性の成果までエンドツーエンドで担当。\",\n      \"summary\": \"ヘルスケアAIスタートアップ | 従業員300名 | $700M シリーズC-E\",\n      \"title\": \"シニアスタッフソフトウェアエンジニア\"\n    },\n    \"arena\": {\n      \"details\": \"エンジニアリング、アーキテクチャ、ITを統括。CRV、Craft Ventures、Artisanal Ventures、Vela Partners主導のシリーズAを経てプラットフォームをスケール。技術運用コストを40%+削減。全社的なJavaScriptからTypeScriptへの移行を主導。コードレビュー、CI、計画、メトリクス駆動の運用、標準化された技術プロセスなど、規律あるエンジニアリングプラクティスを確立。\",\n      \"summary\": \"オーディエンス・エンゲージメントのスタートアップ | 従業員50名 | $13.6M シリーズA\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"hpi\": {\n      \"details\": \"新規コンシューマープロダクトの企画からローンチまで、エンドツーエンドのプロダクト開発とデリバリーを主導。英国における車両履歴チェックの市場リーダー。\",\n      \"notes\": \"（Solera Holdingsの子会社）\",\n      \"summary\": \"非公開企業 | 自動車データ＆資産保護 | £20M 売上\",\n      \"title\": \"Head of Technology\"\n    },\n    \"madbid\": {\n      \"details\": \"MadBidを共同創業し、ブートストラップからスケールまで、技術およびソフトウェア開発全般を統括。急成長期を通じてエンジニアリング組織全体を構築・運営。\",\n      \"summary\": \"エンタメショッピングのスタートアップ | 従業員75名 | £4M シリーズA | £10M 売上\",\n      \"title\": \"テクニカルディレクター\"\n    },\n    \"optym\": {\n      \"details\": \"OptymのSaaS技術ベンチャーを支援。迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを確立。シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。顧客、パートナー、エグゼクティブと直接協働し、新規プロダクトの設計、個別ソリューションの提供を実施。\",\n      \"summary\": \"B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | $25M 売上\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"present\": \"現在\",\n    \"solera\": {\n      \"details\": \"CEOオフィス向けに、戦略的なR&Dおよびプロダクト・インキュベーションの取り組みを主導。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価。\",\n      \"summary\": \"多国籍企業 | リスク管理＆資産保護 | 従業員6,000名 | $1.1B 売上\",\n      \"title\": \"チーフアーキテクト\"\n    },\n    \"talmix\": {\n      \"details\": \"レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性を高めるため、検索およびマッチングの改善を主導。\",\n      \"notes\": \"（旧称：MBA & Company）\",\n      \"summary\": \"経営コンサルティングのスタートアップ | 人材サーチ | £2M シリーズA\",\n      \"title\": \"Chief Technology Officer\"\n    },\n    \"title\": \"職務経歴\"\n  }\n}}}"
   },
   "projects": {
     "jsvfx": {
-      "description": "純粋なJavaScriptで記述されたビジュアルエフェクト。",
+      "description": "純粋なJavaScriptで書かれた視覚効果。",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "この履歴書をコードで。極端に過剰設計。ここから始める。",
-      "name": "履歴"
+      "description": "この履歴書をコードとして。極端に過剰設計。ここから開始。",
+      "name": "履歴書"
     },
     "tartarus": {
-      "description": "TypeScriptのための、ゼロから構築されたディープラーニングフレームワーク。",
-      "name": "Tartarus ディープラーニングフレームワーク"
+      "description": "TypeScript向けのゼロから構築したディープラーニング・フレームワーク。",
+      "name": "Tartarus Deep Learning Framework"
     }
   },
   "resume": {
     "professionalTitles": "CTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業エンジニア、シニアスタッフエンジニア"
   },
   "techStack": {
-    "title": "参照プロジェクト"
+    "title": "日本語翻訳版履歴書JSON"
   },
   "workHistory": {
     "abridge": {
-      "details": "約30名の従業員時にAbridgeに入社。最初のシニアスタッフエンジニアとして、ハイパーグロースと複数の資金調達段階（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。アーキテクチャの決定を主導し、ビジネスと共にスケールする基盤技術（例：Temporal）を選択することで、コアとなる技術的方向性を推進。音声データを構造化された臨床記録へと大規模にオーケストレーションするなど、ミッションクリティカルなシステムの提案、設計、実装を担当。データベースの大規模移行のような、ハイリスク・高精度な社内イニシアチブを主導し、設計、実行、信頼性といった成果をエンドツーエンドで所有。",
-      "summary": "ヘルスケアAIスタートアップ | 従業員300人 | 7億ドル（シリーズC〜E）",
+      "details": "従業員約30名の時点でAbridgeに参画。初のシニアスタッフエンジニア。急成長および複数の資金調達ステージ（A16Z、Khosla Ventures、Elad Gil、IVP）を通じて推進。アーキテクチャの意思決定を主導し、事業成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、技術的中核の方向性を牽引。音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、ミッションクリティカルなシステムを提案・設計・実装。大規模なデータベース移行などの高リスクかつ高精度が求められる社内イニシアチブを主導し、設計から実行、信頼性の成果までエンドツーエンドで担当。",
+      "summary": "ヘルスケアAIスタートアップ | 従業員300名 | $700M シリーズC-E",
       "title": "シニアスタッフソフトウェアエンジニア"
     },
     "arena": {
-      "details": "エンジニアリング、アーキテクチャ、ITを所有。CRV、Craft Ventures、Artisanal Ventures、Vela Partnersが主導するシリーズAでプラットフォームを拡大。技術運用コストを40%以上削減。JavaScriptからTypeScriptへの全社的な移行を主導。規律あるエンジニアリングプラクティスを確立：コードレビュー、CI、計画、メトリクス駆動運用、標準化された技術プロセス。",
-      "summary": "オーディエンスエンゲージメントスタートアップ | 従業員50名 | 1360万ドルのシリーズA",
-      "title": "最高技術責任者"
+      "details": "エンジニアリング、アーキテクチャ、ITを統括。CRV、Craft Ventures、Artisanal Ventures、Vela Partnersが主導するシリーズAを通じてプラットフォームをスケール。技術運用コストを40%以上削減。全社的なJavaScriptからTypeScriptへの移行を主導。規律あるエンジニアリングプラクティスを確立：コードレビュー、CI、計画、メトリクス主導の運用、標準化された技術プロセス。",
+      "summary": "オーディエンスエンゲージメントスタートアップ | 従業員50名 | $13.6M シリーズA",
+      "title": "Chief Technology Officer"
     },
     "hpi": {
-      "details": "コンセプトからローンチまで、新しいコンシューマー製品のエンドツーエンドの製品開発とデリバリーを主導。自動車履歴チェックで英国市場をリード。",
-      "notes": "(Solera Holdingsの子会社)",
-      "summary": "非公開企業 | 自動車データ＆資産保護 | 年商2000万ポンド",
-      "title": "テクノロジー責任者"
+      "details": "コンセプトからローンチまで、新規コンシューマー向け製品のプロダクト開発とデリバリーをエンドツーエンドで主導。車両履歴チェックにおける英国市場リーダー。",
+      "notes": "（Solera Holdingsの子会社）",
+      "summary": "非公開企業 | 自動車データ＆資産保護 | 売上£20M",
+      "title": "技術責任者"
     },
     "madbid": {
-      "details": "MadBidを共同設立し、ブートストラップからスケールアップまでのすべての技術およびソフトウェア開発を主導しました。急成長を通じて、エンジニアリング組織全体を構築・運営しました。",
-      "summary": "エンターテイメントショッピングスタートアップ | 従業員75名 | シリーズAで400万ポンド | 収益1000万ポンド",
+      "details": "MadBidを共同創業し、ブートストラップからスケールまで、すべての技術およびソフトウェア開発を主導。急成長の中でエンジニアリング組織全体を構築・運営。",
+      "summary": "エンタメショッピングスタートアップ | 従業員75名 | £4M シリーズA | 売上£10M",
       "title": "テクニカルディレクター"
     },
     "optym": {
-      "details": "OptymのSaaSテクノロジーベンチャーをサポート。迅速な製品ローンチを可能にするための共有アーキテクチャ、ポリシー、デリバリー基準を確立。シニアエンジニアやテクニカルリーダーを指導し、実行品質とエンジニアリング文化を強化。顧客、パートナー、エグゼクティブと直接協力し、新製品の設計やオーダーメイドソリューションの提供を行った。",
-      "summary": "B2B SaaS | 最適化と意思決定科学 | 従業員250人 | 収益2500万ドル",
-      "title": "最高技術責任者"
+      "details": "OptymのSaaS技術ベンチャーを支援。迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを確立。シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。顧客、パートナー、経営層と直接協働し、新製品の設計、個別ソリューションの提供を実施。",
+      "summary": "B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | 売上$25M",
+      "title": "Chief Technology Officer"
     },
     "present": "現在",
     "solera": {
-      "details": "CEO室において、戦略的なR&Dおよびプロダクトインキュベーションの取り組みを主導。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルアイデンティティ、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価した。",
-      "summary": "多国籍 | リスク管理と資産保護 | 従業員6,000人 | 収益11億ドル",
+      "details": "CEO直轄組織にて、戦略的R&Dおよびプロダクトインキュベーションのイニシアチブを主導。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、企業導入に向けた新興技術を評価。",
+      "summary": "多国籍企業 | リスク管理＆資産保護 | 従業員6,000名 | 売上$1.1B",
       "title": "チーフアーキテクト"
     },
     "talmix": {
-      "details": "スケーラブルなツーサイドマーケットプレイスへとレガシープラットフォームを再構築。コンサルタントのおすすめの関連性を高めるため、検索とマッチングの改善を主導。",
-      "notes": "（以前はMBA & Companyとして知られていました）",
-      "summary": "マネジメントコンサルティングスタートアップ | 人材検索 | 200万ポンドのシリーズA",
-      "title": "最高技術責任者"
+      "details": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性向上のため、検索およびマッチングを改善。",
+      "notes": "（以前はMBA & Companyとして知られる）",
+      "summary": "経営コンサルティングスタートアップ | 人材検索 | £2M シリーズA",
+      "title": "Chief Technology Officer"
     },
     "title": "職務経歴"
   }

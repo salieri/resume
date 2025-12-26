@@ -45,7 +45,7 @@ program
     const promptTemplate = await fs.readFile(opts.promptTemplate, 'utf8');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const inputData = JSON.parse(await fs.readFile(opts.input, 'utf8'));
-    const targetLanguages = opts.language.includes('all') ? languageCodes : opts.language;
+    const targetLanguages = opts.language.includes('all') ? languageCodes.filter((l) => l !== opts.sourceLanguage) : opts.language;
 
     await fs.mkdir(opts.output, { recursive: true });
 
@@ -62,11 +62,10 @@ program
         });
 
         const translatedJson = await translate(params);
-
         const outputFilePath = path.join(opts.output, opts.outputFilePattern.replace('{{LANGUAGE}}', targetLanguage));
 
         await fs.mkdir(path.dirname(outputFilePath), { recursive: true });
-        await fs.writeFile(path.join(''), JSON.stringify(translatedJson, null, 2), 'utf8');
+        await fs.writeFile(outputFilePath, JSON.stringify(translatedJson, null, 2), 'utf8');
 
         console.info('✅ Translated to:', targetLanguage, '->', outputFilePath);
       } catch (error) {
