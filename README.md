@@ -11,14 +11,25 @@ For example:
 
 ## Architecture
 * Scalable monorepo model
+  * PNPM workspace
+  * Terraform and GitHub Actions for IaC and CI/CD
 * Templates
   * NestJS
   * React
   * React-Router
-  * React pacakge
+  * React package
   * NodeJS package
+* Shared [build configuration](./dev/config) and [ESLint configuration](./dev/packages/eslint-config/eslintrc.esm.mjs)
+
+## AI/ML/LLM
+* Site is translated to multiple languages using LLM over OpenRouter
+  * [Prompt](./dev/apps/resume/scripts/translation/prompt.md)
+  * [Translation script](./dev/apps/resume/scripts/translation/translate.ts)
 
 ## Platform & Infrastructure
+* Deploys to Cloudflare Pages
+* [Infrastructure as Code](./ops/infra) with Terraform
+* [CI/CD](./.github) with GitHub Actions
 
 ## Middleware & Backend
 
@@ -34,7 +45,47 @@ For example:
   * Dark/light mode
 
 ## Code Quality
-* Complex ESLint configuration
+* Complex [ESLint configuration](./dev/packages/eslint-config/eslintrc.esm.mjs)
 * Stylelint for CSS
+* `tflint` for Terraform
+* I18next linter for translation keys
 
-## AI/ML/LLM
+
+## Getting Started
+```bash
+# Install dependencies
+brew bundle
+
+# (You will likely need to re-open your shell now)
+
+# Install and use Node.js 24
+nvm use 24
+corepack enable pnpm
+
+# Install NPM dependencies and build all packages
+pnpm install
+pnpm build
+
+# Run the resume app
+cd dev/apps/resume && pnpm dev
+```
+
+## Building & Deploying
+```bash
+cd dev/apps/resume
+
+# Collect all keys for translation
+pnpm i18n:extract
+
+# Translate to all languages
+OPENROUTER_API_KEY="asdf" pnpm i18n:translate
+
+# Generate PDF versions of the resume
+pnpm generate:pdf
+
+# Build for production
+pnpm --workspace-root build
+
+# Deploy to CloudFlare Pages
+wrangler pages deploy ./dist/client --project-name=your-project-name --branch=main
+```
