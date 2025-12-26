@@ -9,7 +9,7 @@ variable "project_name" {
   description = "The name of the project."
 }
 
-variable "resume_zone_id" {
+variable "resume_zone_name" {
   type        = string
   description = "The domain name of the resume website."
 }
@@ -23,18 +23,6 @@ variable "cloudflare_account_id" {
 variable "cloudflare_api_token" {
   type        = string
   description = "Cloudflare API token."
-  sensitive   = true
-}
-
-variable "cloudflare_r2_access_key_id" {
-  type        = string
-  description = "Cloudflare R2 Access Key ID."
-  sensitive   = true
-}
-
-variable "cloudflare_r2_secret_access_key" {
-  type        = string
-  description = "Cloudflare R2 Secret Access Key."
   sensitive   = true
 }
 
