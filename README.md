@@ -102,8 +102,22 @@ wrangler pages deploy ./dist/client --project-name=your-project-name --branch=ma
 
 ## Infrastructure
 
-### API Token
+### Authn/z
+#### Terraform Cloudflare API Token
 The Terraform setup relies on a Cloudflare API token with the following permissions:
 
 * Account – Cloudflare Pages:Edit, Workers R2 Storage:Edit
 * Zone - Zone:Read, DNS:Edit
+
+#### Terraform Cloudflare R2 Access Token
+The Terraform setup requires an access key ID and secret access key for Cloudflare R2. These can be generated in the Cloudflare dashboard under "R2" -> "Access Keys".
+
+* R2 Bucket Scoped Token
+
+#### Wrangler Cloudflare API Token
+The Wrangler CLI requires a Cloudflare API token with the following permissions:
+
+* Account - Cloudflare Pages:Edit
+
+#### OpenRouter API Key
+An OpenRouter API key is required for the translation functionality. You can obtain an API key at [OpenRouter](https://openrouter.ai/settings/keys).
