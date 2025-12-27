@@ -16,8 +16,8 @@
     "prepublishOnly": "pnpm build",
     "stylelint": "stylelint '**/*.css' --cache",
     "test": "exit 0",
-    "test:ci": "pnpm test:cov",
-    "test:cov": "pnpm test --coverage",
+    "test:ci": "exit 0",
+    "test:cov": "exit 0",
     "test:watch": "exit 0",
     "typecheck": "tsc --noEmit"
   },
