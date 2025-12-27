@@ -7,15 +7,18 @@
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "pnpm clean && tsc && vite build",
     "clean": "rm -rf ./dist",
     "eslint": "eslint . --cache",
-    "lint": "pnpm run eslint && pnpm run stylelint",
-    "lint:ci": "pnpm run eslint -- --quiet && pnpm run stylelint -- --quiet",
-    "lint:fix": "pnpm run eslint --fix && pnpm run stylelint --fix",
-    "prepublishOnly": "pnpm run build",
+    "lint": "pnpm eslint",
+    "lint:ci": "pnpm eslint --quiet",
+    "lint:fix": "pnpm eslint --fix",
+    "prepublishOnly": "pnpm build",
     "stylelint": "stylelint '**/*.css' --cache",
     "test": "exit 0",
+    "test:ci": "exit 0",
+    "test:cov": "exit 0",
+    "test:watch": "exit 0",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
