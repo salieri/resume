@@ -49,7 +49,7 @@ For example:
 * Stylelint for CSS
 * `tflint` for Terraform
 * I18next linter for translation keys
-
+* Code coverage with `vitest`
 
 ## Getting Started
 ```bash
@@ -100,7 +100,7 @@ CLOUDFLARE_API_TOKEN="..." CLOUDFLARE_ACCOUNT_ID="..." \
 | `AWS_ENDPOINT_URL_S3`   | terraform  | Endpoint URL for Cloudflare R2 bucket              |
 | `AWS_ACCESS_KEY_ID`     | terraform  | Access key ID for Cloudflare R2 bucket             |
 | `AWS_SECRET_ACCESS_KEY` | terraform  | Secret access key for Cloudflare R2 bucket         |
-| `CLOUDFLARE_API_TOKEN`  | deployment | Cloudflare API token                               |
+| `CLOUDFLARE_API_TOKEN`  | deployment | Cloudflare API token                               |codex
 | `CLOUDFLARE_ACCOUNT_ID` | deployment | Cloudflare account ID                              |
 
 ## Infrastructure
