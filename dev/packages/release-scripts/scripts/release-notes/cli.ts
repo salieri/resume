@@ -2,8 +2,8 @@
 import { execFile } from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
 
 import { OpenRouter } from '@openrouter/sdk';
 import { Option, program } from 'commander';
@@ -22,6 +22,7 @@ interface ReleaseNotesCliArgs {
 }
 
 const MAX_CONTEXT_CHARS = 90_000;
+
 const DEFAULT_PROMPT_TEMPLATE = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   'prompt.md',
