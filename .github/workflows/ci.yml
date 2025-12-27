@@ -111,10 +111,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          # path: .
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: List files
+        run: |
+          find . | grep -v node_modules
 
       - name: Lint
         run: pnpm lint:ci
@@ -159,7 +163,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          # path: .
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
