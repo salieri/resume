@@ -1,0 +1,142 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Bump Type'
+        type: choice
+        default: patch
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read tool versions from package.json
+        id: versions
+        run: |
+          PNPM_VERSION=$(node -p "require('./package.json').engines.pnpm.replace(/^[^0-9]*/, '')")
+          NODE_VERSION=$(node -p "require('./package.json').engines.node.replace(/^[^0-9]*/, '')")
+          echo "pnpm_version=$PNPM_VERSION" >> "$GITHUB_OUTPUT"
+          echo "node_version=$NODE_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ steps.versions.outputs.pnpm_version }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.versions.outputs.node_version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Collect translation keys
+        working-directory: dev/apps/resume
+        run: pnpm i18n:extract
+
+      - name: Translate resume content
+        working-directory: dev/apps/resume
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+            echo "OPENROUTER_API_KEY is required for translation." >&2
+            exit 1
+          fi
+          pnpm i18n:translate
+
+      - name: Generate PDF
+        working-directory: dev/apps/resume
+        run: pnpm generate:pdf
+
+      - name: Commit generated assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git status --porcelain | grep .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+            git add .
+            git commit -m "chore: update generated resume assets [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "No generated changes to commit."
+          fi
+
+      - name: Build workspace
+        working-directory: dev/apps/resume
+        run: pnpm --workspace-root build
+
+      - name: Determine release tags
+        id: tags
+        run: |
+          RELEASE_TYPE="${{ inputs.release_type }}"
+          CURRENT_TAG=$(git tag --list 'v*' --sort=-v:refname | head -n1)
+
+          if [ -z "$CURRENT_TAG" ]; then
+            PREVIOUS_TAG=""
+            BASE_VERSION="0.0.0"
+          else
+            PREVIOUS_TAG="$CURRENT_TAG"
+            BASE_VERSION="${CURRENT_TAG#v}"
+          fi
+
+          NEW_VERSION=$(pnpm dlx semver "$BASE_VERSION" -i "$RELEASE_TYPE")
+          NEW_TAG="v${NEW_VERSION}"
+
+          echo "Release type: $RELEASE_TYPE"
+          echo "Base version: $BASE_VERSION"
+          echo "New version: $NEW_VERSION"
+
+          echo "previous_tag=$PREVIOUS_TAG" >> "$GITHUB_OUTPUT"
+          echo "new_tag=$NEW_TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Tag release
+        env:
+          NEW_TAG: ${{ steps.tags.outputs.new_tag }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "$NEW_TAG" -m "Resume release $NEW_TAG"
+          git push origin "$NEW_TAG"
+
+      - name: Release notes prompt (dry run)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          pnpm --filter @faust/release-scripts release:notes \
+            --current-tag "${{ steps.tags.outputs.new_tag }}" \
+            --previous-tag "${{ steps.tags.outputs.previous_tag }}" \
+            --dry-run
+
+      - name: Generate release summary
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          pnpm --filter @faust/release-scripts release:notes \
+            --current-tag "${{ steps.tags.outputs.new_tag }}" \
+            --previous-tag "${{ steps.tags.outputs.previous_tag }}" \
+            --output release-notes.md
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tags.outputs.new_tag }}
+          name: Resume ${{ steps.tags.outputs.new_tag }}
+          body_path: release-notes.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
