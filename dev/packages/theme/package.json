@@ -10,7 +10,7 @@
     "build": "pnpm clean && tsc && vite build",
     "clean": "rm -rf ./dist",
     "eslint": "eslint . --cache",
-    "lint": "pnpm eslint && pnpm stylelint",
+    "lint": "pnpm eslint",
     "lint:ci": "pnpm eslint --quiet",
     "lint:fix": "pnpm eslint --fix",
     "prepublishOnly": "pnpm build",
