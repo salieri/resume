@@ -80,6 +80,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: terraform-linters/setup-tflint@v6
+        name: Setup TFLint
+        with:
+          tflint_version: v0.60.0
+          cache: true
+
       - name: Read tool versions from package.json
         id: versions
         run: |
@@ -115,10 +121,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
-
-      - name: List files
-        run: |
-          find . | grep -v node_modules
 
       - name: Lint
         run: pnpm lint:ci
