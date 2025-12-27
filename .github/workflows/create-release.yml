@@ -24,15 +24,11 @@ jobs:
       - name: Read tool versions from package.json
         id: versions
         run: |
-          PNPM_VERSION=$(jq -r '.engines.pnpm' package.json | sed 's/^[^0-9]*//')
           NODE_VERSION=$(jq -r '.engines.node' package.json | sed 's/^[^0-9]*//')
-          echo "pnpm_version=$PNPM_VERSION" >> "$GITHUB_OUTPUT"
           echo "node_version=$NODE_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
-        with:
-          version: ${{ steps.versions.outputs.pnpm_version }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
