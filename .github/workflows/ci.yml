@@ -158,7 +158,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          # path: .
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
