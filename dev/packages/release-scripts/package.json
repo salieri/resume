@@ -13,16 +13,16 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run clean && tsc -p ./tsconfig.build.json",
+    "build": "pnpm clean && tsc -p ./tsconfig.build.json",
     "clean": "rm -rf ./dist ./coverage ./docs",
     "release:notes": "tsx ./scripts/release-notes/cli.ts",
     "lint": "eslint --ext .js,.ts .",
-    "lint:ci": "pnpm run lint -- --quiet",
-    "lint:fix": "pnpm run lint --fix",
-    "prepublishOnly": "pnpm run build",
+    "lint:ci": "pnpm lint --quiet",
+    "lint:fix": "pnpm lint --fix",
+    "prepublishOnly": "pnpm build",
     "test": "vitest run",
-    "test:ci": "pnpm run test:cov --",
-    "test:cov": "pnpm run test -- --coverage",
+    "test:ci": "pnpm test:cov",
+    "test:cov": "pnpm test --coverage",
     "test:watch": "vitest",
     "watch": "tsc -p ./tsconfig.build.json --watch"
   },
@@ -35,6 +35,7 @@
   "devDependencies": {
     "@faust/eslint-config": "workspace:",
     "@types/node": "catalog:",
+    "eslint": "catalog:",
     "typescript": "catalog:",
     "tsx": "catalog:",
     "vitest": "catalog:"
