@@ -463,6 +463,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.3
+      eslint:
+        specifier: 'catalog:'
+        version: 9.39.2(jiti@2.6.1)
       tsx:
         specifier: 'catalog:'
         version: 4.21.0
@@ -833,6 +836,9 @@ importers:
       '@types/lodash':
         specifier: 'catalog:'
         version: 4.17.21
+      eslint:
+        specifier: 'catalog:'
+        version: 9.39.2(jiti@2.6.1)
       tsx:
         specifier: 'catalog:'
         version: 4.21.0
