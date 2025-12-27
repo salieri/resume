@@ -67,7 +67,7 @@ catalog:
   react-router: ^7.9.5
   sass-embedded: ^1.93.3
   semver: ^7.7.3
-  storybook: ^10.0.0
+  storybook: ^10.1.10
   stylelint: ^16.25.0
   stylelint-config-standard-scss: ^16.0.0
   throat: ^6.0.2
