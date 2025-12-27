@@ -106,14 +106,14 @@ jobs:
           restore-keys: |
             pnpm-store-${{ runner.os }}-
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
-
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-output
           path: .
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Lint
         run: pnpm lint:ci
@@ -154,14 +154,14 @@ jobs:
           restore-keys: |
             pnpm-store-${{ runner.os }}-
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
-
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-output
           path: .
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Test
         run: pnpm test:ci
