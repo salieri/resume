@@ -33,6 +33,7 @@ export const globalTypes = {
 export const decorators = [
   (renderStory: () => ReactElement, context: { globals: { theme: string } }) => {
     const scheme = (context.globals.theme || 'light') as 'light' | 'dark';
+
     return (
       <MantineProvider theme={theme} forceColorScheme={scheme}>
         <ColorSchemeScript />
