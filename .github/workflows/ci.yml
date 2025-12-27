@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       pnpm-store-path: ${{ steps.store-path.outputs.path }}
-      pnpm-cache-key: ${{ steps.pnpm-cache.outputs.cache-primary-key }}
+      pnpm-cache-key: ${{ steps.cache-key.outputs.key }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,12 +42,16 @@ jobs:
         id: store-path
         run: echo "path=$(pnpm store path)" >> "$GITHUB_OUTPUT"
 
+      - name: Compute pnpm cache key
+        id: cache-key
+        run: echo "key=pnpm-store-${{ runner.os }}-${{ steps.versions.outputs.pnpm_version }}-${{ hashFiles('pnpm-lock.yaml') }}" >> "$GITHUB_OUTPUT"
+
       - name: Cache pnpm store
         id: pnpm-cache
         uses: actions/cache@v4
         with:
           path: ${{ steps.store-path.outputs.path }}
-          key: pnpm-store-${{ runner.os }}-${{ steps.versions.outputs.pnpm_version }}-${{ hashFiles('pnpm-lock.yaml') }}
+          key: ${{ steps.cache-key.outputs.key }}
           restore-keys: |
             pnpm-store-${{ runner.os }}-
 
