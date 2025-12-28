@@ -81,15 +81,12 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CHECK_RUN_ID: ${{ steps.fix-pr-check.outputs.check_run_id }}
-          JOB_STATUS: ${{ job.status }}
         uses: ./.github/actions/check-run
         with:
           mode: update
           check-run-id: ${{ steps.fix-pr-check.outputs.check_run_id }}
           status: in_progress
           summary: 'Auto-fix attempt in progress...'
-          details-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
       - name: Attempt auto-fix with Codex
         env:
@@ -111,8 +108,6 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CHECK_RUN_ID: ${{ steps.fix-pr-check.outputs.check_run_id }}
-          JOB_STATUS: ${{ job.status }}
         uses: ./.github/actions/check-run
         with:
           mode: update
@@ -120,4 +115,3 @@ jobs:
           status: completed
           conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
           summary: ${{ job.status == 'success' && 'Success – fix PR filed.' || 'Fix attempt failed. See workflow run artifacts for details.' }}
-          details-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
