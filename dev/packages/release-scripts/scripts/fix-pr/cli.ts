@@ -521,7 +521,7 @@ const applyCodexFix = async (prompt: string, apiKey: string) => {
 };
 
 const verifyWorkspace = async () => {
-  const verifyCommands = ['pnpm build', 'pnpm lint:ci', 'pnpm test:ci'];
+  const verifyCommands = ['pnpm build', 'pnpm lint:ci',   'pnpm test:ci'];
 
   for (const command of verifyCommands) {
     const result = await runCommand(command, { allowFailure: true });
