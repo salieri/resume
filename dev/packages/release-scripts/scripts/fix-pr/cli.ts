@@ -205,7 +205,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
   }
 
   const runCmd = path.join('.', 'node_modules', '.bin', 'codex');
-  const codexArgs = ['exec'];
+  const codexArgs = ['exec', '--config preferred_auth_method', 'apikey'];
   const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
   if (isGitHubActions) {
@@ -220,7 +220,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
     runCmd,
     codexArgs,
     {
-      env: { ...process.env, CODEX_API_KEY: apiKey },
+      env: { ...process.env, OPENAI_API_KEY: apiKey },
       allowFailure: true,
     },
   );
