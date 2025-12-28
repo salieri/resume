@@ -52,6 +52,7 @@ const COMMAND_BY_JOB: Record<string, string> = {
 };
 
 const LOG_TAIL_LINES = 400;
+const MAX_FIX_PR_NESTING = 5;
 const PROMPT_TEMPLATE_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'prompt.md');
 
 const execFileAsync = promisify(execFile);
@@ -351,6 +352,71 @@ const ensurePushablePullRequest = (pr: Awaited<ReturnType<Octokit['rest']['pulls
   }
 };
 
+const extractFixPrTargetNumber = (title: string) => {
+  const match = title.match(/^CI auto-fix for PR #(\d+)\b/i);
+
+  if (!match) {
+    return null;
+  }
+
+  return Number(match[1]);
+};
+
+const getFixPrNestingDepth = async (
+  octokit: Octokit,
+  repo: { owner: string; repo: string },
+  prNumber: number,
+  prTitle: string,
+) => {
+  let depth = 0;
+  let currentNumber = prNumber;
+  let currentTitle = prTitle;
+  const seen = new Set<number>([currentNumber]);
+
+  while (true) {
+    const targetNumber = extractFixPrTargetNumber(currentTitle);
+
+    if (!targetNumber) {
+      break;
+    }
+
+    depth += 1;
+
+    if (depth >= MAX_FIX_PR_NESTING) {
+      break;
+    }
+
+    if (seen.has(targetNumber)) {
+      break;
+    }
+
+    seen.add(targetNumber);
+
+    const response = await octokit.rest.pulls.get({
+      owner: repo.owner,
+      repo: repo.repo,
+      pull_number: targetNumber,
+    });
+
+    currentNumber = response.data.number;
+    currentTitle = response.data.title ?? '';
+  }
+
+  return depth;
+};
+
+const ensureFixPrNestingLimit = async (
+  octokit: Octokit,
+  repo: { owner: string; repo: string },
+  pr: Awaited<ReturnType<Octokit['rest']['pulls']['get']>>,
+) => {
+  const depth = await getFixPrNestingDepth(octokit, repo, pr.data.number, pr.data.title ?? '');
+
+  if (depth >= MAX_FIX_PR_NESTING) {
+    throw new Error(`Fix PR nesting exceeds limit (${MAX_FIX_PR_NESTING}); skipping auto-fix.`);
+  }
+};
+
 const getReproductionOutput = async (command: string) => {
   const reproductionResult = await runCommand(command, { allowFailure: true });
 
@@ -382,6 +448,7 @@ const buildFailureContext = async (octokit: Octokit, event: WorkflowRunEvent): P
   const repo = resolveRepoFromEvent(event);
   const pr = await octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber });
   ensurePushablePullRequest(pr);
+  await ensureFixPrNestingLimit(octokit, repo, pr);
   const jobContext = await collectJobContext(octokit, repo, workflowRun.id);
 
   return {
