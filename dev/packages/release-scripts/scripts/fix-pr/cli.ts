@@ -96,7 +96,7 @@ const runCommand = async (command: string, opts?: { cwd?: string; allowFailure?:
 };
 
 const runCommandArgs = async (
-  file: string,
+  cmd: string,
   args: string[],
   opts?: { cwd?: string; allowFailure?: boolean; env?: NodeJS.ProcessEnv },
 ) => {
@@ -108,13 +108,15 @@ const runCommandArgs = async (
   };
 
   try {
-    console.info('runCommandArgs:', JSON.stringify({ file, execOptions, args }));
+    console.info('runCommandArgs.exec', JSON.stringify({ cmd, args }));
 
-    const { stdout, stderr } = await execFileAsync(file, args, execOptions);
+    const { stdout, stderr } = await execFileAsync(cmd, args, execOptions);
 
     return { code: 0, stdout, stderr };
   } catch (error) {
     const result = normalizeExecFailure(error);
+
+    console.info('runCommandArgs.error:', JSON.stringify({ result, cmd, args }));
 
     if (!opts?.allowFailure) {
       throw Object.assign(new Error(result.stderr || result.stdout || String(error)), result);
@@ -226,10 +228,10 @@ const invokeCodex = async (prompt: string, apiKey: string, model: string) => {
     },
   );
 
-  console.info('codex stdout', stdout);
+  console.info('codex.stdout', stdout);
 
   if (code !== 0) {
-    console.error('codex stderr', code, stderr);
+    console.error('codex.stderr', code, stderr);
     throw new Error(`@openai/codex CLI failed with exit code ${code}: ${stderr || stdout}`);
   }
 
@@ -525,7 +527,7 @@ const main = async (opts: FixPrCliOptions) => {
   const context = await buildFailureContext(octokit, event, opts);
   const prompt = await buildCodexPrompt(context);
 
-  console.info('Failure context:', JSON.stringify(context));
+  console.info('init.failureContext', JSON.stringify({ context, prompt }));
 
   if (opts.dryRun) {
     logDryRunPrompt(prompt);
