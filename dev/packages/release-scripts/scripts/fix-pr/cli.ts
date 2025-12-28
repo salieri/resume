@@ -32,16 +32,18 @@ interface FailureContext {
   prTitle: string;
   prBody: string;
   headBranch: string;
+  headSha: string;
   baseBranch: string;
   workflowUrl?: string;
   jobName: string;
   failedCommand: string;
   logSnippet: string;
+  artifactPath: string;
 }
 
 interface FixPrCliOptions {
   dryRun: boolean;
-  saveArtifacts: boolean;
+  artifactPath: string;
   codexApiKey: string;
   model: string;
   githubToken: string;
@@ -311,6 +313,76 @@ const createPullRequest = async (opts: CreatePullRequestOptions) => {
   return response.data.html_url ?? '';
 };
 
+const createFixPrCheckRun = async (
+  octokit: Octokit,
+  context: FailureContext,
+  summary: string,
+) => {
+  const response = await octokit.rest.checks.create({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    name: 'fix-pr',
+    head_sha: context.headSha,
+    status: 'in_progress',
+    output: {
+      title: 'Fix PR automation',
+      summary,
+    },
+  });
+
+  return response.data.id;
+};
+
+const updateFixPrCheckRun = async (
+  octokit: Octokit,
+  context: FailureContext,
+  checkRunId: number,
+  opts: {
+    status: 'in_progress' | 'completed';
+    conclusion?: 'success' | 'failure' | 'neutral' | 'cancelled' | 'timed_out' | 'action_required' | 'stale';
+    summary: string;
+    text?: string;
+    detailsUrl?: string;
+  },
+) => {
+  await octokit.rest.checks.update({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    check_run_id: checkRunId,
+    status: opts.status,
+    conclusion: opts.conclusion,
+    details_url: opts.detailsUrl,
+    output: {
+      title: 'Fix PR automation',
+      summary: opts.summary,
+      text: opts.text,
+    },
+  });
+};
+
+const safeUpdateFixPrCheckRun = async (
+  octokit: Octokit,
+  context: FailureContext,
+  checkRunId: number | null,
+  opts: {
+    status: 'in_progress' | 'completed';
+    conclusion?: 'success' | 'failure' | 'neutral' | 'cancelled' | 'timed_out' | 'action_required' | 'stale';
+    summary: string;
+    text?: string;
+    detailsUrl?: string;
+  },
+) => {
+  if (!checkRunId) {
+    return;
+  }
+
+  try {
+    await updateFixPrCheckRun(octokit, context, checkRunId, opts);
+  } catch (error) {
+    console.error('fix-pr.check.update.failed', serializeError(error));
+  }
+};
+
 const assertPullRequestRun = (workflowRun: WorkflowRunEvent['workflow_run']) => {
   if (workflowRun.event !== 'pull_request') {
     throw new Error('Workflow run is not from a pull_request event; skipping fix.');
@@ -421,7 +493,7 @@ const collectJobContext = async (octokit: Octokit, repo: { owner: string; repo: 
 const buildFailureContext = async (
   octokit: Octokit,
   event: WorkflowRunEvent,
-  opts: Pick<FixPrCliOptions, 'githubRepository'>,
+  opts: Pick<FixPrCliOptions, 'githubRepository' | 'artifactPath'>,
 ): Promise<FailureContext> => {
   const workflowRun = event.workflow_run;
 
@@ -432,6 +504,7 @@ const buildFailureContext = async (
   const prNumber = assertPullRequestRun(workflowRun);
   const repo = resolveRepoFromEvent(event, opts.githubRepository);
   const pr = await octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber });
+  const headSha = workflowRun.head_sha ?? pr.data.head.sha;
 
   ensurePushablePullRequest(pr);
   await ensureFixPrNestingLimit(octokit, repo, pr);
@@ -444,11 +517,13 @@ const buildFailureContext = async (
     prTitle: pr.data.title ?? '',
     prBody: pr.data.body ?? '',
     headBranch: pr.data.head.ref,
+    headSha,
     baseBranch: pr.data.base.ref,
     workflowUrl: workflowRun.html_url ?? '',
     jobName: jobContext.jobName,
     failedCommand: jobContext.failedCommand,
     logSnippet: jobContext.jobLogTail,
+    artifactPath: opts.artifactPath,
   };
 };
 
@@ -471,6 +546,7 @@ const buildCodexPrompt = async (context: FailureContext) => {
     LOG_SNIPPET: context.logSnippet,
     HEAD_BRANCH: context.headBranch,
     BASE_BRANCH: context.baseBranch,
+    ARTIFACT_PATH: context.artifactPath,
   });
 };
 
@@ -518,10 +594,13 @@ const main = async (opts: FixPrCliOptions) => {
 
   console.info('init.failureContext', JSON.stringify({ context, prompt }));
 
-  if (opts.saveArtifacts) {
-    await fs.writeFile('/tmp/fix-pr-prompt.md', prompt, 'utf8');
-    await fs.writeFile('/tmp/fix-pr-context.json', JSON.stringify(context, null, 2), 'utf8');
-  }
+  // just in case
+  await fs.mkdir(opts.artifactPath, { recursive: true });
+
+  await Promise.all([
+    fs.writeFile(path.join(opts.artifactPath, 'prompt.md'), prompt, 'utf8'),
+    fs.writeFile(path.join(opts.artifactPath, 'context.json'), JSON.stringify(context, null, 2), 'utf8'),
+  ]);
 
   if (opts.dryRun) {
     logDryRunPrompt(prompt);
@@ -529,28 +608,63 @@ const main = async (opts: FixPrCliOptions) => {
     return;
   }
 
+  let checkRunId: number | null = null;
+
+  try {
+    checkRunId = await createFixPrCheckRun(octokit, context, 'Preparing fix attempt.');
+  } catch (error) {
+    console.error('fix-pr.check.create.failed', serializeError(error));
+  }
+
   const branchName = `ci-fix/pr-${context.prNumber}-${context.jobName.toLowerCase()}-t${Math.round(Date.now() / 1000)}`;
 
-  await createFixBranch(branchName);
-  await configureGitUser();
+  try {
+    await createFixBranch(branchName);
+    await configureGitUser();
 
-  await applyCodexFix(prompt, opts.codexApiKey, opts.model);
-  await verifyWorkspace();
+    await applyCodexFix(prompt, opts.codexApiKey, opts.model);
 
-  await commitChanges(`chore: auto-fix ${context.jobName} failure for PR #${context.prNumber}`);
-  await pushBranch(branchName);
+    await safeUpdateFixPrCheckRun(octokit, context, checkRunId, {
+      status: 'in_progress',
+      summary: 'Applied fixes. Running verification.',
+    });
 
-  const prUrl = await createPullRequest({
-    octokit,
-    repo: context.repo,
-    head: branchName,
-    base: context.headBranch,
-    prNumber: context.prNumber,
-    jobName: context.jobName,
-    workflowUrl: context.workflowUrl,
-  });
+    await verifyWorkspace();
 
-  console.info('✅ Auto-fix PR created:', prUrl);
+    await commitChanges(`chore: auto-fix ${context.jobName} failure for PR #${context.prNumber}`);
+    await pushBranch(branchName);
+
+    const prUrl = await createPullRequest({
+      octokit,
+      repo: context.repo,
+      head: branchName,
+      base: context.headBranch,
+      prNumber: context.prNumber,
+      jobName: context.jobName,
+      workflowUrl: context.workflowUrl,
+    });
+
+    await safeUpdateFixPrCheckRun(octokit, context, checkRunId, {
+      status: 'completed',
+      conclusion: 'success',
+      summary: 'Fix PR created. Review the proposed changes.',
+      text: `Fix PR: ${prUrl}`,
+      detailsUrl: prUrl,
+    });
+
+    console.info('✅ Auto-fix PR created:', prUrl);
+  } catch (error) {
+    const detail = (error instanceof Error && error.message) ? error.message : String(error);
+
+    await safeUpdateFixPrCheckRun(octokit, context, checkRunId, {
+      status: 'completed',
+      conclusion: 'failure',
+      summary: 'Fix attempt failed.',
+      text: detail,
+    });
+
+    throw error;
+  }
 };
 
 try {
@@ -582,7 +696,7 @@ try {
       'GitHub repository (defaults to GITHUB_REPOSITORY env var)',
       process.env.GITHUB_REPOSITORY || '',
     )
-    .option('--save-artifacts', 'Save PR fix artifacts to /tmp', false)
+    .option('--artifact-path <path>', 'Directory to which save artifact files', '/tmp/fix-pr-artifacts')
     .option('--dry-run', 'Print the Codex prompt without applying changes', false)
     .action(async (opts: FixPrCliOptions) => {
       await main(opts);
