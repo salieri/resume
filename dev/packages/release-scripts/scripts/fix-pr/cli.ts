@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 
+import { program } from 'commander';
 import { Octokit } from 'octokit';
 import { serializeError } from 'serialize-error';
 import { z } from 'zod';
@@ -38,6 +39,10 @@ interface FailureContext {
   failedCommand: string;
   logSnippet: string;
   reproductionOutput: string;
+}
+
+interface FixPrCliOptions {
+  dryRun: boolean;
 }
 
 const COMMAND_BY_JOB: Record<string, string> = {
@@ -188,6 +193,11 @@ const renderPrompt = async (templatePath: string, replacements: Record<string, s
   const template = await fs.readFile(templatePath, 'utf8');
 
   return template.replaceAll(/\{\{(\w+)\}\}/g, (_match, key: string) => replacements[key] ?? '');
+};
+
+const logDryRunPrompt = (prompt: string) => {
+  console.info('===== Codex Prompt (dry run) =====');
+  console.info(prompt);
 };
 
 const invokeCodex = async (prompt: string) => {
@@ -397,8 +407,8 @@ const createFixBranch = async (branchName: string) => {
   }
 };
 
-const applyCodexFix = async (context: FailureContext) => {
-  const prompt = await renderPrompt(PROMPT_TEMPLATE_PATH, {
+const buildCodexPrompt = async (context: FailureContext) => {
+  return renderPrompt(PROMPT_TEMPLATE_PATH, {
     JOB_NAME: context.jobName,
     FAILED_COMMAND: context.failedCommand,
     PR_NUMBER: String(context.prNumber),
@@ -410,7 +420,9 @@ const applyCodexFix = async (context: FailureContext) => {
     HEAD_BRANCH: context.headBranch,
     BASE_BRANCH: context.baseBranch,
   });
+};
 
+const applyCodexFix = async (prompt: string) => {
   const codexOutput = await invokeCodex(prompt);
   const patch = extractPatch(codexOutput);
 
@@ -447,7 +459,7 @@ const pushBranch = async (branchName: string) => {
   }
 };
 
-const main = async () => {
+const main = async (opts: FixPrCliOptions) => {
   const event = await parseEvent();
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 
@@ -457,12 +469,20 @@ const main = async () => {
 
   const octokit = new Octokit({ auth: token });
   const context = await buildFailureContext(octokit, event);
+  const prompt = await buildCodexPrompt(context);
+
+  if (opts.dryRun) {
+    logDryRunPrompt(prompt);
+
+    return;
+  }
+
   const branchName = `ci-fix/pr-${context.prNumber}-${context.jobName.toLowerCase()}`;
 
   await createFixBranch(branchName);
   await configureGitUser();
 
-  await applyCodexFix(context);
+  await applyCodexFix(prompt);
   await verifyWorkspace();
 
   await commitChanges(`chore: auto-fix ${context.jobName} failure for PR #${context.prNumber}`);
@@ -482,7 +502,15 @@ const main = async () => {
 };
 
 try {
-  await main();
+  program
+    .name('fix-pr')
+    .description('Attempt to auto-fix CI failures for pull requests')
+    .option('--dry-run', 'Print the Codex prompt without applying changes', false)
+    .action(async (opts: FixPrCliOptions) => {
+      await main(opts);
+    });
+
+  await program.parseAsync();
 } catch (error) {
   console.error('❌ Fix PR automation failed:', serializeError(error));
   process.exit(1);
