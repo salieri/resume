@@ -529,7 +529,7 @@ const main = async (opts: FixPrCliOptions) => {
     return;
   }
 
-  const branchName = `ci-fix/pr-${context.prNumber}-${context.jobName.toLowerCase()}`;
+  const branchName = `ci-fix/pr-${context.prNumber}-${context.jobName.toLowerCase()}-t${Math.round(Date.now() / 1000)}`;
 
   await createFixBranch(branchName);
   await configureGitUser();
