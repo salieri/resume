@@ -10,7 +10,7 @@ import { Option, program } from 'commander';
 import { Octokit } from 'octokit';
 import { serializeError } from 'serialize-error';
 
-import { summarizeRelease } from './summarize-release';
+import { runWithOctokitRateLimit, summarizeRelease } from './summarize-release';
 
 interface ReleaseNotesCliArgs {
   currentTag: string;
@@ -145,17 +145,23 @@ const formatReviews = (reviews: { body?: string | null; user?: { login?: string 
 };
 
 const fetchPrConversation = async (octokit: Octokit, repo: { owner: string; repo: string }, prNumber: number) => {
-  const [pr, reviews, comments] = await Promise.all([
-    octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber }),
-    octokit.paginate(
-      octokit.rest.pulls.listReviews,
-      { owner: repo.owner, repo: repo.repo, pull_number: prNumber, per_page: 100 },
-    ),
-    octokit.paginate(
-      octokit.rest.issues.listComments,
-      { owner: repo.owner, repo: repo.repo, issue_number: prNumber, per_page: 100 },
-    ),
-  ]);
+  const prPromise = runWithOctokitRateLimit(() => octokit.rest.pulls.get({
+    owner: repo.owner,
+    repo: repo.repo,
+    pull_number: prNumber,
+  }));
+
+  const reviewsPromise = runWithOctokitRateLimit(() => octokit.paginate(
+    octokit.rest.pulls.listReviews,
+    { owner: repo.owner, repo: repo.repo, pull_number: prNumber, per_page: 100 },
+  ));
+
+  const commentsPromise = runWithOctokitRateLimit(() => octokit.paginate(
+    octokit.rest.issues.listComments,
+    { owner: repo.owner, repo: repo.repo, issue_number: prNumber, per_page: 100 },
+  ));
+
+  const [pr, reviews, comments] = await Promise.all([prPromise, reviewsPromise, commentsPromise]);
 
   return {
     number: pr.data.number,

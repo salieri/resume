@@ -1,6 +1,8 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
+import { Queue } from 'modern-async';
+
 export interface ReleaseSummaryOptions {
   currentTag: string;
   previousTag?: string;
@@ -14,6 +16,11 @@ export interface ReleaseSummary {
   tagNotes: { current?: string; previous?: string };
   pullRequestNumbers: number[];
 }
+
+const OCTOKIT_CONCURRENCY = 10;
+const octokitQueue = new Queue(OCTOKIT_CONCURRENCY);
+
+export const runWithOctokitRateLimit = <T>(task: () => Promise<T>) => octokitQueue.exec(task);
 
 const execGit = async (args: string[]) => {
   const { stdout } = await promisify(execFile)('git', args, { encoding: 'utf8' });
