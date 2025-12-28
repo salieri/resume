@@ -123,6 +123,7 @@ const getRepoInfo = async () => {
     }
 
     const [owner, repo] = parts;
+
     return { owner, repo };
   }
 
