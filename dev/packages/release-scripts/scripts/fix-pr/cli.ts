@@ -221,7 +221,7 @@ const invokeCodex = async (prompt: string, apiKey: string, model: string) => {
     runCmd,
     codexArgs,
     {
-      env: { ...process.env, OPENAI_API_KEY: apiKey },
+      env: { ...process.env, CODEX_API_KEY: apiKey },
       allowFailure: true,
     },
   );
