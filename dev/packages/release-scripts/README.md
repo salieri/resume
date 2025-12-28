@@ -3,6 +3,7 @@ Generic scripts for managing releases.
 
 ## Scripts
 * `release-notes` generates release notes between two git tags
+* `fix-pr` attempts to auto-fix failing CI jobs on pull requests
 
 ## Commands
 ```bash
