@@ -7,6 +7,7 @@ import { promisify } from 'node:util';
 
 import { OpenRouter } from '@openrouter/sdk';
 import { Option, program } from 'commander';
+import { Octokit } from 'octokit';
 import { serializeError } from 'serialize-error';
 
 import { summarizeRelease } from './summarize-release';
@@ -21,7 +22,7 @@ interface ReleaseNotesCliArgs {
   dryRun: boolean;
 }
 
-const MAX_CONTEXT_CHARS = 90_000;
+const MAX_CONTEXT_CHARS = 65_536;
 
 const DEFAULT_PROMPT_TEMPLATE = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -35,11 +36,7 @@ const execGit = async (args: string[]) => {
 };
 
 const renderReleaseNotes = (summary: string, opts: ReleaseNotesCliArgs, range: string) => {
-  return [
-    `# Release ${opts.currentTag}`,
-    summary.trim(),
-    `> Range: \`${range}\``,
-  ].join('\n\n');
+  return [`# Release ${opts.currentTag}`, summary.trim(), `> Range: \`${range}\``].join('\n\n');
 };
 
 const buildPrompt = async (templatePath: string, replacements: Record<string, string>) => {
@@ -90,8 +87,136 @@ const getReleaseSummary = async (opts: ReleaseNotesCliArgs) => summarizeRelease(
   previousTag: opts.previousTag?.trim() || undefined,
 });
 
+const formatGhText = (input?: string | null) => input?.trim().replaceAll(/\s+/g, ' ') ?? '';
+
+const parseGitHubRepoFromUrl = (remoteUrl: string) => {
+  const sshMatch = remoteUrl.match(/git@[^:]+:([^/]+)\/(.+?)(?:\.git)?$/);
+
+  if (sshMatch) {
+    return { owner: sshMatch[1], repo: sshMatch[2].replace(/\.git$/, '') };
+  }
+
+  try {
+    const parsed = new URL(remoteUrl.replace(/^git\+/, ''));
+    const parts = parsed.pathname.replace(/^\//, '').replace(/\.git$/, '').split('/').filter(Boolean);
+    const owner = parts.at(-2);
+    const repo = parts.at(-1);
+
+    if (owner && repo) {
+      return { owner, repo };
+    }
+  } catch {
+    // fallthrough to error below
+  }
+
+  throw new Error(`Unable to parse GitHub repository from remote URL "${remoteUrl}".`);
+};
+
+const getRepoInfo = async () => {
+  const envRepo = process.env.GITHUB_REPOSITORY;
+
+  if (envRepo) {
+    const [owner, repo] = envRepo.split('/');
+
+    if (owner && repo) {
+      return { owner, repo };
+    }
+  }
+
+  const remote = await execGit(['remote', 'get-url', 'origin']);
+
+  return parseGitHubRepoFromUrl(remote);
+};
+
+const formatComments = (comments: { body?: string | null; user?: { login?: string | null } | null }[]) => {
+  return comments.length > 0
+    ? comments
+        .map((comment) => `- ${comment.user?.login ?? 'unknown'}: ${formatGhText(comment.body) || '(no content)'}`)
+        .join('\n')
+    : 'No PR comments.';
+};
+
+const formatReviews = (reviews: { body?: string | null; user?: { login?: string | null } | null; state?: string | null }[]) => {
+  return reviews.length > 0
+    ? reviews
+        .map((review) => `- ${review.user?.login ?? 'unknown'} (${review.state ?? 'REVIEW'}): ${formatGhText(review.body) || '(no notes)'}`)
+        .join('\n')
+    : 'No review summaries.';
+};
+
+const fetchPrConversation = async (octokit: Octokit, repo: { owner: string; repo: string }, prNumber: number) => {
+  const [pr, reviews, comments] = await Promise.all([
+    octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber }),
+    octokit.paginate(
+      octokit.rest.pulls.listReviews,
+      { owner: repo.owner, repo: repo.repo, pull_number: prNumber, per_page: 100 },
+    ),
+    octokit.paginate(
+      octokit.rest.issues.listComments,
+      { owner: repo.owner, repo: repo.repo, issue_number: prNumber, per_page: 100 },
+    ),
+  ]);
+
+  return {
+    number: pr.data.number,
+    title: pr.data.title ?? undefined,
+    body: pr.data.body ?? undefined,
+    reviews,
+    comments,
+  };
+};
+
+const buildPrConversationsContext = async (pullRequestNumbers: number[]) => {
+  if (pullRequestNumbers.length === 0) {
+    return 'No pull requests detected in commit range.';
+  }
+
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+
+  if (!token) {
+    return 'GitHub token (GITHUB_TOKEN or GH_TOKEN) not available; skipping PR conversations.';
+  }
+
+  let repoInfo: { owner: string; repo: string };
+
+  try {
+    repoInfo = await getRepoInfo();
+  } catch (error) {
+    return `Unable to determine GitHub repository: ${String(error)}`;
+  }
+
+  const octokit = new Octokit({ auth: token });
+
+  const conversations = await Promise.all(
+    pullRequestNumbers.map(async (prNumber) => {
+      try {
+        const pr = await fetchPrConversation(octokit, repoInfo, prNumber);
+
+        const commentText = formatComments(pr.comments);
+        const reviewText = formatReviews(pr.reviews);
+
+        return [
+          `### PR #${pr.number}: ${pr.title ?? 'No title'}`,
+          `#### Description\n ${pr.body ? formatGhText(pr.body) : 'No description provided.'}\n`,
+          `#### Reviews\n${reviewText}\n`,
+          `#### Comments\n${commentText}`,
+        ].join('\n');
+      } catch (error) {
+        return `### PR #${prNumber}\nUnable to fetch conversation (${String(error)})`;
+      }
+    }),
+  );
+
+  const combined = conversations.join('\n\n').trim();
+
+  return trimContext(combined.length > 0 ? combined : 'No PR conversations available.');
+};
+
 const buildReleasePrompt = async (opts: ReleaseNotesCliArgs, summary: Awaited<ReturnType<typeof summarizeRelease>>) => {
-  const codeChanges = await buildCodeChangesContext(summary.range, summary.previousTag);
+  const [codeChanges, prConversations] = await Promise.all([
+    buildCodeChangesContext(summary.range, summary.previousTag),
+    buildPrConversationsContext(summary.pullRequestNumbers),
+  ]);
 
   const commitsBlock = summary.commits.length === 0
     ? 'No commits found in range.'
@@ -105,6 +230,7 @@ const buildReleasePrompt = async (opts: ReleaseNotesCliArgs, summary: Awaited<Re
     PREVIOUS_TAG_NOTES: summary.tagNotes.previous ?? 'No tag annotation',
     COMMITS: commitsBlock,
     CODE_CHANGES: codeChanges,
+    PR_CONVERSATIONS: prConversations,
   });
 };
 
@@ -113,9 +239,7 @@ const summarizeWithModel = async (prompt: string, model: string, apiKey: string)
 
   const llmResult = await openRouter.chat.send({
     model,
-    messages: [
-      { role: 'user', content: prompt },
-    ],
+    messages: [{ role: 'user', content: prompt }],
     temperature: 0.2,
   }, { retries: {
     strategy: 'backoff',

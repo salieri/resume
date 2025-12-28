@@ -30,6 +30,7 @@
   "dependencies": {
     "@openrouter/sdk": "catalog:",
     "commander": "catalog:",
+    "octokit": "catalog:",
     "serialize-error": "catalog:"
   },
   "devDependencies": {

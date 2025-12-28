@@ -12,6 +12,7 @@ export interface ReleaseSummary {
   range: string;
   commits: { hash: string; subject: string }[];
   tagNotes: { current?: string; previous?: string };
+  pullRequestNumbers: number[];
 }
 
 const execGit = async (args: string[]) => {
@@ -59,6 +60,26 @@ const getCommitsBetween = async (range: string) => {
       });
 };
 
+const getPullRequestNumbersBetween = async (range: string) => {
+  const logOutput = await execGit(['log', '--pretty=format:%B%x1e', range]);
+  const entries = logOutput.split('\x1e').filter(Boolean);
+  const prNumbers = new Set<number>();
+
+  for (const entry of entries) {
+    const matches = entry.matchAll(/#(\d+)/g);
+
+    for (const match of matches) {
+      const parsed = Number.parseInt(match[1], 10);
+
+      if (!Number.isNaN(parsed)) {
+        prNumbers.add(parsed);
+      }
+    }
+  }
+
+  return Array.from(prNumbers).sort((a, b) => a - b);
+};
+
 export const summarizeRelease = async (options: ReleaseSummaryOptions): Promise<ReleaseSummary> => {
   await assertTagExists(options.currentTag);
 
@@ -76,11 +97,14 @@ export const summarizeRelease = async (options: ReleaseSummaryOptions): Promise<
     previous: await getTagAnnotation(previousTag),
   };
 
+  const pullRequestNumbers = await getPullRequestNumbersBetween(range);
+
   return {
     currentTag: options.currentTag,
     previousTag,
     range,
     commits,
     tagNotes,
+    pullRequestNumbers,
   };
 };
