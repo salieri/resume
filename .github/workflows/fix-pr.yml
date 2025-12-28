@@ -9,6 +9,7 @@ permissions:
   contents: write
   pull-requests: write
   actions: read
+  checks: write
 
 jobs:
   attempt-fix:
@@ -52,25 +53,24 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-#      - name: Log Codex prompt (dry run)
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: pnpm --filter @faust/release-scripts fix:pr --dry-run
+      - name: Create artifact directory
+        id: artifact-path
+        run: |
+          ARTIFACT_PATH=$(mktemp -d /tmp/fix-pr-XXXXXXX)
+          echo "artifact_path=$ARTIFACT_PATH" >> "$GITHUB_OUTPUT"
 
       - name: Attempt auto-fix with Codex
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        # run: pnpm --filter @faust/release-scripts fix:pr
         run: |
           cd dev/packages/release-scripts
-          ./node_modules/.bin/tsx ./scripts/fix-pr/cli.ts --save-artifacts
+          ./node_modules/.bin/tsx ./scripts/fix-pr/cli.ts --artifact-path "${{ steps.artifact-path.outputs.artifact_path }}"
 
       - name: 'Save generation artifacts'
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: generation-artifacts
-          path: |
-            /tmp/fix-pr-*
+          path: ${{ steps.artifact-path.outputs.artifact_path }}/**/*
           if-no-files-found: ignore
