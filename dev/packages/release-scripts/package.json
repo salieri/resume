@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@faust/eslint-config": "workspace:",
+    "@openai/codex": "catalog:",
     "@types/node": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "eslint": "catalog:",

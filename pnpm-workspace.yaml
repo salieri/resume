@@ -21,6 +21,7 @@ catalog:
   "@mantine/dropzone": ^8.3.7
   "@mantine/hooks": ^8.3.7
   "@mantine/notifications": ^8.3.7
+  "@openai/codex": ^0.77.0
   "@openrouter/sdk": ^0.3.10
   "@react-router/dev": ^7.9.2
   "@react-router/node": ^7.9.2

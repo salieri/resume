@@ -24,6 +24,9 @@ catalogs:
     '@mantine/notifications':
       specifier: ^8.3.7
       version: 8.3.10
+    '@openai/codex':
+      specifier: ^0.77.0
+      version: 0.77.0
     '@openrouter/sdk':
       specifier: ^0.3.10
       version: 0.3.10
@@ -481,6 +484,9 @@ importers:
       '@faust/eslint-config':
         specifier: 'workspace:'
         version: link:../eslint-config
+      '@openai/codex':
+        specifier: 'catalog:'
+        version: 0.77.0
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.3
@@ -2032,6 +2038,11 @@ packages:
   '@octokit/webhooks@14.2.0':
     resolution: {integrity: sha512-da6KbdNCV5sr1/txD896V+6W0iamFWrvVl8cHkBSPT+YlvmT3DwXa4jxZnQc+gnuTEqSWbBeoSZYTayXH9wXcw==}
     engines: {node: '>= 20'}
+
+  '@openai/codex@0.77.0':
+    resolution: {integrity: sha512-1Z3tuJsePfQvBELmTT3Dpzm4GheQn0t4H8RtdZnYVBdj1vA2Hi6eGCrOHXxPSfXRKDrSZ4VvALcQmZpFmYsaHA==}
+    engines: {node: '>=16'}
+    hasBin: true
 
   '@openrouter/sdk@0.3.10':
     resolution: {integrity: sha512-FNOwLn/GvOw1Xk+x36bC1vtDwLIo45yIEoBwin+Dhb4j9DoRVBW2h9L/1rjNd7ILpyj9lB3LBhaLmateOt4Wrg==}
@@ -7580,6 +7591,8 @@ snapshots:
       '@octokit/openapi-webhooks-types': 12.1.0
       '@octokit/request-error': 7.1.0
       '@octokit/webhooks-methods': 6.0.0
+
+  '@openai/codex@0.77.0': {}
 
   '@openrouter/sdk@0.3.10':
     dependencies:
