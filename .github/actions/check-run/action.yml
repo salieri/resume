@@ -86,7 +86,7 @@ runs:
           exit 1
         fi
         if [[ -z "${{ inputs.check-run-id }}" || -z "${{ inputs.status }}" ]]; then
-          echo "check-run-id and status are required for update."
+          echo "check-run-id and status are required for update. Got: '${{ inputs.check-run-id }}', '${{ inputs.status }}'"
           exit 2
         fi
         DETAILS_ARG=()
