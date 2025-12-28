@@ -52,13 +52,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Log Codex prompt (dry run)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm --filter @faust/release-scripts fix:pr --dry-run
+#      - name: Log Codex prompt (dry run)
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: pnpm --filter @faust/release-scripts fix:pr --dry-run
 
       - name: Attempt auto-fix with Codex
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: pnpm --filter @faust/release-scripts fix:pr
+        # run: pnpm --filter @faust/release-scripts fix:pr
+        run: |
+          cd dev/packages/release-scripts
+          ./node_modules/.bin/tsx ./scripts/fix-pr/cli.ts
