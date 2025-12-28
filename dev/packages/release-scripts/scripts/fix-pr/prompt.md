@@ -35,11 +35,12 @@ Your task is to diagnose the failure, apply minimal code fixes, and verify the f
 ## Helpful Commands
 Run these commands to diagnose and verify fixes:
 
-| Command        | Purpose                            | Scope                     |
-|----------------|------------------------------------|---------------------------|
-| `pnpm build`   | Check for build/compilation errors | Root or package directory |
-| `pnpm lint:ci` | Check for linting errors           | Root or package directory |
-| `pnpm test:ci` | Check for test failures            | Root or package directory |
+| Command         | Purpose                            | Scope                     |
+|-----------------|------------------------------------|---------------------------|
+| `pnpm build`    | Check for build/compilation errors | Root or package directory |
+| `pnpm lint:ci`  | Check for linting errors           | Root or package directory |
+| `pnpm test:ci`  | Check for test failures            | Root or package directory |
+| `pnpm lint:fix` | Attempt to auto-fix linting errors | Root or package directory |
 
 > **Tip:** Running commands in a specific package directory (e.g., `cd dev/packages/release-scripts/ && pnpm test:ci`) is faster than running from the workspace root.
 

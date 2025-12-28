@@ -55,7 +55,7 @@ jobs:
       - name: Log Codex prompt (dry run)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm --filter @faust/release-scripts fix:pr -- --dry-run
+        run: pnpm --filter @faust/release-scripts fix:pr --dry-run
 
       - name: Attempt auto-fix with Codex
         env:

@@ -275,10 +275,10 @@ const outputSummary = async (content: string, outputPath?: string) => {
   if (!outputPath) {
     console.info(content);
 
-    ret urn;
+    return;
   }
 
-  await fs.mkdir(path.dirname(outputPath), {    recursive: true });
+  await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, content, 'utf8');
   console.info('✅ Release summary written to', outputPath);
 };
