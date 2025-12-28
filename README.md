@@ -58,6 +58,7 @@
 * `tflint` for Terraform
 * I18next linter for translation keys
 * Code coverage with `vitest`
+* Test coverage reports with `codecov`
 
 ## Getting Started
 ```bash
