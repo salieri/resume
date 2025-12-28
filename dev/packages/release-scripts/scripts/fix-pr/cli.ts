@@ -72,31 +72,7 @@ const normalizeExecFailure = (error: unknown) => {
   };
 };
 
-const runCommand = async (command: string, opts?: { cwd?: string; allowFailure?: boolean; env?: NodeJS.ProcessEnv }) => {
-  const execOptions = {
-    shell: true,
-    cwd: opts?.cwd ?? process.cwd(),
-    env: { ...process.env, ...opts?.env },
-    maxBuffer: 10 * 1024 * 1024,
-    encoding: 'utf8' as const,
-  };
-
-  try {
-    const { stdout, stderr } = await execFileAsync(command, execOptions);
-
-    return { code: 0, stdout, stderr };
-  } catch (error) {
-    const result = normalizeExecFailure(error);
-
-    if (!opts?.allowFailure) {
-      throw Object.assign(new Error(result.stderr || result.stdout || String(error)), result);
-    }
-
-    return result;
-  }
-};
-
-const runCommandArgs = async (
+const runCommand = async (
   cmd: string,
   args: string[],
   opts?: { cwd?: string; allowFailure?: boolean; env?: NodeJS.ProcessEnv },
@@ -109,7 +85,7 @@ const runCommandArgs = async (
   };
 
   try {
-    console.info('runCommandArgs.exec', JSON.stringify({ cmd, args }));
+    console.info('runCommand.exec', JSON.stringify({ cmd, args }));
 
     const { stdout, stderr } = await execFileAsync(cmd, args, execOptions);
 
@@ -117,7 +93,7 @@ const runCommandArgs = async (
   } catch (error) {
     const result = normalizeExecFailure(error);
 
-    console.info('runCommandArgs.error:', JSON.stringify({ result, cmd, args }));
+    console.error('runCommand.error', JSON.stringify({ result, cmd, args }));
 
     if (!opts?.allowFailure) {
       throw Object.assign(new Error(result.stderr || result.stdout || String(error)), result);
@@ -253,20 +229,20 @@ const getRepoInfo = (fullName: string) => {
 };
 
 const getGitStatus = async () => {
-  const { stdout } = await runCommand('git status --porcelain', { allowFailure: true });
+  const { stdout } = await runCommand('git', ['status', '--porcelain'], { allowFailure: true });
 
   return stdout.trim();
 };
 
 const configureGitUser = async () => {
-  await runCommand('git config user.name "ci-fix-bot"', { allowFailure: true });
-  await runCommand('git config user.email "ci-fix-bot@users.noreply.github.com"', { allowFailure: true });
+  await runCommand('git', ['config', 'user.name', 'ci-fix-bot'], { allowFailure: true });
+  await runCommand('git', ['config', 'user.email', 'ci-fix-bot@users.noreply.github.com'], { allowFailure: true });
 };
 
 const commitChanges = async (message: string) => {
-  await runCommand('git add -A');
+  await runCommand('git', ['add', '-A']);
 
-  const commitResult = await runCommand(`git commit -m "${message}"`, { allowFailure: true });
+  const commitResult = await runCommand('git', ['commit', '-m', message], { allowFailure: true });
 
   if (commitResult.code !== 0) {
     throw new Error(`Unable to commit changes: ${commitResult.stderr || commitResult.stdout}`);
@@ -458,7 +434,7 @@ const buildFailureContext = async (
 };
 
 const createFixBranch = async (branchName: string) => {
-  const result = await runCommand(`git checkout -b "${branchName}"`, { allowFailure: true });
+  const result = await runCommand('git', ['checkout', '-b', branchName], { allowFailure: true });
 
   if (result.code !== 0) {
     throw new Error(`Failed to create fix branch ${branchName}: ${result.stderr || result.stdout}`);
@@ -491,19 +467,19 @@ const applyCodexFix = async (prompt: string, apiKey: string, model: string) => {
 };
 
 const verifyWorkspace = async () => {
-  const verifyCommands = ['pnpm build', 'pnpm lint:ci', 'pnpm test:ci'];
+  const verifyCommands = ['build', 'lint:ci', 'test:ci'];
 
   for (const command of verifyCommands) {
-    const result = await runCommand(command, { allowFailure: true });
+    const result = await runCommand('pnpm', [command], { allowFailure: true });
 
     if (result.code !== 0) {
-      throw new Error(`Verification command failed (${command}): ${result.stderr || result.stdout}`);
+      throw new Error(`Verification command failed (pnpm ${command}): ${result.stderr || result.stdout}`);
     }
   }
 };
 
 const pushBranch = async (branchName: string) => {
-  const pushResult = await runCommand(`git push origin "${branchName}"`, { allowFailure: false });
+  const pushResult = await runCommand('git', ['push', 'origin', branchName], { allowFailure: false });
 
   if (pushResult.code !== 0) {
     throw new Error(`Failed to push branch ${branchName}: ${pushResult.stderr || pushResult.stdout}`);
