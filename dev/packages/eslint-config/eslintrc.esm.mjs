@@ -317,6 +317,9 @@ export default (basePath) => defineConfig(
           alwaysTryTypes: true,
           project: './tsconfig.json',
         },
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+        },
       },
     }
   },
