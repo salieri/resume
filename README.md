@@ -1,13 +1,14 @@
-## Why is this project so unnecessarily complex?
-This project is my calling card. It demonstrates my ability to architect and implement a sophisticated software system that spans multiple domains and technologies.
-
-For example:
-* Technology stack selection
-* Templating
-* Infrastructure and platform
-* Middleware and backend
-* AI/LLM
-* Frontend and user experience
+> ## Why is this project so unnecessarily complex?
+> This resume has been written as a demo you can use to evaluate my technical skills.
+> It showcases my ability to architect, build, and deploy a modern web application using a variety of technologies and best practices.
+>
+> For example:
+> * Technology stack selection
+> * Templating
+> * Infrastructure and platform
+> * Middleware and backend
+> * AI/LLM/automation
+> * Frontend and user experience
 
 ## Architecture
 * Scalable monorepo model
@@ -25,6 +26,13 @@ For example:
 * Site is translated to multiple languages using LLM over OpenRouter
   * [Prompt](./dev/apps/resume/scripts/translation/prompt.md)
   * [Translation script](./dev/apps/resume/scripts/translation/translate.ts)
+* Releases notes are generated using LLM
+  * [Prompt](./dev/packages/release-scripts/scripts/release-notes/prompt.md)
+  * [Release notes script](./dev/packages/release-scripts/scripts/release-notes/summarize-release.ts)
+  * [GitHub Action](./.github/workflows/create-release.yml)
+* PRs with build/lint/test failures are automatically fixed with Codex
+  * [Prompt](./dev/packages/release-scripts/scripts/fix-pr/prompt.md)
+  * [GitHub Action](./.github/workflows/fix-pr.yml)
 
 ## Platform & Infrastructure
 * Deploys to Cloudflare Pages
@@ -50,6 +58,7 @@ For example:
 * `tflint` for Terraform
 * I18next linter for translation keys
 * Code coverage with `vitest`
+* Test coverage reports with `codecov`
 
 ## Getting Started
 ```bash
