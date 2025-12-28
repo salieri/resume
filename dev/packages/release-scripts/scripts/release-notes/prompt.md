@@ -13,8 +13,11 @@ You are a technical writer creating concise release notes from the commit messag
 ## Code Changes (may be truncated)
 {{CODE_CHANGES}}
 
+## PR Conversations (may be truncated)
+{{PR_CONVERSATIONS}}
+
 ## Task
-Write bullet-point release notes summarizing meaningful changes between {{PREVIOUS_TAG}} and {{CURRENT_TAG}}.
+Write bullet-point release notes summarizing meaningful changes between {{PREVIOUS_TAG}} and {{CURRENT_TAG}}. Use the PR conversations to capture user-facing impacts, breaking changes, and nuance that may not be obvious from diffs alone.
 
 ## Guidelines
 
@@ -22,6 +25,7 @@ Write bullet-point release notes summarizing meaningful changes between {{PREVIO
 1. **Synthesize related commits** – Group commits addressing the same feature, bug, or area into single bullet points. Never list commits individually.
 2. **Omit noise** – Skip trivial commits (typo fixes, merge commits, version bumps) unless they're the only changes.
 3. **Handle empty ranges** – If there are no commits, write: "No changes since {{PREVIOUS_TAG}}."
+4. **Respect discussion context** – If PR conversations clarify intent, risk, or follow-up work, incorporate that into the summary even if code changes look small.
 
 ### Prioritization (use this order)
 1. Breaking changes (always first; prefix with "**Breaking:**")

@@ -91,6 +91,9 @@ export default (basePath) => defineConfig(
   },
   {
     rules: {
+      '@stylistic/array-bracket-newline': ['error', { multiline: true, minItems: null }],
+      '@stylistic/array-bracket-spacing': ['error', 'never'],
+      '@stylistic/array-element-newline': ['error', { consistent: true, multiline: true, minItems: null }],
       '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false } ],
       '@stylistic/jsx-one-expression-per-line': 'off',
