@@ -43,6 +43,10 @@ interface FailureContext {
 
 interface FixPrCliOptions {
   dryRun: boolean;
+  codexApiKey: string;
+  githubToken: string;
+  githubEventPath: string;
+  githubRepository: string;
 }
 
 const COMMAND_BY_JOB: Record<string, string> = {
@@ -56,16 +60,6 @@ const MAX_FIX_PR_NESTING = 5;
 const PROMPT_TEMPLATE_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'prompt.md');
 
 const execFileAsync = promisify(execFile);
-
-const ensureEnv = (name: string) => {
-  const value = process.env[name];
-
-  if (!value) {
-    throw new Error(`${name} is required`);
-  }
-
-  return value;
-};
 
 const normalizeExecFailure = (error: unknown) => {
   const execError = error as { stdout?: string; stderr?: string; code?: number };
@@ -128,8 +122,11 @@ const runCommandArgs = async (
   }
 };
 
-const parseEvent = async (): Promise<WorkflowRunEvent> => {
-  const eventPath = ensureEnv('GITHUB_EVENT_PATH');
+const parseEvent = async (eventPath: string): Promise<WorkflowRunEvent> => {
+  if (!eventPath) {
+    throw new Error('GitHub event path is required.');
+  }
+
   const content = await fs.readFile(eventPath, 'utf8');
 
   let raw: unknown;
@@ -201,16 +198,25 @@ const logDryRunPrompt = (prompt: string) => {
   console.info(prompt);
 };
 
-const invokeCodex = async (prompt: string) => {
-  const apiKey = process.env.CODEX_API_KEY || process.env.OPENAI_API_KEY;
-
+const invokeCodex = async (prompt: string, apiKey: string) => {
   if (!apiKey) {
-    throw new Error('CODEX_API_KEY or OPENAI_API_KEY is required for @openai/codex');
+    throw new Error('Codex API key is required for @openai/codex');
   }
+
+  const codexArgs = ['dlx', '@openai/codex', 'exec'];
+  const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+
+  if (isGitHubActions) {
+    codexArgs.push('--dangerously-bypass-approvals-and-sandbox');
+  } else {
+    codexArgs.push('--sandbox', 'workspace-write', '--ask-for-approval', 'untrusted');
+  }
+
+  codexArgs.push(prompt);
 
   const { code, stdout, stderr } = await runCommandArgs(
     'pnpm',
-    ['dlx', '@openai/codex', 'exec', '--dangerously-bypass-approvals-and-sandbox', prompt],
+    codexArgs,
     {
       env: { ...process.env, CODEX_API_KEY: apiKey },
       allowFailure: true,
@@ -338,10 +344,14 @@ const assertPullRequestRun = (workflowRun: WorkflowRunEvent['workflow_run']) => 
   return prNumber;
 };
 
-const resolveRepoFromEvent = (event: WorkflowRunEvent) => {
+const resolveRepoFromEvent = (event: WorkflowRunEvent, fallbackRepo?: string) => {
   const repoFullName = event.workflow_run.head_repository?.full_name
     ?? event.repository?.full_name
-    ?? ensureEnv('GITHUB_REPOSITORY');
+    ?? fallbackRepo;
+
+  if (!repoFullName) {
+    throw new Error('GitHub repository is required to resolve repo info.');
+  }
 
   return getRepoInfo(repoFullName);
 };
@@ -437,7 +447,11 @@ const collectJobContext = async (octokit: Octokit, repo: { owner: string; repo: 
   return { jobName, failedCommand, jobLogTail, reproductionOutput };
 };
 
-const buildFailureContext = async (octokit: Octokit, event: WorkflowRunEvent): Promise<FailureContext> => {
+const buildFailureContext = async (
+  octokit: Octokit,
+  event: WorkflowRunEvent,
+  opts: Pick<FixPrCliOptions, 'githubRepository'>,
+): Promise<FailureContext> => {
   const workflowRun = event.workflow_run;
 
   if (workflowRun.conclusion !== 'failure') {
@@ -445,7 +459,7 @@ const buildFailureContext = async (octokit: Octokit, event: WorkflowRunEvent): P
   }
 
   const prNumber = assertPullRequestRun(workflowRun);
-  const repo = resolveRepoFromEvent(event);
+  const repo = resolveRepoFromEvent(event, opts.githubRepository);
   const pr = await octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber });
   ensurePushablePullRequest(pr);
   await ensureFixPrNestingLimit(octokit, repo, pr);
@@ -489,8 +503,8 @@ const buildCodexPrompt = async (context: FailureContext) => {
   });
 };
 
-const applyCodexFix = async (prompt: string) => {
-  const codexOutput = await invokeCodex(prompt);
+const applyCodexFix = async (prompt: string, apiKey: string) => {
+  const codexOutput = await invokeCodex(prompt, apiKey);
   const patch = extractPatch(codexOutput);
 
   if (!patch) {
@@ -527,15 +541,14 @@ const pushBranch = async (branchName: string) => {
 };
 
 const main = async (opts: FixPrCliOptions) => {
-  const event = await parseEvent();
-  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  const event = await parseEvent(opts.githubEventPath);
 
-  if (!token) {
-    throw new Error('GITHUB_TOKEN or GH_TOKEN is required to fetch workflow data.');
+  if (!opts.githubToken) {
+    throw new Error('GitHub token is required to fetch workflow data.');
   }
 
-  const octokit = new Octokit({ auth: token });
-  const context = await buildFailureContext(octokit, event);
+  const octokit = new Octokit({ auth: opts.githubToken });
+  const context = await buildFailureContext(octokit, event, opts);
   const prompt = await buildCodexPrompt(context);
 
   if (opts.dryRun) {
@@ -549,7 +562,7 @@ const main = async (opts: FixPrCliOptions) => {
   await createFixBranch(branchName);
   await configureGitUser();
 
-  await applyCodexFix(prompt);
+  await applyCodexFix(prompt, opts.codexApiKey);
   await verifyWorkspace();
 
   await commitChanges(`chore: auto-fix ${context.jobName} failure for PR #${context.prNumber}`);
@@ -572,6 +585,26 @@ try {
   program
     .name('fix-pr')
     .description('Attempt to auto-fix CI failures for pull requests')
+    .option(
+      '--codex-api-key <key>',
+      'Codex API Key (defaults to CODEX_API_KEY or OPENAI_API_KEY env var)',
+      process.env.CODEX_API_KEY || process.env.OPENAI_API_KEY || '',
+    )
+    .option(
+      '--github-token <token>',
+      'GitHub token (defaults to GITHUB_TOKEN or GH_TOKEN env var)',
+      process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '',
+    )
+    .option(
+      '--github-event-path <path>',
+      'GitHub event path (defaults to GITHUB_EVENT_PATH env var)',
+      process.env.GITHUB_EVENT_PATH || '',
+    )
+    .option(
+      '--github-repository <repo>',
+      'GitHub repository (defaults to GITHUB_REPOSITORY env var)',
+      process.env.GITHUB_REPOSITORY || '',
+    )
     .option('--dry-run', 'Print the Codex prompt without applying changes', false)
     .action(async (opts: FixPrCliOptions) => {
       await main(opts);
