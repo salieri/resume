@@ -64,4 +64,13 @@ jobs:
         # run: pnpm --filter @faust/release-scripts fix:pr
         run: |
           cd dev/packages/release-scripts
-          ./node_modules/.bin/tsx ./scripts/fix-pr/cli.ts
+          ./node_modules/.bin/tsx ./scripts/fix-pr/cli.ts --save-artifacts
+
+      - name: 'Save generation artifacts'
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: generation-artifacts
+          path: |
+            /tmp/fix-pr-*
+          if-no-files-found: ignore
