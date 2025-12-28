@@ -32,10 +32,12 @@ inputs:
 outputs:
   check-run-id:
     description: The created check run id
+    value: ${{ steps.create-check.outputs.check-run-id }}
 runs:
   using: composite
   steps:
     - name: Create check run
+      id: create-check
       if: ${{ inputs.mode == 'create' }}
       shell: bash
       run: |
