@@ -16,12 +16,30 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.event == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Create fix-pr check
+        id: fix-pr-check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: .github/actions/check-run
+        with:
+          mode: create
+          name: fix-pr
+          head-sha: ${{ github.event.workflow_run.head_sha }}
+          summary: Initializing a fix attempt...
+          details-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
       - name: Checkout PR head
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.workflow_run.head_repository.full_name }}
           ref: ${{ github.event.workflow_run.head_branch }}
           fetch-depth: 0
+
+      - uses: terraform-linters/setup-tflint@v6
+        name: Setup TFLint
+        with:
+          tflint_version: v0.60.0
+          cache: true
 
       - name: Read tool versions from package.json
         id: versions
@@ -59,6 +77,20 @@ jobs:
           ARTIFACT_PATH=$(mktemp -d /tmp/fix-pr-XXXXXXX)
           echo "artifact_path=$ARTIFACT_PATH" >> "$GITHUB_OUTPUT"
 
+      - name: Update fix-pr check - in progress
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CHECK_RUN_ID: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          JOB_STATUS: ${{ job.status }}
+        uses: ./.github/actions/check-run
+        with:
+          mode: update
+          check-run-id: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          status: in_progress
+          summary: 'Auto-fix attempt in progress...'
+          details-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
       - name: Attempt auto-fix with Codex
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -74,3 +106,18 @@ jobs:
           name: generation-artifacts
           path: ${{ steps.artifact-path.outputs.artifact_path }}/**/*
           if-no-files-found: ignore
+
+      - name: Update fix-pr check - completed
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CHECK_RUN_ID: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          JOB_STATUS: ${{ job.status }}
+        uses: ./.github/actions/check-run
+        with:
+          mode: update
+          check-run-id: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          status: completed
+          conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
+          summary: ${{ job.status == 'success' && 'Success – fix PR filed.' || 'Fix attempt failed. See workflow run artifacts for details.' }}
+          details-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
