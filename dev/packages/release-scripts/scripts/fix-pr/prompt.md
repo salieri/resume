@@ -45,6 +45,8 @@ Run these commands to diagnose and verify fixes:
 > **Tip:** Running commands in a specific package directory (e.g., `cd dev/packages/release-scripts/ && pnpm test:ci`) is faster than running from the workspace root.
 
 ## Execution Protocol
+Execute all steps. Do not prompt for user input. Operate independently and autonomously with the goal of fully resolving the CI failure. Continue iterating through the steps until all issues are resolved, or you determine that human intervention is required.
+
 ### Step 1: Diagnose
 1. **Parse the error**: Carefully analyze the CI log excerpt and local reproduction output.
 2. **Identify error type**: Classify as build error, lint violation, test failure, or a combination.
