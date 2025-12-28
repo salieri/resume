@@ -41,13 +41,6 @@ Execute all steps. Do not prompt for user input. Operate independently and auton
 1. **Parse the error**: Carefully analyze the CI log excerpt and local reproduction output.
 2. **Identify error type**: Classify as build error, lint violation, test failure, or a combination.
 3. **Locate the source**: Identify the specific file(s), line number(s), and code causing the failure.
-4. **State your diagnosis**: Before making any changes, output a clear, concise diagnosis in this format:
-   ```
-   DIAGNOSIS:
-   - Error type: <build|lint|test|multiple>
-   - Root cause: <one-sentence explanation>
-   - Affected files: <list of files>
-   ```
 
 ### Step 2: Fix
 1. **Plan before editing**: Determine the minimal change required to fix the identified issue.
@@ -62,13 +55,12 @@ Execute all steps. Do not prompt for user input. Operate independently and auton
 - Clean up code, comments, or documentation unless directly related to the fix
 
 ### Step 3: Verify
-1. **Re-run the failed command**: Execute `{{FAILED_COMMAND}}` to confirm your fix resolves the original error.
-2. **Run full validation**: Execute all three checks in sequence:
+1. **Run full validation**: Execute all three checks in sequence:
    ```bash
    pnpm build && pnpm lint:ci && pnpm test:ci
    ```
-3. **Handle cascading errors**: If your fix reveals new errors, return to Step 1 and repeat the process.
-4. **Confirm all green**: Only proceed to Step 4 when all three commands pass successfully.
+2. **Handle cascading errors**: If your fix reveals new errors, return to Step 1 and repeat the process.
+3. **Confirm all green**: Only proceed to Step 4 when all three commands pass successfully.
 
 ### Step 4: Complete (Success Path)
 When all validation commands pass:
