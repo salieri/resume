@@ -203,7 +203,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
     throw new Error('Codex API key is required for @openai/codex');
   }
 
-  const codexArgs = ['dlx', '@openai/codex', 'exec'];
+  const codexArgs = ['exec'];
   const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
   if (isGitHubActions) {
@@ -215,7 +215,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
   codexArgs.push(prompt);
 
   const { code, stdout, stderr } = await runCommandArgs(
-    'pnpm',
+    path.join('.', 'node_modules', '.bin', 'codex'),
     codexArgs,
     {
       env: { ...process.env, CODEX_API_KEY: apiKey },
