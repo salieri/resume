@@ -1,5 +1,5 @@
 /* eslint-disable no-console,unicorn/no-process-exit */
-import { execFile } from 'node:child_process';
+import { execFile, spawn } from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -220,23 +220,26 @@ const invokeCodex = async (prompt: string, apiKey: string, model: string) => {
 
   codexArgs.push(prompt);
 
-  const { code, stdout, stderr } = await runCommandArgs(
-    runCmd,
-    codexArgs,
-    {
+  await new Promise<void>((resolve, reject) => {
+    const child = spawn(runCmd, codexArgs, {
       env: { ...process.env, CODEX_API_KEY: apiKey },
-      allowFailure: true,
-    },
-  );
+      stdio: 'inherit',
+    });
 
-  console.info('codex.stdout', stdout);
+    child.on('error', (error) => {
+      reject(error);
+    });
 
-  if (code !== 0) {
-    console.error('codex.stderr', code, stderr);
-    throw new Error(`@openai/codex CLI failed with exit code ${code}: ${stderr || stdout}`);
-  }
+    child.on('close', (code) => {
+      if (code !== 0) {
+        reject(new Error(`@openai/codex CLI failed with exit code ${code}`));
 
-  return stdout + stderr;
+        return;
+      }
+
+      resolve();
+    });
+  });
 };
 
 const getRepoInfo = (fullName: string) => {
