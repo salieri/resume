@@ -1,0 +1,109 @@
+name: Check Run Helper
+description: Create or update GitHub check runs.
+inputs:
+  mode:
+    description: create or update
+    required: true
+  name:
+    description: Check run name (required for create)
+    required: false
+  head-sha:
+    description: Head SHA (required for create)
+    required: false
+  summary:
+    description: Output summary
+    required: true
+  status:
+    description: in_progress or completed (required for update)
+    required: false
+  conclusion:
+    description: Check conclusion (required for completed update)
+    required: false
+  details-url:
+    description: Details URL to link to
+    required: false
+  title:
+    description: Output title
+    required: false
+    default: Fix PR automation
+  check-run-id:
+    description: Check run id (required for update)
+    required: false
+outputs:
+  check-run-id:
+    description: The created check run id
+runs:
+  using: composite
+  steps:
+    - name: Create check run
+      if: ${{ inputs.mode == 'create' }}
+      shell: bash
+      run: |
+        set -euo pipefail
+        if [[ -z "${GH_TOKEN:-}" ]]; then
+          echo "GH_TOKEN is required."
+          exit 1
+        fi
+        if [[ -z "${GITHUB_REPOSITORY:-}" ]]; then
+          echo "GITHUB_REPOSITORY is required."
+          exit 1
+        fi
+        if [[ -z "${{ inputs.name }}" || -z "${{ inputs.head-sha }}" ]]; then
+          echo "name and head-sha are required for create."
+          exit 2
+        fi
+        DETAILS_ARG=()
+        if [[ -n "${{ inputs.details-url }}" ]]; then
+          DETAILS_ARG=(-f details_url="${{ inputs.details-url }}")
+        fi
+        RESPONSE=$(gh api \
+          --method POST \
+          -H "Accept: application/vnd.github+json" \
+          "/repos/${GITHUB_REPOSITORY}/check-runs" \
+          -f name="${{ inputs.name }}" \
+          -f head_sha="${{ inputs.head-sha }}" \
+          -f status="in_progress" \
+          "${DETAILS_ARG[@]}" \
+          -f output[title]="${{ inputs.title }}" \
+          -f output[summary]="${{ inputs.summary }}")
+        CHECK_RUN_ID=$(echo "$RESPONSE" | jq -r '.id')
+        if [[ -z "$CHECK_RUN_ID" || "$CHECK_RUN_ID" == "null" ]]; then
+          echo "Unable to read check run id."
+          exit 1
+        fi
+        echo "check-run-id=$CHECK_RUN_ID" >> "$GITHUB_OUTPUT"
+    - name: Update check run
+      if: ${{ inputs.mode == 'update' }}
+      shell: bash
+      run: |
+        set -euo pipefail
+        if [[ -z "${GH_TOKEN:-}" ]]; then
+          echo "GH_TOKEN is required."
+          exit 1
+        fi
+        if [[ -z "${GITHUB_REPOSITORY:-}" ]]; then
+          echo "GITHUB_REPOSITORY is required."
+          exit 1
+        fi
+        if [[ -z "${{ inputs.check-run-id }}" || -z "${{ inputs.status }}" ]]; then
+          echo "check-run-id and status are required for update."
+          exit 2
+        fi
+        DETAILS_ARG=()
+        if [[ -n "${{ inputs.details-url }}" ]]; then
+          DETAILS_ARG=(-f details_url="${{ inputs.details-url }}")
+        fi
+        CONCLUSION_ARG=()
+        if [[ -n "${{ inputs.conclusion }}" ]]; then
+          CONCLUSION_ARG=(-f conclusion="${{ inputs.conclusion }}")
+        fi
+        gh api \
+          --method PATCH \
+          -H "Accept: application/vnd.github+json" \
+          "/repos/${GITHUB_REPOSITORY}/check-runs/${{ inputs.check-run-id }}" \
+          -f status="${{ inputs.status }}" \
+          "${CONCLUSION_ARG[@]}" \
+          "${DETAILS_ARG[@]}" \
+          -f output[title]="${{ inputs.title }}" \
+          -f output[summary]="${{ inputs.summary }}" \
+          >/dev/null
