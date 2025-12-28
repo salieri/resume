@@ -41,6 +41,13 @@ Execute all steps. Do not prompt for user input. Operate independently and auton
 1. **Parse the error**: Carefully analyze the CI log excerpt and local reproduction output.
 2. **Identify error type**: Classify as build error, lint violation, test failure, or a combination.
 3. **Locate the source**: Identify the specific file(s), line number(s), and code causing the failure.
+4. **State your diagnosis**: Before making any changes, output a clear, concise diagnosis in this format:
+   ```
+   DIAGNOSIS:
+   - Error type: <build|lint|test|multiple>
+   - Root cause: <one-sentence explanation>
+   - Affected files: <list of files>
+   ```
 
 ### Step 2: Fix
 1. **Plan before editing**: Determine the minimal change required to fix the identified issue.
