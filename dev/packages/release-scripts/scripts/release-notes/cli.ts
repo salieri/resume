@@ -113,14 +113,17 @@ const parseGitHubRepoFromUrl = (remoteUrl: string) => {
 };
 
 const getRepoInfo = async () => {
-  const envRepo = process.env.GITHUB_REPOSITORY;
+  const envRepo = process.env.GITHUB_REPOSITORY?.trim();
 
   if (envRepo) {
-    const [owner, repo] = envRepo.split('/');
+    const parts = envRepo.split('/');
 
-    if (owner && repo) {
-      return { owner, repo };
+    if (parts.length !== 2 || !parts[0] || !parts[1]) {
+      throw new Error(`Invalid GITHUB_REPOSITORY value "${envRepo}". Expected format "owner/repo".`);
     }
+
+    const [owner, repo] = parts;
+    return { owner, repo };
   }
 
   const remote = await execGit(['remote', 'get-url', 'origin']);
