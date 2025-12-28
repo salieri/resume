@@ -8,9 +8,7 @@ const translateSection = async (sectionData: Record<string, unknown>, sectionKey
 
   const result // await params.openRouter.completions.generate({
     = await params.openRouter.chat.send({
-      messages: [
-        { role: 'user', content: prompt.replace('{{OUTPUT_FORMAT}}', JSON.stringify(sectionData, null, 2)) },
-      ],
+      messages: [{ role: 'user', content: prompt.replace('{{OUTPUT_FORMAT}}', JSON.stringify(sectionData, null, 2)) }],
       ...params.modelParams,
 
       responseFormat: {
