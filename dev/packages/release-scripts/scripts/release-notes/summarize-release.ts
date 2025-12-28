@@ -62,7 +62,7 @@ const getCommitsBetween = async (range: string) => {
 
 const getPullRequestNumbersBetween = async (range: string) => {
   const logOutput = await execGit(['log', '--pretty=format:%B%x1e', range]);
-  const entries = logOutput.split('\x1e').filter(Boolean);
+  const entries = logOutput.split('\u001E').filter(Boolean);
   const prNumbers = new Set<number>();
 
   for (const entry of entries) {
@@ -77,7 +77,7 @@ const getPullRequestNumbersBetween = async (range: string) => {
     }
   }
 
-  return Array.from(prNumbers).sort((a, b) => a - b);
+  return [...prNumbers].toSorted((a, b) => a - b);
 };
 
 export const summarizeRelease = async (options: ReleaseSummaryOptions): Promise<ReleaseSummary> => {
