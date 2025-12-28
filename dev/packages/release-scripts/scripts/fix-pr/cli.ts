@@ -42,6 +42,7 @@ interface FailureContext {
 
 interface FixPrCliOptions {
   dryRun: boolean;
+  saveArtifacts: boolean;
   codexApiKey: string;
   model: string;
   githubToken: string;
@@ -516,6 +517,7 @@ const pushBranch = async (branchName: string) => {
   }
 };
 
+// eslint-disable-next-line max-statements
 const main = async (opts: FixPrCliOptions) => {
   const event = await parseEvent(opts.githubEventPath);
 
@@ -528,6 +530,11 @@ const main = async (opts: FixPrCliOptions) => {
   const prompt = await buildCodexPrompt(context);
 
   console.info('init.failureContext', JSON.stringify({ context, prompt }));
+
+  if (opts.saveArtifacts) {
+    await fs.writeFile('/tmp/fix-pr-prompt.md', prompt, 'utf8');
+    await fs.writeFile('/tmp/fix-pr-context.json', JSON.stringify(prompt, null, 2), 'utf8');
+  }
 
   if (opts.dryRun) {
     logDryRunPrompt(prompt);
@@ -588,6 +595,7 @@ try {
       'GitHub repository (defaults to GITHUB_REPOSITORY env var)',
       process.env.GITHUB_REPOSITORY || '',
     )
+    .option('--save-artifacts', 'Save PR fix artifacts to /tmp', false)
     .option('--dry-run', 'Print the Codex prompt without applying changes', false)
     .action(async (opts: FixPrCliOptions) => {
       await main(opts);
