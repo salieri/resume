@@ -84,7 +84,7 @@ jobs:
         uses: ./.github/actions/check-run
         with:
           mode: update
-          check-run-id: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          check-run-id: ${{ steps.fix-pr-check.outputs.check-run-id }}
           status: in_progress
           summary: 'Auto-fix attempt in progress...'
 
@@ -111,7 +111,7 @@ jobs:
         uses: ./.github/actions/check-run
         with:
           mode: update
-          check-run-id: ${{ steps.fix-pr-check.outputs.check_run_id }}
+          check-run-id: ${{ steps.fix-pr-check.outputs.check-run-id }}
           status: completed
           conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
           summary: ${{ job.status == 'success' && 'Success – fix PR filed.' || 'Fix attempt failed. See workflow run artifacts for details.' }}
