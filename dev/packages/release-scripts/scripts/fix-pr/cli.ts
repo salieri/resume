@@ -43,6 +43,7 @@ interface FailureContext {
 interface FixPrCliOptions {
   dryRun: boolean;
   codexApiKey: string;
+  model: string;
   githubToken: string;
   githubEventPath: string;
   githubRepository: string;
@@ -199,13 +200,13 @@ const logDryRunPrompt = (prompt: string) => {
   console.info(prompt);
 };
 
-const invokeCodex = async (prompt: string, apiKey: string) => {
+const invokeCodex = async (prompt: string, apiKey: string, model: string) => {
   if (!apiKey) {
     throw new Error('Codex API key is required for @openai/codex');
   }
 
   const runCmd = path.join('.', 'node_modules', '.bin', 'codex');
-  const codexArgs = ['exec', '--config', 'preferred_auth_method=apikey'];
+  const codexArgs = ['--config', 'preferred_auth_method=apikey', '--config', `model=${model}`, 'exec'];
   const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
   if (isGitHubActions) {
@@ -483,8 +484,8 @@ const buildCodexPrompt = async (context: FailureContext) => {
   });
 };
 
-const applyCodexFix = async (prompt: string, apiKey: string) => {
-  await invokeCodex(prompt, apiKey);
+const applyCodexFix = async (prompt: string, apiKey: string, model: string) => {
+  await invokeCodex(prompt, apiKey, model);
 
   const status = await getGitStatus();
 
@@ -537,7 +538,7 @@ const main = async (opts: FixPrCliOptions) => {
   await createFixBranch(branchName);
   await configureGitUser();
 
-  await applyCodexFix(prompt, opts.codexApiKey);
+  await applyCodexFix(prompt, opts.codexApiKey, opts.model);
   await verifyWorkspace();
 
   await commitChanges(`chore: auto-fix ${context.jobName} failure for PR #${context.prNumber}`);
@@ -564,6 +565,11 @@ try {
       '--codex-api-key <key>',
       'Codex API Key (defaults to CODEX_API_KEY or OPENAI_API_KEY env var)',
       process.env.CODEX_API_KEY || process.env.OPENAI_API_KEY || '',
+    )
+    .option(
+      '--model <name>',
+      'OpenAI model to be used',
+      'gpt-5.1',
     )
     .option(
       '--github-token <token>',
