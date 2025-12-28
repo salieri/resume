@@ -565,7 +565,7 @@ try {
     .option(
       '--model <name>',
       'OpenAI model to be used',
-      'gpt-5.1-codex',
+      'gpt-5.1',
     )
     .option(
       '--github-token <token>',
