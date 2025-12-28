@@ -41,7 +41,7 @@ Execute all steps. Do not prompt for user input. Operate independently and auton
 1. **Parse the error**: Carefully analyze the CI log excerpt and local reproduction output.
 2. **Identify error type**: Classify as build error, lint violation, test failure, or a combination.
 3. **Locate the source**: Identify the specific file(s), line number(s), and code causing the failure.
-4. **State your diagnosis**: Before making any changes, output a clear, concise diagnosis in this format:
+4. **Save diagnosis**: Before making any changes, store a clear, concise diagnosis in this format into `/tmp/fix-pr-diagnosis.txt`:
    ```
    DIAGNOSIS:
    - Error type: <build|lint|test|multiple>
@@ -72,7 +72,7 @@ Execute all steps. Do not prompt for user input. Operate independently and auton
 ### Step 4: Complete (Success Path)
 When all validation commands pass:
 
-1. **Summarize changes** in this format:
+1. **Summarize changes** in this format and save the summary in `/tmp/fix-pr-resolution.txt`:
    ```
    RESOLUTION SUMMARY:
    - Files modified: <list>
@@ -86,7 +86,7 @@ When all validation commands pass:
 ### Failure Protocol
 If you cannot resolve the issue after reasonable attempts:
 
-1. Document what you tried and why it failed:
+1. Document what you tried and why it failed and save the summary in `/tmp/fix-pr-failure.txt`:
     ```
     UNABLE TO RESOLVE:
     - Error type: <classification>
