@@ -2,8 +2,6 @@
 You are an autonomous coding agent. A CI pipeline has failed on this branch.
 Your task is to diagnose the failure, apply minimal code fixes, and verify the fix—all independently.
 
----
-
 ## Context
 | Field          | Value                         |
 |----------------|-------------------------------|
@@ -13,7 +11,6 @@ Your task is to diagnose the failure, apply minimal code fixes, and verify the f
 | Failed job     | `{{JOB_NAME}}`                |
 | Failed command | `{{FAILED_COMMAND}}`          |
 | Workflow run   | {{RUN_URL}}                   |
-
 
 ### Pull Request Body
 ```
@@ -25,15 +22,8 @@ Your task is to diagnose the failure, apply minimal code fixes, and verify the f
 {{LOG_SNIPPET}}
 ```
 
-### Local Reproduction Output
-```
-{{REPRO_OUTPUT}}
-```
-
----
-
 ## Helpful Commands
-Run these commands to diagnose and verify fixes:
+You can run these commands to diagnose and verify fixes:
 
 | Command         | Purpose                            | Scope                     |
 |-----------------|------------------------------------|---------------------------|

@@ -37,7 +37,6 @@ interface FailureContext {
   jobName: string;
   failedCommand: string;
   logSnippet: string;
-  reproductionOutput: string;
 }
 
 interface FixPrCliOptions {
@@ -409,24 +408,14 @@ const ensureFixPrNestingLimit = async (
   }
 };
 
-const getReproductionOutput = async (command: string) => {
-  const reproductionResult = await runCommand(command, { allowFailure: true });
-
-  return trimLinesFromEnd(
-    [reproductionResult.stdout, reproductionResult.stderr].filter(Boolean).join('\n'),
-    LOG_TAIL_LINES,
-  );
-};
-
 const collectJobContext = async (octokit: Octokit, repo: { owner: string; repo: string }, workflowRunId: number) => {
   const failedJob = await fetchFailedJob(octokit, repo, workflowRunId);
   const jobName = failedJob.name ?? 'unknown';
   const failedCommand = COMMAND_BY_JOB[jobName.toLowerCase()] ?? 'pnpm build';
   const jobLog = await downloadJobLog(octokit, repo, failedJob.id);
   const jobLogTail = trimLinesFromEnd(jobLog, LOG_TAIL_LINES);
-  const reproductionOutput = await getReproductionOutput(failedCommand);
 
-  return { jobName, failedCommand, jobLogTail, reproductionOutput };
+  return { jobName, failedCommand, jobLogTail };
 };
 
 const buildFailureContext = async (
@@ -460,7 +449,6 @@ const buildFailureContext = async (
     jobName: jobContext.jobName,
     failedCommand: jobContext.failedCommand,
     logSnippet: jobContext.jobLogTail,
-    reproductionOutput: jobContext.reproductionOutput,
   };
 };
 
@@ -481,7 +469,6 @@ const buildCodexPrompt = async (context: FailureContext) => {
     PR_BODY: context.prBody,
     RUN_URL: context.workflowUrl ?? '',
     LOG_SNIPPET: context.logSnippet,
-    REPRO_OUTPUT: context.reproductionOutput,
     HEAD_BRANCH: context.headBranch,
     BASE_BRANCH: context.baseBranch,
   });
@@ -533,7 +520,7 @@ const main = async (opts: FixPrCliOptions) => {
 
   if (opts.saveArtifacts) {
     await fs.writeFile('/tmp/fix-pr-prompt.md', prompt, 'utf8');
-    await fs.writeFile('/tmp/fix-pr-context.json', JSON.stringify(prompt, null, 2), 'utf8');
+    await fs.writeFile('/tmp/fix-pr-context.json', JSON.stringify(context, null, 2), 'utf8');
   }
 
   if (opts.dryRun) {
