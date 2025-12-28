@@ -96,37 +96,6 @@ const runCommand = async (command: string, opts?: { cwd?: string; allowFailure?:
   }
 };
 
-const runCommandArgs = async (
-  cmd: string,
-  args: string[],
-  opts?: { cwd?: string; allowFailure?: boolean; env?: NodeJS.ProcessEnv },
-) => {
-  const execOptions = {
-    cwd: opts?.cwd ?? process.cwd(),
-    env: { ...process.env, ...opts?.env },
-    maxBuffer: 10 * 1024 * 1024,
-    encoding: 'utf8' as const,
-  };
-
-  try {
-    console.info('runCommandArgs.exec', JSON.stringify({ cmd, args }));
-
-    const { stdout, stderr } = await execFileAsync(cmd, args, execOptions);
-
-    return { code: 0, stdout, stderr };
-  } catch (error) {
-    const result = normalizeExecFailure(error);
-
-    console.info('runCommandArgs.error:', JSON.stringify({ result, cmd, args }));
-
-    if (!opts?.allowFailure) {
-      throw Object.assign(new Error(result.stderr || result.stdout || String(error)), result);
-    }
-
-    return result;
-  }
-};
-
 const parseEvent = async (eventPath: string): Promise<WorkflowRunEvent> => {
   if (!eventPath) {
     throw new Error('GitHub event path is required.');
