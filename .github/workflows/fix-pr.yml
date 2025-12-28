@@ -20,7 +20,7 @@ jobs:
         id: fix-pr-check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: .github/actions/check-run
+        uses: ./.github/actions/check-run
         with:
           mode: create
           name: fix-pr
