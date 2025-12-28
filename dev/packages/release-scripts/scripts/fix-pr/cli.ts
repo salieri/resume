@@ -1,7 +1,6 @@
 /* eslint-disable no-console,unicorn/no-process-exit */
 import { execFile } from 'node:child_process';
 import fs from 'node:fs/promises';
-import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
@@ -108,6 +107,8 @@ const runCommandArgs = async (
   };
 
   try {
+    console.info('runCommandArgs:', JSON.stringify({ file, execOptions, args }));
+
     const { stdout, stderr } = await execFileAsync(file, args, execOptions);
 
     return { code: 0, stdout, stderr };
@@ -203,6 +204,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
     throw new Error('Codex API key is required for @openai/codex');
   }
 
+  const runCmd = path.join('.', 'node_modules', '.bin', 'codex');
   const codexArgs = ['exec'];
   const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
@@ -215,7 +217,7 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
   codexArgs.push(prompt);
 
   const { code, stdout, stderr } = await runCommandArgs(
-    path.join('.', 'node_modules', '.bin', 'codex'),
+    runCmd,
     codexArgs,
     {
       env: { ...process.env, CODEX_API_KEY: apiKey },
@@ -223,39 +225,14 @@ const invokeCodex = async (prompt: string, apiKey: string) => {
     },
   );
 
+  console.info('codex stdout', stdout);
+
   if (code !== 0) {
+    console.error('codex stderr', code, stderr);
     throw new Error(`@openai/codex CLI failed with exit code ${code}: ${stderr || stdout}`);
   }
 
   return stdout + stderr;
-};
-
-const extractPatch = (content: string) => {
-  const taggedMatch = content.match(/PATCH_START([\s\S]*?)PATCH_END/);
-
-  if (taggedMatch?.[1]) {
-    return taggedMatch[1].trim();
-  }
-
-  const diffFenceMatch = content.match(/```diff([\s\S]*?)```/);
-
-  if (diffFenceMatch?.[1]) {
-    return diffFenceMatch[1].trim();
-  }
-
-  return null;
-};
-
-const applyPatch = async (patchContent: string) => {
-  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'codex-patch-'));
-  const patchPath = path.join(dir, 'fix.patch');
-  await fs.writeFile(patchPath, patchContent, 'utf8');
-
-  const { code, stderr } = await runCommand(`git apply --whitespace=fix "${patchPath}"`, { allowFailure: true });
-
-  if (code !== 0) {
-    throw new Error(`Failed to apply patch: ${stderr}`);
-  }
 };
 
 const getRepoInfo = (fullName: string) => {
@@ -281,6 +258,7 @@ const configureGitUser = async () => {
 
 const commitChanges = async (message: string) => {
   await runCommand('git add -A');
+
   const commitResult = await runCommand(`git commit -m "${message}"`, { allowFailure: true });
 
   if (commitResult.code !== 0) {
@@ -461,8 +439,10 @@ const buildFailureContext = async (
   const prNumber = assertPullRequestRun(workflowRun);
   const repo = resolveRepoFromEvent(event, opts.githubRepository);
   const pr = await octokit.rest.pulls.get({ owner: repo.owner, repo: repo.repo, pull_number: prNumber });
+
   ensurePushablePullRequest(pr);
   await ensureFixPrNestingLimit(octokit, repo, pr);
+
   const jobContext = await collectJobContext(octokit, repo, workflowRun.id);
 
   return {
@@ -481,7 +461,7 @@ const buildFailureContext = async (
 };
 
 const createFixBranch = async (branchName: string) => {
-  const result = await runCommand(`git switch -c "${branchName}"`, { allowFailure: true });
+  const result = await runCommand(`git checkout -b "${branchName}"`, { allowFailure: true });
 
   if (result.code !== 0) {
     throw new Error(`Failed to create fix branch ${branchName}: ${result.stderr || result.stdout}`);
@@ -504,19 +484,12 @@ const buildCodexPrompt = async (context: FailureContext) => {
 };
 
 const applyCodexFix = async (prompt: string, apiKey: string) => {
-  const codexOutput = await invokeCodex(prompt, apiKey);
-  const patch = extractPatch(codexOutput);
-
-  if (!patch) {
-    throw new Error('No patch detected in codex output; aborting.');
-  }
-
-  await applyPatch(patch);
+  await invokeCodex(prompt, apiKey);
 
   const status = await getGitStatus();
 
   if (!status) {
-    throw new Error('Codex produced no changes after applying patch.');
+    throw new Error('Codex produced no changes.');
   }
 };
 
@@ -533,7 +506,7 @@ const verifyWorkspace = async () => {
 };
 
 const pushBranch = async (branchName: string) => {
-  const pushResult = await runCommand(`git push origin "${branchName}"`, { allowFailure: true });
+  const pushResult = await runCommand(`git push origin "${branchName}"`, { allowFailure: false });
 
   if (pushResult.code !== 0) {
     throw new Error(`Failed to push branch ${branchName}: ${pushResult.stderr || pushResult.stdout}`);
@@ -550,6 +523,8 @@ const main = async (opts: FixPrCliOptions) => {
   const octokit = new Octokit({ auth: opts.githubToken });
   const context = await buildFailureContext(octokit, event, opts);
   const prompt = await buildCodexPrompt(context);
+
+  console.info('Failure context:', JSON.stringify(context));
 
   if (opts.dryRun) {
     logDryRunPrompt(prompt);

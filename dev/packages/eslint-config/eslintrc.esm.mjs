@@ -130,6 +130,13 @@ export default (basePath) => defineConfig(
           { blankLine: "always", prev: "multiline-const", next: "*" },
           { blankLine: "always", prev: "*", next: "multiline-expression" },
           { blankLine: "always", prev: "multiline-expression", next: "*" },
+
+          { blankLine: "always", prev: "*", next: "const" },
+          { blankLine: "always", prev: "*", next: "let" },
+          { blankLine: "any", prev: "const", next: "const" },
+          { blankLine: "any", prev: "let", next: "const" },
+          { blankLine: "any", prev: "const", next: "let" },
+          { blankLine: "any", prev: "let", next: "let" },
       ],
       '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'never' }],
       '@stylistic/semi': ['error', 'always'],
