@@ -67,7 +67,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <>
               <I18nTitleManager />
               <DirectionProvider initialDirection='ltr' detectDirection={false}>
-                <MantineProvider theme={[theme]}>
+                <MantineProvider theme={theme}>
                   <ResumeAppShell>{children}</ResumeAppShell>
                 </MantineProvider>
               </DirectionProvider>
@@ -89,7 +89,7 @@ export default function App() {
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = 'Oops!';
   let details = 'An unexpected error occurred.';
-  let stack: string | undefined;
+  let stack: string | undefined = true;
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? '404' : 'Error';

@@ -1,10 +1,10 @@
 {
-  "name": "@faust/react-template",
+  "name": "@aleksi/resume",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "react-router build",
+    "build": "pnpm clean && tsc --noEmit && react-router build",
     "clean": "rm -rf ./dist",
     "dev": "react-router dev --port 3030 --host 0.0.0.0",
     "eslint": "eslint . --cache",

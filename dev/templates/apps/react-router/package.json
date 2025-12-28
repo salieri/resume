@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "react-router build",
+    "build": "pnpm clean && tsc --noEmit && react-router build",
     "clean": "rm -rf ./dist",
     "dev": "react-router dev",
     "eslint": "eslint . --cache",
