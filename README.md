@@ -33,6 +33,7 @@
 * PRs with build/lint/test failures are automatically fixed with Codex
   * [Prompt](./dev/packages/release-scripts/scripts/fix-pr/prompt.md)
   * [GitHub Action](./.github/workflows/fix-pr.yml)
+* [AGENTS.md](./AGENTS.md)
 
 ## Platform & Infrastructure
 * Deploys to Cloudflare Pages
@@ -59,6 +60,7 @@
 * I18next linter for translation keys
 * Code coverage with `vitest`
 * Test coverage reports with `codecov`
+* GitHub Copilot reviews
 
 ## Getting Started
 ```bash
