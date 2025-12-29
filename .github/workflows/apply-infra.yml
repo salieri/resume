@@ -48,7 +48,7 @@ jobs:
           project_name = "${{ inputs.project_name }}"
           resume_zone_name = "${{ inputs.resume_zone_name }}"
           cloudflare_account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
-          cloudflare_api_token = "${{ secrets.CLOUDFLARE_API_TOKEN }}"
+          cloudflare_api_token = "${{ secrets.CLOUDFLARE_API_TOKEN_TERRAFORM }}"
           EOF
 
       - name: Terraform init
