@@ -105,14 +105,16 @@ CLOUDFLARE_API_TOKEN="..." CLOUDFLARE_ACCOUNT_ID="..." \
 
 ### Environment Variables
 
-| **Name**                | **Scope**  | **Description**                                    |
-|-------------------------|------------|----------------------------------------------------|
-| `OPENROUTER_API_KEY`    | build      | API key for OpenRouter to use LLM for translations |
-| `AWS_ENDPOINT_URL_S3`   | terraform  | Endpoint URL for Cloudflare R2 bucket              |
-| `AWS_ACCESS_KEY_ID`     | terraform  | Access key ID for Cloudflare R2 bucket             |
-| `AWS_SECRET_ACCESS_KEY` | terraform  | Secret access key for Cloudflare R2 bucket         |
-| `CLOUDFLARE_API_TOKEN`  | deployment | Cloudflare API token                               |codex
-| `CLOUDFLARE_ACCOUNT_ID` | deployment | Cloudflare account ID                              |
+| **Name**                        | **Scope**  | **Description**                                    |
+|---------------------------------|------------|----------------------------------------------------|
+| `OPENROUTER_API_KEY`            | build      | API key for OpenRouter to use LLM for translations |
+| `AWS_ENDPOINT_URL_S3`           | terraform  | Endpoint URL for Cloudflare R2 bucket              |
+| `AWS_ACCESS_KEY_ID`             | terraform  | Access key ID for Cloudflare R2 bucket             |
+| `AWS_SECRET_ACCESS_KEY`         | terraform  | Secret access key for Cloudflare R2 bucket         |
+| `CLOUDFLARE_API_TOKEN`          | deployment | Cloudflare API token                               |
+| `CLOUDFLARE_ACCOUNT_ID`         | deployment | Cloudflare account ID                              |
+| `CODECOV_TOKEN`                 | ci         | Token for Codecov coverage uploads                 |
+| `OPENAI_API_KEY`                | ci         | Fallback API key for automated PR fixes            |
 
 ## Infrastructure
 
@@ -135,3 +137,6 @@ The Wrangler CLI requires a Cloudflare API token with the following permissions:
 
 #### OpenRouter API Key
 An OpenRouter API key is required for the translation functionality. You can obtain an API key at [OpenRouter](https://openrouter.ai/settings/keys).
+
+#### OpenAI API Key
+An OpenAI API key is required for the automated PR fixing functionality. You can obtain an API key at [OpenAI](https://platform.openai.com/account/api-keys).

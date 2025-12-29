@@ -156,6 +156,11 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 * Keep commits atomic and focused on a single change.
 * Write descriptive commit messages explaining *why*, not just *what*.
 
+## Documentation
+* Add all environment variables to the 'Environment Variables' section in README.md
+* Add JSDoc comments to all public functions. Write SHORT descriptions (=1 sentence).
+* Prefer TERSE descriptions that are easy to read and consume.
+* Add `.describe()` blocks to all `zod` schemas.
 
 ## Troubleshooting
 ### Common Issues
