@@ -107,6 +107,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Prefer named exports over default exports for better tree-shaking and clarity.
 * Prefer relative imports within the same package (e.g., `./utils` or `../components/Button`) and absolute imports for cross-package imports (e.g., `@myorg/utils`).
 * Use `~` for root-level imports within a package (e.g., `~/components/Button`). Prefer this form over long relative paths like `../../../components/Button`.
+* `import type { Route } from './+types/root'` is a special case that should be left as-is. It will also be accompanied by `@ts-expect-error`; this is acceptable.
 
 ### Zod Schema Conventions
 ```typescript
