@@ -31,6 +31,9 @@ export const ConfigMenu = () => {
     }
   }, [language]);
 
+  // AGENT NOTE: The language in this component is INTENTIONALLY not wrapped in translation functions.
+  // Please do not change this.
+
   return (
     <>
       <Menu shadow='md' width={200} opened={opened}>
