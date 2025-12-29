@@ -25,6 +25,9 @@ Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a spe
 │   ├── packages/          # Shared libraries and internal packages
 │   ├── templates/         # Starter templates for new packages/apps
 │   └── AGENTS.md
+├── ops/                   # Deployment and infrastructure code
+│   └── infra/             # Infrastructure as Code (IaC) definitions (Terraform)
+├── .github/               # GitHub workflows for CI/CD
 └── pnpm-workspace.yaml
 ```
 
@@ -63,6 +66,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Use `lodash` for utility functions.
 * Use `type-fest` for advanced TypeScript types.
 * Use `modern-async` for async utility functions.
+* Use `tsx` for running TypeScript scripts.
 
 ### React Components
 * When creating React components, prefer functional components with hooks over class components.
@@ -70,12 +74,25 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Story files should be named `component-name.stories.tsx` and colocated with the component.
 
 ### Testing
+* Write code that is easily testable by keeping functions pure and minimizing side effects.
 * Write unit tests for all functions, classes, and React components.
 * Aim for at least 90% code coverage.
 * Use `vitest` for testing.
 * IMPORTANT: Write reusable, generalized tests that can be easily refactored in the future.
 * Avoid hardcoding specific values; instead, use test data generators or factories to create test cases.
 * Name test files `component-name.test.ts` or `component-name.test.tsx` and colocate them with the source files.
+
+### CLI
+* Use `commander` for building CLI applications.
+* Typically, each CLI script should reside in `<package/app root>/scripts/<cli-name>`
+* The entrypoint for the CLI should be a file named `cli.ts`
+* Add a `scripts` entry in the package's `package.json` to run the CLI, e.g. `"my-cli": "tsx ./scripts/my-cli/cli.ts"`
+* Do not use `process.env` directly in CLI scripts. Instead, use command line arguments with `commander` to pass configuration values. The default values for the command line arguments can be read from environment variables if needed.
+* A successful CLI execution should exit with code `0`. On failure, it should exit with a non-zero code and print an error message to `stderr`.
+
+### Logging
+* Write structured logs (JSONL). Each log entry should be a single line JSON object.
+* In browser logging, do not stringify objects; log them directly so the browser console can format them properly.
 
 ### Translations
 * All language in the React apps must be wrapped into `i18next` translation functions with keys, `t('key')` or `<Trans i18nKey='key'>`.
@@ -163,5 +180,3 @@ Before marking any task as complete, verify:
 - [ ] New code has corresponding unit tests
 - [ ] New dependencies are justified and documented
 - [ ] Commit messages follow conventional commit format
-
-
