@@ -1,7 +1,7 @@
 import { useMantineTheme } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
-const betterMediaQuery = (mediaQueryString: string) => {
+const useChangeBasedMediaQuery = (mediaQueryString: string) => {
   const [matches, setMatches] = useState<null | boolean>(null);
 
   useEffect(() => {
@@ -21,5 +21,5 @@ const betterMediaQuery = (mediaQueryString: string) => {
 export const useIsMdOrUp = () => {
   const theme = useMantineTheme();
 
-  return betterMediaQuery(`(min-width: ${theme.breakpoints.md})`);
+  return useChangeBasedMediaQuery(`(min-width: ${theme.breakpoints.md})`);
 };

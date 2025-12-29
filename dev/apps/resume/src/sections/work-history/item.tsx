@@ -20,7 +20,7 @@ export const WorkHistoryItem = (props: WorkHistoryItemProps) => {
         <span className={classes.company}>
           {data.url
             ? (
-                <Anchor href={data.url} target='_blank' rel='noreferrer'>
+                <Anchor href={data.url} target='_blank' rel='noopener noreferrer'>
                   {data.company}
                 </Anchor>
               )

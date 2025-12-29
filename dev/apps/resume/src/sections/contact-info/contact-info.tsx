@@ -31,7 +31,7 @@ export const ContactInfo = () => {
               </ThemeIcon>
             )}
           >
-            <Anchor href={url} target='_blank'>
+            <Anchor href={url} target='_blank' rel='noopener noreferrer'>
               {caption}
             </Anchor>
           </List.Item>
