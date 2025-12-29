@@ -1,10 +1,10 @@
 import { SimpleGrid, Title } from '@mantine/core';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { DisplayOnly } from '@/components/display-only/display-only';
-import { Section } from '@/components/section/section';
-import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
-import { useIsPrint } from '@/utils/use-is-print';
+import { DisplayOnly } from '~/components/display-only/display-only';
+import { Section } from '~/components/section/section';
+import { useIsMdOrUp } from '~/utils/use-is-md-or-up';
+import { useIsPrint } from '~/utils/use-is-print';
 
 import { TranslatedChart } from './chart';
 import {

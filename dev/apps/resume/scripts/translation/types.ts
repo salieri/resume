@@ -1,7 +1,7 @@
 import { OpenRouter } from '@openrouter/sdk';
 import { z } from 'zod';
 
-import { languageCodes } from '@/i18n/i18n';
+import { languageCodes } from '~/i18n/i18n';
 
 export const ModelParams = z.object({
   temperature: z.number().min(0).max(1),

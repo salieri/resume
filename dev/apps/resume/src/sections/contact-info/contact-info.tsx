@@ -2,8 +2,8 @@ import { Anchor, Button, List, Space, ThemeIcon } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { DisplayOnly } from '@/components/display-only/display-only';
-import { Section } from '@/components/section/section';
+import { DisplayOnly } from '~/components/display-only/display-only';
+import { Section } from '~/components/section/section';
 
 import classes from './contact-info.module.css';
 import { contactInfoData, migrationData } from './data';

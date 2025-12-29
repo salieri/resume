@@ -1,8 +1,8 @@
 import { Title } from '@mantine/core';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { Section } from '@/components/section/section';
-import { WorkHistoryItem } from '@/sections/work-history/item';
+import { Section } from '~/components/section/section';
+import { WorkHistoryItem } from '~/sections/work-history/item';
 
 import { data } from './data';
 

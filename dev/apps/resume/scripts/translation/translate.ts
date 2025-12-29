@@ -1,4 +1,4 @@
-import { languageMap } from '@/i18n/i18n';
+import { languageMap } from '~/i18n/i18n';
 
 import { toJsonSchema } from './to-json-schema';
 import type { TranslateParams } from './types';

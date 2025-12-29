@@ -7,7 +7,7 @@ import { Option, program } from 'commander';
 import _ from 'lodash';
 import { serializeError } from 'serialize-error';
 
-import { languageCodes } from '@/i18n/i18n';
+import { languageCodes } from '~/i18n/i18n';
 
 import { translate } from './translate';
 import { TranslateParams } from './types';

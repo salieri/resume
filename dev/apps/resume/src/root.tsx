@@ -19,8 +19,8 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
-import { initI18n } from '@/i18n/i18n';
-import { I18nTitleManager } from '@/i18n/i18n-title-manager';
+import { initI18n } from '~/i18n/i18n';
+import { I18nTitleManager } from '~/i18n/i18n-title-manager';
 
 // @ts-expect-error
 import type { Route } from './+types/root';

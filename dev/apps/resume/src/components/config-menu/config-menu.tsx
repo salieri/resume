@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { languages } from '@/i18n/i18n';
+import { languages } from '~/i18n/i18n';
 
 import { colorSchemes } from './data';
 

@@ -1,6 +1,6 @@
 import { Anchor, Box, Text, Title } from '@mantine/core';
 
-import type { WorkHistory } from '@/sections/work-history/data';
+import type { WorkHistory } from '~/sections/work-history/data';
 
 import classes from './item.module.css';
 

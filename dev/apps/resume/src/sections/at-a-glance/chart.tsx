@@ -10,8 +10,8 @@ import {
 } from 'recharts';
 import type { TextProps as RechartTextProps } from 'recharts';
 
-import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
-import { useIsPrint } from '@/utils/use-is-print';
+import { useIsMdOrUp } from '~/utils/use-is-md-or-up';
+import { useIsPrint } from '~/utils/use-is-print';
 
 import classes from './chart.module.css';
 import type { Chart } from './data';

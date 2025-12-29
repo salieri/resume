@@ -1,4 +1,4 @@
-import type { TranslatorFn } from '@/utils/translator.type';
+import type { TranslatorFn } from '~/utils/translator.type';
 
 export interface Project {
   id: string;

@@ -1,8 +1,8 @@
 import { AppShell, Typography } from '@mantine/core';
 import type { ReactNode } from 'react';
 
-import { ConfigMenu } from '@/components/config-menu/config-menu';
-import { DisplayOnly } from '@/components/display-only/display-only';
+import { ConfigMenu } from '~/components/config-menu/config-menu';
+import { DisplayOnly } from '~/components/display-only/display-only';
 
 export interface ResumeAppShellProps {
   children?: ReactNode;
