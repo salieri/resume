@@ -162,6 +162,9 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 * Prefer TERSE descriptions that are easy to read and consume.
 * Add `.describe()` blocks to all `zod` schemas.
 
+## CI/CD
+* Use the latest available versions of GitHub Actions.
+
 ## Troubleshooting
 ### Common Issues
 | Symptom | Solution |

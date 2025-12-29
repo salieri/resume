@@ -1,28 +1,23 @@
-> ## Why is this project so unnecessarily complex?
+> ## Why Is This Project So Complex?
 > This resume has been written as a demo you can use to evaluate my technical skills.
-> It showcases my ability to architect, build, and deploy a modern web application using a variety of technologies and best practices.
+> It showcases how I would architect, build, and deploy a modern web application using a variety of technologies and best practices.
 >
 > For example:
 > * Technology stack selection
 > * Templating
 > * Infrastructure and platform
 > * Middleware and backend
-> * AI/LLM/automation
+> * AI/LLM/agentic/automation
 > * Frontend and user experience
 
 ## Architecture
 * Scalable monorepo model
   * PNPM workspace
   * Terraform and GitHub Actions for IaC and CI/CD
-* Templates
-  * NestJS
-  * React
-  * React-Router
-  * React package
-  * NodeJS package
+* [Templates](./dev/templates) for apps and packages
 * Shared [build configuration](./dev/config) and [ESLint configuration](./dev/packages/eslint-config/eslintrc.esm.mjs)
 
-## AI/ML/LLM
+## AI, ML, LLM, Agentic
 * Site is translated to multiple languages using LLM over OpenRouter
   * [Prompt](./dev/apps/resume/scripts/translation/prompt.md)
   * [Translation script](./dev/apps/resume/scripts/translation/translate.ts)
