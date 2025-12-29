@@ -291,6 +291,24 @@ const createPullRequest = async (opts: CreatePullRequestOptions) => {
   return response.data.html_url ?? '';
 };
 
+const postFixPrLink = async (
+  octokit: Octokit,
+  context: FailureContext,
+  prUrl: string,
+) => {
+  await octokit.rest.issues.createComment({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    issue_number: context.prNumber,
+    body: [
+      `Auto-fix PR created for this failure: ${prUrl}`,
+      context.workflowUrl ? `Source workflow: ${context.workflowUrl}` : undefined,
+    ]
+      .filter(Boolean)
+      .join('\n'),
+  });
+};
+
 const assertPullRequestRun = (workflowRun: WorkflowRunEvent['workflow_run']) => {
   if (workflowRun.event !== 'pull_request') {
     throw new Error('Workflow run is not from a pull_request event; skipping fix.');
@@ -534,6 +552,8 @@ const main = async (opts: FixPrCliOptions) => {
     jobName: context.jobName,
     workflowUrl: context.workflowUrl,
   });
+
+  await postFixPrLink(octokit, context, prUrl);
 
   console.info('✅ Auto-fix PR created:', prUrl);
 };
