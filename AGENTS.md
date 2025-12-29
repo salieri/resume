@@ -94,6 +94,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 ### Logging
 * Write structured logs (JSONL). Each log entry should be a single line JSON object.
 * In browser logging, do not stringify objects; log them directly so the browser console can format them properly.
+* Use a pattern in which a log contains a "greppable"/unique log key (e.g. `some.machine.readableKey`) and log data as an object, e.g. `logger.info('some.machine.readableKey', { some: 'value', another: 1234 })`.
 
 ### Translations
 * All language in the React apps must be wrapped into `i18next` translation functions with keys, `t('key')` or `<Trans i18nKey='key'>`.
@@ -160,7 +161,8 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 
 ## Documentation
 * Add all environment variables to the 'Environment Variables' section in README.md
-* Add JSDoc comments to all public functions. Write SHORT descriptions (=1 sentence).
+* Add JSDoc/TSDoc comments to all public functions. Write SHORT descriptions (=1 sentence).
+* JSDoc/TSDoc comments may be omitted if the use case is self-evident from the function name and parameters.
 * Prefer TERSE descriptions that are easy to read and consume.
 * Add `.describe()` blocks to all `zod` schemas.
 
