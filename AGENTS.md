@@ -68,6 +68,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Use `type-fest` for advanced TypeScript types.
 * Use `modern-async` for async utility functions.
 * Use `tsx` for running TypeScript scripts.
+* Use `@faust/logger` for logging
 
 ### React Components
 * When creating React components, prefer functional components with hooks over class components.
