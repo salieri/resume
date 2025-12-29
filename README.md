@@ -1,28 +1,23 @@
-> ## Why is this project so unnecessarily complex?
+> ## Why Is This Project So Complex?
 > This resume has been written as a demo you can use to evaluate my technical skills.
-> It showcases my ability to architect, build, and deploy a modern web application using a variety of technologies and best practices.
+> It showcases how I would architect, build, and deploy a modern web application using a variety of technologies and best practices.
 >
 > For example:
 > * Technology stack selection
 > * Templating
 > * Infrastructure and platform
 > * Middleware and backend
-> * AI/LLM/automation
+> * AI/LLM/agentic/automation
 > * Frontend and user experience
 
 ## Architecture
 * Scalable monorepo model
   * PNPM workspace
   * Terraform and GitHub Actions for IaC and CI/CD
-* Templates
-  * NestJS
-  * React
-  * React-Router
-  * React package
-  * NodeJS package
+* [Templates](./dev/templates) for apps and packages
 * Shared [build configuration](./dev/config) and [ESLint configuration](./dev/packages/eslint-config/eslintrc.esm.mjs)
 
-## AI/ML/LLM
+## AI, ML, LLM, Agentic
 * Site is translated to multiple languages using LLM over OpenRouter
   * [Prompt](./dev/apps/resume/scripts/translation/prompt.md)
   * [Translation script](./dev/apps/resume/scripts/translation/translate.ts)
@@ -105,14 +100,16 @@ CLOUDFLARE_API_TOKEN="..." CLOUDFLARE_ACCOUNT_ID="..." \
 
 ### Environment Variables
 
-| **Name**                | **Scope**  | **Description**                                    |
-|-------------------------|------------|----------------------------------------------------|
-| `OPENROUTER_API_KEY`    | build      | API key for OpenRouter to use LLM for translations |
-| `AWS_ENDPOINT_URL_S3`   | terraform  | Endpoint URL for Cloudflare R2 bucket              |
-| `AWS_ACCESS_KEY_ID`     | terraform  | Access key ID for Cloudflare R2 bucket             |
-| `AWS_SECRET_ACCESS_KEY` | terraform  | Secret access key for Cloudflare R2 bucket         |
-| `CLOUDFLARE_API_TOKEN`  | deployment | Cloudflare API token                               |codex
-| `CLOUDFLARE_ACCOUNT_ID` | deployment | Cloudflare account ID                              |
+| **Name**                        | **Scope**  | **Description**                                    |
+|---------------------------------|------------|----------------------------------------------------|
+| `OPENROUTER_API_KEY`            | build      | API key for OpenRouter to use LLM for translations |
+| `AWS_ENDPOINT_URL_S3`           | terraform  | Endpoint URL for Cloudflare R2 bucket              |
+| `AWS_ACCESS_KEY_ID`             | terraform  | Access key ID for Cloudflare R2 bucket             |
+| `AWS_SECRET_ACCESS_KEY`         | terraform  | Secret access key for Cloudflare R2 bucket         |
+| `CLOUDFLARE_API_TOKEN`          | deployment | Cloudflare API token                               |
+| `CLOUDFLARE_ACCOUNT_ID`         | deployment | Cloudflare account ID                              |
+| `CODECOV_TOKEN`                 | ci         | Token for Codecov coverage uploads                 |
+| `OPENAI_API_KEY`                | ci         | Fallback API key for automated PR fixes            |
 
 ## Infrastructure
 
@@ -135,3 +132,6 @@ The Wrangler CLI requires a Cloudflare API token with the following permissions:
 
 #### OpenRouter API Key
 An OpenRouter API key is required for the translation functionality. You can obtain an API key at [OpenRouter](https://openrouter.ai/settings/keys).
+
+#### OpenAI API Key
+An OpenAI API key is required for the automated PR fixing functionality. You can obtain an API key at [OpenAI](https://platform.openai.com/account/api-keys).
