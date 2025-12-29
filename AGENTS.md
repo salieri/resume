@@ -6,13 +6,13 @@
 * **Node Version**: 24
 
 ## Essential Commands
-| Task | Command                          |
-|------|----------------------------------|
-| Install dependencies | `pnpm install`                   |
-| Build all packages | `pnpm build`                     |
-| Run tests | `pnpm test:ci`                   |
-| Lint | `pnpm lint`                      |
-| Lint with auto-fix | `pnpm lint:fix`                  |
+| Task                 | Command        |
+|----------------------|----------------|
+| Install dependencies | `pnpm install` |
+| Build all packages   | `pnpm build`   |
+| Run tests            | `pnpm test:ci` |
+| Lint                 | `pnpm lint`    |
+| Lint with auto-fix   | `pnpm lint:fix` |
 
 Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a specific package directory (e.g., `cd dev/packages/release-scripts/ && pnpm lint:fix`) is significantly faster than running it from the workspace root.
 
@@ -165,15 +165,19 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 ## CI/CD
 * Use the latest available versions of GitHub Actions.
 
+## Platform
+* Use `terraform fmt` to format all Terraform code before committing.
+* Use `tflint` to lint all Terraform code before committing.
+
 ## Troubleshooting
 ### Common Issues
-| Symptom | Solution |
-|---------|----------|
+| Symptom                                          | Solution |
+|--------------------------------------------------|----------|
 | `Module not found` errors after adding a package | Run `pnpm install` from workspace root |
-| Type errors in a dependency | Run `pnpm build` in the dependency package first |
-| Stale build artifacts | Delete `dist/` folders: `pnpm -r exec rm -rf dist` |
-| Lock file conflicts | Delete `node_modules` and `pnpm-lock.yaml`, then `pnpm install` |
-| Port already in use | Kill the process or use a different port via env variable |
+| Type errors in a dependency                      | Run `pnpm build` in the dependency package first |
+| Stale build artifacts                            | Delete `dist/` folders: `pnpm -r exec rm -rf dist` |
+| Lock file conflicts                              | Delete `node_modules` and `pnpm-lock.yaml`, then `pnpm install` |
+| Port already in use                              | Kill the process or use a different port via env variable |
 
 ### Build Order
 When making cross-package changes, build dependencies before dependents by running `pnpm build` from workspace root.
