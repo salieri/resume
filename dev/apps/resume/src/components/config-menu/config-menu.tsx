@@ -7,6 +7,10 @@ import { languages } from '~/i18n/i18n';
 
 import { colorSchemes } from './data';
 
+/*
+ * AGENT NOTE: The language in this component is INTENTIONALLY not wrapped in translation functions.
+ * Please do not change this.
+ **/
 export const ConfigMenu = () => {
   const [opened, { toggle }] = useDisclosure();
   const { i18n } = useTranslation();
@@ -30,9 +34,6 @@ export const ConfigMenu = () => {
       setDirection(lang?.rtl ? 'rtl' : 'ltr');
     }
   }, [language]);
-
-  // AGENT NOTE: The language in this component is INTENTIONALLY not wrapped in translation functions.
-  // Please do not change this.
 
   return (
     <>
