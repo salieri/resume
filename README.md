@@ -27,6 +27,7 @@
   * [GitHub Action](./.github/workflows/create-release.yml)
 * PRs with build/lint/test failures are automatically fixed with Codex
   * [Prompt](./dev/packages/release-scripts/scripts/fix-pr/prompt.md)
+  * [Fix PR script](./dev/packages/release-scripts/scripts/fix-pr/cli.ts)
   * [GitHub Action](./.github/workflows/fix-pr.yml)
 * [AGENTS.md](./AGENTS.md)
 
@@ -36,17 +37,17 @@
 * [CI/CD](./.github) with GitHub Actions
 
 ## Middleware & Backend
+TBD
 
 ## Frontend
 * React with Mantine
 * Vite
 * TypeScript
-* Featuring:
-  * Responsive design for mobile and desktop
-  * `@media print` styles for convenient printing
-  * PDF generation
-  * I18N and A11Y
-  * Dark/light mode
+* Responsive design for mobile and desktop
+* `@media print` styles for convenient printing
+* PDF generation
+* I18N and A11Y
+* Dark/light mode
 
 ## Code Quality
 * Complex [ESLint configuration](./dev/packages/eslint-config/eslintrc.esm.mjs)

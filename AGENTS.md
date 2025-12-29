@@ -24,10 +24,10 @@ Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a spe
 │   ├── config/            # Shared build and tooling configurations (e.g. TypeScript config)
 │   ├── packages/          # Shared libraries and internal packages
 │   ├── templates/         # Starter templates for new packages/apps
-│   └── AGENTS.md
 ├── ops/                   # Deployment and infrastructure code
 │   └── infra/             # Infrastructure as Code (IaC) definitions (Terraform)
 ├── .github/               # GitHub workflows for CI/CD
+├── AGENTS.md
 └── pnpm-workspace.yaml
 ```
 
@@ -62,6 +62,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Use `react-router` for all routing in React applications.
 * Use `i18next` for all internationalization (i18n) needs.
 * Use `vitest` for all testing.
+* Use `vite` for building React applications.
 * Use `date-fns` for date manipulation.
 * Use `lodash` for utility functions.
 * Use `type-fest` for advanced TypeScript types.
