@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@faust/eslint-config": "workspace:",
+    "@faust/logger": "workspace:",
     "@openrouter/sdk": "catalog:",
     "@storybook/addon-themes": "catalog:",
     "@storybook/react": "catalog:",

@@ -176,13 +176,14 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 
 ## Troubleshooting
 ### Common Issues
-| Symptom                                          | Solution |
-|--------------------------------------------------|----------|
-| `Module not found` errors after adding a package | Run `pnpm install` from workspace root |
-| Type errors in a dependency                      | Run `pnpm build` in the dependency package first |
-| Stale build artifacts                            | Delete `dist/` folders: `pnpm -r exec rm -rf dist` |
+| Symptom                                          | Solution                                                        |
+|--------------------------------------------------|-----------------------------------------------------------------|
+| `Module not found` errors after adding a package | Run `pnpm install` from workspace root                          |
+| Type errors in a dependency                      | Run `pnpm build` in the dependency package first                |
+| Stale build artifacts                            | Delete `dist/` folder and rebuild: `rm -rf dist && pnpm build`  |
 | Lock file conflicts                              | Delete `node_modules` and `pnpm-lock.yaml`, then `pnpm install` |
-| Port already in use                              | Kill the process or use a different port via env variable |
+| Port already in use                              | Kill the process or use a different port via env variable       |
+| `dist` directory is missing                      | Run `pnpm build` in the package                                 |
 
 ### Build Order
 When making cross-package changes, build dependencies before dependents by running `pnpm build` from workspace root.
