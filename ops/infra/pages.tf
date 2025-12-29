@@ -13,9 +13,9 @@ resource "cloudflare_pages_domain" "resume_production_domain" {
 data "cloudflare_zone" "resume_zone" {
   filter = {
     name = var.resume_zone_name
-    # account = {
-    #   id = var.cloudflare_account_id
-    # }
+    account = {
+      id = var.cloudflare_account_id
+    }
   }
 }
 
@@ -28,4 +28,3 @@ resource "cloudflare_dns_record" "resume_apex" {
   ttl     = 1 # required by Cloudflare
   content = cloudflare_pages_project.resume_pages_project.subdomain
 }
-

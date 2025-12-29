@@ -1,0 +1,75 @@
+name: Apply Infrastructure
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: "Terraform project name"
+        required: true
+        default: "resume"
+      resume_zone_name:
+        description: "Resume site domain name"
+        required: true
+        default: "getsalieri.com"
+      plan_only:
+        description: "Only run `terraform plan`, do not apply changes"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# enforced because R2 does not support object locking
+concurrency:
+  group: apply-infra
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ops/infra
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.14.0"
+
+      - name: Write production.tfvars
+        run: |
+          cat <<'EOF' > production.tfvars
+          project_name = "${{ inputs.project_name }}"
+          resume_zone_name = "${{ inputs.resume_zone_name }}"
+          cloudflare_account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+          cloudflare_api_token = "${{ secrets.CLOUDFLARE_API_TOKEN }}"
+          EOF
+
+      - name: Terraform init
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+        run: terraform init -var-file="production.tfvars"
+
+      - name: Terraform plan
+        if: ${{ inputs.plan_only }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+        run: terraform plan -var-file="production.tfvars"
+
+      - name: Terraform apply
+        if: ${{ !inputs.plan_only }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+        run: terraform apply -auto-approve -var-file="production.tfvars"
