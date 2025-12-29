@@ -17,6 +17,10 @@ export interface Language {
   rtl?: boolean;
 }
 
+/*
+ * AGENT NOTE: The language in this array is INTENTIONALLY not wrapped in translation functions or language keys.
+ * Please do not change this.
+ **/
 export const languages: Language[] = [
   { value: 'en', label: 'English', flag: '🇺🇸' },
   { value: 'es', label: 'Spanish', flag: '🇪🇸' },
