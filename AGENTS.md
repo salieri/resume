@@ -177,6 +177,16 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 * Use `terraform fmt` to format all Terraform code before committing.
 * Use `tflint` to lint all Terraform code before committing.
 
+## Security
+* Never commit secrets or sensitive information to the repository.
+* Use environment variables or secure secret management solutions for sensitive data.
+* Run `pnpm audit` to check for vulnerabilities in dependencies.
+* Keep dependencies up to date to minimize security risks.
+* Follow best practices for secure coding, such as input validation, output encoding, and proper error handling.
+* Review code changes for potential security issues during code reviews.
+* Encrypt sensitive data both in transit and at rest using industry-standard encryption algorithms.
+* Avoid using deprecated or unmaintained libraries that may pose security risks.
+
 ## Troubleshooting
 ### Common Issues
 | Symptom                                          | Solution                                                  |
