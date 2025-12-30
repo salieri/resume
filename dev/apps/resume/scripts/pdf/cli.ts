@@ -1,17 +1,12 @@
-/* eslint-disable no-console, unicorn/no-process-exit */
-
 import { spawn } from 'node:child_process';
 import type { ChildProcess } from 'node:child_process';
 import process from 'node:process';
 
+import { PinoLogger } from '@faust/logger';
+import { Command } from 'commander';
 import { launch } from 'puppeteer';
 
-const [url, out = 'out.pdf'] = process.argv.slice(2);
-
-if (!url) {
-  console.error('usage: to-pdf <url> [out.pdf]');
-  process.exit(1);
-}
+const logger = new PinoLogger('info');
 
 let devProc: ChildProcess | undefined;
 
@@ -22,25 +17,29 @@ function killDev() {
     return;
   }
 
-  // Kill entire process group (detached spawn => pgid == pid on POSIX)
   try {
+    // Kill entire process group (detached spawn => pgid == pid on POSIX)
     process.kill(-p.pid, 'SIGTERM');
-  } catch {
-    // ignore (already dead / not supported)
+  } catch (error) {
+    logger.warn('resume.pdf.dev.kill_failed', { error });
   }
 }
 
 process.on('exit', killDev);
 
-process.on('SIGINT', () => {
-  killDev();
-  process.exit(130);
-});
+const createSignalHandler = (signal: NodeJS.Signals, exitCode: number) => {
+  const handler = () => {
+    killDev();
+    process.exitCode = exitCode;
+    process.removeListener(signal, handler);
+    process.kill(process.pid, signal);
+  };
 
-process.on('SIGTERM', () => {
-  killDev();
-  process.exit(143);
-});
+  return handler;
+};
+
+process.on('SIGINT', createSignalHandler('SIGINT', 130));
+process.on('SIGTERM', createSignalHandler('SIGTERM', 143));
 
 async function sleep(ms: number) {
   await new Promise<void>((resolve) => setTimeout(resolve, ms));
@@ -48,6 +47,7 @@ async function sleep(ms: number) {
 
 async function waitForHttpOk(targetUrl: string, timeoutMs = 60_000): Promise<void> {
   const deadline = Date.now() + timeoutMs;
+  let lastError: unknown;
 
   while (Date.now() < deadline) {
     try {
@@ -56,14 +56,17 @@ async function waitForHttpOk(targetUrl: string, timeoutMs = 60_000): Promise<voi
       if (res.ok) {
         return;
       }
-    } catch {
-      // ignore
+
+      lastError = new Error(`Unexpected response status: ${res.status}`);
+    } catch (error) {
+      lastError = error;
     }
 
     await sleep(250);
   }
 
-  throw new Error(`Timed out waiting for server: ${targetUrl}`);
+  logger.warn('resume.pdf.dev.wait_timeout', { url: targetUrl, error: lastError });
+  throw new Error(`Timed out waiting for server: ${targetUrl}`, { cause: lastError });
 }
 
 async function waitForClose(p: ChildProcess): Promise<void> {
@@ -76,15 +79,15 @@ async function waitForClose(p: ChildProcess): Promise<void> {
   });
 }
 
-async function main(): Promise<void> {
+async function main(url: string, out: string): Promise<void> {
   // Start pnpm dev in background (new process group)
   devProc = spawn('pnpm', ['dev'], {
     stdio: ['ignore', 'inherit', 'inherit'],
     detached: true,
-    env: process.env,
   });
 
   try {
+    logger.info('resume.pdf.dev.waiting', { url });
     await waitForHttpOk(url);
 
     const browser = await launch({
@@ -109,28 +112,35 @@ async function main(): Promise<void> {
         waitForFonts: true,
       });
 
-      console.log('PDF saved to', out);
+      logger.info('resume.pdf.saved', { out });
     } finally {
       await browser.close();
     }
   } finally {
-    console.log('Shutting down dev server...');
+    logger.info('resume.pdf.dev.shutdown');
     killDev();
 
     if (devProc) {
-      console.log('Waiting for close...');
+      logger.info('resume.pdf.dev.wait_close');
       await waitForClose(devProc);
-      console.log('Closed; ELIFECYCLE 143 expected.');
+      logger.info('resume.pdf.dev.closed', { note: 'ELIFECYCLE 143 expected.' });
     }
   }
 }
 
 try {
-  await main();
+  const program = new Command()
+    .name('to-pdf')
+    .description('Render resume to a PDF using Puppeteer.')
+    .requiredOption('--url <url>', 'URL to render')
+    .requiredOption('--out <path>', 'Output PDF path')
+    .action(async (opts: { url: string; out: string }) => {
+      await main(opts.url, opts.out);
+    });
 
-  console.log('Done, all OK');
+  await program.parseAsync();
+  logger.info('resume.pdf.done');
 } catch (error) {
-  const msg = error instanceof Error ? error.stack ?? error.message : String(error);
-  console.error(msg);
-  process.exit(1);
+  logger.error('resume.pdf.failed', { error });
+  process.exitCode = 1;
 }

@@ -1,16 +1,16 @@
-/* eslint-disable no-console,unicorn/no-process-exit */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { PinoLogger } from '@faust/logger';
 import { OpenRouter } from '@openrouter/sdk';
 import { Option, program } from 'commander';
-import _ from 'lodash';
-import { serializeError } from 'serialize-error';
 
 import { languageCodes } from '~/i18n/i18n';
 
 import { translate } from './translate';
-import { TranslateParams } from './types';
+import { TranslateParams, TranslationInputData } from './types';
+
+const logger = new PinoLogger('info');
 
 interface TranslateCliArgs {
   temperature: number;
@@ -25,6 +25,13 @@ interface TranslateCliArgs {
   promptTemplate: string;
   apiKey: string;
 }
+
+const readJsonFile = async (filePath: string): Promise<TranslationInputData> => {
+  const raw = await fs.readFile(filePath, 'utf8');
+  const parsed: unknown = JSON.parse(raw);
+
+  return TranslationInputData.parse(parsed);
+};
 
 program
   .name('i18n-translate')
@@ -43,22 +50,27 @@ program
   .action(async (opts: TranslateCliArgs) => {
     const openRouter = new OpenRouter({ apiKey: opts.apiKey });
     const promptTemplate = await fs.readFile(opts.promptTemplate, 'utf8');
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const inputData = JSON.parse(await fs.readFile(opts.input, 'utf8'));
+    const inputData = await readJsonFile(opts.input);
     const targetLanguages = opts.language.includes('all') ? languageCodes.filter((l) => l !== opts.sourceLanguage) : opts.language;
 
     await fs.mkdir(opts.output, { recursive: true });
 
     await Promise.all(targetLanguages.map(async (targetLanguage) => {
       try {
+        logger.info('resume.translation.started', { targetLanguage, input: opts.input });
+
         const params = TranslateParams.parse({
           sourceLanguage: opts.sourceLanguage,
           targetLanguage,
           promptTemplate,
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           inputData,
           openRouter,
-          modelParams: _.pick(opts, ['temperature', 'frequencyPenalty', 'presencePenalty', 'model']),
+          modelParams: {
+            temperature: opts.temperature,
+            frequencyPenalty: opts.frequencyPenalty,
+            presencePenalty: opts.presencePenalty,
+            model: opts.model,
+          },
         });
 
         const translatedJson = await translate(params);
@@ -67,9 +79,9 @@ program
         await fs.mkdir(path.dirname(outputFilePath), { recursive: true });
         await fs.writeFile(outputFilePath, JSON.stringify(translatedJson, null, 2), 'utf8');
 
-        console.info('✅ Translated to:', targetLanguage, '->', outputFilePath);
+        logger.info('resume.translation.saved', { targetLanguage, outputFilePath });
       } catch (error) {
-        console.info('❌ Failed to translate to:', targetLanguage);
+        logger.error('resume.translation.failed', { targetLanguage, error });
         throw error;
       }
     }));
@@ -78,6 +90,6 @@ program
 try {
   await program.parseAsync();
 } catch (error) {
-  console.error('❌ Error during translation:', serializeError(error));
-  process.exit(1);
+  logger.error('resume.translation.cli_error', { error });
+  process.exitCode = 1;
 }

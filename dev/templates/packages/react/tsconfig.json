@@ -3,8 +3,8 @@
   "compilerOptions": {
     "paths": {
       "~/*": ["./src/*"],
-      "@test-utils": ["./test-utils"]
+      "@test-utils": ["./test/test-utils"]
     }
   },
-  "include": ["src", "test-utils", "test", "scripts", ".storybook/main.ts", ".storybook/preview.tsx"]
+  "include": ["src", "test", "scripts", ".storybook/main.ts", ".storybook/preview.tsx"]
 }

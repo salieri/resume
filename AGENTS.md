@@ -98,6 +98,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Use a pattern in which a log contains a "greppable"/unique log key (e.g. `some.machine.readableKey`) and (optional) log data as an object, e.g. `logger.info('some.machine.readableKey', { some: 'value', another: 1234 })`.
 * In browser logging, do not stringify objects; log them directly so the browser console can format them properly.
 * Always use `@faust/logger` for logging.
+* Use `PinoLogger` for NodeJS applications and `ConsoleLogger` for browser applications.
 
 ### Translations
 * All language in the React apps must be wrapped into `i18next` translation functions with keys, `t('key')` or `<Trans i18nKey='key'>`.

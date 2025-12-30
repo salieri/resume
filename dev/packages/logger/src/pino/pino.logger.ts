@@ -2,11 +2,11 @@ import pino from 'pino';
 
 import { Logger } from '../logger';
 import { LogLevel } from '../types';
-import type { LogData, LogLevelName } from '../types';
+import type { LogData } from '../types';
 
 export class PinoLogger extends Logger {
   constructor(
-    logLevel: LogLevel | LogLevelName = LogLevel.INFO,
+    logLevel: LogLevel | string = LogLevel.INFO,
     metadata: Record<string, unknown> = {}, protected readonly pinoInstance: pino.Logger = pino(),
   ) {
     super(logLevel, metadata);
