@@ -1,17 +1,29 @@
-@media display {
+:global(body) {
   @mixin light {
-    body {
-      background-color: whitesmoke;
-    }
-
-    strong {
-      color: #1f6964; /* #2d8e7d */ /* #1f6964 */ /* 1f791f */
-    }
+    background-color: #f7f8f9;
+    background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(237, 239, 240, 1) 100%);
+    background-attachment: fixed;
   }
 
   @mixin dark {
-    strong {
-      color: #e4e4e4
-    }
+    background-color: #242730;
   }
+}
+
+:global(strong) {
+  @mixin light {
+    color: #020304; /* #2d8e7d */ /* #1f6964 */ /* 1f791f */
+  }
+
+  @mixin dark {
+    color: #e4e4e4
+  }
+}
+
+p {
+  text-wrap-style: pretty;
+}
+
+h1 {
+  margin-bottom: 0 !important;
 }

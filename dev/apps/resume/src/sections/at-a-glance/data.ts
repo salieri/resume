@@ -27,6 +27,10 @@ export const technicalExperienceData = (t: TranslatorFn): Chart => {
         value: 5,
       },
       {
+        label: t(`${keyBase}.llmAgenticAI`, 'LLM/Agentic AI'),
+        value: 4.5,
+      },
+      {
         label: t(`${keyBase}.devops`, 'DevOps'),
         value: 4.5,
       },
@@ -105,11 +109,11 @@ export const missionFitData = (t: TranslatorFn): Chart => {
         value: 4.5,
       },
       {
-        label: t(`${keyBase}.fixProjects`, 'Fix Projects'),
+        label: t(`${keyBase}.fixTeamsProjects`, 'Fix Teams/ Projects'),
         value: 4,
       },
       {
-        label: t(`${keyBase}.fixTeams`, 'Fix Teams'),
+        label: t(`${keyBase}.productionOps`, 'Production Ops'),
         value: 4,
       },
       {
@@ -184,6 +188,10 @@ export const technologyFitData = (t: TranslatorFn): Chart => {
       },
       {
         label: t(`${keyBase}.sql`, 'SQL'),
+        value: 5,
+      },
+      {
+        label: t(`${keyBase}.temporal`, 'Temporal'),
         value: 5,
       },
       {

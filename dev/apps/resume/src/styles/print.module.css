@@ -4,91 +4,83 @@
 }
 
 @media print {
-  html {
+  :global(html) {
     font-size: 12pt; /* manages rem */
   }
 
-  body {
+  :global(body) {
     background-color: transparent !important;
     -webkit-print-color-adjust: exact;
   }
 
-  p, strong, h1, h2, h3, h4, h5, h6, li, .mantine-Title-root, .workHistoryItem a {
+  :global(p), :global(strong), :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6), :global(li), :global(.mantine-Title-root), :global(.workHistoryItem) :global(a) {
     color: #000 !important;
     -webkit-print-color-adjust: exact;
   }
 
-  .page > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
-  .page > .section > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
+  :global(.page) > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
+  :global(.page) > :global(.section) > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
 
-  h1 {
+  :global(h1) {
     font-size: 2.75rem !important;
   }
 
-  h2 {
+  :global(h2) {
     margin-top: var(--mantine-spacing-sm) !important;
     font-size: 1.9rem !important;
   }
 
-  .mantine-List-root a, a {
+  :global(.mantine-List-root) :global(a), :global(a) {
     /* color: var(--mantine-color-blue-6) !important; */
     color: black !important;
   }
 
-  .mantine-ThemeIcon-root {
+  :global(.mantine-ThemeIcon-root) {
     /* color: var(--mantine-color-gray-6) !important; */
     color: black !important;
   }
 
-  .recharts-text {
+  :global(.recharts-text) {
     color: black !important;
     fill: black;
   }
 
-  p, a {
+  :global(p), :global(a) {
     font-size: 75% !important;
     line-height: 155% !important;
     margin-bottom: var(--mantine-spacing-sm) !important;
   }
 
-  .mantine-List-item {
-    .mantine-ThemeIcon-root {
+  :global(.mantine-List-item) {
+    :global(.mantine-ThemeIcon-root) {
       --ti-size: var(--ti-size-sm);
     }
 
-    .mantine-List-itemLabel {
+    :global(.mantine-List-itemLabel) {
       font-size: var(--mantine-font-size-xs) !important;
 
-      a {
+      :global(a) {
         font-size: var(--mantine-font-size-xs) !important;
       }
     }
   }
 
-  .workHistoryItem {
+  :global(.workHistoryItem) {
     margin-bottom: 1.5rem !important;
 
-    p {
+    :global(p) {
       margin-bottom: 0;
     }
   }
 
-  .projectItem {
+  :global(.projectItem) {
     margin-bottom: 1.5rem !important;
   }
 
-  .atAGlanceSection {
-    .title {
+  :global(.atAGlanceSection) {
+    :global(.title) {
       font-size: 70% !important;
     }
   }
-}
-
-p {
-  text-wrap-style: pretty;
-}
-
-h1 {
-  margin-bottom: 0 !important;
 }
 

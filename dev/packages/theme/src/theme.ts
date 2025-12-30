@@ -1,4 +1,15 @@
 import { createTheme } from '@mantine/core';
+import type { CSSVariablesResolver } from '@mantine/core';
+
+export const cssVarResolver: CSSVariablesResolver = () => ({
+  variables: {},
+  light: {
+    '--mantine-color-text': '#12171c',
+  },
+  dark: {
+    // '--mantine-color-text': '#FFFFFF',
+  },
+});
 
 export const theme = createTheme({
   fontFamily: 'Merriweather, Georgia, serif',
@@ -29,6 +40,7 @@ export const theme = createTheme({
     lg: '2.25rem',
     xl: '2.5rem',
   },
+
 });
 
 // 1.25rem merriweather, font-weight:300, line-height:2.35rem margin bottom 1.55rem;

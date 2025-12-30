@@ -12,6 +12,12 @@ const baseKey = 'projects';
 export const data = (t: TranslatorFn): Project[] => {
   return [
     {
+      id: 'resume',
+      name: t(`${baseKey}.resume.name`, 'Resume'),
+      url: 'https://github.com/salieri/resume/',
+      description: t(`${baseKey}.resume.description`, 'This resume as code. Extremely over-engineered. Start here.'),
+    },
+    {
       id: 'jsvfx',
       name: t(`${baseKey}.jsvfx.name`, 'JS VFX'),
       url: 'https://salieri.github.io/js-vfx/',
@@ -22,12 +28,6 @@ export const data = (t: TranslatorFn): Project[] => {
       name: t(`${baseKey}.tartarus.name`, 'Tartarus Deep Learning Framework'),
       url: 'https://github.com/salieri/tartarus-deep/',
       description: t(`${baseKey}.tartarus.description`, 'From-the-ground-up deep learning framework for TypeScript.'),
-    },
-    {
-      id: 'resume',
-      name: t(`${baseKey}.resume.name`, 'Resume'),
-      url: 'https://github.com/salieri/resume/',
-      description: t(`${baseKey}.resume.description`, 'This resume as code. Extremely over-engineered. Start here.'),
     },
   ];
 };

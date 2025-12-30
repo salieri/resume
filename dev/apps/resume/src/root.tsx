@@ -4,7 +4,7 @@ import '@mantine/charts/styles.css';
 import './styles/print.module.css';
 import './styles/display.module.css';
 
-import { theme } from '@faust/theme';
+import { cssVarResolver, theme } from '@faust/theme';
 import {
   ColorSchemeScript, DirectionProvider,
   mantineHtmlProps,
@@ -66,7 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Suspense fallback={<I18nFallback />}>
             <I18nTitleManager />
             <DirectionProvider initialDirection='ltr' detectDirection={false}>
-              <MantineProvider theme={theme}>
+              <MantineProvider theme={theme} cssVariablesResolver={cssVarResolver}>
                 <ResumeAppShell>{children}</ResumeAppShell>
               </MantineProvider>
             </DirectionProvider>

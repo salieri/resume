@@ -39,7 +39,7 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       title: t(`${baseKey}.arena.title`, 'Chief Technology Officer'),
       company: 'Arena',
       startDate: '08/2021',
-      endDate: '01/2023',
+      endDate: '12/2022',
       summary: t(`${baseKey}.arena.summary`, 'Audience engagement startup | 50 employees | $13.6M series A'),
       url: 'https://arena.im/',
       details:
