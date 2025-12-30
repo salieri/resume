@@ -5,7 +5,10 @@ import { LogLevel } from '../types';
 import type { LogData, LogLevelName } from '../types';
 
 export class PinoLogger extends Logger {
-  constructor(logLevel: LogLevel | LogLevelName = LogLevel.INFO, metadata: Record<string, unknown> = {}, protected readonly pinoInstance: pino.Logger = pino()) {
+  constructor(
+    logLevel: LogLevel | LogLevelName = LogLevel.INFO,
+    metadata: Record<string, unknown> = {}, protected readonly pinoInstance: pino.Logger = pino(),
+  ) {
     super(logLevel, metadata);
   }
 
