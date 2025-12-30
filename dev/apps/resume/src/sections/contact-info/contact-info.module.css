@@ -19,3 +19,15 @@
   font-family: var(--mantine-font-family-headings);
   color: var(--mantine-primary-color-contrast);
 }
+
+.translationAlert {
+  font-family: var(--mantine-font-family-headings);
+  line-height: 135%;
+
+  :global(.mantine-Alert-message) {
+    :global(a) {
+      font-size: var(--mantine-font-size-sm);
+    }
+  }
+
+}
