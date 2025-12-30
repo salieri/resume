@@ -9,6 +9,7 @@ import {
   MantineProvider,
 } from '@mantine/core';
 import i18n from 'i18next';
+import { Suspense } from 'react';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import {
   isRouteErrorResponse,
@@ -26,22 +27,26 @@ import { I18nTitleManager } from '~/i18n/i18n-title-manager';
 import type { Route } from './+types/root';
 import { ResumeAppShell } from './components/app-shell/app-shell';
 
-// eslint-disable-next-line @stylistic/array-bracket-newline
 export const links: Route.LinksFunction = () => [
-  // { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  // {
-  //   rel: "preconnect",
-  //   href: "https://fonts.gstatic.com",
-  //   crossOrigin: "anonymous",
-  // },
-  // {
-  //   rel: "stylesheet",
-  //   href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  // },
-// eslint-disable-next-line @stylistic/array-bracket-newline
+  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+  {
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
+    crossOrigin: 'anonymous',
+  },
+  {
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap',
+  },
 ];
 
 void initI18n();
+
+const I18nFallback = () => (
+  <div className='p-6 text-center'>
+    Loading...
+  </div>
+);
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -53,26 +58,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ColorSchemeScript />
         <Meta />
         <Links />
-
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
-          rel='stylesheet'
-        />
       </head>
       <body>
         <I18nextProvider i18n={i18n}>
-          {i18n.isInitialized && (
-            <>
-              <I18nTitleManager />
-              <DirectionProvider initialDirection='ltr' detectDirection={false}>
-                <MantineProvider theme={theme}>
-                  <ResumeAppShell>{children}</ResumeAppShell>
-                </MantineProvider>
-              </DirectionProvider>
-            </>
-          )}
+          <Suspense fallback={<I18nFallback />}>
+            <I18nTitleManager />
+            <DirectionProvider initialDirection='ltr' detectDirection={false}>
+              <MantineProvider theme={theme}>
+                <ResumeAppShell>{children}</ResumeAppShell>
+              </MantineProvider>
+            </DirectionProvider>
+          </Suspense>
         </I18nextProvider>
 
         <ScrollRestoration />
@@ -87,7 +83,7 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(undefined, { useSuspense: false });
   let message = t('error.oops', 'Oops!');
   let details = t('error.unexpected', 'An unexpected error occurred.');
   let stack: string | undefined;

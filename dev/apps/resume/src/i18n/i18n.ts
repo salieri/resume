@@ -70,7 +70,7 @@ export const initI18n = async () => {
       },
 
       react: {
-        useSuspense: false,
+        useSuspense: true,
       },
     });
 };
