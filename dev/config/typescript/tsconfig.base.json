@@ -20,7 +20,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "${configDir}/dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noImplicitOverride": true,
