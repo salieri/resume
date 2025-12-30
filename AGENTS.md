@@ -42,6 +42,7 @@ Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a spe
 * Prefer to put types in a separate `types.ts` file when they are used in multiple places.
 * When a file exports a single class, function, or React component, name the file the same as the exported entity using `kebab-case`. For example, a React component named `UserProfile` should be in a file named `user-profile.tsx`.
 * If you have multiple files related to a specific feature, create a directory for that feature and place all related files – including source code, tests, CSS, resources, etc. – within it. For example, a `user-profile` directory could contain `user-profile.tsx`, `types.ts`, and `utils.ts`.
+* Avoid one-liner wrapper functions that do not add meaningful abstraction or functionality.
 
 ### Type Assertions
 * When data is received from an external source, such as JSON from an API, read from a file, or parsed with `JSON.parse()`, do not simply assert the data type using the `as` keyword.
