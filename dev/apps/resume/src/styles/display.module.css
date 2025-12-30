@@ -1,0 +1,17 @@
+@media display {
+  @mixin light {
+    body {
+      background-color: whitesmoke;
+    }
+
+    strong {
+      color: #1f6964; /* #2d8e7d */ /* #1f6964 */ /* 1f791f */
+    }
+  }
+
+  @mixin dark {
+    strong {
+      color: #e4e4e4
+    }
+  }
+}

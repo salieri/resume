@@ -1,6 +1,8 @@
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
-import './print/styles.css';
+
+import './styles/print.module.css';
+import './styles/display.module.css';
 
 import { theme } from '@faust/theme';
 import {
