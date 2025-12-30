@@ -12,6 +12,8 @@ import nPlugin from 'eslint-plugin-n';
 import eslintReact from '@eslint-react/eslint-plugin';
 import stylistic from '@stylistic/eslint-plugin';
 import mantine from 'eslint-config-mantine';
+// import perfectionist from 'eslint-plugin-perfectionist';
+import security from 'eslint-plugin-security';
 
 export default (basePath) => defineConfig(
   {
@@ -62,6 +64,8 @@ export default (basePath) => defineConfig(
   },
   vitestPlugin.configs.recommended,
   nPlugin.configs['flat/recommended'],
+  security.configs.recommended,
+  // perfectionist,
   stylistic.configs['disable-legacy'],
   stylistic.configs['recommended'],
   {
@@ -294,6 +298,9 @@ export default (basePath) => defineConfig(
       'promise/always-return': 'off',
       'promise/no-promise-in-callback': 'off',
       'radix': 'off',
+
+      'security/detect-non-literal-fs-filename': 'off',
+      'security/detect-object-injection': 'off',
 
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',

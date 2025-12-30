@@ -39,6 +39,7 @@
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-safe-kysely": "^1.0.1",
     "eslint-plugin-unicorn": "^61.0.2",
     "eslint-plugin-validate-filename": "^1.2.0",
