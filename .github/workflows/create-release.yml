@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.TOKEN_OVERRIDE_GITHUB }}
 
       - name: Read tool versions from package.json
         id: versions
