@@ -100,6 +100,10 @@ async function main(url: string, out: string): Promise<void> {
 
       await page.goto(url, { waitUntil: 'networkidle2', timeout: 60_000 });
       await page.bringToFront();
+      await page.emulateMediaType('print');
+      await page.waitForFunction(() => globalThis.matchMedia('print').matches);
+
+      await sleep(1000);
 
       await page.pdf({
         path: out,
