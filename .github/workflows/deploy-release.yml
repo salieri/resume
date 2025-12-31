@@ -52,7 +52,7 @@ jobs:
             -f ref="${{ inputs.tag }}" \
             -f environment="production" \
             -f description="Resume deployment ${{ inputs.tag }}" \
-            -f auto_merge=false \
+            -F auto_merge=false \
             --jq '.id')
           echo "id=$DEPLOYMENT_ID" >> "$GITHUB_OUTPUT"
 
