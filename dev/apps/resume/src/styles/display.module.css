@@ -1,8 +1,10 @@
 :global(body) {
   @mixin light {
     background-color: #f7f8f9;
+    /* stylelint-disable */
     background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(238, 240, 240, 1) 100%);
     background-attachment: fixed;
+    /* stylelint-enable */
   }
 
   @mixin dark {
