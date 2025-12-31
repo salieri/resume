@@ -228,7 +228,9 @@ const summarizeWithModel = async (prompt: string, model: string, apiKey: string)
   return extractOpenRouterSummary(llmResult);
 };
 
-const outputSummary = async (content: string, outputPath?: string) => {
+const outputSummary = async (content: string, outputPath: string | undefined, prompt: string) => {
+  logger.info('release-notes.output', { outputPath, content, prompt });
+
   if (!outputPath) {
     process.stdout.write(`${content}\n`);
 
@@ -237,7 +239,6 @@ const outputSummary = async (content: string, outputPath?: string) => {
 
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, content, 'utf8');
-  logger.info('release-notes.output.written', { outputPath });
 };
 
 const outputPrompt = (prompt: string) => {
@@ -253,6 +254,7 @@ export const runReleaseNotes = async (opts: ReleaseNotesCliArgs) => {
     currentTag: opts.currentTag,
     previousTag: opts.previousTag?.trim() || undefined,
   });
+
   const prompt = await buildReleasePrompt(opts, releaseSummary);
 
   if (opts.dryRun) {
@@ -264,5 +266,5 @@ export const runReleaseNotes = async (opts: ReleaseNotesCliArgs) => {
   const apiKey = validateApiKey(opts.apiKey);
   const summaryText = await summarizeWithModel(prompt, opts.model, apiKey);
   const content = renderReleaseNotes(summaryText, opts.currentTag, releaseSummary.range);
-  await outputSummary(content, opts.output);
+  await outputSummary(content, opts.output, prompt);
 };
