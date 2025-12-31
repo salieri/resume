@@ -85,7 +85,7 @@ program
         logger.error('resume.translation.failed', { targetLanguage, error });
         throw error;
       }
-    }, 4);
+    }, 2);
   });
 
 try {
