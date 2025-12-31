@@ -46,7 +46,10 @@ void initI18n();
 
 const I18nFallback = () => (
   <div className='p-6 text-center'>
-    Loading...
+    {
+      /* i18next-lint-ignore */
+      'Loading...'
+    }
   </div>
 );
 
