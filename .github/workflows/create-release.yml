@@ -131,15 +131,6 @@ jobs:
           git tag -a "$NEW_TAG" -m "Resume release $NEW_TAG"
           git push origin "$NEW_TAG"
 
-      - name: Release notes prompt (dry run)
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: |
-          pnpm --filter @faust/release-scripts release:notes \
-            --current-tag "${{ steps.tags.outputs.new_tag }}" \
-            --previous-tag "${{ steps.tags.outputs.previous_tag }}" \
-            --dry-run
-
       - name: Generate release summary
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -147,13 +138,13 @@ jobs:
           pnpm --filter @faust/release-scripts release:notes \
             --current-tag "${{ steps.tags.outputs.new_tag }}" \
             --previous-tag "${{ steps.tags.outputs.previous_tag }}" \
-            --output release-notes.md
+            --output ./release-notes.md
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tags.outputs.new_tag }}
           name: Resume ${{ steps.tags.outputs.new_tag }}
-          body_path: release-notes.md
+          body_path: ./release-notes.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
