@@ -34,10 +34,15 @@
   }
 }
 
-p {
+:global(p) {
   text-wrap-style: pretty;
 }
 
 h1 {
   margin-bottom: 0 !important;
+}
+
+
+:global(.mantine-Menu-itemLabel), :global(.mantine-Menu-itemSection) {
+  line-height: 125% !important;
 }

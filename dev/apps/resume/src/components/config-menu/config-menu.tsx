@@ -1,30 +1,29 @@
-import { Burger, Menu, NativeSelect, Radio, useDirection, useMantineColorScheme } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import {
+  Button,
+  Flex,
+  Menu,
+  useDirection,
+  useMantineColorScheme,
+} from '@mantine/core';
+import { IconMoon, IconSun } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { DisplayOnly } from '~/components/display-only/display-only';
 import { languages } from '~/i18n/i18n';
 
-import { colorSchemes } from './data';
-
 /*
  * AGENT NOTE: The language in this component is INTENTIONALLY not wrapped in translation functions.
  * Please do not change this.
  **/
 export const ConfigMenu = () => {
-  const [opened, { toggle }] = useDisclosure();
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || 'en');
 
   const { setColorScheme, colorScheme } = useMantineColorScheme();
   const { setDirection } = useDirection();
 
-  const languageOptions = languages.map((lang) => ({
-    value: lang.value,
-    label: `${lang.flag} ${lang.label}`,
-    name: lang.label,
-  })).toSorted((a, b) => a.name.localeCompare(b.name));
+  const languageOptions = languages.toSorted((a, b) => a.label.localeCompare(b.label));
 
   useEffect(() => {
     if (i18n.language === language) {
@@ -42,29 +41,48 @@ export const ConfigMenu = () => {
     setLanguage(i18n.language);
   }, [i18n.language]);
 
-  return (
-    <>
-      <Menu shadow='md' width={200} opened={opened}>
-        <Menu.Target>
-          <Burger onClick={toggle} opened={opened} />
-        </Menu.Target>
-        <Menu.Dropdown>
-          <DisplayOnly>
-            <Radio.Group value={colorScheme}>
-              {colorSchemes.map((scheme) => (
-                <Radio
-                  value={scheme.value}
-                  label={scheme.label}
-                  key={scheme.value}
-                  onClick={() => setColorScheme(scheme.value)}
-                />
-              ))}
-            </Radio.Group>
+  const curLanguage = languages.find((lang) => lang.value === language);
 
-            <NativeSelect value={language} data={languageOptions} onChange={(e) => setLanguage(e.currentTarget.value)}></NativeSelect>
-          </DisplayOnly>
-        </Menu.Dropdown>
-      </Menu>
-    </>
+  return (
+    <DisplayOnly>
+      <Flex justify='flex-end'>
+        <Button.Group mb='1rem'>
+          <Menu trigger='hover' openDelay={65} closeDelay={150} shadow='md' width={160}>
+            <Menu.Target>
+              <Button leftSection={curLanguage?.flag} size='compact-sm' variant='subtle' color='gray'>
+                {curLanguage?.label}
+              </Button>
+            </Menu.Target>
+            <Menu.Dropdown>
+              {languageOptions.map((lang) => (
+                <Menu.Item
+                  key={lang.value}
+                  onClick={() => setLanguage(lang.value)}
+                  leftSection={lang.flag}
+                >
+                  {lang.label}
+                </Menu.Item>
+              ))}
+            </Menu.Dropdown>
+          </Menu>
+
+          <Menu trigger='hover' openDelay={65} closeDelay={150} shadow='md' width={180}>
+            <Menu.Target>
+              <Button leftSection={colorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} size='compact-sm' variant='subtle' color='gray'>
+                {colorScheme === 'dark' ? 'Dark' : 'Light'}
+              </Button>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item onClick={() => setColorScheme('light')} leftSection={<IconSun size={16} />} rightSection={colorScheme === 'light' ? '✓' : undefined}>
+                Light Mode
+              </Menu.Item>
+              <Menu.Item onClick={() => setColorScheme('dark')} leftSection={<IconMoon size={16} />} rightSection={colorScheme === 'dark' ? '✓' : undefined}>
+                Dark Mode
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
+        </Button.Group>
+      </Flex>
+    </DisplayOnly>
   );
 };
