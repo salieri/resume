@@ -5,7 +5,7 @@
       "collaboration": "Yhteistyö",
       "deepWork": "Syvätyö",
       "devops": "DevOps",
-      "mgmtAdmin": "Johto ja hallinto",
+      "mgmtAdmin": "Johto & hallinto",
       "programming": "Ohjelmointi",
       "strategy": "Strategia",
       "title": "Painopiste"
@@ -17,7 +17,7 @@
       "fintech": "Fintech",
       "healthcare": "Terveydenhuolto",
       "homeAutomation": "Kotiautomaatio",
-      "hwEmbedded": "Laitteisto ja sulautetut järjestelmät",
+      "hwEmbedded": "Laitteisto & sulautetut järjestelmät",
       "paymentSolutions": "Maksuratkaisut",
       "realtime": "Reaaliaikainen",
       "talentSearch": "Osaajahaku",
@@ -25,32 +25,32 @@
       "videoGames": "Videopelit"
     },
     "leadershipExperience": {
-      "mentoringTraining": "Mentorointi ja koulutus",
-      "MgmtAdmin": "Johto ja hallinto",
+      "mentoringTraining": "Mentorointi & koulutus",
+      "MgmtAdmin": "Johto & hallinto",
       "planning": "Suunnittelu",
       "productDevelopment": "Tuotekehitys",
       "recruitment": "Rekrytointi",
-      "techLeadership": "Tekninen johtajuus",
-      "techStrategy": "Tekninen strategia",
+      "techLeadership": "Tekninen johtaminen",
+      "techStrategy": "Teknologiastrategia",
       "title": "Johtajuus"
     },
     "missionFit": {
-      "devInfraTooling": "Keh. infra ja työkalut",
-      "fixTeamsProjects": "Tiimien/projektien korjaaminen",
+      "devInfraTooling": "Kehitysinfrastruktuuri & työkalut",
+      "fixTeamsProjects": "Tiimien/projektien kuntoon saattaminen",
       "greenField": "Greenfield",
       "maintenance": "Ylläpito",
-      "nextGen20": "Seuraava sukupolvi ja 2.0",
+      "nextGen20": "Seuraavan sukupolven & 2.0",
       "productionOps": "Tuotanto-operaatiot",
       "rnd": "T&K",
       "scaling": "Skaalaus",
-      "title": "Sopivuus tehtävään"
+      "title": "Tehtävään sopivuus"
     },
     "technicalExperience": {
       "architecture": "Arkkitehtuuri",
       "backend": "Backend",
       "devops": "DevOps",
       "frontend": "Frontend",
-      "llmAgenticAI": "LLM / agenttimainen AI",
+      "llmAgenticAI": "LLM/agenttipohjainen AI",
       "mobile": "Mobiili",
       "technicalWriting": "Tekninen kirjoittaminen",
       "testingQa": "Testaus/QA",
@@ -84,10 +84,10 @@
     "download": "Lataa PDF",
     "name": "Aleksi Asikainen",
     "professionalTitles": "CTO, pääarkkitehti, pääinsinööri, <1></1>perustaja-insinööri, vanhempi henkilöstöinsinööri",
-    "relocation": "Voi muuttaa",
-    "residency": "Yhdysvaltojen pysyvä oleskelulupa, EU-kansalainen",
-    "translationAlertMessage": "Tämä ansioluettelo on käännetty automaattisesti konekäännöksellä. Osa kohdista ei välttämättä ole kääntynyt tarkasti. Katso tarkimmat tiedot <1><strong>alkuperäisestä englanninkielisestä versiosta</strong></1>.",
-    "translationAlertTitle": "Käännöstä koskeva huomautus"
+    "relocation": "Voin muuttaa",
+    "residency": "Yhdysvaltain pysyvä asukas, EU-kansalainen",
+    "translationAlertMessage": "Tämä ansioluettelo on käännetty automaattisesti konekäännöksellä. Joitakin osia ei välttämättä ole käännetty tarkasti. Katso tarkimpia tietoja varten <1><strong>alkuperäinen englanninkielinen versio</strong></1>.",
+    "translationAlertTitle": "Käännöshuomautus"
   },
   "error": {
     "errorTitle": "Virhe",
@@ -98,20 +98,20 @@
   },
   "exsum": {
     "20YearsOfExperience": "<strong>25+ vuotta</strong> <strong>käytännönläheistä</strong> ohjelmistojohtamista.",
-    "creativeTechnologist": "Senior-tason teknologia-asiantuntija, joka <strong>vie läpi monimutkaisia teknologiakokonaisuuksia</strong>. Muuttaa epämääräiset ideat <strong>skaalautuviksi, tuotantokelpoisiksi alustoiksi</strong>.",
-    "engagement": "Näyttöä <strong>0→1-, 1→N- ja scale-up-käännekohdissa</strong>. Rakensi hiljattain järjestelmän, joka muuntaa <strong>100+ tuntia audiota</strong> rakenteiseksi inferenssiksi <strong>joka minuutti</strong>.",
-    "managementResource": "Tuodaan mukaan <strong>vähentämään toteutuksen riskejä, nopeuttamaan toimitusta ja skaalaamaan tiimejä ja järjestelmiä</strong>. Neuvonantaja <strong>perustajille, C-level-johtajille ja VP:ille</strong>.",
-    "practicalExperienceOnAllLayers": "Perustajatason generalisti: backend, web, mobile, desktop, data, ML, QA, platform, infrastructure ja DevOps. Tekee myös jonkin verran tuote-, design- ja UX-työtä. Rakastaa <strong>rakentaa</strong>.",
+    "creativeTechnologist": "Kokenut teknologiaosaaja, joka <strong>toteuttaa monimutkaisia teknologiahankkeita</strong>. Muuntaa epämääräiset ideat <strong>skaalautuviksi, tuotantovalmiiksi alustoiksi</strong>.",
+    "engagement": "Näyttöä <strong>0→1-, 1→N- ja scale-up-käännekohdissa</strong>. Rakensi hiljattain järjestelmän, joka muuntaa <strong>100+ tuntia ääntä</strong> rakenteiseksi päättelyksi <strong>joka minuutti</strong>.",
+    "managementResource": "Kutsutaan mukaan <strong>vähentämään toteutusriskejä, nopeuttamaan toimitusta sekä skaalaamaan tiimejä ja järjestelmiä</strong>. Neuvonantaja <strong>perustajille, C-tasolle ja VP:ille</strong>.",
+    "practicalExperienceOnAllLayers": "Perustajatason generalisti: backend, web, mobile, desktop, data, ML, QA, platform, infrastructure ja DevOps. Sivuaa myös product-, design- ja UX-alueita. Rakastaa <strong>rakentamista</strong>.",
     "problemSolver": "Ratkaisusi kysymykseen: <i>\"Miten rakennamme tämän?\"</i>",
     "title": "Johtotiivistelmä"
   },
   "page": {
-    "resume": "Ansioluettelo | Aleksi Asikainen | Ohjelmistoarkkitehtuuri ja kehitys",
+    "resume": "Ansioluettelo | Aleksi Asikainen | Ohjelmistoarkkitehtuuri ja -kehitys",
     "untitled": "Nimetön sivu"
   },
   "projects": {
     "jsvfx": {
-      "description": "Visuaaliset tehosteet kirjoitettu puhtaalla JavaScriptillä.",
+      "description": "Visuaaliset tehosteet kirjoitettuna puhtaalla JavaScriptillä.",
       "name": "JS VFX"
     },
     "resume": {
@@ -126,41 +126,41 @@
   },
   "workHistory": {
     "abridge": {
-      "details": "Liittyi Abridgeen, kun yrityksessä oli ~30 työntekijää. Yrityksen ensimmäinen senior staff -ohjelmistoinsinööri. Toimi hyperkasvun ja useiden rahoituskierrosten aikana (A16Z, Khosla Ventures, Elad Gil, IVP). Ohjasi keskeistä teknistä suuntaa johtamalla arkkitehtuuripäätöksiä ja valitsemalla perustavanlaatuisia teknologioita (esim. Temporal), jotka skaalautuivat liiketoiminnan mukana. Ehdotti, suunnitteli arkkitehtuurin ja toteutti liiketoimintakriittisiä järjestelmiä, mukaan lukien laajamittainen äänidatan orkestrointi strukturoiduiksi kliinisiksi muistiinpanoiksi. Johti riskialttiita, erittäin tarkkuutta vaativia sisäisiä aloitteita, kuten merkittäviä tietokantasiirtoja, omistaen suunnittelun, toteutuksen ja luotettavuustulokset päästä päähän.",
-      "summary": "Terveydenhuollon AI-startup | 300 työntekijää | $700M Series C–E",
-      "title": "Senior Staff -ohjelmistoinsinööri"
+      "details": "Liittyi Abridgeen, kun yrityksessä oli ~30 työntekijää. Yrityksen ensimmäinen senior staff -ohjelmistosuunnittelija. Toimi hyperkasvun ja useiden rahoitusvaiheiden aikana (A16Z, Khosla Ventures, Elad Gil, IVP). Ohjasi teknistä ydinsuuntaa johtamalla arkkitehtuuripäätöksiä ja valitsemalla perustavanlaatuisia teknologioita (esim. Temporal), jotka skaalautuivat liiketoiminnan mukana. Ehdotti, suunnitteli arkkitehtuurin ja toteutti liiketoimintakriittisiä järjestelmiä, mukaan lukien laajamittainen äänidatan orkestrointi strukturoiduiksi kliinisiksi muistiinpanoiksi. Johti riskialttiita, korkeaa tarkkuutta vaativia sisäisiä aloitteita, kuten merkittäviä tietokantamigraatioita, omistaen suunnittelun, toteutuksen ja luotettavuustulokset alusta loppuun.",
+      "summary": "Healthcare AI -startup | 300 työntekijää | $700M series C-E",
+      "title": "Senior Staff -ohjelmistosuunnittelija"
     },
     "arena": {
-      "details": "Vastasi engineeringistä, arkkitehtuurista ja IT:stä. Skaalasi alustaa Series A -rahoituskierroksen läpi, jota johtivat CRV, Craft Ventures, Artisanal Ventures ja Vela Partners. Leikkasi teknisten operaatioiden kustannuksia 40%+. Johti koko yrityksen laajuista migraatiota JavaScriptistä TypeScriptiin. Vakiinnutti kurinalaiset engineering-käytännöt: koodikatselmoinnit, CI, suunnittelu, metriikkaohjattu operointi ja standardoidut tekniset prosessit.",
-      "summary": "Yleisön sitouttamisstartup | 50 työntekijää | $13.6M Series A",
+      "details": "Omisti vastuun ohjelmistokehityksestä, arkkitehtuurista ja IT:stä. Skaalasi alustaa Series A -kierroksen kautta, jota johtivat CRV, Craft Ventures, Artisanal Ventures ja Vela Partners. Leikkasi teknisten operaatioiden kustannuksia 40%+. Johti yhtiönlaajuista migraatiota JavaScriptistä TypeScriptiin. Vakiinnutti kurinalaiset ohjelmistokehityskäytännöt: koodikatselmoinnit, CI, suunnittelu, mittareihin perustuvat operaatiot sekä standardoidut tekniset prosessit.",
+      "summary": "Yleisön sitouttamisen startup | 50 työntekijää | $13.6M series A",
       "title": "Chief Technology Officer"
     },
     "hpi": {
-      "details": "Johti päästä päähän uusien kuluttajatuotteiden tuotekehitystä ja toimitusta konseptista lanseeraukseen. Ajoneuvohistorian tarkistusten markkinajohtaja Isossa-Britanniassa.",
+      "details": "Johti uusien kuluttajatuotteiden tuotekehitystä ja toimitusta päästä päähän konseptista julkaisuun. Ison-Britannian markkinajohtaja ajoneuvojen historiatarkastuksissa.",
       "notes": "(Solera Holdingsin tytäryhtiö)",
-      "summary": "Yksityinen yhtiö | Autoteollisuuden data & omaisuudensuoja | £20M liikevaihto",
+      "summary": "Yksityinen yhtiö | Autodataa & omaisuuserien suojaus | £20M liikevaihto",
       "title": "Teknologiajohtaja"
     },
     "madbid": {
-      "details": "Perusti MadBidin yhdessä ja johti kaikkea teknologiaa ja ohjelmistokehitystä bootstrap-vaiheesta skaalautumiseen. Rakensi ja johti koko engineering-organisaatiota nopean kasvun aikana.",
-      "summary": "Viihdeostosten startup | 75 työntekijää | £4M Series A | £10M liikevaihto",
+      "details": "Perusti MadBidin yhdessä ja johti kaikkea teknologiaa sekä ohjelmistokehitystä bootstrap-vaiheesta skaalaukseen. Rakensi ja johti koko ohjelmistokehitysorganisaatiota nopean kasvun aikana.",
+      "summary": "Viihdeostamisen startup | 75 työntekijää | £4M Series A | £10M liikevaihto",
       "title": "Tekninen johtaja"
     },
     "optym": {
-      "details": "Tuki Optymn SaaS-teknologiahankkeita. Vakiinnutti jaetut arkkitehtuurit, linjaukset ja toimitusstandardit nopeiden tuotelanseerausten mahdollistamiseksi. Mentoroi senior-insinöörejä ja teknisiä johtajia, vahvistaen toteutuksen laatua ja engineering-kulttuuria. Työskenteli suoraan asiakkaiden, kumppaneiden ja johtajien kanssa uusien tuotteiden suunnittelemiseksi ja räätälöityjen ratkaisujen toimittamiseksi.",
-      "summary": "B2B SaaS | Optimointi & päätöstiede | 250 työntekijää | $25M liikevaihto",
+      "details": "Tuki Optymin SaaS-teknologiahankkeita. Vakiinnutti jaetut arkkitehtuurit, käytännöt ja toimitusstandardit nopeiden tuotelanseerausten mahdollistamiseksi. MentoroI senior-insinöörejä ja teknisiä johtajia vahvistaen toteutuksen laatua ja ohjelmistokehityskulttuuria. Työskenteli suoraan asiakkaiden, kumppaneiden ja johtajien kanssa uusien tuotteiden suunnittelussa sekä räätälöityjen ratkaisujen toimittamisessa.",
+      "summary": "B2B SaaS | Optimointi & Decision Science | 250 työntekijää | $25M liikevaihto",
       "title": "Chief Technology Officer"
     },
-    "presentlyWorkingHere": "Nykyisin",
+    "presentlyWorkingHere": "Nykyhetki",
     "solera": {
-      "details": "Johti strategisia R&D- ja tuoteinkubointialoitteita toimitusjohtajan toimistolle. Arvioi nousevia teknologioita yrityskäyttöönottoa varten, mukaan lukien ML, blockchain, AR/VR, IoT/telematiikka, digitaalinen identiteetti, laajamittaiset dataplatformit sekä cloud-native SaaS (AWS).",
-      "summary": "Monikansallinen | Riskienhallinta & omaisuudensuoja | 6,000 työntekijää | $1.1B liikevaihto",
+      "details": "Johti strategisia R&D- ja tuoteinkubaatioaloitteita toimitusjohtajan toimistolle. Arvioi nousevia teknologioita yrityskäyttöön, mukaan lukien ML, blockchain, AR/VR, IoT/telematiikka, digitaalinen identiteetti, laajamittaiset dataplatformit sekä pilvinatiivi SaaS (AWS).",
+      "summary": "Monikansallinen | Riskienhallinta & omaisuuserien suojaus | 6,000 työntekijää | $1.1B liikevaihto",
       "title": "Pääarkkitehti"
     },
     "talmix": {
-      "details": "Rakensi uudelleen legacy-alustan skaalautuvaksi kaksipuoliseksi markkinapaikaksi. Johti haun ja matchauksen parannuksia konsulttisuositusten relevanssin lisäämiseksi.",
+      "details": "Rakensi uudelleen legacy-alustan skaalautuvaksi kaksipuoliseksi markkinapaikaksi. Johti haku- ja matchausparannuksia konsulttisuositusten osuvuuden lisäämiseksi.",
       "notes": "(Aiemmin tunnettu nimellä MBA & Company)",
-      "summary": "Johtamiskonsultoinnin startup | Osaajahaku | £2M Series A",
+      "summary": "Johtamiskonsultoinnin startup | Talent search | £2M series A",
       "title": "Chief Technology Officer"
     },
     "title": "Työhistoria"
