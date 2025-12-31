@@ -18,7 +18,6 @@
     "preview": "vite preview",
     "prod": "serve --listen tcp://0.0.0.0:3131 --cors './dist/client'",
     "start": "react-router-serve ./build/server/index.js",
-    "release:notes": "tsx ../packages/release-scripts/src/release-notes/cli.ts",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "stylelint": "stylelint '**/*.css' --cache",
