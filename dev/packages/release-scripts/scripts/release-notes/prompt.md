@@ -49,6 +49,7 @@ Write bullet-point release notes summarizing meaningful changes between {{PREVIO
 * 1–4 sentences per bullet point
 * Target length: 50–150 words total (up to 250 for major releases)
 * No preamble or closing commentary—output only the bullet list
+* Do not add headings, ranges, or footers
 
 ## Example Output
 * **Breaking:** The `--legacy` flag has been removed from the CLI. Use `--compat` instead.

@@ -136,17 +136,18 @@ jobs:
       - name: Generate release summary
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        working-directory: dev/packages/release-scripts
         run: |
-          pnpm --filter @faust/release-scripts release:notes \
+          pnpm release:notes \
             --current-tag "${{ steps.tags.outputs.new_tag }}" \
             --previous-tag "${{ steps.tags.outputs.previous_tag }}" \
-            --output ./release-notes.md
+            --output "${{ github.workspace }}/release-notes.md"
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tags.outputs.new_tag }}
           name: Resume ${{ steps.tags.outputs.new_tag }}
-          body_path: ./release-notes.md
+          body_path: "${{ github.workspace }}/release-notes.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
