@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 
 import { DisplayOnly } from '~/components/display-only/display-only';
 import { languages } from '~/i18n/i18n';
+import { useHydrated } from '~/utils/use-hydrated';
 
 /*
  * AGENT NOTE: The language in this component is INTENTIONALLY not wrapped in translation functions.
@@ -25,8 +26,10 @@ export const ConfigMenu = () => {
 
   const { setColorScheme, colorScheme } = useMantineColorScheme();
   const { setDirection } = useDirection();
+  const isHydrated = useHydrated();
 
   const languageOptions = languages.toSorted((a, b) => a.label.localeCompare(b.label));
+  const resolvedColorScheme = isHydrated ? colorScheme : 'light';
 
   const lightDarkOptions: { value: MantineColorScheme; label: string; icon: FunctionComponent<IconProps> }[] = [
     {
@@ -84,13 +87,13 @@ export const ConfigMenu = () => {
 
           <Menu trigger='hover' openDelay={65} closeDelay={150} shadow='md' width={180}>
             <Menu.Target>
-              <Button leftSection={colorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} size='compact-sm' variant='subtle' color='gray'>
-                {colorScheme === 'dark' ? 'Dark' : 'Light'}
+              <Button leftSection={resolvedColorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} size='compact-sm' variant='subtle' color='gray'>
+                {resolvedColorScheme === 'dark' ? 'Dark' : 'Light'}
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
               {lightDarkOptions.map((l) => (
-                <Menu.Item key={l.value} onClick={() => setColorScheme(l.value)} leftSection={<l.icon size={16} />} rightSection={colorScheme === l.value ? '✓' : undefined}>
+                <Menu.Item key={l.value} onClick={() => setColorScheme(l.value)} leftSection={<l.icon size={16} />} rightSection={resolvedColorScheme === l.value ? '✓' : undefined}>
                   {l.label}
                 </Menu.Item>
               ))}

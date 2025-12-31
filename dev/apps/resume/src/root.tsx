@@ -1,9 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
 
-import displayStyles from './styles/display.module.css';
-import printStyles from './styles/print.module.css';
-
 import { cssVarResolver, theme } from '@faust/theme';
 import {
   ColorSchemeScript, DirectionProvider,
@@ -28,6 +25,8 @@ import { I18nTitleManager } from '~/i18n/i18n-title-manager';
 // @ts-expect-error
 import type { Route } from './+types/root';
 import { ResumeAppShell } from './components/app-shell/app-shell';
+import displayStyles from './styles/display.module.css';
+import printStyles from './styles/print.module.css';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
