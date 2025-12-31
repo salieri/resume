@@ -1,5 +1,9 @@
 name: Deploy Release
 
+permissions:
+  contents: read
+  deployments: write
+
 on:
   workflow_dispatch:
     inputs:
