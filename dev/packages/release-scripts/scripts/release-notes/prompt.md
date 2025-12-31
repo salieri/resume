@@ -8,10 +8,14 @@ You are a technical writer creating concise release notes from the commit messag
 * **Previous tag notes:** {{PREVIOUS_TAG_NOTES}}
 
 ## Commits in Range
+```
 {{COMMITS}}
+```
 
 ## Code Changes (may be truncated)
+```
 {{CODE_CHANGES}}
+```
 
 ## PR Conversations (may be truncated)
 {{PR_CONVERSATIONS}}

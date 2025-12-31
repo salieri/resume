@@ -25,6 +25,16 @@ export interface ReleaseNotesCliArgs {
 
 const logger = createScriptLogger('release-notes');
 
+const INCLUDED_PATHS = [':(glob,top)**/*'];
+const EXCLUDED_PATHS = [':(exclude,top)dev/apps/resume/src/i18n/locales/**'];
+
+const buildGitArgsWithExclusions = (baseArgs: string[]) => [
+  ...baseArgs,
+  '--',
+  ...INCLUDED_PATHS,
+  ...EXCLUDED_PATHS,
+];
+
 const execGit = async (args: string[]) => {
   const { stdout } = await promisify(execFile)('git', args, { encoding: 'utf8' });
 
@@ -46,9 +56,17 @@ const renderReleaseNotes = (summary: string, currentTag: string, range: string) 
 };
 
 const buildCodeChangesContext = async (range: string, previousTag?: string) => {
+  const emptyTree = '4b825dc642cb6eb9a060e54bf8d69288fbee4904';
   const diffArgs = previousTag
-    ? ['diff', '--stat', '--unified=5', range]
-    : ['show', '--stat', '--patch', '--unified=5', range];
+    ? buildGitArgsWithExclusions(['diff', '--stat', '--unified=5', range])
+    : buildGitArgsWithExclusions([
+        'diff',
+        '--stat',
+        '--patch',
+        '--unified=5',
+        emptyTree,
+        `${range}^{tree}`,
+      ]);
 
   try {
     const diff = await execGit(diffArgs);

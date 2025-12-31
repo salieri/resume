@@ -55,13 +55,14 @@ const getTagAnnotation = async (tag?: string) => {
   return cleaned.length > 0 ? cleaned : undefined;
 };
 
-const EXCLUDED_PATHS = ['dev/apps/resume/src/i18n/locales/'];
+const INCLUDED_PATHS = [':(glob,top)**/*'];
+const EXCLUDED_PATHS = [':(exclude,top)dev/apps/resume/src/i18n/locales/**'];
 
 const buildGitArgsWithExclusions = (baseArgs: string[]) => [
   ...baseArgs,
   '--',
-  '.',
-  ...EXCLUDED_PATHS.map((path) => `:(exclude)${path}`),
+  ...INCLUDED_PATHS,
+  ...EXCLUDED_PATHS,
 ];
 
 const getCommitsBetween = async (range: string) => {
@@ -79,9 +80,7 @@ const getCommitsBetween = async (range: string) => {
 };
 
 const getPullRequestNumbersBetween = async (range: string) => {
-  const logOutput = await execGit(
-    buildGitArgsWithExclusions(['log', '--pretty=format:%B%x1e', range]),
-  );
+  const logOutput = await execGit(['log', '--pretty=format:%B%x1e', range]);
   const entries = logOutput.split('\u001E').filter(Boolean);
   const prNumbers = new Set<number>();
 
