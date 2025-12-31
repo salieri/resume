@@ -15,14 +15,14 @@
       "b2b": "B2B",
       "b2c": "B2C",
       "fintech": "Fintech",
-      "healthcare": "Layanan Kesehatan",
+      "healthcare": "Kesehatan",
       "homeAutomation": "Otomasi Rumah",
-      "hwEmbedded": "Perangkat Keras & Embedded",
+      "hwEmbedded": "HW & Embedded",
       "paymentSolutions": "Solusi Pembayaran",
-      "realtime": "Waktu Nyata",
+      "realtime": "Real-Time",
       "talentSearch": "Pencarian Talenta",
       "title": "Pengalaman Industri",
-      "videoGames": "Gim Video"
+      "videoGames": "Video Game"
     },
     "leadershipExperience": {
       "mentoringTraining": "Mentoring & Pelatihan",
@@ -35,12 +35,12 @@
       "title": "Kepemimpinan"
     },
     "missionFit": {
-      "devInfraTooling": "Infrastruktur Pengembangan & Tooling",
-      "fixTeamsProjects": "Membenahi Tim/ Proyek",
+      "devInfraTooling": "Infrastruktur & Tooling Pengembangan",
+      "fixTeamsProjects": "Membenahi Tim/Proyek",
       "greenField": "Green-Field",
       "maintenance": "Pemeliharaan",
       "nextGen20": "Generasi Berikutnya & 2.0",
-      "productionOps": "Operasi Produksi",
+      "productionOps": "Operasional Produksi",
       "rnd": "R&D",
       "scaling": "Skalabilitas",
       "title": "Kesesuaian Misi"
@@ -83,11 +83,11 @@
   "contactInfo": {
     "download": "Unduh PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO, Kepala Arsitek, Insinyur Utama, <1></1>Insinyur Pendiri, Insinyur Staf Senior",
-    "relocation": "Bersedia relokasi",
+    "professionalTitles": "CTO, Chief Architect, Principal Engineer, <1></1>Founding Engineer, Senior Staff Engineer",
+    "relocation": "Dapat relokasi",
     "residency": "Penduduk tetap AS, warga negara UE",
-    "translationAlertMessage": "Resume ini telah diterjemahkan secara otomatis menggunakan terjemahan mesin. Beberapa bagian mungkin tidak diterjemahkan dengan akurat. Silakan merujuk ke <1><strong>versi asli bahasa Inggris</strong></1> untuk informasi yang paling akurat.",
-    "translationAlertTitle": "Peringatan Terjemahan"
+    "translationAlertMessage": "Resume ini telah diterjemahkan secara otomatis menggunakan penerjemahan mesin. Beberapa bagian mungkin tidak diterjemahkan secara akurat. Silakan merujuk ke <1><strong>versi bahasa Inggris asli</strong></1> untuk informasi yang paling akurat.",
+    "translationAlertTitle": "Pemberitahuan Terjemahan"
   },
   "error": {
     "errorTitle": "Kesalahan",
@@ -97,16 +97,16 @@
     "unexpected": "Terjadi kesalahan yang tidak terduga."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ tahun</strong> pengalaman <strong>praktis langsung</strong> dalam kepemimpinan perangkat lunak.",
-    "creativeTechnologist": "Teknolog senior yang <strong>menghasilkan inisiatif teknologi yang kompleks</strong>. Menerjemahkan ide-ide yang masih samar menjadi <strong>platform yang skalabel dan siap produksi</strong>.",
-    "engagement": "Terbukti dalam <strong>0→1, 1→N, dan titik infleksi scale-up</strong>. Baru-baru ini membangun sistem yang mengubah <strong>100+ jam audio</strong> menjadi inferensi terstruktur <strong>setiap menit</strong>.",
-    "managementResource": "Dilibatkan untuk <strong>mengurangi risiko eksekusi, mempercepat penyampaian, serta menskalakan tim dan sistem</strong>. Penasihat bagi <strong>founder, level C, dan VP</strong>.",
-    "practicalExperienceOnAllLayers": "Generalis setingkat founder: backend, web, mobile, desktop, data, ML, QA, platform, infrastruktur, dan DevOps. Sesekali terlibat dalam produk, desain, dan UX. Menyukai <strong>membangun</strong>.",
+    "20YearsOfExperience": "<strong>25+ tahun</strong> <strong>pengalaman langsung</strong> dalam kepemimpinan perangkat lunak.",
+    "creativeTechnologist": "Teknolog senior yang <strong>menjalankan inisiatif teknologi yang kompleks</strong>. Menerjemahkan ide-ide yang masih samar menjadi <strong>platform yang skalabel dan siap produksi</strong>.",
+    "engagement": "Terbukti di <strong>0→1, 1→N, dan titik infleksi scale-up</strong>. Baru-baru ini membangun sistem yang mengubah <strong>100+ jam audio</strong> menjadi inferensi terstruktur <strong>setiap menit</strong>.",
+    "managementResource": "Dilibatkan untuk <strong>mengurangi risiko eksekusi, mempercepat pengiriman, serta menskalakan tim dan sistem</strong>. Penasihat bagi <strong>pendiri, C-level, dan VP</strong>.",
+    "practicalExperienceOnAllLayers": "Generalis level pendiri: backend, web, mobile, desktop, data, ML, QA, platform, infrastruktur, dan DevOps. Menjajal produk, desain, dan UX. Suka <strong>membangun</strong>.",
     "problemSolver": "Solusi Anda untuk: <i>\"Bagaimana kita membangun ini?\"</i>",
     "title": "Ringkasan Eksekutif"
   },
   "page": {
-    "resume": "CV | Aleksi Asikainen | Arsitektur dan Pengembangan Perangkat Lunak",
+    "resume": "Resume | Aleksi Asikainen | Arsitektur dan Pengembangan Perangkat Lunak",
     "untitled": "Halaman Tanpa Judul"
   },
   "projects": {
@@ -115,53 +115,53 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "Resume ini sebagai kode. Sangat di-over-engineer. Mulai dari sini.",
+      "description": "Resume ini sebagai kode. Sangat berlebihan dari sisi rekayasa. Mulai di sini.",
       "name": "Resume"
     },
     "tartarus": {
-      "description": "Framework deep learning untuk TypeScript yang dibangun dari nol.",
+      "description": "Kerangka kerja deep learning dari nol untuk TypeScript.",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "Proyek Referensi"
   },
   "workHistory": {
     "abridge": {
-      "details": "Bergabung dengan Abridge saat memiliki ~30 karyawan. Senior staff engineer pertama di perusahaan. Beroperasi melalui fase hyper-growth dan beberapa tahap pendanaan (A16Z, Khosla Ventures, Elad Gil, IVP). Mengarahkan arah teknis inti dengan memimpin keputusan arsitektur dan memilih teknologi fundamental (mis., Temporal) yang dapat diskalakan seiring pertumbuhan bisnis. Mengusulkan, merancang arsitektur, dan mengimplementasikan sistem yang sangat kritis, termasuk orkestrasi audio skala besar menjadi catatan klinis terstruktur. Memimpin inisiatif internal berisiko tinggi dan berpresisi tinggi seperti migrasi database besar, dengan kepemilikan desain, eksekusi, dan hasil keandalan secara end-to-end.",
-      "summary": "Startup AI healthcare | 300 karyawan | $700M seri C-E",
-      "title": "Senior Staff Software Engineer"
+      "details": "Bergabung dengan Abridge saat jumlah karyawan ~30. Senior staff engineer pertama di perusahaan. Beroperasi melalui pertumbuhan hiper dan beberapa tahap pendanaan (A16Z, Khosla Ventures, Elad Gil, IVP). Mendorong arah teknis inti dengan memimpin keputusan arsitektur dan memilih teknologi dasar (mis., Temporal) yang dapat diskalakan seiring bisnis. Mengusulkan, merancang arsitektur, dan mengimplementasikan sistem yang sangat kritis, termasuk orkestrasi skala besar dari audio menjadi catatan klinis terstruktur. Memimpin inisiatif internal berisiko tinggi dan berpresisi tinggi seperti migrasi database besar, dengan memiliki desain, eksekusi, dan hasil keandalan secara end-to-end.",
+      "summary": "Startup AI layanan kesehatan | 300 karyawan | $700M seri C-E",
+      "title": "Insinyur Perangkat Lunak Senior Staff"
     },
     "arena": {
-      "details": "Bertanggung jawab atas engineering, arsitektur, dan IT. Menskalakan platform melalui pendanaan Seri A yang dipimpin oleh CRV, Craft Ventures, Artisanal Ventures, dan Vela Partners. Mengurangi biaya operasi teknis 40%+. Memimpin migrasi skala perusahaan dari JavaScript ke TypeScript. Menerapkan praktik engineering yang disiplin: code review, CI, perencanaan, operasi berbasis metrik, serta proses teknis yang distandardisasi.",
-      "summary": "Startup engagement audiens | 50 karyawan | $13.6M seri A",
-      "title": "Chief Technology Officer"
+      "details": "Bertanggung jawab penuh atas engineering, arsitektur, dan TI. Menskalakan platform melalui pendanaan Seri A yang dipimpin oleh CRV, Craft Ventures, Artisanal Ventures, dan Vela Partners. Menurunkan biaya operasi teknis 40%+. Memimpin migrasi seluruh perusahaan dari JavaScript ke TypeScript. Menerapkan praktik engineering yang disiplin: code review, CI, perencanaan, operasi berbasis metrik, dan proses teknis yang distandardisasi.",
+      "summary": "Startup keterlibatan audiens | 50 karyawan | $13.6M seri A",
+      "title": "Direktur Teknologi"
     },
     "hpi": {
-      "details": "Memimpin pengembangan dan delivery produk end-to-end untuk produk konsumen baru, dari konsep hingga peluncuran. Pemimpin pasar Inggris untuk pemeriksaan riwayat kendaraan.",
+      "details": "Memimpin pengembangan dan delivery produk end-to-end untuk produk konsumen baru, dari konsep hingga peluncuran. Pemimpin pasar di Inggris untuk pemeriksaan riwayat kendaraan.",
       "notes": "(Anak perusahaan Solera Holdings)",
-      "summary": "Perusahaan privat | Data otomotif & perlindungan aset | pendapatan £20M",
-      "title": "Head of Technology"
+      "summary": "Perusahaan swasta | Data otomotif & perlindungan aset | pendapatan £20M",
+      "title": "Kepala Teknologi"
     },
     "madbid": {
-      "details": "Ikut mendirikan MadBid dan memimpin seluruh teknologi serta pengembangan perangkat lunak dari bootstrap hingga skala. Membangun dan menjalankan seluruh organisasi engineering selama pertumbuhan yang cepat.",
-      "summary": "Startup belanja hiburan | 75 karyawan | Seri A £4M | pendapatan £10M",
+      "details": "Mendirikan bersama MadBid dan memimpin seluruh teknologi serta pengembangan perangkat lunak dari bootstrap hingga skala. Membangun dan menjalankan seluruh organisasi engineering selama pertumbuhan pesat.",
+      "summary": "Startup belanja hiburan | 75 karyawan | £4M Seri A | pendapatan £10M",
       "title": "Direktur Teknis"
     },
     "optym": {
-      "details": "Mendukung venture teknologi SaaS Optym. Menetapkan arsitektur bersama, kebijakan, dan standar delivery untuk memungkinkan peluncuran produk yang cepat. Membimbing senior engineer dan pemimpin teknis, memperkuat kualitas eksekusi dan budaya engineering. Bekerja langsung dengan pelanggan, mitra, dan eksekutif untuk merancang produk baru, serta menyampaikan solusi bespoke.",
-      "summary": "SaaS B2B | Optimization & Decision Science | 250 karyawan | pendapatan $25M",
-      "title": "Chief Technology Officer"
+      "details": "Mendukung venture teknologi SaaS Optym. Menetapkan arsitektur bersama, kebijakan, dan standar delivery untuk memungkinkan peluncuran produk yang cepat. Membimbing insinyur senior dan pemimpin teknis, memperkuat kualitas eksekusi dan budaya engineering. Bekerja langsung dengan pelanggan, mitra, dan eksekutif untuk merancang produk baru, menyampaikan solusi khusus.",
+      "summary": "SaaS B2B | Optimisasi & Ilmu Keputusan | 250 karyawan | pendapatan $25M",
+      "title": "Direktur Teknologi"
     },
     "presentlyWorkingHere": "Saat ini",
     "solera": {
-      "details": "Memimpin inisiatif R&D strategis dan inkubasi produk untuk kantor CEO. Menilai teknologi baru untuk adopsi enterprise, termasuk ML, blockchain, AR/VR, IoT/telematics, identitas digital, platform data skala besar, dan SaaS cloud-native (AWS).",
+      "details": "Memimpin inisiatif R&D strategis dan inkubasi produk untuk kantor CEO. Menilai teknologi baru untuk adopsi perusahaan, termasuk ML, blockchain, AR/VR, IoT/telematics, identitas digital, platform data skala besar, dan SaaS cloud-native (AWS).",
       "summary": "Multinasional | Manajemen risiko & perlindungan aset | 6,000 karyawan | pendapatan $1.1B",
-      "title": "Chief Architect"
+      "title": "Arsitek Utama"
     },
     "talmix": {
-      "details": "Membangun ulang platform legacy menjadi marketplace dua sisi yang dapat diskalakan. Memimpin peningkatan search dan matching untuk meningkatkan relevansi rekomendasi konsultan.",
+      "details": "Membangun ulang platform legacy menjadi marketplace dua sisi yang dapat diskalakan. Memimpin peningkatan pencarian dan pencocokan untuk meningkatkan relevansi rekomendasi konsultan.",
       "notes": "(Sebelumnya dikenal sebagai MBA & Company)",
-      "summary": "Startup konsultasi manajemen | Pencarian talenta | seri A £2M",
-      "title": "Chief Technology Officer"
+      "summary": "Startup konsultansi manajemen | Pencarian talenta | £2M seri A",
+      "title": "Direktur Teknologi"
     },
     "title": "Riwayat Pekerjaan"
   }

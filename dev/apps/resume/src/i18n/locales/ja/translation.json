@@ -14,10 +14,10 @@
       "automotive": "自動車",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "フィンテック",
+      "fintech": "Fintech",
       "healthcare": "ヘルスケア",
       "homeAutomation": "ホームオートメーション",
-      "hwEmbedded": "ハードウェア＆組込み",
+      "hwEmbedded": "HW＆組込み",
       "paymentSolutions": "決済ソリューション",
       "realtime": "リアルタイム",
       "talentSearch": "タレントサーチ",
@@ -50,7 +50,7 @@
       "backend": "バックエンド",
       "devops": "DevOps",
       "frontend": "フロントエンド",
-      "llmAgenticAI": "LLM／エージェント型AI",
+      "llmAgenticAI": "LLM／Agentic AI",
       "mobile": "モバイル",
       "technicalWriting": "テクニカルライティング",
       "testingQa": "テスト／QA",
@@ -97,16 +97,16 @@
     "unexpected": "予期しないエラーが発生しました。"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+年</strong>にわたる<strong>ハンズオン</strong>のソフトウェア・リーダーシップ経験。",
-    "creativeTechnologist": "複雑な技術イニシアチブを<strong>遂行</strong>するシニア・テクノロジスト。曖昧なアイデアを<strong>スケーラブルで本番運用レベルのプラットフォーム</strong>へと落とし込む。",
-    "engagement": "<strong>0→1、1→N、およびスケールアップの転換点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化推論へ変換するシステムを構築。",
+    "20YearsOfExperience": "<strong>25年以上</strong>の<strong>ハンズオン</strong>によるソフトウェア・リーダーシップ。",
+    "creativeTechnologist": "複雑な技術イニシアチブを<strong>推進・実現</strong>するシニア・テクノロジスト。曖昧なアイデアを<strong>スケーラブルで本番運用に耐えるプラットフォーム</strong>へと落とし込む。",
+    "engagement": "<strong>0→1、1→N、スケールアップの変曲点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化推論へ変換するシステムを構築。",
     "managementResource": "<strong>実行リスクの低減、デリバリーの加速、チームとシステムのスケール</strong>のために参画。<strong>創業者、C-level、VP</strong>へのアドバイザー。",
-    "practicalExperienceOnAllLayers": "創業者レベルのジェネラリスト：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure、DevOps。product、design、UXにも携わる。<strong>ものづくり</strong>が好き。",
-    "problemSolver": "あなたの答え：<i>\"どうやってこれを作る？\"</i>",
+    "practicalExperienceOnAllLayers": "創業者レベルのジェネラリスト：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure、DevOps。プロダクト、デザイン、UXにも関与。<strong>構築</strong>が好き。",
+    "problemSolver": "あなたの課題に対する解決策：<i>\"どうやってこれを作る？\"</i>",
     "title": "エグゼクティブサマリー"
   },
   "page": {
-    "resume": "履歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャおよび開発",
+    "resume": "職務経歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発",
     "untitled": "無題のページ"
   },
   "projects": {
@@ -115,8 +115,8 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "このレジュメをコードとして。極端にオーバーエンジニアリング。ここから開始。",
-      "name": "レジュメ"
+      "description": "この履歴書をコードとして。極端にオーバーエンジニアリング。ここから開始。",
+      "name": "Resume"
     },
     "tartarus": {
       "description": "TypeScript向けにゼロから構築したディープラーニングフレームワーク。",
@@ -126,41 +126,41 @@
   },
   "workHistory": {
     "abridge": {
-      "details": "約30名規模のAbridgeに入社。会社初のシニア・スタッフ・エンジニア。ハイパーグロースおよび複数の資金調達ステージ（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。アーキテクチャ上の意思決定を主導し、事業の成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、中核的な技術方針を推進。音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、ミッションクリティカルなシステムを提案・設計・実装。大規模なデータベース移行などの高リスク・高精度な社内イニシアチブを主導し、設計・実行・信頼性の成果までエンドツーエンドで責任を担った。",
-      "summary": "Healthcare AI スタートアップ | 300 employees | $700M series C-E",
+      "details": "従業員約30名規模のAbridgeに参画。会社初のシニア・スタッフ・エンジニア。ハイパーグロースおよび複数の資金調達ラウンド（A16Z、Khosla Ventures、Elad Gil、IVP）を通じて事業を推進。アーキテクチャ意思決定を主導し、事業とともにスケールする基盤技術（例：Temporal）を選定することで、技術面の中核的な方向性を牽引。音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、ミッションクリティカルなシステムを提案・設計・実装。大規模なデータベース移行などの高リスクかつ高精度を要する社内イニシアチブを主導し、設計から実行、信頼性の成果までエンドツーエンドで担当。",
+      "summary": "ヘルスケアAIスタートアップ | 従業員300名 | $700M シリーズC-E",
       "title": "シニア・スタッフ・ソフトウェアエンジニア"
     },
     "arena": {
-      "details": "エンジニアリング、アーキテクチャ、ITを統括。CRV、Craft Ventures、Artisanal Ventures、Vela Partnersが主導するSeries Aを通じてプラットフォームをスケール。技術運用コストを40%+削減。全社的なJavaScriptからTypeScriptへの移行を主導。コードレビュー、CI、計画、メトリクス駆動の運用、標準化された技術プロセスなど、規律あるエンジニアリングプラクティスを確立。",
-      "summary": "オーディエンス・エンゲージメント スタートアップ | 50 employees | $13.6M series A",
+      "details": "エンジニアリング、アーキテクチャ、ITを統括。CRV、Craft Ventures、Artisanal Ventures、Vela Partnersが主導するシリーズAを経て、プラットフォームをスケール。技術運用コストを40%+削減。全社的なJavaScriptからTypeScriptへの移行を主導。コードレビュー、CI、計画、メトリクス駆動の運用、標準化された技術プロセスなど、規律あるエンジニアリングプラクティスを確立。",
+      "summary": "オーディエンス・エンゲージメントのスタートアップ | 従業員50名 | $13.6M シリーズA",
       "title": "最高技術責任者（CTO）"
     },
     "hpi": {
-      "details": "新規コンシューマー向けプロダクトについて、構想からローンチまでのエンドツーエンドのプロダクト開発とデリバリーを主導。車両履歴チェック分野における英国市場リーダー。",
+      "details": "新規コンシューマー向けプロダクトの企画からローンチまで、エンドツーエンドのプロダクト開発とデリバリーをリード。車両履歴チェックで英国市場のリーダー。",
       "notes": "（Solera Holdingsの子会社）",
-      "summary": "非公開企業 | 自動車データ & 資産保護 | £20M revenue",
+      "summary": "非公開企業 | 自動車データ＆アセット保護 | 売上 £20M",
       "title": "技術責任者"
     },
     "madbid": {
-      "details": "MadBidを共同創業し、立ち上げ（ブートストラップ）からスケールまで、技術およびソフトウェア開発の全体を主導。急成長期を通じてエンジニアリング組織全体を構築し運営。",
-      "summary": "エンターテインメント・ショッピング スタートアップ | 75 employees | £4M Series A | £10M revenue",
+      "details": "MadBidを共同創業し、ブートストラップからスケールまで、全ての技術およびソフトウェア開発をリード。急成長期を通じてエンジニアリング組織全体を構築・運営。",
+      "summary": "エンターテインメント系ショッピングのスタートアップ | 従業員75名 | £4M シリーズA | 売上 £10M",
       "title": "テクニカルディレクター"
     },
     "optym": {
-      "details": "OptymのSaaS技術ベンチャーを支援。迅速なプロダクト立ち上げを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを確立。シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。顧客、パートナー、経営陣と直接連携し、新製品の設計、個別ソリューションの提供を実施。",
-      "summary": "B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue",
+      "details": "OptymのSaaS技術ベンチャーを支援。迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを整備。シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリングカルチャーを強化。顧客、パートナー、経営陣と直接協働し、新規プロダクトの設計や個別最適のソリューション提供を実施。",
+      "summary": "B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | 売上 $25M",
       "title": "最高技術責任者（CTO）"
     },
     "presentlyWorkingHere": "現在",
     "solera": {
-      "details": "CEO直轄組織において、戦略的なR&Dおよびプロダクト・インキュベーションの取り組みを主導。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）などを含む、新興技術のエンタープライズ導入適性を評価。",
-      "summary": "多国籍企業 | リスク管理 & 資産保護 | 6,000 employees | $1.1B revenue",
+      "details": "CEOオフィス向けに、戦略的R&Dおよびプロダクト・インキュベーションのイニシアチブをリード。ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、企業導入に向けた新興技術を評価。",
+      "summary": "多国籍企業 | リスク管理＆アセット保護 | 従業員6,000名 | 売上 $1.1B",
       "title": "チーフアーキテクト"
     },
     "talmix": {
-      "details": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスとして再構築。検索とマッチングの改善を主導し、コンサルタント推薦の関連性を向上。",
+      "details": "レガシープラットフォームを、スケーラブルな両面型マーケットプレイスへ再構築。検索およびマッチングの改善を主導し、コンサルタント推薦の関連性を向上。",
       "notes": "（旧称：MBA & Company）",
-      "summary": "経営コンサルティング スタートアップ | Talent search | £2M series A",
+      "summary": "経営コンサルティングのスタートアップ | タレントサーチ | £2M シリーズA",
       "title": "最高技術責任者（CTO）"
     },
     "title": "職務経歴"
