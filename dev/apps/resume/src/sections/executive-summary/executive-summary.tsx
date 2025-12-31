@@ -14,7 +14,7 @@ export const ExecutiveSummary = () => {
 
       <Text>
         <Trans i18nKey='exsum.20YearsOfExperience'>
-          <strong>25+ years</strong> of <strong>hands-on</strong> software leadership.
+          <strong>20+ years</strong> of <strong>hands-on</strong> software leadership.
         </Trans>
       </Text>
 
