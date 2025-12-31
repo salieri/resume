@@ -39,6 +39,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build workspace (pt. 1)
+        working-directory: dev/apps/resume
+        run: pnpm --workspace-root build
+
       - name: Collect translation keys
         working-directory: dev/apps/resume
         run: pnpm i18n:extract
@@ -73,7 +77,7 @@ jobs:
             echo "No generated changes to commit."
           fi
 
-      - name: Build workspace
+      - name: Build workspace (pt. 2)
         working-directory: dev/apps/resume
         run: pnpm --workspace-root build
 
