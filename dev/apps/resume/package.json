@@ -47,6 +47,7 @@
     "i18next": "catalog:",
     "i18next-resources-to-backend": "catalog:",
     "lodash": "catalog:",
+    "modern-async": "catalog:",
     "recharts": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",

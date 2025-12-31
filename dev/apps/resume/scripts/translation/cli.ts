@@ -4,6 +4,7 @@ import path from 'node:path';
 import { PinoLogger } from '@faust/logger';
 import { OpenRouter } from '@openrouter/sdk';
 import { Option, program } from 'commander';
+import { asyncForEach } from 'modern-async';
 
 import { languageCodes } from '~/i18n/i18n';
 
@@ -55,7 +56,7 @@ program
 
     await fs.mkdir(opts.output, { recursive: true });
 
-    await Promise.all(targetLanguages.map(async (targetLanguage) => {
+    await asyncForEach(targetLanguages, async (targetLanguage) => {
       try {
         logger.info('resume.translation.started', { targetLanguage, input: opts.input });
 
@@ -84,7 +85,7 @@ program
         logger.error('resume.translation.failed', { targetLanguage, error });
         throw error;
       }
-    }));
+    }, 4);
   });
 
 try {
