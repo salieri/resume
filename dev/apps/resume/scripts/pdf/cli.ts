@@ -79,6 +79,7 @@ async function waitForClose(p: ChildProcess): Promise<void> {
   });
 }
 
+// eslint-disable-next-line max-statements
 async function main(url: string, out: string): Promise<void> {
   // Start pnpm dev in background (new process group)
   devProc = spawn('pnpm', ['dev'], {
