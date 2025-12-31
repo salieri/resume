@@ -90,6 +90,7 @@ jobs:
             git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
             git add .
             git commit -m "chore: update generated resume assets [skip ci]"
+            git pull --rebase origin main
             git push origin HEAD:main
           else
             echo "No generated changes to commit."
