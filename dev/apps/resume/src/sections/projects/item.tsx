@@ -13,7 +13,7 @@ export const ProjectItem = (props: ProjectItemProps) => {
   return (
     <Box className={`${classes.projectItem} projectItem`}>
       <Stack gap={0}>
-        <Title order={3} mb={0} lh='100%' className={classes.title}>
+        <Title order={3} mb={0} mt={0} lh='100%' className={classes.title}>
           {data.name}
         </Title>
         <Anchor href={data.url} mb='1em'>{data.url.replace('https://', '')}</Anchor>

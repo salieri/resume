@@ -1,0 +1,50 @@
+{
+  "name": "@faust/logger",
+  "version": "0.1.0",
+  "description": "Faust Logging Utilities",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./pino": "./dist/pino/index.js",
+    "./console": "./dist/console/index.js"
+  },
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc -p ./tsconfig.build.json",
+    "clean": "rm -rf ./dist ./coverage ./docs",
+    "docs": "rm -rf docs && pnpx typedoc --out docs --tsconfig ./tsconfig.build.json",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:ci": "pnpm lint --quiet",
+    "lint:fix": "pnpm lint --fix",
+    "prepublishOnly": "pnpm build",
+    "test": "vitest run",
+    "test:ci": "pnpm test:cov",
+    "test:cov": "pnpm test --coverage",
+    "test:watch": "vitest",
+    "watch": "tsc -p ./tsconfig.build.json --watch"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lodash": "catalog:",
+    "pino": "catalog:",
+    "serialize-error": "catalog:"
+  },
+  "devDependencies": {
+    "@faust/eslint-config": "workspace:",
+    "@types/lodash": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:",
+    "tsx": "catalog:",
+    "type-fest": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

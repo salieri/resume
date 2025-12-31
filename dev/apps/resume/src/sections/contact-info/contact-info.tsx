@@ -1,9 +1,9 @@
-import { Anchor, Button, List, Space, ThemeIcon } from '@mantine/core';
-import { IconDownload } from '@tabler/icons-react';
+import { Alert, Anchor, Button, List, Space, ThemeIcon, useDirection } from '@mantine/core';
+import { IconDownload, IconInfoCircle } from '@tabler/icons-react';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { DisplayOnly } from '@/components/display-only/display-only';
-import { Section } from '@/components/section/section';
+import { DisplayOnly } from '~/components/display-only/display-only';
+import { Section } from '~/components/section/section';
 
 import classes from './contact-info.module.css';
 import { contactInfoData, migrationData } from './data';
@@ -17,7 +17,13 @@ export const ContactInfo = () => {
     color: 'gray',
   };
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { setDirection } = useDirection();
+
+  const resetToEnglish = () => {
+    void i18n.changeLanguage('en');
+    setDirection('ltr');
+  };
 
   return (
     <Section className={`${classes.section} contactInfoSection`}>
@@ -42,6 +48,7 @@ export const ContactInfo = () => {
         {migrationData(t).map(({ caption, Icon, id }) => (
           <List.Item
             key={id}
+            c='var(--mantine-color-anchor)'
             icon={(
               <ThemeIcon {...themeProps} mr={0}>
                 <Icon style={iconStyle} />
@@ -56,6 +63,18 @@ export const ContactInfo = () => {
       <DisplayOnly>
         <Space h='xs' />
         <Button component='a' className={classes.download} href='/aleksi-asikainen-resume.pdf' download rightSection={<IconDownload size={14} />}><Trans i18nKey='contactInfo.download'>Download PDF</Trans></Button>
+      </DisplayOnly>
+
+      <DisplayOnly>
+        {i18n.language !== 'en' && (
+          <Alert title={t('contactInfo.translationAlertTitle', 'Translation Advisory')} mt='3rem' icon={<IconInfoCircle />} className={classes.translationAlert}>
+            <Trans i18nKey='contactInfo.translationAlertMessage'>
+              This resume has been automatically translated using machine translation. Some parts may not be accurately translated.
+              Please refer to the <Anchor onClick={resetToEnglish}><strong>original English version</strong></Anchor>{' '}
+              for the most accurate information.
+            </Trans>
+          </Alert>
+        )}
       </DisplayOnly>
 
     </Section>

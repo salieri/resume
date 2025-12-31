@@ -1,4 +1,4 @@
-import type { TranslatorFn } from '@/utils/translator.type';
+import type { TranslatorFn } from '~/utils/translator.type';
 
 export interface WorkHistory {
   id: string;
@@ -39,7 +39,7 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       title: t(`${baseKey}.arena.title`, 'Chief Technology Officer'),
       company: 'Arena',
       startDate: '08/2021',
-      endDate: '01/2023',
+      endDate: '12/2022',
       summary: t(`${baseKey}.arena.summary`, 'Audience engagement startup | 50 employees | $13.6M series A'),
       url: 'https://arena.im/',
       details:
@@ -78,7 +78,7 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       summary: t(`${baseKey}.hpi.summary`, 'Private company | Automotive data & asset protection | £20M revenue'),
       details:
       t(`${baseKey}.hpi.details`, 'Led end-to-end product development and delivery for new consumer products, from concept through launch. UK market leader in vehicle history checks.'),
-      notes: t(`${baseKey}.hpi.notes`, '(Subsidiary of Solera Holdings)'),
+      notes: t(`${baseKey}.hpi.notes`, '(Subsidiary of Solera)'),
     },
     {
       id: 'talmix',

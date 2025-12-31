@@ -1,1 +1,6 @@
-dist
+**/node_modules/**/*
+**/dist/**/*
+**/build/**/*
+**/docs/**/*
+**/coverage/**/*
+**/.react-router/**/*

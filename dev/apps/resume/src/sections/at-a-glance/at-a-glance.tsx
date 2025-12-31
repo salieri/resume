@@ -1,11 +1,12 @@
 import { SimpleGrid, Title } from '@mantine/core';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { DisplayOnly } from '@/components/display-only/display-only';
-import { Section } from '@/components/section/section';
-import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
-import { useIsPrint } from '@/utils/use-is-print';
+import { DisplayOnly } from '~/components/display-only/display-only';
+import { Section } from '~/components/section/section';
+import { useIsMdOrUp } from '~/utils/use-is-md-or-up';
+import { useIsPrint } from '~/utils/use-is-print';
 
+import classes from './at-a-glance.module.css';
 import { TranslatedChart } from './chart';
 import {
   focusFitData,
@@ -24,7 +25,7 @@ export const AtAGlance = () => {
   const { t } = useTranslation();
 
   return (
-    <Section className='atAGlanceSection'>
+    <Section className={`${classes.atAGlanceSection} atAGlanceSection`}>
       <DisplayOnly>
         <Title order={2}>
           <Trans i18nKey='atAGlance.title'>At a Glance</Trans>

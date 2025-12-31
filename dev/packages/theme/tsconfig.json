@@ -2,7 +2,7 @@
   "extends": "../../config/typescript/tsconfig.react.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "~/*": ["./src/*"]
     }
   },
   "include": ["src"]

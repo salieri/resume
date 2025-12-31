@@ -1,7 +1,7 @@
 import { Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
-import { Section } from '@/components/section/section';
+import { Section } from '~/components/section/section';
 
 import { data } from './data';
 import { ProjectItem } from './item';

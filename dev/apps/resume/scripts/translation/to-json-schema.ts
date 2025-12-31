@@ -12,7 +12,9 @@ interface JsonSchema {
 //   "$schema": "https://json-schema.org/draft-07/schema",
 // }
 
-// weak JSON schema generator for translation scripts
+/**
+ * Convert JSON-like values into a JSON schema for translation validation.
+ */
 export const toJsonSchema = (value: unknown): JsonSchema => {
   if (_.isArray(value)) {
     return {
@@ -21,9 +23,27 @@ export const toJsonSchema = (value: unknown): JsonSchema => {
     };
   }
 
-  if (_.isNull(value) || _.isString(value) || _.isNumber(value) || _.isBoolean(value)) {
+  if (_.isNull(value)) {
     return {
-      type: typeof value as 'string' | 'number' | 'boolean' | 'null',
+      type: 'null',
+    };
+  }
+
+  if (_.isString(value)) {
+    return {
+      type: 'string',
+    };
+  }
+
+  if (_.isNumber(value)) {
+    return {
+      type: 'number',
+    };
+  }
+
+  if (_.isBoolean(value)) {
+    return {
+      type: 'boolean',
     };
   }
 
@@ -39,6 +59,9 @@ export const toJsonSchema = (value: unknown): JsonSchema => {
   throw new Error(`Unsupported value type: ${typeof value}`);
 };
 
+/**
+ * Flatten a nested JSON object into a dot-notated map of values.
+ */
 export const flattenObject = (value: unknown, parentPath = '', result: Record<string, unknown> = {}) => {
   if (_.isNull(value) || _.isString(value) || _.isNumber(value) || _.isBoolean(value)) {
     result[parentPath] = value;

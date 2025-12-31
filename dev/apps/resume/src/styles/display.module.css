@@ -1,0 +1,50 @@
+:global(body) {
+  @mixin light {
+    background-color: #f7f8f9;
+    /* stylelint-disable */
+    background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(238, 240, 240, 1) 100%);
+    background-attachment: fixed;
+    /* stylelint-enable */
+  }
+
+  @mixin dark {
+    background-color: #242730;
+  }
+}
+
+:global(strong) {
+  @mixin light {
+    color: #020304; /* #2d8e7d */ /* #1f6964 */ /* 1f791f */
+  }
+
+  @mixin dark {
+    color: #e4e4e4
+  }
+}
+
+:global(small) {
+  color: var(--mantine-color-dimmed);
+}
+
+:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6) {
+  @mixin light {
+    color: #1da589;
+  }
+
+  @mixin dark {
+    color: #25b89a;
+  }
+}
+
+:global(p) {
+  text-wrap-style: pretty;
+}
+
+h1 {
+  margin-bottom: 0 !important;
+}
+
+
+:global(.mantine-Menu-itemLabel), :global(.mantine-Menu-itemSection) {
+  line-height: 125% !important;
+}

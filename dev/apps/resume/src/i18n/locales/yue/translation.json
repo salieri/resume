@@ -3,23 +3,23 @@
     "focusFit": {
       "architecture": "架構",
       "collaboration": "協作",
-      "deepWork": "深度專注工作",
+      "deepWork": "深度工作",
       "devops": "DevOps",
       "mgmtAdmin": "管理及行政",
-      "programming": "編程",
+      "programming": "程式開發",
       "strategy": "策略",
       "title": "重點"
     },
     "industryExperience": {
-      "automotive": "汽車業",
+      "automotive": "汽車",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "金融科技",
+      "fintech": "Fintech",
       "healthcare": "醫療保健",
-      "homeAutomation": "家居自動化",
+      "homeAutomation": "智能家居",
       "hwEmbedded": "硬件及嵌入式",
       "paymentSolutions": "支付方案",
-      "realtime": "即時系統",
+      "realtime": "實時",
       "talentSearch": "人才搜尋",
       "title": "行業經驗",
       "videoGames": "電子遊戲"
@@ -35,24 +35,25 @@
       "title": "領導力"
     },
     "missionFit": {
-      "devInfraTooling": "開發基建及工具鏈",
-      "fixProjects": "修復項目",
-      "fixTeams": "整頓團隊",
-      "greenField": "全新項目",
+      "devInfraTooling": "開發基建及工具",
+      "fixTeamsProjects": "修復團隊／專案",
+      "greenField": "綠地項目",
       "maintenance": "維護",
       "nextGen20": "下一代及 2.0",
-      "rnd": "R&D",
+      "productionOps": "生產運營",
+      "rnd": "研發",
       "scaling": "擴展",
-      "title": "任務匹配"
+      "title": "任務契合度"
     },
     "technicalExperience": {
       "architecture": "架構",
       "backend": "後端",
       "devops": "DevOps",
       "frontend": "前端",
+      "llmAgenticAI": "LLM／Agentic AI",
       "mobile": "流動端",
       "technicalWriting": "技術寫作",
-      "testingQa": "測試/QA",
+      "testingQa": "測試／QA",
       "title": "技術強項"
     },
     "technologyFit": {
@@ -68,6 +69,7 @@
       "python": "Python",
       "react": "React",
       "sql": "SQL",
+      "temporal": "Temporal",
       "title": "近期經驗",
       "typeScript": "TypeScript",
       "vue": "Vue"
@@ -77,21 +79,30 @@
   "contactInfo": {
     "download": "下載 PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO, 首席架構師, 首席工程師, <1></1>創始工程師, 資深 Staff 工程師",
-    "relocation": "可調遷",
-    "residency": "美國永久居民, 歐盟公民"
+    "professionalTitles": "CTO，首席架構師，首席工程師，<1></1>創始工程師，資深 Staff 工程師",
+    "relocation": "可接受調遷",
+    "residency": "美國永久居民，歐盟公民",
+    "translationAlertMessage": "此履歷已使用機器翻譯自動翻譯，部分內容可能未能準確翻譯。請參閱<1><strong>英文原版</strong></1>以獲取最準確資料。",
+    "translationAlertTitle": "翻譯提示"
+  },
+  "error": {
+    "errorTitle": "錯誤",
+    "notFoundDetails": "搵唔到你要求嘅頁面。",
+    "notFoundTitle": "404",
+    "oops": "哎呀！",
+    "unexpected": "發生咗一個意料之外嘅錯誤。"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ 年</strong> <strong>親身實戰</strong>嘅軟件領導經驗。",
-    "creativeTechnologist": "資深技術專才，能夠<strong>落地推動複雜技術項目</strong>。將模糊構想轉化為<strong>可擴展、可投產嘅平台</strong>。",
-    "engagement": "於<strong>0→1、1→N，以及規模化轉捩點</strong>均有實績。最近建立咗一套系統，將<strong>100+ 小時音訊</strong>轉化為結構化推論，做到<strong>每分鐘</strong>產出。",
-    "managementResource": "常被邀請介入以<strong>降低交付風險、加快交付速度、並擴展團隊與系統規模</strong>。擔任<strong>創辦人、C-level 及 VP</strong>嘅顧問。",
-    "practicalExperienceOnAllLayers": "創辦人級別嘅通才：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure，以及 DevOps。亦涉獵 product、design 同 UX。熱愛<strong>打造</strong>。",
-    "problemSolver": "為你解答：<i>\"我哋點樣建立呢個？\"</i>",
-    "title": "高層摘要"
+    "20YearsOfExperience": "具備<strong>25+ 年</strong> <strong>親身實戰</strong>嘅軟件領導經驗。",
+    "creativeTechnologist": "資深技術專才，能夠<strong>交付複雜嘅技術計劃</strong>。將模糊嘅構想轉化為<strong>可擴展、達到生產級別嘅平台</strong>。",
+    "engagement": "喺<strong>0→1、1→N 以及規模化轉捩點</strong>上有實證經驗。最近構建一個系統，將<strong>100+ 小時音訊</strong>轉換為結構化推論，並且<strong>每分鐘</strong>產出。",
+    "managementResource": "受邀加入以<strong>降低交付風險、加速交付，並擴展團隊與系統</strong>。為<strong>創辦人、C-level 及 VP</strong>提供顧問支援。",
+    "practicalExperienceOnAllLayers": "創辦人級通才：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure 同 DevOps。亦涉獵 product、design 同 UX。熱愛<strong>建構</strong>。",
+    "problemSolver": "你嘅解決方案，應對：<i>\"我哋點樣建立呢樣嘢？\"</i>",
+    "title": "管理層摘要"
   },
   "page": {
-    "resume": "履歷 | Aleksi Asikainen | 軟件架構及開發",
+    "resume": "履歷｜Aleksi Asikainen｜軟件架構與開發",
     "untitled": "未命名頁面"
   },
   "projects": {
@@ -100,54 +111,54 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "以程式碼呈現的履歷。極度過度工程化。由此開始。",
-      "name": "履歷"
+      "description": "以程式碼形式呈現的履歷表。極度過度工程化。由此開始。",
+      "name": "履歷表"
     },
     "tartarus": {
       "description": "為 TypeScript 從零開始打造的深度學習框架。",
       "name": "Tartarus Deep Learning Framework"
     },
-    "title": "參考專案"
+    "title": "參考項目"
   },
   "workHistory": {
     "abridge": {
-      "details": "在 Abridge 員工約 30 人時加入。公司首位資深 Staff 工程師。經歷高速增長及多輪融資階段（A16Z、Khosla Ventures、Elad Gil、IVP）。透過主導架構決策及挑選可隨業務擴展的基礎技術（例如 Temporal），推動核心技術方向。提出、設計架構並實作關鍵任務系統，包括將音訊大規模編排成結構化臨床筆記。領導高風險、高精度的內部計劃，例如大型資料庫遷移，端到端負責設計、執行及可靠性成果。",
-      "summary": "醫療保健 AI 初創 | 300 名員工 | $700M C-E 輪",
-      "title": "資深 Staff 軟件工程師"
+      "details": "於 Abridge 團隊約 30 人時加入。公司首位資深員工工程師。經歷高速增長及多輪融資階段（A16Z、Khosla Ventures、Elad Gil、IVP）。透過帶領架構決策及選定可隨業務擴展嘅基礎技術（例如 Temporal），主導核心技術方向。提出、設計架構並實作關鍵任務系統，包括大規模協調將音訊轉為結構化臨床筆記。帶領高風險、高精準度嘅內部項目，例如大型資料庫遷移，端到端負責設計、執行及可靠性成果。",
+      "summary": "醫療保健 AI 初創 | 300 名員工 | $700M Series C-E",
+      "title": "資深員工軟件工程師"
     },
     "arena": {
-      "details": "全面負責工程、架構及 IT。平台在 CRV、Craft Ventures、Artisanal Ventures 及 Vela Partners 領投的 A 輪期間完成擴展。將技術營運成本降低 40%+。主導公司範圍由 JavaScript 遷移至 TypeScript。建立嚴謹的工程實務：程式碼審查、CI、規劃、以指標驅動的營運，以及標準化技術流程。",
-      "summary": "受眾互動初創 | 50 名員工 | $13.6M A 輪",
+      "details": "全面負責工程、架構及 IT。於由 CRV、Craft Ventures、Artisanal Ventures 及 Vela Partners 主導嘅 Series A 輪融資期間擴展平台。將技術營運成本降低 40% 以上。帶領全公司由 JavaScript 遷移至 TypeScript。建立嚴謹工程實踐：code review、CI、規劃、以指標驅動嘅營運，以及標準化技術流程。",
+      "summary": "觀眾互動初創 | 50 名員工 | $13.6M Series A",
       "title": "首席技術官"
     },
     "hpi": {
-      "details": "領導新消費者產品由概念到上線的端到端產品研發與交付。英國車輛歷史查詢市場領導者。",
-      "notes": "（Solera Holdings 的附屬公司）",
-      "summary": "私人公司 | 汽車數據及資產保護 | £20M 收入",
+      "details": "帶領新消費者產品由概念到推出嘅端到端產品開發及交付。英國車輛歷史查核市場領導者。",
+      "notes": "（Solera Holdings 旗下子公司）",
+      "summary": "私人公司 | 汽車數據及資產保護 | £20M 營收",
       "title": "技術主管"
     },
     "madbid": {
-      "details": "共同創辦 MadBid，由自籌資金到規模化，領導全部技術及軟件開發。在快速增長期間建立並管理整個工程組織。",
-      "summary": "娛樂購物初創 | 75 名員工 | £4M A 輪 | £10M 收入",
+      "details": "共同創辦 MadBid，並由自籌資金到擴展規模，帶領所有技術及軟件開發。在快速增長期間建立並營運整個工程團隊。",
+      "summary": "娛樂購物初創 | 75 名員工 | £4M Series A | £10M 營收",
       "title": "技術總監"
     },
     "optym": {
-      "details": "支援 Optym 的 SaaS 技術業務。建立共用架構、政策及交付標準，以支持快速產品推出。指導資深工程師及技術領導，強化執行品質與工程文化。直接與客戶、合作夥伴及高層合作，設計新產品並交付客製化方案。",
-      "summary": "B2B SaaS | 優化及決策科學 | 250 名員工 | $25M 收入",
+      "details": "支援 Optym 嘅 SaaS 技術業務。建立共用架構、政策及交付標準，以支援快速產品推出。指導資深工程師及技術領導者，鞏固執行質素及工程文化。直接與客戶、合作夥伴及管理層合作，設計新產品並交付度身訂造方案。",
+      "summary": "B2B SaaS | Optimization & Decision Science | 250 名員工 | $25M 營收",
       "title": "首席技術官"
     },
-    "presentlyWorkingHere": "至今",
+    "presentlyWorkingHere": "現任",
     "solera": {
-      "details": "為 CEO 辦公室主導策略性研發及產品孵化計劃。評估新興技術以供企業採用，包括 ML、blockchain、AR/VR、IoT/telematics、digital identity、大規模數據平台，以及雲原生 SaaS（AWS）。",
-      "summary": "跨國企業 | 風險管理及資產保護 | 6,000 名員工 | $1.1B 收入",
+      "details": "為 CEO 辦公室帶領策略性 R&D 及產品孵化計劃。評估可供企業採用嘅新興技術，包括 ML、blockchain、AR/VR、IoT/telematics、數碼身份、大規模數據平台，以及雲原生 SaaS（AWS）。",
+      "summary": "跨國企業 | 風險管理及資產保護 | 6,000 名員工 | $1.1B 營收",
       "title": "首席架構師"
     },
     "talmix": {
-      "details": "將傳統平台重建為可擴展的雙邊市場。主導搜尋及配對改進，提高顧問推薦的相關性。",
-      "notes": "（先前稱為 MBA & Company）",
-      "summary": "管理顧問初創 | 人才搜尋 | £2M A 輪",
+      "details": "將舊有平台重建為可擴展嘅雙邊市場平台。帶領改善搜尋及配對，以提升顧問推薦嘅相關性。",
+      "notes": "（曾名為 MBA & Company）",
+      "summary": "管理顧問初創 | 人才搜尋 | £2M Series A",
       "title": "首席技術官"
     },
-    "title": "工作經歷"
+    "title": "工作履歷"
   }
 }

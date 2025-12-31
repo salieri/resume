@@ -7,7 +7,7 @@ import {
   IconPlaneDeparture,
 } from '@tabler/icons-react';
 
-import type { TranslatorFn } from '@/utils/translator.type';
+import type { TranslatorFn } from '~/utils/translator.type';
 
 const baseKey = 'contactInfo';
 

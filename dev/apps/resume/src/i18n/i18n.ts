@@ -4,10 +4,14 @@ import fromPairs from 'lodash/fromPairs';
 import { initReactI18next } from 'react-i18next';
 import { z } from 'zod';
 
-export const LanguageCode = z.string().brand('LanguageCode');
+export const LanguageCode = z.string()
+  .describe('Language code used for translations.')
+  .brand('LanguageCode');
 export type LanguageCode = z.infer<typeof LanguageCode>;
 
-export const LanguageName = z.string().brand('LanguageName');
+export const LanguageName = z.string()
+  .describe('Localized language name for display.')
+  .brand('LanguageName');
 export type LanguageName = z.infer<typeof LanguageName>;
 
 export interface Language {
@@ -17,6 +21,10 @@ export interface Language {
   rtl?: boolean;
 }
 
+/*
+ * AGENT NOTE: The language in this array is INTENTIONALLY not wrapped in translation functions or language keys.
+ * Please do not change this.
+ **/
 export const languages: Language[] = [
   { value: 'en', label: 'English', flag: '🇺🇸' },
   { value: 'es', label: 'Spanish', flag: '🇪🇸' },
@@ -62,7 +70,7 @@ export const initI18n = async () => {
       },
 
       react: {
-        useSuspense: false,
+        useSuspense: true,
       },
     });
 };

@@ -2,6 +2,7 @@
 .list {
   &:global(.mantine-List-root) {
     padding-left: 0;
+    padding-right: 0;
   }
 
   :global(.mantine-List-itemIcon) {
@@ -18,4 +19,16 @@
   text-transform: uppercase;
   font-family: var(--mantine-font-family-headings);
   color: var(--mantine-primary-color-contrast);
+}
+
+.translationAlert {
+  font-family: var(--mantine-font-family-headings);
+  line-height: 135%;
+
+  :global(.mantine-Alert-message) {
+    :global(a) {
+      font-size: var(--mantine-font-size-sm);
+    }
+  }
+
 }

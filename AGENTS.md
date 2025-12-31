@@ -42,6 +42,7 @@ Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a spe
 * Prefer to put types in a separate `types.ts` file when they are used in multiple places.
 * When a file exports a single class, function, or React component, name the file the same as the exported entity using `kebab-case`. For example, a React component named `UserProfile` should be in a file named `user-profile.tsx`.
 * If you have multiple files related to a specific feature, create a directory for that feature and place all related files – including source code, tests, CSS, resources, etc. – within it. For example, a `user-profile` directory could contain `user-profile.tsx`, `types.ts`, and `utils.ts`.
+* Avoid one-liner wrapper functions that do not add meaningful abstraction or functionality.
 
 ### Type Assertions
 * When data is received from an external source, such as JSON from an API, read from a file, or parsed with `JSON.parse()`, do not simply assert the data type using the `as` keyword.
@@ -68,6 +69,7 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * Use `type-fest` for advanced TypeScript types.
 * Use `modern-async` for async utility functions.
 * Use `tsx` for running TypeScript scripts.
+* Use `@faust/logger` for logging
 
 ### React Components
 * When creating React components, prefer functional components with hooks over class components.
@@ -92,8 +94,11 @@ Do not reinvent the wheel. Use these common modules for their respective purpose
 * A successful CLI execution should exit with code `0`. On failure, it should exit with a non-zero code and print an error message to `stderr`.
 
 ### Logging
-* Write structured logs (JSONL). Each log entry should be a single line JSON object.
+* Always write structured logs.
+* Use a pattern in which a log contains a "greppable"/unique log key (e.g. `some.machine.readableKey`) and (optional) log data as an object, e.g. `logger.info('some.machine.readableKey', { some: 'value', another: 1234 })`.
 * In browser logging, do not stringify objects; log them directly so the browser console can format them properly.
+* Always use `@faust/logger` for logging.
+* Use `PinoLogger` for NodeJS applications and `ConsoleLogger` for browser applications.
 
 ### Translations
 * All language in the React apps must be wrapped into `i18next` translation functions with keys, `t('key')` or `<Trans i18nKey='key'>`.
@@ -160,7 +165,8 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 
 ## Documentation
 * Add all environment variables to the 'Environment Variables' section in README.md
-* Add JSDoc comments to all public functions. Write SHORT descriptions (=1 sentence).
+* Add JSDoc/TSDoc comments to all public functions. Write SHORT descriptions (=1 sentence).
+* JSDoc/TSDoc comments may be omitted if the use case is self-evident from the function name and parameters.
 * Prefer TERSE descriptions that are easy to read and consume.
 * Add `.describe()` blocks to all `zod` schemas.
 
@@ -171,15 +177,24 @@ type UserType = z.infer<typeof UserSchema>;  // Avoid this
 * Use `terraform fmt` to format all Terraform code before committing.
 * Use `tflint` to lint all Terraform code before committing.
 
+## Security
+* Never commit secrets or sensitive information to the repository.
+* Use environment variables or secure secret management solutions for sensitive data.
+* Run `pnpm audit` to check for vulnerabilities in dependencies.
+* Keep dependencies up to date to minimize security risks.
+* Follow best practices for secure coding, such as input validation, output encoding, and proper error handling.
+* Review code changes for potential security issues during code reviews.
+* Encrypt sensitive data both in transit and at rest using industry-standard encryption algorithms.
+* Avoid using deprecated or unmaintained libraries that may pose security risks.
+
 ## Troubleshooting
 ### Common Issues
-| Symptom                                          | Solution |
-|--------------------------------------------------|----------|
-| `Module not found` errors after adding a package | Run `pnpm install` from workspace root |
-| Type errors in a dependency                      | Run `pnpm build` in the dependency package first |
-| Stale build artifacts                            | Delete `dist/` folders: `pnpm -r exec rm -rf dist` |
-| Lock file conflicts                              | Delete `node_modules` and `pnpm-lock.yaml`, then `pnpm install` |
-| Port already in use                              | Kill the process or use a different port via env variable |
+| Symptom                                          | Solution                                                  |
+|--------------------------------------------------|-----------------------------------------------------------|
+| `Module not found` errors after adding a package | Run `pnpm install` from workspace root                    |
+| Type errors in a dependency                      | Run `pnpm build` in the dependency package first          |
+| Stale build artifacts                            | Run `pnpm build` in the package/app directory             |
+| `dist` directory is missing                      | Run `pnpm build` in the package                           |
 
 ### Build Order
 When making cross-package changes, build dependencies before dependents by running `pnpm build` from workspace root.

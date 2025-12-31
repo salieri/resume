@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useMatches } from 'react-router';
 import type { UIMatch } from 'react-router';
 
-import type { TranslatorFn } from '@/utils/translator.type';
+import type { TranslatorFn } from '~/utils/translator.type';
 
 export interface TranslatableHandle {
   title?: (t: TranslatorFn) => string;

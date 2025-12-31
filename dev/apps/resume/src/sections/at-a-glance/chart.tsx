@@ -10,8 +10,8 @@ import {
 } from 'recharts';
 import type { TextProps as RechartTextProps } from 'recharts';
 
-import { useIsMdOrUp } from '@/utils/use-is-md-or-up';
-import { useIsPrint } from '@/utils/use-is-print';
+import { useIsMdOrUp } from '~/utils/use-is-md-or-up';
+import { useIsPrint } from '~/utils/use-is-print';
 
 import classes from './chart.module.css';
 import type { Chart } from './data';
@@ -24,7 +24,7 @@ interface TranslatedChartProps {
 }
 
 const chartSizing = {
-  base: { height: 300, width: 400 },
+  base: { height: 300, width: 420 },
   md: { height: 240, width: 325 },
   print: { height: 120, width: 240 },
 };
@@ -40,6 +40,7 @@ const TickWithWordWrap = (
     <RechartText
       x={x}
       y={y}
+      fill='var(--mantine-color-anchor)'
       className='recharts-text recharts-polar-angle-axis-tick-value'
       textAnchor={textAnchor}
       verticalAnchor={verticalAnchor}
@@ -63,7 +64,8 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
   const width = chartSizing[sizeKey].width;
   const height = chartSizing[sizeKey].height;
 
-  const chartColor = 'var(--mantine-color-lime-4)';
+  const chartColor = '#28dbb5'; // 'var(--mantine-color-lime-4)';
+  const gridColor = 'var(--mantine-color-gray-4)';
 
   const chart = (
     <RadarChart
@@ -74,7 +76,7 @@ export const TranslatedChart = (props: TranslatedChartProps) => {
       responsive={false}
       style={{ width, height }}
     >
-      <PolarGrid />
+      <PolarGrid stroke={gridColor} />
       <PolarAngleAxis
         dataKey='label'
         tick={(tickProps) => <TickWithWordWrap isPrint={isPrint} {...tickProps} />}

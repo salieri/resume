@@ -1,23 +1,17 @@
-:root {
-  --lineHeight: 120%;
-  --paragraphSpacing: 0.8rem;
-}
-
 .projectItem {
   p {
-    margin-bottom: var(--paragraphSpacing);
+    margin-bottom: 0.8rem;
   }
 
   margin: 0;
-  padding: 0;
-
   margin-bottom: 2.5rem;
+  padding: 0;
 
   break-inside: avoid;
 }
 
-p.description {
-  line-height: var(--lineHeight);
+.title {
+  margin-top: 0;
 }
 
 @media print {
@@ -26,3 +20,4 @@ p.description {
     margin-bottom: 0.2rem !important;
   }
 }
+

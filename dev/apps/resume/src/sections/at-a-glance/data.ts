@@ -1,4 +1,4 @@
-import type { TranslatorFn } from '@/utils/translator.type';
+import type { TranslatorFn } from '~/utils/translator.type';
 
 export interface ChartData {
   label: string;
@@ -28,6 +28,10 @@ export const technicalExperienceData = (t: TranslatorFn): Chart => {
       },
       {
         label: t(`${keyBase}.devops`, 'DevOps'),
+        value: 4.5,
+      },
+      {
+        label: t(`${keyBase}.llmAgenticAI`, 'LLM/ Agentic AI'),
         value: 4.5,
       },
       {
@@ -105,16 +109,16 @@ export const missionFitData = (t: TranslatorFn): Chart => {
         value: 4.5,
       },
       {
-        label: t(`${keyBase}.fixProjects`, 'Fix Projects'),
-        value: 4,
-      },
-      {
-        label: t(`${keyBase}.fixTeams`, 'Fix Teams'),
+        label: t(`${keyBase}.fixTeamsProjects`, 'Fix Teams/ Projects'),
         value: 4,
       },
       {
         label: t(`${keyBase}.maintenance`, 'Maintenance'),
         value: 2,
+      },
+      {
+        label: t(`${keyBase}.productionOps`, 'Production Ops'),
+        value: 4,
       },
       {
         label: t(`${keyBase}.rnd`, 'R&D'),
@@ -184,6 +188,10 @@ export const technologyFitData = (t: TranslatorFn): Chart => {
       },
       {
         label: t(`${keyBase}.sql`, 'SQL'),
+        value: 5,
+      },
+      {
+        label: t(`${keyBase}.temporal`, 'Temporal'),
         value: 5,
       },
       {
