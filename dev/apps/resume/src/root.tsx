@@ -1,8 +1,8 @@
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
 
-import './styles/print.module.css';
-import './styles/display.module.css';
+import displayStyles from './styles/display.module.css';
+import printStyles from './styles/print.module.css';
 
 import { cssVarResolver, theme } from '@faust/theme';
 import {
@@ -64,7 +64,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={`${displayStyles.displayRoot} ${printStyles.printRoot}`}>
         <I18nextProvider i18n={i18n}>
           <Suspense fallback={<I18nFallback />}>
             <I18nTitleManager />

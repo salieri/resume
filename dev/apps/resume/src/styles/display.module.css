@@ -48,3 +48,6 @@ h1 {
 :global(.mantine-Menu-itemLabel), :global(.mantine-Menu-itemSection) {
   line-height: 125% !important;
 }
+
+.displayRoot {
+}
