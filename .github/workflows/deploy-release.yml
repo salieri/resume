@@ -1,4 +1,5 @@
 name: Deploy Release
+run-name: "Deploy Release: ${{ inputs.tag }}"
 
 permissions:
   contents: read
