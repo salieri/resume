@@ -5,8 +5,11 @@ import {
   useDirection,
   useMantineColorScheme,
 } from '@mantine/core';
+import type { MantineColorScheme } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
+import type { IconProps } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
+import type { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { DisplayOnly } from '~/components/display-only/display-only';
@@ -17,13 +20,26 @@ import { languages } from '~/i18n/i18n';
  * Please do not change this.
  **/
 export const ConfigMenu = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || 'en');
 
   const { setColorScheme, colorScheme } = useMantineColorScheme();
   const { setDirection } = useDirection();
 
   const languageOptions = languages.toSorted((a, b) => a.label.localeCompare(b.label));
+
+  const lightDarkOptions: { value: MantineColorScheme; label: string; icon: FunctionComponent<IconProps> }[] = [
+    {
+      value: 'light',
+      label: t('config.lightMode', 'Light Mode'),
+      icon: IconSun,
+    },
+    {
+      value: 'dark',
+      label: t('config.darkMode', 'Dark Mode'),
+      icon: IconMoon,
+    },
+  ];
 
   useEffect(() => {
     if (i18n.language === language) {
@@ -68,17 +84,16 @@ export const ConfigMenu = () => {
 
           <Menu trigger='hover' openDelay={65} closeDelay={150} shadow='md' width={180}>
             <Menu.Target>
-              <Button leftSection={colorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} size='compact-sm' variant='subtle' color='gray'>
+              <Button leftSection={colorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} size='compact-sm' variant='subtle' color='gray'>
                 {colorScheme === 'dark' ? 'Dark' : 'Light'}
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item onClick={() => setColorScheme('light')} leftSection={<IconSun size={16} />} rightSection={colorScheme === 'light' ? '✓' : undefined}>
-                Light Mode
-              </Menu.Item>
-              <Menu.Item onClick={() => setColorScheme('dark')} leftSection={<IconMoon size={16} />} rightSection={colorScheme === 'dark' ? '✓' : undefined}>
-                Dark Mode
-              </Menu.Item>
+              {lightDarkOptions.map((l) => (
+                <Menu.Item key={l.value} onClick={() => setColorScheme(l.value)} leftSection={<l.icon size={16} />} rightSection={colorScheme === l.value ? '✓' : undefined}>
+                  {l.label}
+                </Menu.Item>
+              ))}
             </Menu.Dropdown>
           </Menu>
         </Button.Group>

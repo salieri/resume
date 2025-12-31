@@ -9,7 +9,7 @@
     "dev": "react-router dev --port 3030 --host 0.0.0.0",
     "eslint": "eslint . --cache",
     "generate:pdf": "./scripts/pdf/generate-pdf.sh",
-    "i18n:extract": "i18next-cli extract",
+    "i18n:extract": "rm -rf ./src/locales/en && i18next-cli extract",
     "i18n:translate": "tsx ./scripts/translation/cli.ts",
     "lint": "pnpm eslint && pnpm stylelint && i18next-cli lint",
     "lint:ci": "pnpm eslint --quiet && pnpm stylelint --quiet && i18next-cli lint",
