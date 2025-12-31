@@ -76,6 +76,10 @@
     },
     "title": "At a Glance"
   },
+  "config": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
   "contactInfo": {
     "download": "Download PDF",
     "name": "Aleksi Asikainen",
