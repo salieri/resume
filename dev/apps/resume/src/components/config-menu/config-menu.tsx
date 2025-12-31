@@ -88,7 +88,7 @@ export const ConfigMenu = () => {
           <Menu trigger='hover' openDelay={65} closeDelay={150} shadow='md' width={180}>
             <Menu.Target>
               <Button leftSection={resolvedColorScheme === 'light' ? <IconSun size={16} /> : <IconMoon size={16} />} size='compact-sm' variant='subtle' color='gray'>
-                {resolvedColorScheme === 'dark' ? 'Dark' : 'Light'}
+                {resolvedColorScheme === 'dark' ? t('config.dark', 'Dark') : t('config.light', 'Light')}
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
