@@ -92,8 +92,7 @@ async function main(url: string, out: string): Promise<void> {
 
     const browser = await launch({
       headless: true,
-      // In CI/docker you may need:
-      // args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
     try {
