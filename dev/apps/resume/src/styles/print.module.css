@@ -13,7 +13,7 @@
     -webkit-print-color-adjust: exact;
   }
 
-  :global(p), :global(strong), :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6), :global(li), :global(.mantine-Title-root), :global(.workHistoryItem) :global(a) {
+  :global(p), :global(strong), :global(small), :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6), :global(li), :global(.mantine-Title-root), :global(.workHistoryItem) :global(a) {
     color: #000 !important;
     -webkit-print-color-adjust: exact;
   }

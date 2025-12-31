@@ -5,9 +5,15 @@ export const cssVarResolver: CSSVariablesResolver = () => ({
   variables: {},
   light: {
     '--mantine-color-text': '#12171c',
+    '--mantine-color-anchor': '#727577',
+    '--mantine-color-gray-outline': '#727577',
+    '--mantine-color-dimmed': '#727577',
   },
   dark: {
     // '--mantine-color-text': '#FFFFFF',
+    '--mantine-color-gray-outline': '#9b9ea0',
+    '--mantine-color-anchor': '#9b9ea0',
+    '--mantine-color-dimmed': '#9b9ea0',
   },
 });
 

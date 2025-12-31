@@ -78,7 +78,7 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       summary: t(`${baseKey}.hpi.summary`, 'Private company | Automotive data & asset protection | £20M revenue'),
       details:
       t(`${baseKey}.hpi.details`, 'Led end-to-end product development and delivery for new consumer products, from concept through launch. UK market leader in vehicle history checks.'),
-      notes: t(`${baseKey}.hpi.notes`, '(Subsidiary of Solera Holdings)'),
+      notes: t(`${baseKey}.hpi.notes`, '(Subsidiary of Solera)'),
     },
     {
       id: 'talmix',

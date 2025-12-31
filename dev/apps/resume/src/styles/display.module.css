@@ -1,7 +1,7 @@
 :global(body) {
   @mixin light {
     background-color: #f7f8f9;
-    background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(237, 239, 240, 1) 100%);
+    background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(238, 240, 240, 1) 100%);
     background-attachment: fixed;
   }
 
@@ -17,6 +17,20 @@
 
   @mixin dark {
     color: #e4e4e4
+  }
+}
+
+:global(small) {
+  color: var(--mantine-color-dimmed);
+}
+
+:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6) {
+  @mixin light {
+    color: #1da589;
+  }
+
+  @mixin dark {
+    color: #25b89a;
   }
 }
 

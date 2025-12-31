@@ -1,4 +1,4 @@
-import { Alert, Anchor, Button, List, Space, ThemeIcon } from '@mantine/core';
+import { Alert, Anchor, Button, List, Space, ThemeIcon, useDirection } from '@mantine/core';
 import { IconDownload, IconInfoCircle } from '@tabler/icons-react';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -18,9 +18,11 @@ export const ContactInfo = () => {
   };
 
   const { t, i18n } = useTranslation();
+  const { setDirection } = useDirection();
 
   const resetToEnglish = () => {
     void i18n.changeLanguage('en');
+    setDirection('ltr');
   };
 
   return (
@@ -46,6 +48,7 @@ export const ContactInfo = () => {
         {migrationData(t).map(({ caption, Icon, id }) => (
           <List.Item
             key={id}
+            c='var(--mantine-color-anchor)'
             icon={(
               <ThemeIcon {...themeProps} mr={0}>
                 <Icon style={iconStyle} />
@@ -67,7 +70,8 @@ export const ContactInfo = () => {
           <Alert title={t('contactInfo.translationAlertTitle', 'Translation Advisory')} mt='3rem' icon={<IconInfoCircle />} className={classes.translationAlert}>
             <Trans i18nKey='contactInfo.translationAlertMessage'>
               This resume has been automatically translated using machine translation. Some parts may not be accurately translated.
-              Please refer to the <Anchor onClick={resetToEnglish}>original English version</Anchor> for the most accurate information.
+              Please refer to the <Anchor onClick={resetToEnglish}><strong>original English version</strong></Anchor>{' '}
+              for the most accurate information.
             </Trans>
           </Alert>
         )}

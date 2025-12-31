@@ -2,6 +2,7 @@
 .list {
   &:global(.mantine-List-root) {
     padding-left: 0;
+    padding-right: 0;
   }
 
   :global(.mantine-List-itemIcon) {

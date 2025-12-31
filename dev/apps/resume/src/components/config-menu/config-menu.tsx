@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { DisplayOnly } from '~/components/display-only/display-only';
 import { languages } from '~/i18n/i18n';
 
 import { colorSchemes } from './data';
@@ -16,7 +17,7 @@ export const ConfigMenu = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || 'en');
 
-  const { setColorScheme } = useMantineColorScheme();
+  const { setColorScheme, colorScheme } = useMantineColorScheme();
   const { setDirection } = useDirection();
 
   const languageOptions = languages.map((lang) => ({
@@ -26,14 +27,20 @@ export const ConfigMenu = () => {
   })).toSorted((a, b) => a.name.localeCompare(b.name));
 
   useEffect(() => {
-    if (i18n.language !== language) {
-      void i18n.changeLanguage(language);
-
-      const lang = languages.find((l) => l.value === language);
-
-      setDirection(lang?.rtl ? 'rtl' : 'ltr');
+    if (i18n.language === language) {
+      return;
     }
+
+    void i18n.changeLanguage(language);
+
+    const lang = languages.find((l) => l.value === language);
+
+    setDirection(lang?.rtl ? 'rtl' : 'ltr');
   }, [language]);
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language]);
 
   return (
     <>
@@ -42,19 +49,20 @@ export const ConfigMenu = () => {
           <Burger onClick={toggle} opened={opened} />
         </Menu.Target>
         <Menu.Dropdown>
+          <DisplayOnly>
+            <Radio.Group value={colorScheme}>
+              {colorSchemes.map((scheme) => (
+                <Radio
+                  value={scheme.value}
+                  label={scheme.label}
+                  key={scheme.value}
+                  onClick={() => setColorScheme(scheme.value)}
+                />
+              ))}
+            </Radio.Group>
 
-          <Radio.Group>
-            {colorSchemes.map((scheme) => (
-              <Radio
-                value={scheme.value}
-                label={scheme.label}
-                key={scheme.value}
-                onClick={() => setColorScheme(scheme.value)}
-              />
-            ))}
-          </Radio.Group>
-
-          <NativeSelect value={language} data={languageOptions} onChange={(e) => setLanguage(e.currentTarget.value)}></NativeSelect>
+            <NativeSelect value={language} data={languageOptions} onChange={(e) => setLanguage(e.currentTarget.value)}></NativeSelect>
+          </DisplayOnly>
         </Menu.Dropdown>
       </Menu>
     </>
