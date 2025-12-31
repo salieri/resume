@@ -36,6 +36,19 @@ jobs:
           node-version: ${{ steps.versions.outputs.node_version }}
           cache: pnpm
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install pdfcpu
+        run: |
+          echo "$HOME/go/bin" >> "$GITHUB_PATH"
+          go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
+
+      - name: Install Ghostscript
+        run: sudo apt-get update && sudo apt-get install -y ghostscript
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
