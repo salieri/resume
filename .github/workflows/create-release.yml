@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build workspace (pt. 1)
+      - name: Build workspace
         working-directory: dev/apps/resume
         run: pnpm --workspace-root build
 
@@ -93,9 +93,9 @@ jobs:
             echo "No generated changes to commit."
           fi
 
-      - name: Build workspace (pt. 2)
+      - name: Build resume app
         working-directory: dev/apps/resume
-        run: pnpm --workspace-root build
+        run: pnpm build
 
       - name: Determine release tags
         id: tags
