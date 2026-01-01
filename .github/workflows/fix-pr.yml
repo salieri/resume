@@ -6,6 +6,11 @@ name: Fix PR
 #   it could theoretically arbitrarily use those permissions to
 #   do harm.
 
+# @todo: The current approach of `pnpm build && pnpm lint:fix && pnpm test`
+#   works because tests have no external dependencies. A cleaner approach
+#   would be to have a way to run tests in GHA, and then parsing the output
+#   with Codex to determine what failed and why.
+
 on:
   workflow_run:
     workflows: ['CI']
