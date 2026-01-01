@@ -16,12 +16,6 @@ export const contactInfoData = (_t: TranslatorFn) => {
 
   return [
     {
-      id: 'phone',
-      caption: '+1 (817) 247-0723',
-      url: 'tel:+1817247023',
-      Icon: IconPhone,
-    },
-    {
       id: 'email',
       caption: 'ping@getsalieri.com',
       url: 'email:ping@getsalieri.com',
