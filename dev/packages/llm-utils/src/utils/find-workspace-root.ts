@@ -43,7 +43,7 @@ export const findWorkspaceRoot = async (): Promise<string> => {
     const parentDir = path.dirname(dir);
 
     if (parentDir === dir) {
-      throw new Error('Could not find root directory (package.json not found).');
+      throw new Error('Could not find root directory (package.json/.git not found).');
     }
 
     dir = parentDir;

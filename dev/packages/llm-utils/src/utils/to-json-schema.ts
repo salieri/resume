@@ -8,7 +8,7 @@ export const toJsonSchema = (value: unknown): JSONSchema4 => {
   if (_.isArray(value)) {
     return {
       type: 'array',
-      items: toJsonSchema(value[0]),
+      items: toJsonSchema(value.length === 0 ? undefined : value[0]),
     };
   }
 

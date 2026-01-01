@@ -32,12 +32,12 @@ export const runCodexExec = async (prompt: string, args: RunCodexExecArgs) => {
     let stdout = '';
     let stderr = '';
 
-    child.stdout.on('data', (chunk: string) => {
+    child.stdout.on('data', (chunk: Buffer) => {
       process.stdout.write(chunk); // behave like inherit
       stdout += chunk.toString(); // capture
     });
 
-    child.stderr.on('data', (chunk: string) => {
+    child.stderr.on('data', (chunk: Buffer) => {
       process.stderr.write(chunk); // behave like inherit
       stderr += chunk.toString(); // capture
     });

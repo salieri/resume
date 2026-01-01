@@ -23,6 +23,11 @@ const createTempTemplateFile = async (content: string) => {
   return filePath;
 };
 
+const clearTempTemplateFile = async (filePath: string) => {
+  const dir = path.dirname(filePath);
+  await fs.rm(dir, { recursive: true, force: true });
+};
+
 describe('renderTemplate', () => {
   it('renders a template string with data', async () => {
     const template = createTemplateContent();
@@ -36,5 +41,7 @@ describe('renderTemplate', () => {
     const result = await renderTemplate({ templatePath }, createTemplateData());
 
     expect(result).toBe('Hello Ada Lovelace <tag> {"a":1}');
+
+    await clearTempTemplateFile(templatePath);
   });
 });

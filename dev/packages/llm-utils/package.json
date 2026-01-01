@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@faust/eslint-config": "workspace:",
-    "@openai/codex": "catalog:",
     "@types/node": "catalog:",
     "@types/lodash": "catalog:",
     "@types/json-schema": "catalog:",
