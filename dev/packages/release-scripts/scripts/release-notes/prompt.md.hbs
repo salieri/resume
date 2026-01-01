@@ -18,7 +18,9 @@ You are a technical writer creating concise release notes from the commit messag
 ```
 
 ## PR Conversations (may be truncated)
+```
 {{PR_CONVERSATIONS}}
+```
 
 ## Task
 Write bullet-point release notes summarizing meaningful changes between {{PREVIOUS_TAG}} and {{CURRENT_TAG}}. Use the PR conversations to capture user-facing impacts, breaking changes, and nuance that may not be obvious from diffs alone.
@@ -49,10 +51,12 @@ Write bullet-point release notes summarizing meaningful changes between {{PREVIO
 * 1–4 sentences per bullet point
 * Target length: 50–150 words total (up to 250 for major releases)
 * No preamble or closing commentary—output only the bullet list
-* Do not add headings, ranges, or footers
+* VERY IMPORTANT: Do not add headings, titles, ranges, or footers
 
 ## Example Output
+```markdown
 * **Breaking:** The `--legacy` flag has been removed from the CLI. Use `--compat` instead.
 * Added dark mode support to the settings panel, with automatic detection of system preferences.
 * Fixed a bug where search results would not update after clearing filters (#247).
 * Improved German and French translations for the onboarding flow.
+```

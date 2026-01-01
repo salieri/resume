@@ -1,9 +1,9 @@
+import { runOpenRouterPromptWithStructuredResponse, toJsonSchema } from '@faust/llm-utils';
 import { ConsoleLogger } from '@faust/logger';
 import { z } from 'zod';
 
 import { LanguageCode, languageMap } from '~/i18n/i18n';
 
-import { toJsonSchema } from './to-json-schema';
 import { TranslationInputData } from './types';
 import type { TranslateParams } from './types';
 
@@ -30,31 +30,21 @@ const parseTranslationContent = (content: string, sectionKey: string): Translati
   }
 };
 
-const translateSection = async (sectionData: unknown, sectionKey: string, params: TranslateParams, prompt: string) => {
+const translateSection = async (sectionData: unknown, sectionKey: string, params: TranslateParams, promptData: Record<string, unknown>) => {
   const schema = toJsonSchema(sectionData);
+  const { model, ...modelParams } = params.modelParams;
+  const outputFormat = JSON.stringify(sectionData, null, 2);
 
-  const result = await params.openRouter.chat.send({
-    messages: [{ role: 'user', content: prompt.replace('{{OUTPUT_FORMAT}}', JSON.stringify(sectionData, null, 2)) }],
-    ...params.modelParams,
-
-    responseFormat: {
-      type: 'json_schema',
-      jsonSchema: {
-        name: 'translation',
-        strict: true,
-        schema,
-      },
+  const { result } = await runOpenRouterPromptWithStructuredResponse({
+    openRouter: params.openRouter,
+    template: { templatePath: params.promptTemplate },
+    data: {
+      ...promptData,
+      OUTPUT_FORMAT: outputFormat,
     },
-  }, { retries: {
-    strategy: 'backoff',
-    backoff: {
-      initialInterval: 500,
-      maxInterval: 10_000,
-      exponent: 1.5,
-      maxElapsedTime: 600_000,
-    },
-    retryConnectionErrors: true,
-  } });
+    model,
+    modelParams,
+  }, schema);
 
   const parsedResponse = TranslationResponse.parse(result);
   const translatedSection = parseTranslationContent(parsedResponse.choices[0].message.content, sectionKey);
@@ -72,22 +62,17 @@ export const translate = async (params: TranslateParams): Promise<TranslationInp
   const inputData = params.inputData;
   const sourceLanguage = LanguageCode.parse(params.sourceLanguage);
   const targetLanguage = LanguageCode.parse(params.targetLanguage);
-  const replacements: Record<string, string> = {
-    '{{SOURCE_LANGUAGE}}': String(languageMap[sourceLanguage]),
-    '{{TARGET_LANGUAGE}}': String(languageMap[targetLanguage]),
-    '{{INPUT_CONTENT}}': JSON.stringify(inputData, null, 2),
+
+  const promptData = {
+    SOURCE_LANGUAGE: String(languageMap[sourceLanguage]),
+    TARGET_LANGUAGE: String(languageMap[targetLanguage]),
+    INPUT_CONTENT: JSON.stringify(inputData, null, 2),
   };
-
-  let prompt = params.promptTemplate;
-
-  for (const [key, value] of Object.entries(replacements)) {
-    prompt = prompt.replaceAll(key, value);
-  }
 
   // translate each top-level section separately due to the JSON schema complexity limits on OpenRouter
   const results = await Promise.all(
     Object.entries(inputData).map(async ([key, value]) =>
-      translateSection(value, key, params, prompt)),
+      translateSection(value, key, params, promptData)),
   );
 
   const combined: TranslationInputData = {};

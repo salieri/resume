@@ -1,18 +1,4 @@
-import { z } from 'zod';
-
 export const MAX_CONTEXT_CHARS = 65_536;
-
-const OpenRouterMessage = z.object({
-  content: z.string().min(1).describe('LLM response content'),
-}).describe('OpenRouter message');
-
-const OpenRouterChoice = z.object({
-  message: OpenRouterMessage.describe('OpenRouter choice message'),
-}).describe('OpenRouter choice');
-
-const OpenRouterResponse = z.object({
-  choices: z.array(OpenRouterChoice).min(1).describe('OpenRouter choices'),
-}).describe('OpenRouter chat response');
 
 /**
  * Trims long context strings to keep within model limits.
@@ -54,18 +40,4 @@ export const parseGitHubRepoFromUrl = (remoteUrl: string) => {
   }
 
   throw new Error(`Unable to parse GitHub repository from remote URL "${remoteUrl}".`);
-};
-
-/**
- * Extracts a summary string from the OpenRouter response payload.
- */
-export const extractOpenRouterSummary = (response: unknown) => {
-  const parsed = OpenRouterResponse.parse(response);
-  const summaryText = parsed.choices[0]?.message.content.trim();
-
-  if (!summaryText) {
-    throw new Error('Received empty summary from model.');
-  }
-
-  return summaryText;
 };

@@ -2,11 +2,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { renderTemplate } from '@faust/llm-utils';
 import { Octokit } from 'octokit';
 
 import { createScriptLogger } from '../shared/logger';
 
-import { applyCodexFix, logDryRunPrompt, renderPrompt } from './codex';
+import { applyCodexFix, logDryRunPrompt } from './codex';
 import { commitChanges, configureGitUser, createFixBranch, pushBranch, runCommand } from './git';
 import { collectFailureContext, createPullRequest, postFixPrLink } from './github';
 import { parseEvent } from './inputs';
@@ -14,10 +15,10 @@ import type { FailureContext, FixPrCliOptions } from './types';
 
 const logger = createScriptLogger('fix-pr');
 
-const PROMPT_TEMPLATE_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'prompt.md');
+const PROMPT_TEMPLATE_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'prompt.md.hbs');
 
 const buildCodexPrompt = async (context: FailureContext) => {
-  return renderPrompt(PROMPT_TEMPLATE_PATH, {
+  return renderTemplate({ templatePath: PROMPT_TEMPLATE_PATH }, {
     JOB_NAME: context.jobName,
     FAILED_COMMAND: context.failedCommand,
     PR_NUMBER: String(context.prNumber),

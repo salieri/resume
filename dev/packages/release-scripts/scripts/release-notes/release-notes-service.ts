@@ -3,13 +3,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 
+import { extractOpenRouterSummary, renderTemplate, runOpenRouterPrompt } from '@faust/llm-utils';
 import { OpenRouter } from '@openrouter/sdk';
 import { Octokit } from 'octokit';
 
 import { createScriptLogger } from '../shared/logger';
 
 import { runWithOctokitRateLimit, summarizeRelease } from './summarize-release';
-import { extractOpenRouterSummary, formatGhText, parseGitHubRepoFromUrl, trimContext } from './utils';
+import { formatGhText, parseGitHubRepoFromUrl, trimContext } from './utils';
 
 export interface ReleaseNotesCliArgs {
   currentTag: string;
@@ -41,22 +42,13 @@ const execGit = async (args: string[]) => {
   return stdout.trim();
 };
 
-const buildPrompt = async (templatePath: string, replacements: Record<string, string>) => {
-  let template = await fs.readFile(templatePath, 'utf8');
-
-  for (const [key, value] of Object.entries(replacements)) {
-    template = template.replaceAll(`{{${key}}}`, value);
-  }
-
-  return template;
-};
-
 const renderReleaseNotes = (summary: string, currentTag: string, range: string) => {
   return [`# Release ${currentTag}`, summary.trim(), `> Range: \`${range}\``].join('\n\n');
 };
 
 const buildCodeChangesContext = async (range: string, previousTag?: string) => {
   const emptyTree = '4b825dc642cb6eb9a060e54bf8d69288fbee4904';
+
   const diffArgs = previousTag
     ? buildGitArgsWithExclusions(['diff', '--stat', '--unified=5', range])
     : buildGitArgsWithExclusions([
@@ -201,7 +193,7 @@ const buildPrConversationsContext = async (
   return trimContext(combined.length > 0 ? combined : 'No PR conversations available.');
 };
 
-const buildReleasePrompt = async (opts: ReleaseNotesCliArgs, summary: Awaited<ReturnType<typeof summarizeRelease>>) => {
+const buildPromptData = async (summary: Awaited<ReturnType<typeof summarizeRelease>>, opts: ReleaseNotesCliArgs) => {
   const [codeChanges, prConversations] = await Promise.all([
     buildCodeChangesContext(summary.range, summary.previousTag),
     buildPrConversationsContext(summary.pullRequestNumbers, opts.githubToken, opts.githubRepository),
@@ -211,7 +203,7 @@ const buildReleasePrompt = async (opts: ReleaseNotesCliArgs, summary: Awaited<Re
     ? 'No commits found in range.'
     : summary.commits.map(({ hash, subject }) => `${hash} ${subject}`).join('\n');
 
-  return buildPrompt(opts.promptTemplate, {
+  return {
     CURRENT_TAG: summary.currentTag,
     PREVIOUS_TAG: summary.previousTag ?? 'None (first release)',
     RANGE: summary.range,
@@ -220,30 +212,33 @@ const buildReleasePrompt = async (opts: ReleaseNotesCliArgs, summary: Awaited<Re
     COMMITS: commitsBlock,
     CODE_CHANGES: codeChanges,
     PR_CONVERSATIONS: prConversations,
-  });
+  };
 };
 
-const summarizeWithModel = async (prompt: string, model: string, apiKey: string) => {
+const summarizeWithModel = async (templatePath: string, data: Record<string, unknown>, model: string, apiKey: string) => {
   const openRouter = new OpenRouter({ apiKey });
 
-  const llmResult = await openRouter.chat.send({
+  const { prompt, result } = await runOpenRouterPrompt({
+    openRouter,
+    template: { templatePath },
+    data,
     model,
-    messages: [{ role: 'user', content: prompt }],
-    temperature: 0.2,
-  }, {
-    retries: {
-      strategy: 'backoff',
-      backoff: {
-        initialInterval: 500,
-        maxInterval: 10_000,
-        exponent: 1.5,
-        maxElapsedTime: 600_000,
+    modelParams: { temperature: 0.2 },
+    requestOptions: {
+      retries: {
+        strategy: 'backoff',
+        backoff: {
+          initialInterval: 500,
+          maxInterval: 10_000,
+          exponent: 1.5,
+          maxElapsedTime: 600_000,
+        },
+        retryConnectionErrors: true,
       },
-      retryConnectionErrors: true,
     },
   });
 
-  return extractOpenRouterSummary(llmResult);
+  return { summary: extractOpenRouterSummary(result), prompt };
 };
 
 const outputSummary = async (content: string, outputPath: string | undefined, prompt: string) => {
@@ -273,16 +268,17 @@ export const runReleaseNotes = async (opts: ReleaseNotesCliArgs) => {
     previousTag: opts.previousTag?.trim() || undefined,
   });
 
-  const prompt = await buildReleasePrompt(opts, releaseSummary);
+  const promptData = await buildPromptData(releaseSummary, opts);
 
   if (opts.dryRun) {
+    const prompt = await renderTemplate({ templatePath: opts.promptTemplate }, promptData);
     outputPrompt(prompt);
 
     return;
   }
 
   const apiKey = validateApiKey(opts.apiKey);
-  const summaryText = await summarizeWithModel(prompt, opts.model, apiKey);
+  const { summary: summaryText, prompt } = await summarizeWithModel(opts.promptTemplate, promptData, opts.model, apiKey);
   const content = renderReleaseNotes(summaryText, opts.currentTag, releaseSummary.range);
   await outputSummary(content, opts.output, prompt);
 };
