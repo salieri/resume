@@ -1,5 +1,11 @@
 name: Fix PR
 
+# @todo: Needs to be broken into multiple jobs, so that the
+#   `./scripts/fix-pr/cli.ts` script is run with no privileges;
+#   otherwise, since Codex is running with elevated permissions,
+#   it could theoretically arbitrarily use those permissions to
+#   do harm.
+
 on:
   workflow_run:
     workflows: ['CI']
