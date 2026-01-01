@@ -3,12 +3,12 @@
   overflow-x: hidden;
   width: 100%;
 
-  @mixin light {
+  @mixin light-root {
     background-color: #f7f8f9;
   }
 
-  @mixin dark {
-    background-color: #242730;
+  @mixin dark-root {
+    background-color: #1d2230;
   }
 }
 
@@ -20,14 +20,10 @@
 
   @mixin light {
     background-color: #f7f8f9;
-    /* stylelint-disable */
-    background: linear-gradient(127deg, rgba(247, 248, 249, 1) 50%, rgba(238, 240, 240, 1) 100%);
-    background-attachment: fixed;
-    /* stylelint-enable */
   }
 
   @mixin dark {
-    background-color: #242730;
+    background-color: #1d2230;
   }
 }
 
@@ -67,3 +63,6 @@ h1 {
 :global(.mantine-Menu-itemLabel), :global(.mantine-Menu-itemSection) {
   line-height: 125% !important;
 }
+
+.displayRoot { /* intentionally empty */ }
+.printRoot { /* intentionally empty */ }
