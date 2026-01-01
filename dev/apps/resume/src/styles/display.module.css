@@ -1,4 +1,23 @@
+:global(html) {
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  width: 100%;
+
+  @mixin light {
+    background-color: #f7f8f9;
+  }
+
+  @mixin dark {
+    background-color: #242730;
+  }
+}
+
 :global(body) {
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  width: 100%;
+  margin-bottom: 2rem;
+
   @mixin light {
     background-color: #f7f8f9;
     /* stylelint-disable */
