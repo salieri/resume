@@ -46,7 +46,7 @@ program
   .option('--model <model>', 'Model to use', 'openai/gpt-5.2') // 'anthropic/claude-opus-4.5')
   .option('--output <dir_path>', 'Output Path', './src/i18n/locales')
   .option('--output-file-pattern <pattern>', 'Output file pattern', '{{LANGUAGE}}/translation.json')
-  .option('--prompt-template <file>', 'Prompt template file', './scripts/translation/prompt.md')
+  .option('--prompt-template <file>', 'Prompt template file', './scripts/translation/prompt.md.hbs')
   .addOption(new Option('--sourceLanguage <language>', 'Source language').default('en').choices(languageCodes).makeOptionMandatory(true))
   .action(async (opts: TranslateCliArgs) => {
     const openRouter = new OpenRouter({ apiKey: opts.apiKey });

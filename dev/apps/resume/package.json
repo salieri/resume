@@ -30,6 +30,7 @@
     "vitest:watch": "vitest"
   },
   "dependencies": {
+    "@faust/llm-utils": "workspace:",
     "@faust/theme": "workspace:",
     "@mantine/code-highlight": "catalog:",
     "@mantine/core": "catalog:",

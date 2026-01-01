@@ -11,8 +11,9 @@ import type { ReleaseNotesCliArgs } from './release-notes-service';
 
 const DEFAULT_PROMPT_TEMPLATE = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
-  'prompt.md',
+  'prompt.md.hbs',
 );
+
 const logger = createScriptLogger('release-notes');
 
 try {

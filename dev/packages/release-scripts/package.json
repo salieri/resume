@@ -29,6 +29,7 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
+    "@faust/llm-utils": "workspace:",
     "@openrouter/sdk": "catalog:",
     "commander": "catalog:",
     "modern-async": "catalog:",
@@ -44,6 +45,7 @@
     "@vitest/coverage-v8": "catalog:",
     "eslint": "catalog:",
     "typescript": "catalog:",
+    "type-fest": "catalog:",
     "tsx": "catalog:",
     "vitest": "catalog:"
   },
