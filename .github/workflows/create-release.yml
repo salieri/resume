@@ -19,6 +19,10 @@ on:
         description: 'Generate PDF'
         type: boolean
         default: true
+      re_translate:
+        description: 'Re-Translate'
+        type: boolean
+        default: true
 
 jobs:
   create-release:
@@ -66,10 +70,12 @@ jobs:
         run: pnpm --workspace-root build
 
       - name: Collect translation keys
+        if: ${{ inputs.re_translate }}
         working-directory: dev/apps/resume
         run: pnpm i18n:extract
 
       - name: Translate resume content
+        if: ${{ inputs.re_translate }}
         working-directory: dev/apps/resume
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
