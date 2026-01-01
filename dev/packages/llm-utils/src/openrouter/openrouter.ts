@@ -5,7 +5,7 @@ import { renderTemplate } from '../template/render';
 import { OpenRouterResponse } from './types';
 import type { OpenRouterPromptResult, RunOpenRouterPromptArgs } from './types';
 
-export const defaultRequestOptions = {
+export const defaultRequestOptions: NonNullable<RunOpenRouterPromptArgs['requestOptions']> = {
   retries: {
     strategy: 'backoff',
     backoff: {
