@@ -7,7 +7,7 @@ import type { OpenRouterPromptResult, RunOpenRouterPromptArgs } from './types';
 
 export const defaultRequestOptions = {
   retries: {
-    strategy: 'backoff',
+    strategy: 'backoff' as const,
     backoff: {
       initialInterval: 500,
       maxInterval: 10_000,
