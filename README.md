@@ -30,6 +30,7 @@
   * [Fix PR script](./dev/packages/release-scripts/scripts/fix-pr/cli.ts)
   * [GitHub Action](./.github/workflows/fix-pr.yml)
 * [AGENTS.md](./AGENTS.md)
+* [Skills](./skills)
 
 ## Platform & Infrastructure
 * Deploys to Cloudflare Pages
