@@ -15,6 +15,10 @@ on:
           - patch
           - minor
           - major
+      generate_pdf:
+        description: 'Generate PDF'
+        type: boolean
+        default: true
 
 jobs:
   create-release:
@@ -77,6 +81,7 @@ jobs:
           pnpm i18n:translate
 
       - name: Generate PDF
+        if: ${{ inputs.generate_pdf }}
         working-directory: dev/apps/resume
         run: pnpm generate:pdf
 
