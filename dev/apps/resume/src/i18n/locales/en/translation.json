@@ -99,7 +99,7 @@
     "unexpected": "An unexpected error occurred."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ years</strong> of <strong>hands-on</strong> software leadership.",
+    "20YearsOfExperience": "<strong>20+ years</strong> of <strong>hands-on</strong> software leadership.",
     "creativeTechnologist": "Senior technologist who <strong>delivers complex technology initiatives</strong>. Translates vague ideas into <strong>scalable, production-grade platforms</strong>.",
     "engagement": "Proven at <strong>0→1, 1→N, and scale-up inflection points</strong>. Recently built a system that transforms <strong>100+ hours of audio</strong> into structured inference <strong>every minute</strong>.",
     "managementResource": "Brought in to <strong>de-risk execution, accelerate delivery, and scale teams and systems</strong>. Advisor to <strong>founders, C-level, and VPs</strong>.",
@@ -139,7 +139,7 @@
     },
     "hpi": {
       "details": "Led end-to-end product development and delivery for new consumer products, from concept through launch. UK market leader in vehicle history checks.",
-      "notes": "(Subsidiary of Solera Holdings)",
+      "notes": "(Subsidiary of Solera)",
       "summary": "Private company | Automotive data & asset protection | £20M revenue",
       "title": "Head of Technology"
     },
