@@ -26,6 +26,7 @@ Running the `pnpm lint:fix`, `pnpm build`, and `pnmpm test:ci` commands in a spe
 │   ├── templates/         # Starter templates for new packages/apps
 ├── ops/                   # Deployment and infrastructure code
 │   └── infra/             # Infrastructure as Code (IaC) definitions (Terraform)
+├── skills/                # SKILL.md files for AI agents
 ├── .github/               # GitHub workflows for CI/CD
 ├── AGENTS.md
 └── pnpm-workspace.yaml
