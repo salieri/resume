@@ -1,0 +1,53 @@
+{
+  "name": "@faust/llm-utils",
+  "version": "0.1.0",
+  "description": "Shared LLM prompt tooling (templating, OpenRouter, Codex)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc -p ./tsconfig.build.json",
+    "clean": "rm -rf ./dist ./coverage ./docs",
+    "docs": "rm -rf docs && pnpx typedoc --out docs --tsconfig ./tsconfig.build.json",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:ci": "pnpm lint --quiet",
+    "lint:fix": "pnpm lint --fix",
+    "prepublishOnly": "pnpm build",
+    "test": "vitest run",
+    "test:ci": "pnpm test:cov",
+    "test:cov": "pnpm test --coverage",
+    "test:watch": "vitest",
+    "watch": "tsc -p ./tsconfig.build.json --watch"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@openai/codex": "catalog:",
+    "@openrouter/sdk": "catalog:",
+    "handlebars": "catalog:",
+    "lodash": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@faust/eslint-config": "workspace:",
+    "@openai/codex": "catalog:",
+    "@types/node": "catalog:",
+    "@types/lodash": "catalog:",
+    "@types/json-schema": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:",
+    "type-fest": "catalog:",
+    "typescript": "catalog:",
+    "tsx": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
