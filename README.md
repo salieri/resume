@@ -19,14 +19,14 @@
 
 ## AI, ML, LLM, Agentic
 * Site is translated to multiple languages using LLM over OpenRouter
-  * [Prompt](./dev/apps/resume/scripts/translation/prompt.md)
+  * [Prompt](./dev/apps/resume/scripts/translation/prompt.md.hbs)
   * [Translation script](./dev/apps/resume/scripts/translation/translate.ts)
 * Release notes are generated using LLM
-  * [Prompt](./dev/packages/release-scripts/scripts/release-notes/prompt.md)
+  * [Prompt](./dev/packages/release-scripts/scripts/release-notes/prompt.md.hbs)
   * [Release notes script](./dev/packages/release-scripts/scripts/release-notes/summarize-release.ts)
   * [GitHub Action](./.github/workflows/create-release.yml)
 * PRs with build/lint/test failures are automatically fixed with Codex
-  * [Prompt](./dev/packages/release-scripts/scripts/fix-pr/prompt.md)
+  * [Prompt](./dev/packages/release-scripts/scripts/fix-pr/prompt.md.hbs)
   * [Fix PR script](./dev/packages/release-scripts/scripts/fix-pr/cli.ts)
   * [GitHub Action](./.github/workflows/fix-pr.yml)
 * [AGENTS.md](./AGENTS.md)
