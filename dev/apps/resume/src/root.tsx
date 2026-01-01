@@ -90,7 +90,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   const { t } = useTranslation(undefined, { useSuspense: false });
   let message = t('error.oops', 'Oops!');
   let details = t('error.unexpected', 'An unexpected error occurred.');
-  let stack: string | undefined = true;
+  let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404
