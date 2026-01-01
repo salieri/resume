@@ -6,7 +6,7 @@ description: Create a new app or package from an existing template in the monore
 # Create a New App or Package From a Template
 
 ## Overview
-Run or adjust the automated PR fixer that proposes patches for failing CI jobs.
+Create a new app or package in the monorepo using an existing template.
 
 ## Workflow
 1. Identify the template to use from `dev/templates` and the target location in the monorepo (`dev/apps` or `dev/packages`).
