@@ -3,7 +3,6 @@ import {
   IconBrandLinkedin,
   IconEPassport,
   IconMail,
-  IconPhone,
   IconPlaneDeparture,
 } from '@tabler/icons-react';
 
