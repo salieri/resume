@@ -42,10 +42,6 @@ const execGit = async (args: string[]) => {
   return stdout.trim();
 };
 
-const renderReleaseNotes = (summary: string, currentTag: string, range: string) => {
-  return [`# Release ${currentTag}`, summary.trim(), `> Range: \`${range}\``].join('\n\n');
-};
-
 const buildCodeChangesContext = async (range: string, previousTag?: string) => {
   const emptyTree = '4b825dc642cb6eb9a060e54bf8d69288fbee4904';
 
@@ -279,6 +275,5 @@ export const runReleaseNotes = async (opts: ReleaseNotesCliArgs) => {
 
   const apiKey = validateApiKey(opts.apiKey);
   const { summary: summaryText, prompt } = await summarizeWithModel(opts.promptTemplate, promptData, opts.model, apiKey);
-  const content = renderReleaseNotes(summaryText, opts.currentTag, releaseSummary.range);
-  await outputSummary(content, opts.output, prompt);
+  await outputSummary(summaryText.trim(), opts.output, prompt);
 };
