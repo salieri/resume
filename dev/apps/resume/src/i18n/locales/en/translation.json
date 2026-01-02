@@ -1,0 +1,200 @@
+{
+  "atAGlance": {
+    "focusFit": {
+      "architecture": "Architecture",
+      "collaboration": "Collaboration",
+      "deepWork": "Deep Work",
+      "devops": "DevOps",
+      "mgmtAdmin": "Mgmt & Admin",
+      "programming": "Programming",
+      "strategy": "Strategy",
+      "title": "Focus"
+    },
+    "industryExperience": {
+      "automotive": "Automotive",
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "fintech": "Fintech",
+      "healthcare": "Healthcare",
+      "homeAutomation": "Home Automation",
+      "hwEmbedded": "HW & Embedded",
+      "paymentSolutions": "Payment Solutions",
+      "realtime": "Real-Time",
+      "talentSearch": "Talent Search",
+      "title": "Industry Experience",
+      "videoGames": "Video Games"
+    },
+    "leadershipExperience": {
+      "mentoringTraining": "Mentoring & Training",
+      "MgmtAdmin": "Mgmt & Admin",
+      "planning": "Planning",
+      "productDevelopment": "Product Development",
+      "recruitment": "Recruitment",
+      "techLeadership": "Tech. Leadership",
+      "techStrategy": "Tech. Strategy",
+      "title": "Leadership"
+    },
+    "missionFit": {
+      "devInfraTooling": "Dev. Infra & Tooling",
+      "fixTeamsProjects": "Fix Teams/ Projects",
+      "greenField": "Green-Field",
+      "maintenance": "Maintenance",
+      "nextGen20": "Next-Gen & 2.0",
+      "productionOps": "Production Ops",
+      "rnd": "R&D",
+      "scaling": "Scaling",
+      "title": "Mission Fit"
+    },
+    "technicalExperience": {
+      "architecture": "Architecture",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "frontend": "Frontend",
+      "llmAgenticAI": "LLM/ Agentic AI",
+      "mobile": "Mobile",
+      "technicalWriting": "Technical Writing",
+      "testingQa": "Testing/QA",
+      "title": "Technical Strengths"
+    },
+    "technologyFit": {
+      "angular": "Angular",
+      "aws": "AWS",
+      "azure": "Azure",
+      "docker": "Docker",
+      "electron": "Electron",
+      "gcp": "GCP",
+      "linux": "Linux",
+      "mongoDb": "MongoDB",
+      "nestJS": "NestJS",
+      "python": "Python",
+      "react": "React",
+      "sql": "SQL",
+      "temporal": "Temporal",
+      "title": "Recent Experience",
+      "typeScript": "TypeScript",
+      "vue": "Vue"
+    },
+    "title": "At a Glance"
+  },
+  "config": {
+    "dark": "Dark",
+    "darkMode": "Dark Mode",
+    "light": "Light",
+    "lightMode": "Light Mode"
+  },
+  "contactInfo": {
+    "download": "Download PDF",
+    "name": "Aleksi Asikainen",
+    "professionalTitles": "CTO, Chief Architect, Principal Engineer, <1></1>Founding Engineer, Senior Staff Engineer",
+    "relocation": "Can relocate",
+    "residency": "US permanent resident, EU citizen",
+    "translationAlertMessage": "This resume has been automatically translated using machine translation. Some parts may not be accurately translated. Please refer to the <1><strong>original English version</strong></1> for the most accurate information.",
+    "translationAlertTitle": "Translation Advisory"
+  },
+  "error": {
+    "errorTitle": "Error",
+    "notFoundDetails": "The requested page could not be found.",
+    "notFoundTitle": "404",
+    "oops": "Oops!",
+    "unexpected": "An unexpected error occurred."
+  },
+  "exsum": {
+    "20YearsOfExperience": "<strong>20+ years</strong> of <strong>hands-on</strong> software leadership.",
+    "creativeTechnologist": "Senior technologist who <strong>delivers complex technology initiatives</strong>. Translates ambiguous ideas into <strong>scalable, production-grade platforms</strong>, – including customer-facing products, agentic systems, and distributed cloud environments.",
+    "engagement": "Proven at <strong>0→1, 1→N, and scale-up inflection points</strong>. Recently built a system that transforms <strong>100+ hours of audio</strong> into structured inference <strong>every minute</strong>.",
+    "managementResource": "Brought in to <strong>raise the technical bar, define technical direction, execute complex work, and scale teams and systems</strong>. Advisor to <strong>founders, C-level, and VPs</strong>.",
+    "practicalExperienceOnAllLayers": "Technology generalist: backend, web, mobile, desktop, data, ML/AI, QA, platform, infrastructure, and DevOps. Experience in product, design, and UX. Loves <strong>building</strong>.",
+    "problemSolver": "Your solution to: <i>\"How do we build this?\"</i>",
+    "title": "Executive Summary"
+  },
+  "page": {
+    "resume": "Resume | Aleksi Asikainen | Software Architecture and Development",
+    "untitled": "Untitled Page"
+  },
+  "projects": {
+    "jsvfx": {
+      "description": "Visual effects written in pure JavaScript.",
+      "name": "JS VFX"
+    },
+    "resume": {
+      "description": "This resume as code. Extremely over-engineered. Start here.",
+      "name": "Resume"
+    },
+    "tartarus": {
+      "description": "From-the-ground-up deep learning framework for TypeScript.",
+      "name": "Tartarus Deep Learning Framework"
+    },
+    "title": "Reference Projects"
+  },
+  "workHistory": {
+    "abridge": {
+      "details": {
+        "architecture": "Drove core technical direction by leading architecture decisions and selecting foundational technologies (e.g., Temporal) that scaled with the business.",
+        "growth": "Operated through hyper-growth and multiple funding stages (A16Z, Khosla Ventures, Elad Gil, IVP).",
+        "missions": "Led high-risk, high-precision internal initiatives such as major database migrations, owning design, execution, and reliability outcomes end to end.",
+        "proposals": "Proposed, architected, and implemented critical core systems, including large-scale orchestration of audio into structured clinical notes.",
+        "role": "Joined Abridge at ~30 employees. Company's first senior staff engineer."
+      },
+      "summary": "Healthcare AI startup | 300 employees | $700M series C-E",
+      "title": "Senior Staff Software Engineer"
+    },
+    "arena": {
+      "details": {
+        "optimization": "Cut technical operations costs 40%+.",
+        "ownership": "Owned engineering, architecture, and IT.",
+        "practices": "Established engineering practices: code reviews, CI, planning, metrics-driven operations, and standardized technical processes.",
+        "scale": "Scaled the platform through Series A led by CRV, Craft Ventures, Artisanal Ventures, and Vela Partners."
+      },
+      "summary": "Audience engagement startup | 50 employees | $13.6M series A",
+      "title": "Chief Technology Officer"
+    },
+    "hpi": {
+      "details": {
+        "leader": "UK market leader in vehicle history checks.",
+        "products": "Led end-to-end product development and delivery for new consumer products, from concept through launch."
+      },
+      "notes": "(Subsidiary of Solera)",
+      "summary": "Private company | Automotive data & asset protection | £20M revenue",
+      "title": "Head of Technology"
+    },
+    "madbid": {
+      "details": {
+        "cofounder": "Co-founded MadBid.",
+        "orgScale": "Built and ran the entire engineering organization through rapid growth.",
+        "technlogyLeadership": "Led all technology and software development from bootstrap to scale."
+      },
+      "summary": "Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue",
+      "title": "Technical Director"
+    },
+    "optym": {
+      "details": {
+        "arch": "Established shared architectures, policies, and delivery standards to enable rapid product launches.",
+        "customers": "Worked directly with customers, partners, and executives to design new products, deliver bespoke solutions.",
+        "mentor": "Mentored senior engineers and technical leaders, reinforcing execution quality and engineering culture.",
+        "saas": "Supported Optym’s SaaS technology ventures."
+      },
+      "summary": "B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue",
+      "title": "Chief Technology Officer"
+    },
+    "presentlyWorkingHere": "Present",
+    "solera": {
+      "details": {
+        "emerging": "Assessed emerging technologies for enterprise adoption, including ML, blockchain, AR/VR, IoT/telematics, digital identity, large-scale data platforms, and cloud-native SaaS (AWS).",
+        "rnd": "Led strategic R&D and product incubation initiatives for the office of the CEO."
+      },
+      "summary": "Multinational | Risk management & asset protection | 6,000 employees | $1.1B revenue",
+      "title": "Chief Architect"
+    },
+    "talmix": {
+      "details": {
+        "itTech": "Owned all technical operations.",
+        "rebuild": "Rebuilt a legacy platform into a scalable two-sided marketplace. Led search and matching improvements to increase relevance of consultant recommendations.",
+        "search": "Led search and matching improvements to increase relevance of consultant recommendations."
+      },
+      "notes": "(Previously known as MBA & Company)",
+      "summary": "Management consulting startup | Talent search | £2M series A",
+      "title": "Chief Technology Officer"
+    },
+    "title": "Work History"
+  }
+}
