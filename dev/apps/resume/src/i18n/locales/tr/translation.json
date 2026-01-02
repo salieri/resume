@@ -3,7 +3,7 @@
     "focusFit": {
       "architecture": "Mimari",
       "collaboration": "İş Birliği",
-      "deepWork": "Derin Odak",
+      "deepWork": "Derin Çalışma",
       "devops": "DevOps",
       "mgmtAdmin": "Yönetim & İdare",
       "programming": "Programlama",
@@ -16,8 +16,8 @@
       "b2c": "B2C",
       "fintech": "Fintech",
       "healthcare": "Sağlık",
-      "homeAutomation": "Ev Otomasyonu",
-      "hwEmbedded": "Donanım & Gömülü",
+      "homeAutomation": "Akıllı Ev",
+      "hwEmbedded": "Donanım & Gömülü Sistemler",
       "paymentSolutions": "Ödeme Çözümleri",
       "realtime": "Gerçek Zamanlı",
       "talentSearch": "Yetenek Arama",
@@ -30,27 +30,27 @@
       "planning": "Planlama",
       "productDevelopment": "Ürün Geliştirme",
       "recruitment": "İşe Alım",
-      "techLeadership": "Teknoloji Liderliği",
-      "techStrategy": "Teknoloji Stratejisi",
+      "techLeadership": "Teknik Liderlik",
+      "techStrategy": "Teknik Strateji",
       "title": "Liderlik"
     },
     "missionFit": {
       "devInfraTooling": "Geliştirme Altyapısı & Araçlar",
-      "fixTeamsProjects": "Ekipleri/Projeleri İyileştirme",
-      "greenField": "Sıfırdan",
+      "fixTeamsProjects": "Ekipleri/Projeleri Düzeltme",
+      "greenField": "Sıfırdan (Greenfield)",
       "maintenance": "Bakım",
       "nextGen20": "Yeni Nesil & 2.0",
       "productionOps": "Prodüksiyon Operasyonları",
       "rnd": "Ar-Ge",
-      "scaling": "Ölçeklendirme",
-      "title": "Misyona Uyum"
+      "scaling": "Ölçekleme",
+      "title": "Misyon Uyumu"
     },
     "technicalExperience": {
       "architecture": "Mimari",
       "backend": "Backend",
       "devops": "DevOps",
       "frontend": "Frontend",
-      "llmAgenticAI": "LLM/ Agentic AI",
+      "llmAgenticAI": "LLM/ Agentik AI",
       "mobile": "Mobil",
       "technicalWriting": "Teknik Yazım",
       "testingQa": "Test/QA",
@@ -70,11 +70,11 @@
       "react": "React",
       "sql": "SQL",
       "temporal": "Temporal",
-      "title": "Yakın Dönem Deneyimi",
+      "title": "Son Dönem Deneyim",
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "Özet Bakış"
+    "title": "Genel Bakış"
   },
   "config": {
     "dark": "Koyu",
@@ -86,25 +86,25 @@
     "download": "PDF İndir",
     "name": "Aleksi Asikainen",
     "professionalTitles": "CTO, Baş Mimar, Baş Mühendis, <1></1>Kurucu Mühendis, Kıdemli Staff Mühendis",
-    "relocation": "Taşınabilir",
-    "residency": "ABD daimî oturum sahibi, AB vatandaşı",
-    "translationAlertMessage": "Bu özgeçmiş makine çevirisi kullanılarak otomatik olarak çevrilmiştir. Bazı kısımlar doğru çevrilmemiş olabilir. En doğru bilgi için lütfen <1><strong>orijinal İngilizce sürüme</strong></1> bakın.",
+    "relocation": "Yer değiştirebilirim",
+    "residency": "ABD daimi oturum sahibi, AB vatandaşı",
+    "translationAlertMessage": "Bu özgeçmiş, makine çevirisi kullanılarak otomatik olarak çevrilmiştir. Bazı bölümler doğru çevrilmemiş olabilir. En doğru bilgiler için lütfen <1><strong>orijinal İngilizce sürüme</strong></1> bakın.",
     "translationAlertTitle": "Çeviri Uyarısı"
   },
   "error": {
     "errorTitle": "Hata",
     "notFoundDetails": "İstenen sayfa bulunamadı.",
     "notFoundTitle": "404",
-    "oops": "Hoppala!",
-    "unexpected": "Beklenmeyen bir hata oluştu."
+    "oops": "Hay aksi!",
+    "unexpected": "Beklenmedik bir hata oluştu."
   },
   "exsum": {
     "20YearsOfExperience": "<strong>20+ yıl</strong> <strong>uygulamalı</strong> yazılım liderliği.",
-    "creativeTechnologist": "<strong>Karmaşık teknoloji inisiyatiflerini hayata geçiren</strong> kıdemli teknoloji uzmanı. Muğlak fikirleri <strong>ölçeklenebilir, üretim seviyesinde platformlara</strong> dönüştürür.",
-    "engagement": "<strong>0→1, 1→N ve ölçeklenme dönüm noktalarında</strong> kendini kanıtlamış. Yakın zamanda <strong>100+ saatlik sesi</strong> <strong>her dakika</strong> yapılandırılmış çıkarıma dönüştüren bir sistem kurdu.",
-    "managementResource": "<strong>Uygulama riskini azaltmak, teslimatı hızlandırmak ve ekipleri ile sistemleri ölçeklendirmek</strong> için devreye alınır. <strong>Kuruculara, C-level yöneticilere ve VP’lere</strong> danışmanlık yapar.",
-    "practicalExperienceOnAllLayers": "Kurucu seviyesinde genelci: backend, web, mobil, masaüstü, veri, ML, QA, platform, altyapı ve DevOps. Ürün, tasarım ve UX alanlarında da uğraşır. <strong>İnşa etmeyi</strong> sever.",
-    "problemSolver": "Şu sorunun çözümü: <i>\"Bunu nasıl inşa ederiz?\"</i>",
+    "creativeTechnologist": "<strong>Karmaşık teknoloji inisiyatiflerini hayata geçiren</strong> kıdemli teknolog. Belirsiz fikirleri <strong>ölçeklenebilir, üretim seviyesinde platformlara</strong> dönüştürür; müşteri odaklı ürünler, agentic sistemler ve dağıtık bulut ortamları dahil.",
+    "engagement": "<strong>0→1, 1→N ve scale-up kırılma noktalarında</strong> kanıtlanmış. Yakın zamanda <strong>100+ saatlik sesi</strong> <strong>her dakika</strong> yapılandırılmış çıkarıma dönüştüren bir sistem geliştirdi.",
+    "managementResource": "<strong>Teknik çıtayı yükseltmek, teknik yönü belirlemek, karmaşık işleri yürütmek ve ekipleri ile sistemleri ölçeklendirmek</strong> için göreve dahil edilir. <strong>Kuruculara, C-level yöneticilere ve VP’lere</strong> danışmanlık yapar.",
+    "practicalExperienceOnAllLayers": "Teknoloji genelcisi: backend, web, mobile, desktop, data, ML/AI, QA, platform, altyapı ve DevOps. Ürün, tasarım ve UX alanlarında deneyim. <strong>İnşa etmeyi</strong> sever.",
+    "problemSolver": "Şunun çözümü: <i>\"Bunu nasıl inşa ederiz?\"</i>",
     "title": "Yönetici Özeti"
   },
   "page": {
@@ -117,53 +117,83 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "Bu özgeçmiş, kod olarak. Aşırı derecede fazla mühendislik yapılmış. Buradan başlayın.",
+      "description": "Kod olarak bu özgeçmiş. Aşırı derecede aşırı mühendislik ürünü. Buradan başlayın.",
       "name": "Özgeçmiş"
     },
     "tartarus": {
-      "description": "TypeScript için sıfırdan oluşturulmuş derin öğrenme çatısı.",
+      "description": "TypeScript için sıfırdan derin öğrenme çerçevesi.",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "Referans Projeler"
   },
   "workHistory": {
     "abridge": {
-      "details": "Abridge'e ~30 çalışan varken katıldı. Şirketin ilk kıdemli staff mühendisi. Hiper büyüme ve birden fazla yatırım turu boyunca çalıştı (A16Z, Khosla Ventures, Elad Gil, IVP). İşle birlikte ölçeklenen temel teknolojileri (örn. Temporal) seçerek ve mimari kararları yönlendirerek temel teknik yönü belirledi. Sesin yapılandırılmış klinik notlara dönüştürülmesinin büyük ölçekli orkestrasyonu dahil olmak üzere, kritik sistemleri önerdi, tasarladı ve hayata geçirdi. Büyük veritabanı geçişleri gibi yüksek riskli, yüksek hassasiyet gerektiren iç girişimlere liderlik ederek tasarım, uygulama ve güvenilirlik sonuçlarını uçtan uca sahiplendi.",
-      "summary": "Healthcare AI girişimi | 300 çalışan | $700M Seri C-E",
-      "title": "Kıdemli Staff Yazılım Mühendisi"
+      "details": {
+        "architecture": "Mimari kararlarına liderlik ederek ve iş ile birlikte ölçeklenen temel teknolojileri (örn. Temporal) seçerek temel teknik yönü belirledi.",
+        "growth": "Hiper büyüme ve birden çok finansman aşaması (A16Z, Khosla Ventures, Elad Gil, IVP) boyunca görev yaptı.",
+        "missions": "Büyük veritabanı geçişleri gibi yüksek riskli, yüksek hassasiyetli iç girişimlere liderlik etti; tasarım, yürütme ve güvenilirlik sonuçlarını uçtan uca sahiplendi.",
+        "proposals": "Sesin yapılandırılmış klinik notlara büyük ölçekli orkestrasyonu dahil olmak üzere kritik çekirdek sistemleri önerdi, mimarisini tasarladı ve hayata geçirdi.",
+        "role": "~30 çalışan varken Abridge’e katıldı. Şirketin ilk senior staff mühendisi."
+      },
+      "summary": "Sağlık AI startup’ı | 300 çalışan | $700M seri C-E",
+      "title": "Senior Staff Yazılım Mühendisi"
     },
     "arena": {
-      "details": "Mühendislik, mimari ve BT'nin sahipliğini üstlendi. CRV, Craft Ventures, Artisanal Ventures ve Vela Partners liderliğindeki Seri A boyunca platformu ölçeklendirdi. Teknik operasyon maliyetlerini %40+ azalttı. Şirket genelinde JavaScript'ten TypeScript'e geçişe liderlik etti. Disiplinli mühendislik uygulamaları oluşturdu: kod incelemeleri, CI, planlama, metrik odaklı operasyonlar ve standartlaştırılmış teknik süreçler.",
-      "summary": "Kitle etkileşimi girişimi | 50 çalışan | $13.6M Seri A",
-      "title": "CTO"
+      "details": {
+        "optimization": "Teknik operasyon maliyetlerini %40+ azalttı.",
+        "ownership": "Mühendislik, mimari ve IT’yi sahiplendi.",
+        "practices": "Mühendislik uygulamalarını tesis etti: kod incelemeleri, CI, planlama, metrik odaklı operasyonlar ve standartlaştırılmış teknik süreçler.",
+        "scale": "CRV, Craft Ventures, Artisanal Ventures ve Vela Partners liderliğindeki Seri A sürecinde platformu ölçeklendirdi."
+      },
+      "summary": "Kitle etkileşimi startup’ı | 50 çalışan | $13.6M seri A",
+      "title": "Chief Technology Officer"
     },
     "hpi": {
-      "details": "Yeni tüketici ürünleri için konseptten lansmana kadar uçtan uca ürün geliştirme ve teslimatına liderlik etti. Araç geçmişi sorgulamalarında Birleşik Krallık pazar lideri.",
-      "notes": "(Solera'nın iştiraki)",
+      "details": {
+        "leader": "Araç geçmişi kontrollerinde Birleşik Krallık pazar lideri.",
+        "products": "Yeni tüketici ürünleri için konseptten lansmana kadar uçtan uca ürün geliştirme ve teslimatına liderlik etti."
+      },
+      "notes": "(Solera’nın iştiraki)",
       "summary": "Özel şirket | Otomotiv verisi ve varlık koruma | £20M gelir",
-      "title": "Teknoloji Direktörü"
+      "title": "Teknoloji Başkanı"
     },
     "madbid": {
-      "details": "MadBid'in kurucu ortağı oldu ve bootstrap'ten ölçeğe kadar tüm teknoloji ve yazılım geliştirmeye liderlik etti. Hızlı büyüme boyunca tüm mühendislik organizasyonunu kurdu ve yönetti.",
-      "summary": "Eğlence odaklı alışveriş girişimi | 75 çalışan | £4M Seri A | £10M gelir",
+      "details": {
+        "cofounder": "MadBid’i birlikte kurdu.",
+        "orgScale": "Hızlı büyüme boyunca tüm mühendislik organizasyonunu kurdu ve yönetti.",
+        "technlogyLeadership": "Bootstrap’tan ölçeğe kadar tüm teknoloji ve yazılım geliştirmeye liderlik etti."
+      },
+      "summary": "Eğlence alışverişi startup’ı | 75 çalışan | £4M Seri A | £10M gelir",
       "title": "Teknik Direktör"
     },
     "optym": {
-      "details": "Optym'in SaaS teknoloji girişimlerini destekledi. Hızlı ürün lansmanlarını mümkün kılmak için ortak mimariler, politikalar ve teslimat standartları oluşturdu. Kıdemli mühendisler ve teknik liderlere mentorluk yaparak icra kalitesini ve mühendislik kültürünü güçlendirdi. Yeni ürünleri tasarlamak ve özel çözümler teslim etmek için müşteriler, iş ortakları ve yöneticilerle doğrudan çalıştı.",
+      "details": {
+        "arch": "Hızlı ürün lansmanlarını mümkün kılmak için ortak mimariler, politikalar ve teslimat standartları oluşturdu.",
+        "customers": "Yeni ürünler tasarlamak, özel çözümler teslim etmek için müşteriler, iş ortakları ve yöneticilerle doğrudan çalıştı.",
+        "mentor": "Kıdemli mühendisleri ve teknik liderleri mentorlukla destekledi; uygulama kalitesini ve mühendislik kültürünü pekiştirdi.",
+        "saas": "Optym’in SaaS teknoloji girişimlerini destekledi."
+      },
       "summary": "B2B SaaS | Optimizasyon ve Karar Bilimi | 250 çalışan | $25M gelir",
-      "title": "CTO"
+      "title": "Chief Technology Officer"
     },
     "presentlyWorkingHere": "Günümüz",
     "solera": {
-      "details": "CEO ofisi için stratejik Ar-Ge ve ürün kuluçkalama girişimlerine liderlik etti. Kurumsal benimseme için, ML, blockchain, AR/VR, IoT/telematik, dijital kimlik, büyük ölçekli veri platformları ve cloud-native SaaS (AWS) dahil olmak üzere yükselen teknolojileri değerlendirdi.",
+      "details": {
+        "emerging": "ML, blockchain, AR/VR, IoT/telematics, dijital kimlik, büyük ölçekli veri platformları ve cloud-native SaaS (AWS) dahil olmak üzere kurumsal benimseme için yükselen teknolojileri değerlendirdi.",
+        "rnd": "CEO ofisi için stratejik Ar-Ge ve ürün kuluçka girişimlerine liderlik etti."
+      },
       "summary": "Çok uluslu | Risk yönetimi ve varlık koruma | 6.000 çalışan | $1.1B gelir",
       "title": "Baş Mimar"
     },
     "talmix": {
-      "details": "Eski bir platformu ölçeklenebilir, iki taraflı bir pazar yerine yeniden dönüştürdü. Danışman önerilerinin alaka düzeyini artırmak için arama ve eşleştirme iyileştirmelerine liderlik etti.",
+      "details": {
+        "itTech": "Tüm teknik operasyonları sahiplendi.",
+        "rebuild": "Eski bir platformu ölçeklenebilir iki taraflı bir pazaryerine yeniden inşa etti. Danışman önerilerinin alaka düzeyini artırmak için arama ve eşleştirme iyileştirmelerine liderlik etti.",
+        "search": "Danışman önerilerinin alaka düzeyini artırmak için arama ve eşleştirme iyileştirmelerine liderlik etti."
+      },
       "notes": "(Daha önce MBA & Company olarak biliniyordu)",
-      "summary": "Yönetim danışmanlığı girişimi | Yetenek arama | £2M Seri A",
-      "title": "CTO"
+      "summary": "Yönetim danışmanlığı startup’ı | Yetenek arama | £2M seri A",
+      "title": "Chief Technology Officer"
     },
     "title": "İş Geçmişi"
   }
