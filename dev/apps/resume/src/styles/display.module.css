@@ -9,12 +9,14 @@
 
   @mixin dark-root {
     background-color: #1d2230;
+    scrollbar-color: #66697c #353d5a;
   }
 }
 
 :global(body) {
   overscroll-behavior-x: none;
   overflow-x: hidden;
+
   width: 100%;
   margin-bottom: 2rem;
 

@@ -1,4 +1,4 @@
-import { Anchor, Box, Text, Title } from '@mantine/core';
+import { Anchor, Box, List, Text, Title } from '@mantine/core';
 
 import type { WorkHistory } from '~/sections/work-history/data';
 
@@ -35,9 +35,17 @@ export const WorkHistoryItem = (props: WorkHistoryItemProps) => {
         {data.summary}
       </Text>
 
-      <Text className={`${classes.details} details`}>
-        {data.details}
-      </Text>
+      {Array.isArray(data.details) && (
+        <List className={`${classes.details} details`}>
+          {data.details.map((detail, index) => (<List.Item key={`detail-${index}`}>{detail}</List.Item>))}
+        </List>
+      )}
+
+      {!Array.isArray(data.details) && (
+        <Text className={`${classes.details} details`}>
+          {data.details}
+        </Text>
+      )}
 
       {data.notes && (
         <Text className={`${classes.notes} notes`}>

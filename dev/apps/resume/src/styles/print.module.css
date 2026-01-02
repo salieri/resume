@@ -68,8 +68,17 @@
   :global(.workHistoryItem) {
     margin-bottom: 1.5rem !important;
 
-    :global(p) {
-      margin-bottom: 0;
+    :global(p), :global(ul), :global(li) {
+      margin-bottom: 0 !important;
+    }
+
+    :global(ul) {
+      margin-top: 0.3rem !important;
+
+      :global(li) {
+        line-height: 1.15rem !important;
+        margin-bottom: 0.3rem !important;
+      }
     }
   }
 

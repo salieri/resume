@@ -21,7 +21,8 @@ export const ExecutiveSummary = () => {
       <Text>
         <Trans i18nKey='exsum.creativeTechnologist'>
           Senior technologist who <strong>delivers complex technology initiatives</strong>.
-          Translates vague ideas into <strong>scalable, production-grade platforms</strong>.
+          Translates ambiguous ideas into <strong>scalable, production-grade platforms</strong>,
+          – including customer-facing products, agentic systems, and distributed cloud environments.
         </Trans>
       </Text>
 
@@ -36,7 +37,7 @@ export const ExecutiveSummary = () => {
       <Text>
         <Trans i18nKey='exsum.managementResource'>
           Brought in to{' '}
-          <strong>de-risk execution, accelerate delivery, and scale teams and systems</strong>.
+          <strong>raise the technical bar, define technical direction, execute complex work, and scale teams and systems</strong>.
           Advisor to <strong>founders, C-level, and VPs</strong>.
         </Trans>
       </Text>
@@ -49,8 +50,8 @@ export const ExecutiveSummary = () => {
 
       <Text>
         <Trans i18nKey='exsum.practicalExperienceOnAllLayers'>
-          Founder-level generalist: backend, web, mobile, desktop, data, ML, QA, platform,
-          infrastructure, and DevOps. Dabbles in product, design, and UX. Loves{' '}
+          Technology generalist: backend, web, mobile, desktop, data, ML/AI, QA, platform,
+          infrastructure, and DevOps. Experience in product, design, and UX. Loves{' '}
           <strong>building</strong>.
         </Trans>
       </Text>
