@@ -24,9 +24,9 @@ export default function Resume() {
       <Page>
         <Title order={1}>{t('contactInfo.name', 'Aleksi Asikainen')}</Title>
 
-        <Title order={5} component='p'>
+        <Title order={5} component='p' fs='0.9rem'>
           <Trans i18nKey='contactInfo.professionalTitles' t={t}>
-            CTO, Chief Architect, Principal Engineer, <wbr />
+            Startup CTO, Chief Architect, Principal Engineer, <wbr />
             Founding Engineer, Senior Staff Engineer
           </Trans>
         </Title>
