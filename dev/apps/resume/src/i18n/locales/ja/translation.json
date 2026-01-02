@@ -14,13 +14,13 @@
       "automotive": "自動車",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "Fintech",
+      "fintech": "フィンテック",
       "healthcare": "ヘルスケア",
       "homeAutomation": "ホームオートメーション",
-      "hwEmbedded": "HW＆組込み",
+      "hwEmbedded": "ハードウェア＆組み込み",
       "paymentSolutions": "決済ソリューション",
       "realtime": "リアルタイム",
-      "talentSearch": "人材サーチ",
+      "talentSearch": "人材検索",
       "title": "業界経験",
       "videoGames": "ビデオゲーム"
     },
@@ -36,7 +36,7 @@
     },
     "missionFit": {
       "devInfraTooling": "開発インフラ＆ツール",
-      "fixTeamsProjects": "チーム／プロジェクト立て直し",
+      "fixTeamsProjects": "チーム／プロジェクトの立て直し",
       "greenField": "グリーンフィールド",
       "maintenance": "保守",
       "nextGen20": "次世代＆2.0",
@@ -50,9 +50,9 @@
       "backend": "バックエンド",
       "devops": "DevOps",
       "frontend": "フロントエンド",
-      "llmAgenticAI": "LLM／Agentic AI",
+      "llmAgenticAI": "LLM／エージェンティックAI",
       "mobile": "モバイル",
-      "technicalWriting": "テクニカルライティング",
+      "technicalWriting": "技術文書作成",
       "testingQa": "テスト／QA",
       "title": "技術的強み"
     },
@@ -70,7 +70,7 @@
       "react": "React",
       "sql": "SQL",
       "temporal": "Temporal",
-      "title": "直近の経験",
+      "title": "最近の経験",
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
@@ -85,10 +85,10 @@
   "contactInfo": {
     "download": "PDFをダウンロード",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO、Chief Architect、Principal Engineer、<1></1>創業エンジニア、Senior Staff Engineer",
-    "relocation": "転居可能",
-    "residency": "米国永住権保有、EU市民",
-    "translationAlertMessage": "この履歴書は機械翻訳により自動的に翻訳されています。一部は正確に翻訳されていない可能性があります。最も正確な情報については、<1><strong>英語の原本</strong></1>をご参照ください。",
+    "professionalTitles": "スタートアップCTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業エンジニア、シニアスタッフエンジニア",
+    "relocation": "転居可",
+    "residency": "米国永住権保持者、EU市民",
+    "translationAlertMessage": "この履歴書は機械翻訳により自動翻訳されています。一部が正確に翻訳されていない可能性があります。最も正確な情報については、<1><strong>原文（英語版）</strong></1>をご参照ください。",
     "translationAlertTitle": "翻訳に関する注意"
   },
   "error": {
@@ -99,29 +99,29 @@
     "unexpected": "予期しないエラーが発生しました。"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20年以上</strong>の<strong>ハンズオン</strong>なソフトウェア領域のリーダーシップ。",
-    "creativeTechnologist": "複雑な技術イニシアチブを<strong>遂行</strong>するシニア技術者。曖昧なアイデアを、顧客向けプロダクト、エージェント型システム、分散クラウド環境を含む<strong>スケーラブルで本番運用可能なプラットフォーム</strong>へと落とし込む。",
-    "engagement": "<strong>0→1、1→N、ならびにスケールアップの変曲点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化された推論へと変換するシステムを構築。",
-    "managementResource": "<strong>技術水準の引き上げ、技術方針の策定、複雑な業務の遂行、チームおよびシステムのスケール</strong>のために参画。<strong>創業者、C-level、VP</strong>のアドバイザー。",
-    "practicalExperienceOnAllLayers": "技術ジェネラリスト：backend、web、mobile、desktop、data、ML/AI、QA、platform、infrastructure、DevOps。product、design、UXの経験。<strong>構築</strong>が好き。",
-    "problemSolver": "あなたの問いへの解決策：<i>\"How do we build this?\"</i>",
-    "title": "エグゼクティブ・サマリー"
+    "20YearsOfExperience": "<strong>20年以上</strong>の<strong>ハンズオン</strong>なソフトウェアリーダーシップ。",
+    "creativeTechnologist": "<strong>複雑な技術イニシアチブを推進</strong>するシニア技術者。曖昧なアイデアを、顧客向けプロダクト、エージェント型システム、分散クラウド環境を含む<strong>スケーラブルで本番運用可能なプラットフォーム</strong>へと落とし込み。",
+    "engagement": "<strong>0→1、1→N、スケールアップの変曲点</strong>で実績。最近は、<strong>100+時間の音声</strong>を<strong>毎分</strong>構造化された推論へ変換するシステムを構築。",
+    "managementResource": "<strong>技術水準の引き上げ、技術方針の策定、複雑な業務の遂行、チームとシステムのスケール</strong>のために参画。<strong>創業者、Cレベル、VP</strong>へのアドバイザー。",
+    "practicalExperienceOnAllLayers": "テクノロジーのジェネラリスト：backend、web、mobile、desktop、data、ML/AI、QA、platform、infrastructure、DevOps。プロダクト、デザイン、UXの経験あり。<strong>構築</strong>が好き。",
+    "problemSolver": "あなたの解決策：<i>\"これをどう作る？\"</i>",
+    "title": "エグゼクティブサマリー"
   },
   "page": {
-    "resume": "履歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発",
+    "resume": "職務経歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発",
     "untitled": "無題のページ"
   },
   "projects": {
     "jsvfx": {
-      "description": "純粋なJavaScriptで記述されたビジュアルエフェクト。",
+      "description": "純粋なJavaScriptで書かれたビジュアルエフェクト。",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "この履歴書をコードとして。極度にオーバーエンジニアリング。ここから開始。",
-      "name": "Resume"
+      "description": "この履歴書をコードとして。極端にオーバーエンジニアリング。ここから開始。",
+      "name": "履歴書"
     },
     "tartarus": {
-      "description": "TypeScriptのためのゼロから構築したディープラーニングフレームワーク。",
+      "description": "TypeScript向けのゼロから構築したディープラーニング・フレームワーク。",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "参考プロジェクト"
@@ -129,70 +129,70 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "アーキテクチャ上の意思決定を主導し、事業の成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、中核となる技術的方向性を牽引。",
-        "growth": "ハイパーグロースおよび複数回の資金調達ラウンド（A16Z、Khosla Ventures、Elad Gil、IVP）を通じて業務を推進。",
-        "missions": "大規模なデータベース移行などの高リスクかつ高精度を要する社内イニシアチブを主導し、設計・実行・信頼性の成果をエンドツーエンドで担った。",
-        "proposals": "音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、重要な中核システムを提案・設計・実装。",
-        "role": "社員約30名の時期にAbridgeに参画。会社初のシニアスタッフエンジニア。"
+        "architecture": "アーキテクチャ上の意思決定を主導し、事業の成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、技術面の中核的な方向性を牽引。",
+        "growth": "ハイパーグロースおよび複数回の資金調達ステージ（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。",
+        "missions": "大規模なデータベース移行など、高リスクかつ高精度が求められる社内イニシアチブを主導し、設計・実行・信頼性の成果までエンドツーエンドで担当。",
+        "proposals": "音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、重要な中核システムを提案・設計（アーキテクチャ策定）・実装。",
+        "role": "従業員約30名の時期にAbridgeに参画。同社初のシニア・スタッフ・エンジニア。"
       },
-      "summary": "ヘルスケアAIスタートアップ | 従業員300名 | $700M series C-E",
-      "title": "シニアスタッフ ソフトウェアエンジニア"
+      "summary": "Healthcare AIスタートアップ | 従業員300名 | $700M Series C-E",
+      "title": "シニア・スタッフ・ソフトウェアエンジニア"
     },
     "arena": {
       "details": {
         "optimization": "技術運用コストを40%以上削減。",
         "ownership": "エンジニアリング、アーキテクチャ、ITを統括。",
-        "practices": "エンジニアリングプラクティスを確立：コードレビュー、CI、計画策定、メトリクス主導の運用、標準化された技術プロセス。",
-        "scale": "CRV、Craft Ventures、Artisanal Ventures、Vela Partners主導のSeries Aを経てプラットフォームをスケール。"
+        "practices": "エンジニアリングプラクティスを確立：コードレビュー、CI、計画策定、メトリクス駆動の運用、標準化された技術プロセス。",
+        "scale": "CRV、Craft Ventures、Artisanal Ventures、Vela Partners主導のSeries Aを通じてプラットフォームをスケール。"
       },
-      "summary": "オーディエンス・エンゲージメント スタートアップ | 従業員50名 | $13.6M series A",
+      "summary": "オーディエンス・エンゲージメント系スタートアップ | 従業員50名 | $13.6M series A",
       "title": "最高技術責任者（CTO）"
     },
     "hpi": {
       "details": {
-        "leader": "車両履歴チェックにおける英国市場のリーダー。",
-        "products": "新規コンシューマー向けプロダクトについて、コンセプトからローンチまでのエンドツーエンドの開発・提供を主導。"
+        "leader": "英国における車両履歴チェックの市場リーダー。",
+        "products": "新規コンシューマー向けプロダクトについて、構想からローンチまでのエンドツーエンドのプロダクト開発とデリバリーを主導。"
       },
       "notes": "（Soleraの子会社）",
-      "summary": "非公開企業 | 自動車データ＆資産保護 | 売上£20M",
-      "title": "技術部門責任者"
+      "summary": "非公開企業 | 自動車データ & 資産保護 | 売上£20M",
+      "title": "技術責任者"
     },
     "madbid": {
       "details": {
         "cofounder": "MadBidを共同創業。",
-        "orgScale": "急成長期を通じて、エンジニアリング組織全体を構築し運営。",
-        "technlogyLeadership": "ブートストラップからスケールまで、テクノロジーおよびソフトウェア開発全体を主導。"
+        "orgScale": "急成長期を通じて、エンジニアリング組織全体を構築・運営。",
+        "technlogyLeadership": "ブートストラップからスケールまで、技術およびソフトウェア開発の全体をリード。"
       },
-      "summary": "エンタメ系ショッピング スタートアップ | 従業員75名 | £4M Series A | 売上£10M",
+      "summary": "エンターテインメント・ショッピング系スタートアップ | 従業員75名 | £4M Series A | 売上£10M",
       "title": "テクニカルディレクター"
     },
     "optym": {
       "details": {
-        "arch": "迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリー標準を整備。",
-        "customers": "顧客・パートナー・経営陣と直接連携し、新規プロダクトの設計および個別ソリューションの提供を実施。",
+        "arch": "迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリー標準を策定。",
+        "customers": "顧客、パートナー、経営陣と直接連携し、新規プロダクトの設計および個別要件のソリューション提供を実施。",
         "mentor": "シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。",
         "saas": "OptymのSaaS技術ベンチャーを支援。"
       },
-      "summary": "B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | 売上$25M",
+      "summary": "B2B SaaS | 最適化 & ディシジョンサイエンス | 従業員250名 | 売上$25M",
       "title": "最高技術責任者（CTO）"
     },
     "presentlyWorkingHere": "現在",
     "solera": {
       "details": {
-        "emerging": "ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価。",
-        "rnd": "CEOオフィス向けに、戦略的R&Dおよびプロダクト・インキュベーション施策を主導。"
+        "emerging": "ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルアイデンティティ、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価。",
+        "rnd": "CEOオフィス向けに、戦略的R&Dおよびプロダクト・インキュベーションの取り組みを主導。"
       },
-      "summary": "多国籍企業 | リスク管理＆資産保護 | 従業員6,000名 | 売上$1.1B",
+      "summary": "多国籍企業 | リスク管理 & 資産保護 | 従業員6,000名 | 売上$1.1B",
       "title": "チーフアーキテクト"
     },
     "talmix": {
       "details": {
-        "itTech": "技術運用全般を統括。",
-        "rebuild": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性向上のため、検索・マッチング改善を主導。",
-        "search": "コンサルタント推薦の関連性向上のため、検索・マッチング改善を主導。"
+        "itTech": "技術運用全般を管掌。",
+        "rebuild": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性を高めるため、検索およびマッチング改善を主導。",
+        "search": "コンサルタント推薦の関連性を高めるため、検索およびマッチング改善を主導。"
       },
       "notes": "（旧称：MBA & Company）",
-      "summary": "経営コンサルティング スタートアップ | タレントサーチ | £2M series A",
+      "summary": "マネジメントコンサルティング系スタートアップ | タレントサーチ | £2M series A",
       "title": "最高技術責任者（CTO）"
     },
     "title": "職務経歴"
