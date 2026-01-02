@@ -37,7 +37,7 @@ const translateSection = async (sectionData: unknown, sectionKey: string, params
 
   const { result } = await runOpenRouterPromptWithStructuredResponse({
     openRouter: params.openRouter,
-    template: { templatePath: params.promptTemplate },
+    template: { template: params.promptTemplate },
     data: {
       ...promptData,
       OUTPUT_FORMAT: outputFormat,
