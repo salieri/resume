@@ -8,7 +8,7 @@
       "mgmtAdmin": "管理与行政",
       "programming": "编程",
       "strategy": "战略",
-      "title": "重点方向"
+      "title": "重点领域"
     },
     "industryExperience": {
       "automotive": "汽车",
@@ -35,12 +35,12 @@
       "title": "领导力"
     },
     "missionFit": {
-      "devInfraTooling": "开发基础设施与工具",
-      "fixTeamsProjects": "修复团队/项目",
-      "greenField": "从零开始",
+      "devInfraTooling": "开发基础设施与工具链",
+      "fixTeamsProjects": "团队/项目修复",
+      "greenField": "从零到一（Greenfield）",
       "maintenance": "维护",
       "nextGen20": "下一代与 2.0",
-      "productionOps": "生产运维",
+      "productionOps": "生产运营",
       "rnd": "研发",
       "scaling": "规模化",
       "title": "使命契合度"
@@ -74,7 +74,7 @@
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "概览"
+    "title": "一目了然"
   },
   "config": {
     "dark": "深色",
@@ -85,26 +85,26 @@
   "contactInfo": {
     "download": "下载 PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO，首席架构师，首席工程师，<1></1>创始工程师，高级 Staff 工程师",
-    "relocation": "可搬迁",
+    "professionalTitles": "CTO, 首席架构师, 首席工程师, <1></1>创始工程师, 资深 Staff Engineer",
+    "relocation": "可迁居",
     "residency": "美国永久居民，欧盟公民",
-    "translationAlertMessage": "本简历已使用机器翻译自动翻译。部分内容可能未能准确翻译。为获取最准确的信息，请参阅 <1><strong>英文原版</strong></1>。",
+    "translationAlertMessage": "本简历已使用机器翻译自动翻译。部分内容可能不够准确。为获取最准确的信息，请参阅<1><strong>英文原版</strong></1>。",
     "translationAlertTitle": "翻译提示"
   },
   "error": {
     "errorTitle": "错误",
-    "notFoundDetails": "未找到所请求的页面。",
+    "notFoundDetails": "无法找到请求的页面。",
     "notFoundTitle": "404",
     "oops": "糟糕！",
     "unexpected": "发生了意外错误。"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ years</strong>的<strong>亲自参与</strong>软件领导经验。",
-    "creativeTechnologist": "资深技术专家，能够<strong>交付复杂的技术计划</strong>。将模糊想法转化为<strong>可扩展、可用于生产的高质量平台</strong>。",
-    "engagement": "在<strong>0→1、1→N 以及规模化增长拐点</strong>方面有可靠业绩。近期构建了一个系统，将<strong>100+ 小时的音频</strong>在<strong>每分钟</strong>转化为结构化推理结果。",
-    "managementResource": "受邀参与以<strong>降低执行风险、加速交付，并扩展团队与系统</strong>。为<strong>创始人、C-level 及 VP</strong>提供顾问支持。",
-    "practicalExperienceOnAllLayers": "具备创始人级通才能力：backend、web、mobile、desktop、data、ML、QA、platform、infrastructure 与 DevOps。亦涉猎产品、设计与 UX。热爱<strong>构建</strong>。",
-    "problemSolver": "你的答案：<i>\"我们要如何构建这个？\"</i>",
+    "20YearsOfExperience": "<strong>20+ 年</strong>的<strong>一线实操</strong>软件领导经验。",
+    "creativeTechnologist": "资深技术专家，能够<strong>交付复杂的技术项目</strong>。将模糊想法转化为<strong>可扩展、生产级的平台</strong>。",
+    "engagement": "在<strong>0→1、1→N 以及规模化增长拐点</strong>方面有经验证的成绩。近期构建了一套系统，将<strong>100+ 小时的音频</strong>在<strong>每分钟</strong>转化为结构化推理结果。",
+    "managementResource": "受邀介入以<strong>降低执行风险、加速交付，并扩展团队与系统</strong>。担任<strong>创始人、C-level 与 VP</strong>顾问。",
+    "practicalExperienceOnAllLayers": "具备创始人级别的通才能力：后端、Web、移动端、桌面端、数据、ML、QA、平台、基础设施与 DevOps。亦涉猎产品、设计与 UX。热爱<strong>构建</strong>。",
+    "problemSolver": "你的答案：<i>\"我们该如何构建这个？\"</i>",
     "title": "高管摘要"
   },
   "page": {
@@ -113,11 +113,11 @@
   },
   "projects": {
     "jsvfx": {
-      "description": "使用纯 JavaScript 编写的视觉特效。",
+      "description": "用纯 JavaScript 编写的视觉特效。",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "将本简历作为代码。极度过度工程化。从这里开始。",
+      "description": "这份简历以代码形式呈现。极度过度工程化。从这里开始。",
       "name": "简历"
     },
     "tartarus": {
@@ -128,40 +128,40 @@
   },
   "workHistory": {
     "abridge": {
-      "details": "在 Abridge 约 30 名员工时加入。公司首位高级 Staff 工程师。经历超高速增长及多轮融资阶段（A16Z、Khosla Ventures、Elad Gil、IVP）。通过主导架构决策并选型可随业务扩展的基础技术（如 Temporal），推动核心技术方向。提出、设计并落地关键任务系统，包括将音频大规模编排为结构化临床笔记。主导高风险、高精度的内部项目（如重大数据库迁移），端到端负责设计、执行与可靠性结果。",
+      "details": "在 Abridge 约 30 名员工时加入。公司第一位高级 Staff 工程师。经历超高速增长及多轮融资阶段（A16Z、Khosla Ventures、Elad Gil、IVP）。通过主导架构决策并选择可随业务扩展的基础技术（如 Temporal），推动核心技术方向。提出、架构并实现关键任务系统，包括将音频大规模编排为结构化临床记录。主导高风险、高精度的内部项目（如重大数据库迁移），端到端负责设计、执行与可靠性结果。",
       "summary": "医疗健康 AI 初创公司 | 300 名员工 | $700M C-E 轮",
       "title": "高级 Staff 软件工程师"
     },
     "arena": {
-      "details": "全面负责工程、架构与 IT。推动平台随由 CRV、Craft Ventures、Artisanal Ventures 与 Vela Partners 领投的 A 轮融资实现规模化。将技术运营成本降低 40%+。主导全公司从 JavaScript 迁移至 TypeScript。建立严谨的工程实践：代码评审、CI、规划、指标驱动的运营，以及标准化技术流程。",
+      "details": "负责工程、架构与 IT。通过由 CRV、Craft Ventures、Artisanal Ventures 和 Vela Partners 领投的 A 轮融资推动平台扩展。将技术运营成本降低 40% 以上。主导公司范围从 JavaScript 向 TypeScript 的迁移。建立严谨的工程实践：代码评审、CI、规划、指标驱动运营，以及标准化技术流程。",
       "summary": "受众互动初创公司 | 50 名员工 | $13.6M A 轮",
       "title": "首席技术官"
     },
     "hpi": {
-      "details": "主导新消费产品从概念到上线的端到端产品开发与交付。英国车辆历史查询市场领导者。",
-      "notes": "（Solera Holdings 子公司）",
+      "details": "为新的消费级产品提供端到端产品开发与交付支持，从概念到上线。英国车辆历史查询市场领导者。",
+      "notes": "（Solera 子公司）",
       "summary": "私营公司 | 汽车数据与资产保护 | £20M 营收",
       "title": "技术负责人"
     },
     "madbid": {
-      "details": "联合创立 MadBid，并从自筹启动到规模化阶段主导全部技术与软件开发。在快速增长过程中搭建并运营整个工程组织。",
+      "details": "共同创立 MadBid，从自筹到规模化阶段领导全部技术与软件开发。在快速增长期搭建并运营完整的工程组织。",
       "summary": "娱乐购物初创公司 | 75 名员工 | £4M A 轮 | £10M 营收",
       "title": "技术总监"
     },
     "optym": {
-      "details": "支持 Optym 的 SaaS 技术业务。建立共享架构、政策与交付标准，以支持快速产品发布。辅导资深工程师与技术负责人，强化交付质量与工程文化。与客户、合作伙伴及高管直接合作，设计新产品并交付定制化解决方案。",
+      "details": "支持 Optym 的 SaaS 技术业务。建立共享架构、政策与交付标准，以支持快速产品发布。指导资深工程师与技术负责人，强化交付质量与工程文化。与客户、合作伙伴及高管直接合作，设计新产品并交付定制化解决方案。",
       "summary": "B2B SaaS | 优化与决策科学 | 250 名员工 | $25M 营收",
       "title": "首席技术官"
     },
-    "presentlyWorkingHere": "至今",
+    "presentlyWorkingHere": "目前",
     "solera": {
-      "details": "为 CEO 办公室主导战略性 R&D 与产品孵化项目。评估企业采用的新兴技术，包括 ML、区块链、AR/VR、IoT/车联网（telematics）、数字身份、大规模数据平台，以及云原生 SaaS（AWS）。",
+      "details": "为 CEO 办公室主导战略性 R&D 与产品孵化项目。评估用于企业采用的新兴技术，包括 ML、区块链、AR/VR、IoT/车联网（telematics）、数字身份、大规模数据平台，以及云原生 SaaS（AWS）。",
       "summary": "跨国公司 | 风险管理与资产保护 | 6,000 名员工 | $1.1B 营收",
       "title": "首席架构师"
     },
     "talmix": {
-      "details": "将遗留平台重构为可扩展的双边市场平台。主导搜索与匹配优化，提升顾问推荐的相关性。",
-      "notes": "（曾用名 MBA & Company）",
+      "details": "将遗留平台重构为可扩展的双边市场平台。主导搜索与匹配改进，提高顾问推荐的相关性。",
+      "notes": "（此前名为 MBA & Company）",
       "summary": "管理咨询初创公司 | 人才搜索 | £2M A 轮",
       "title": "首席技术官"
     },

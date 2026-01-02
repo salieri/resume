@@ -36,14 +36,14 @@
     },
     "missionFit": {
       "devInfraTooling": "Infraestrutura e Ferramentas de Desenvolvimento",
-      "fixTeamsProjects": "Organizar Equipes/Projetos",
+      "fixTeamsProjects": "Ajustar Equipes/Projetos",
       "greenField": "Greenfield",
       "maintenance": "Manutenção",
       "nextGen20": "Próxima Geração e 2.0",
       "productionOps": "Operações de Produção",
       "rnd": "P&D",
-      "scaling": "Escalabilidade",
-      "title": "Aderência à Missão"
+      "scaling": "Escalonamento",
+      "title": "Adequação à Missão"
     },
     "technicalExperience": {
       "architecture": "Arquitetura",
@@ -54,7 +54,7 @@
       "mobile": "Mobile",
       "technicalWriting": "Redação Técnica",
       "testingQa": "Testes/QA",
-      "title": "Pontos Fortes Técnicos"
+      "title": "Competências Técnicas"
     },
     "technologyFit": {
       "angular": "Angular",
@@ -85,8 +85,8 @@
   "contactInfo": {
     "download": "Baixar PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO, Arquiteto-Chefe, Engenheiro Principal, <1></1>Engenheiro Fundador, Engenheiro Sênior de Staff",
-    "relocation": "Disponível para relocação",
+    "professionalTitles": "CTO, Arquiteto-Chefe, Engenheiro Principal, <1></1>Engenheiro Fundador, Engenheiro Staff Sênior",
+    "relocation": "Disponível para realocação",
     "residency": "Residente permanente nos EUA, cidadão da UE",
     "translationAlertMessage": "Este currículo foi traduzido automaticamente por meio de tradução automática. Algumas partes podem não ter sido traduzidas com precisão. Consulte a <1><strong>versão original em inglês</strong></1> para obter as informações mais precisas.",
     "translationAlertTitle": "Aviso sobre Tradução"
@@ -99,12 +99,12 @@
     "unexpected": "Ocorreu um erro inesperado."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>25+ anos</strong> de liderança de software <strong>prática</strong>.",
-    "creativeTechnologist": "Tecnólogo sénior que <strong>entrega iniciativas tecnológicas complexas</strong>. Traduz ideias vagas em <strong>plataformas escaláveis, prontas para produção</strong>.",
+    "20YearsOfExperience": "<strong>20+ anos</strong> de liderança em software <strong>hands-on</strong>.",
+    "creativeTechnologist": "Tecnólogo sênior que <strong>entrega iniciativas tecnológicas complexas</strong>. Traduz ideias vagas em <strong>plataformas escaláveis, prontas para produção</strong>.",
     "engagement": "Comprovado em <strong>0→1, 1→N e pontos de inflexão de scale-up</strong>. Recentemente construiu um sistema que transforma <strong>100+ horas de áudio</strong> em inferência estruturada <strong>a cada minuto</strong>.",
-    "managementResource": "Chamado para <strong>reduzir o risco de execução, acelerar a entrega e escalar equipas e sistemas</strong>. Consultor de <strong>fundadores, C-level e VPs</strong>.",
-    "practicalExperienceOnAllLayers": "Generalista ao nível de fundador: backend, web, mobile, desktop, dados, ML, QA, plataforma, infraestrutura e DevOps. Faz incursões em produto, design e UX. Gosta de <strong>construir</strong>.",
-    "problemSolver": "A sua solução para: <i>\"Como construímos isto?\"</i>",
+    "managementResource": "Chamado para <strong>reduzir riscos de execução, acelerar entregas e escalar equipes e sistemas</strong>. Conselheiro de <strong>fundadores, C-level e VPs</strong>.",
+    "practicalExperienceOnAllLayers": "Generalista em nível de fundador: backend, web, mobile, desktop, dados, ML, QA, plataforma, infraestrutura e DevOps. Se aventura em produto, design e UX. Adora <strong>construir</strong>.",
+    "problemSolver": "Sua solução para: <i>\"Como construímos isso?\"</i>",
     "title": "Resumo Executivo"
   },
   "page": {
@@ -121,49 +121,49 @@
       "name": "Currículo"
     },
     "tartarus": {
-      "description": "Framework de aprendizagem profunda para TypeScript, construído do zero.",
-      "name": "Framework de Aprendizagem Profunda Tartarus"
+      "description": "Framework de deep learning, criado do zero, para TypeScript.",
+      "name": "Framework de Deep Learning Tartarus"
     },
     "title": "Projetos de Referência"
   },
   "workHistory": {
     "abridge": {
-      "details": "Entrou na Abridge quando a empresa tinha ~30 colaboradores. Primeiro senior staff engineer da empresa. Atuou durante o hipercrescimento e múltiplas rodadas de financiamento (A16Z, Khosla Ventures, Elad Gil, IVP). Conduziu a direção técnica central ao liderar decisões de arquitetura e selecionar tecnologias fundamentais (por exemplo, Temporal) que escalaram com o negócio. Propôs, arquitetou e implementou sistemas críticos para a missão, incluindo orquestração em larga escala de áudio em notas clínicas estruturadas. Liderou iniciativas internas de alto risco e alta precisão, como grandes migrações de banco de dados, assumindo de ponta a ponta o design, a execução e os resultados de confiabilidade.",
-      "summary": "startup de IA em saúde | 300 colaboradores | $700M séries C-E",
-      "title": "Engenheiro de Software Senior Staff"
+      "details": "Entrou na Abridge quando havia ~30 colaboradores. Primeiro senior staff engineer da empresa. Atuou durante hiper-crescimento e múltiplas rodadas de financiamento (A16Z, Khosla Ventures, Elad Gil, IVP). Direcionou a orientação técnica central liderando decisões de arquitetura e selecionando tecnologias fundamentais (por exemplo, Temporal) que escalaram com o negócio. Propôs, arquitetou e implementou sistemas de missão crítica, incluindo a orquestração em grande escala de áudio em notas clínicas estruturadas. Liderou iniciativas internas de alto risco e alta precisão, como grandes migrações de banco de dados, assumindo de ponta a ponta os resultados de design, execução e confiabilidade.",
+      "summary": "Startup de IA em saúde | 300 colaboradores | $700M séries C-E",
+      "title": "Senior Staff Software Engineer"
     },
     "arena": {
-      "details": "Responsável por engenharia, arquitetura e TI. Escalou a plataforma durante a Série A liderada por CRV, Craft Ventures, Artisanal Ventures e Vela Partners. Reduziu os custos de operações técnicas em 40%+. Liderou a migração, em toda a empresa, de JavaScript para TypeScript. Estabeleceu práticas de engenharia disciplinadas: revisões de código, CI, planejamento, operações orientadas por métricas e processos técnicos padronizados.",
-      "summary": "startup de engajamento de audiência | 50 colaboradores | $13.6M série A",
-      "title": "Diretor de Tecnologia"
+      "details": "Assumiu a engenharia, arquitetura e TI. Escalou a plataforma durante a Série A liderada por CRV, Craft Ventures, Artisanal Ventures e Vela Partners. Reduziu os custos de operações técnicas em 40%+. Liderou a migração em toda a empresa de JavaScript para TypeScript. Estabeleceu práticas de engenharia disciplinadas: revisões de código, CI, planejamento, operações orientadas por métricas e processos técnicos padronizados.",
+      "summary": "Startup de engajamento de audiência | 50 colaboradores | $13.6M série A",
+      "title": "Chief Technology Officer"
     },
     "hpi": {
-      "details": "Liderou o desenvolvimento e a entrega de produtos ponta a ponta para novos produtos de consumo, do conceito ao lançamento. Líder de mercado no Reino Unido em verificações de histórico de veículos.",
-      "notes": "(Subsidiária da Solera Holdings)",
-      "summary": "empresa privada | dados automotivos e proteção de ativos | £20M de receita",
-      "title": "Responsável por Tecnologia"
+      "details": "Liderou o desenvolvimento e a entrega de produto de ponta a ponta para novos produtos de consumo, do conceito ao lançamento. Líder de mercado no Reino Unido em verificações de histórico de veículos.",
+      "notes": "(Subsidiária da Solera)",
+      "summary": "Empresa privada | Dados automotivos e proteção de ativos | £20M de receita",
+      "title": "Head of Technology"
     },
     "madbid": {
-      "details": "Cofundou a MadBid e liderou toda a tecnologia e o desenvolvimento de software do bootstrapping à escala. Construiu e liderou toda a organização de engenharia durante o crescimento acelerado.",
-      "summary": "startup de compras e entretenimento | 75 colaboradores | £4M Série A | £10M de receita",
+      "details": "Cofundou a MadBid e liderou toda a tecnologia e o desenvolvimento de software, do bootstrap à escala. Construiu e geriu toda a organização de engenharia durante o rápido crescimento.",
+      "summary": "Startup de compras de entretenimento | 75 colaboradores | £4M Série A | £10M de receita",
       "title": "Diretor Técnico"
     },
     "optym": {
-      "details": "Apoiou os empreendimentos de tecnologia SaaS da Optym. Estabeleceu arquiteturas compartilhadas, políticas e padrões de entrega para viabilizar lançamentos rápidos de produtos. Mentorou engenheiros seniores e líderes técnicos, reforçando a qualidade de execução e a cultura de engenharia. Trabalhou diretamente com clientes, parceiros e executivos para desenhar novos produtos e entregar soluções sob medida.",
-      "summary": "SaaS B2B | Otimização & Decision Science | 250 colaboradores | $25M de receita",
-      "title": "Diretor de Tecnologia"
+      "details": "Apoiou as iniciativas de tecnologia SaaS da Optym. Estabeleceu arquiteturas, políticas e padrões de entrega compartilhados para viabilizar lançamentos rápidos de produtos. Mentoreou engenheiros seniores e líderes técnicos, reforçando a qualidade de execução e a cultura de engenharia. Trabalhou diretamente com clientes, parceiros e executivos para desenhar novos produtos e entregar soluções sob medida.",
+      "summary": "SaaS B2B | Otimização e ciência da decisão | 250 colaboradores | $25M de receita",
+      "title": "Chief Technology Officer"
     },
     "presentlyWorkingHere": "Presente",
     "solera": {
-      "details": "Liderou iniciativas estratégicas de P&D e incubação de produtos para o escritório do CEO. Avaliou tecnologias emergentes para adoção corporativa, incluindo ML, blockchain, AR/VR, IoT/telematics, identidade digital, plataformas de dados em larga escala e SaaS nativo em nuvem (AWS).",
-      "summary": "Multinacional | gestão de riscos e proteção de ativos | 6,000 colaboradores | $1.1B de receita",
+      "details": "Liderou iniciativas estratégicas de P&D e de incubação de produto para o gabinete do CEO. Avaliou tecnologias emergentes para adoção corporativa, incluindo ML, blockchain, AR/VR, IoT/telemática, identidade digital, plataformas de dados em grande escala e SaaS cloud-native (AWS).",
+      "summary": "Multinacional | Gestão de risco e proteção de ativos | 6.000 colaboradores | $1.1B de receita",
       "title": "Arquiteto-Chefe"
     },
     "talmix": {
-      "details": "Reconstruiu uma plataforma legada em um marketplace bilateral escalável. Liderou melhorias de busca e matching para aumentar a relevância das recomendações de consultores.",
+      "details": "Reconstruiu uma plataforma legada em um marketplace escalável de dois lados. Liderou melhorias de busca e matching para aumentar a relevância das recomendações de consultores.",
       "notes": "(Anteriormente conhecida como MBA & Company)",
-      "summary": "startup de consultoria de gestão | busca de talentos | £2M série A",
-      "title": "Diretor de Tecnologia"
+      "summary": "Startup de consultoria de gestão | Busca de talentos | £2M série A",
+      "title": "Chief Technology Officer"
     },
     "title": "Histórico Profissional"
   }
