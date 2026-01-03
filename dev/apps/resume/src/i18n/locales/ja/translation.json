@@ -5,10 +5,10 @@
       "collaboration": "コラボレーション",
       "deepWork": "ディープワーク",
       "devops": "DevOps",
-      "mgmtAdmin": "マネジメント & 管理",
+      "mgmtAdmin": "マネジメント／管理",
       "programming": "プログラミング",
       "strategy": "戦略",
-      "title": "重点領域"
+      "title": "注力領域"
     },
     "industryExperience": {
       "automotive": "自動車",
@@ -17,16 +17,16 @@
       "fintech": "フィンテック",
       "healthcare": "ヘルスケア",
       "homeAutomation": "ホームオートメーション",
-      "hwEmbedded": "HW & 組込み",
+      "hwEmbedded": "ハードウェア／組込み",
       "paymentSolutions": "決済ソリューション",
       "realtime": "リアルタイム",
-      "talentSearch": "タレントサーチ",
+      "talentSearch": "人材検索",
       "title": "業界経験",
       "videoGames": "ビデオゲーム"
     },
     "leadershipExperience": {
-      "mentoringTraining": "メンタリング & トレーニング",
-      "MgmtAdmin": "マネジメント & 管理",
+      "mentoringTraining": "メンタリング／トレーニング",
+      "MgmtAdmin": "マネジメント／管理",
       "planning": "計画",
       "productDevelopment": "プロダクト開発",
       "recruitment": "採用",
@@ -35,11 +35,11 @@
       "title": "リーダーシップ"
     },
     "missionFit": {
-      "devInfraTooling": "開発インフラ & ツール",
+      "devInfraTooling": "開発インフラ／ツール",
       "fixTeamsProjects": "チーム／プロジェクトの立て直し",
       "greenField": "グリーンフィールド",
       "maintenance": "保守",
-      "nextGen20": "次世代 & 2.0",
+      "nextGen20": "次世代／2.0",
       "productionOps": "本番運用",
       "rnd": "R&D",
       "scaling": "スケーリング",
@@ -70,43 +70,47 @@
       "react": "React",
       "sql": "SQL",
       "temporal": "Temporal",
-      "title": "直近の経験",
+      "title": "最近の経験",
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
     "title": "概要"
   },
   "caseStudy": {
-    "collaborationContent": "本取り組みを重要な事業推進要因として支援したVP of Engineeringと緊密に連携。プロジェクトは自ら起案・提案し、当初は単独で実装を開始したのち、長期的なオーナーシップのため専任チームへ移管。",
+    "collaborationContent": "本イニシアチブを重要な事業推進要因として支援するVP of Engineeringと緊密に連携して取り組んだ。本プロジェクトは自発的に立ち上げ、提案し、当初は単独で実装を開始したのち、長期的なオーナーシップのため専任チームへ移管した。",
     "collaborationTitle": "コラボレーション",
-    "contextContent": "Series B（$30M）直後に入社。会社は最初の主要エンタープライズ顧客のオンボーディング準備段階にあった。エンジニアリング組織（約10～15名）はプロダクトマーケットフィット達成に向けて高速に反復しており、その結果、コアの音声→ノートのパイプラインは脆弱で不透明になり、スケールに伴うリスクが増大していた。",
+    "contextContent": "Series B（$30M）直後に参画。当時、同社は初の主要エンタープライズ顧客のオンボーディング準備を進めていた。エンジニアリング組織（約10〜15名）はプロダクトマーケットフィット到達に向けて急速に反復開発を行っており、その結果、音声からノートへのコアパイプラインは脆弱で不透明となり、スケールのリスクが増大していた。",
     "contextTitle": "背景",
-    "contributionsDecisionsTitle": "主な貢献・意思決定",
     "outcomesArchitecture": "アーキテクチャは<strong>会社の成長に合わせてスケール</strong>し、その後のパイプライン開発の基盤となった。",
-    "outcomesCustomerMigration": "最初のエンタープライズ顧客を約7か月で新パイプラインへ移行。リスク最小化のため、その後約2か月で段階的に<strong>全顧客移行</strong>を完了。",
-    "outcomesMonitoring": "テレメトリに基づく<strong>監視とアラーム</strong>の構築を可能にし、本番障害への反応時間を短縮。",
-    "outcomesPipelineThroughput": "パイプラインは現在、<strong>1分あたり100時間超の音声</strong>を処理。",
-    "outcomesReliability": "<strong>システムの信頼性、デバッグ容易性、運用可視性</strong>を段階的に大幅改善。初めてエンジニアが稼働中のワークフロー状態を検査し、障害を決定論的に診断し、安全に復旧できるようになった。",
-    "outcomesTemplates": "エンジニアリング組織全体で採用された<strong>再利用可能なプロジェクトテンプレート</strong>（CI/CD、Helm charts、サービス構成）を確立。",
-    "outcomesTemporalAdoption": "Temporalは、元のパイプラインプロジェクトを大きく超えて再利用される<strong>標準的なプラットフォーム・プリミティブ</strong>となった。",
+    "outcomesCustomerMigration": "約7か月で最初のエンタープライズ顧客を新パイプラインへ移行。リスク最小化のため、続く約2か月で段階的に<strong>全顧客移行</strong>を完了。",
+    "outcomesMonitoring": "テレメトリに対する<strong>監視とアラーム</strong>の構築を可能にし、本番障害への反応時間を短縮した。",
+    "outcomesPipelineThroughput": "パイプラインは現在、<strong>毎分100時間超の音声</strong>を処理している。顧客基盤と利用量の大幅な増加を経ても、事業要件を満たしてきた。",
+    "outcomesReliability": "<strong>システムの信頼性、デバッグ容易性、運用可視性</strong>を段階的に大幅改善。初めてエンジニアが稼働中のワークフロー状態を確認し、障害を決定論的に診断し、安全に復旧できるようになった。",
+    "outcomesTemplates": "エンジニアリング組織全体で採用された<strong>再利用可能なプロジェクトテンプレート</strong>（CI/CD、Helm charts、サービス構成）を確立した。",
+    "outcomesTemporalAdoption": "Temporalは、元のパイプラインプロジェクトを大きく超えて再利用される<strong>標準的なプラットフォームのプリミティブ</strong>となった。",
     "outcomesTitle": "成果",
-    "roleScopeContent": "明確なプロダクトオーナーが存在しない横断的システムのオーナーシップを担う、水平型のシニア技術リーダーとして活動。複数のプロダクト領域で利用されるコアの音声→ノート処理パイプラインをエンドツーエンドで再設計。専任チームへ移管されるまで、主要な技術意思決定者およびオンコールのエスカレーションポイントを担当。",
+    "roleScopeContent": "水平的なシニア技術リーダーとして、明確なプロダクトオーナーが存在しない横断的システムの責務を担った。複数のプロダクト領域で利用される音声からノートへのコア処理パイプラインを、エンドツーエンドで再設計・刷新。専任チームへオーナーシップを移管するまで、主要な技術意思決定者およびオンコールのエスカレーション先として対応した。",
     "roleScopeTitle": "役割・スコープ",
     "title": "インパクト・ケーススタディ – Abridge"
   },
-  "caseStudyDecisions": {
-    "apiBoundary": "すべてのパイプライン入口に対して単一の<strong>標準化されたAPI境界</strong>を徹底し、実装の分岐を排除して、システム挙動を可観測かつ予測可能にした。",
-    "kubernetes": "デバッグ容易性、運用コントロール、ベンダー非依存性を取り戻すため、実行基盤をクラウド関数から<strong>Kubernetesベースのサービス</strong>へ移行した。",
-    "loadTests": "広範な顧客移行に先立ち、スケーリング挙動を検証するための<strong>負荷テスト</strong>を構築し、実行した。",
-    "orchestration": "<strong>ドメイン駆動設計</strong>を用いて新たに分離されたオーケストレーションサービスを設計・実装し、パイプラインの関心事をプロダクトコードから意図的に切り離して、影響範囲と認知負荷を低減した。",
-    "reframing": "音声からノートへのパイプラインを、その場しのぎの関数の寄せ集めではなく、<strong>ミッションクリティカルな社内プロダクト</strong>として再定義した。",
-    "reverseEngineering": "レガシーコードから暗黙のシステム挙動を<strong>リバースエンジニアリング</strong>して明示的なベースライン要件を確立し、その後、不確実なスケールと進化するプロダクト要件の下で将来を見据えた要件を定義した。",
-    "singleWriter": "<strong>すべてのDB書き込みを</strong>パイプライン配下に集約し、データ破損、競合状態、副作用を防ぐためにMLからの直接アクセスを明示的に遮断した。",
-    "telemetry": "<strong>包括的なテレメトリ</strong>（ログ、メトリクス、ワークフロー可視化）を導入し、より広いエンジニアリング組織がシステム挙動を理解できるようにした。",
-    "templates": "<strong>再利用可能なインフラ</strong>と<strong>プロジェクトテンプレート</strong>（CI/CD、Helm charts、サービスのスキャフォールディング）を設計し、後に他のエンジニアリング施策の基盤となった。",
-    "temporal": "リプレイ機能を備えた決定的でデバッグ可能なワークフローを実現するため、ワークフロー実行レイヤーとして<strong>Temporalを選定</strong>し、短期的な学習コストと引き換えに長期的な信頼性と運用性を得た。",
-    "testingLintingDocs": "これまで存在しなかった<strong>エンドツーエンドテスト</strong>、厳格なlint基準、<strong>構造化ドキュメント</strong>、フローダイアグラムを導入した。",
+  "caseStudyContributions": {
+    "apiBoundary": "すべてのパイプライン入口ポイントに対して<strong>標準化された単一のAPI境界</strong>を徹底し、実装の分岐を排除して、システム挙動を観測可能かつ予測可能にした。",
+    "leadership": "新パイプラインの<strong>アーキテクチャ</strong>、<strong>技術的なプロダクト設計</strong>、<strong>実装</strong>をゼロから定義し、オーナーシップを担った。",
+    "loadTests": "広範な顧客移行に先立ち、スケーリング挙動を検証するための<strong>負荷テスト</strong>を構築・実行した。",
+    "reverseEngineering": "レガシーコードから暗黙的なシステム挙動を<strong>リバースエンジニアリング</strong>して明示的なベースライン要件を確立し、その後、不確実なスケールと進化するプロダクト要件のもとで将来を見据えた要件を定義した。",
+    "templates": "後に他のエンジニアリング取り組みの基盤となる<strong>再利用可能なインフラ</strong>および<strong>プロジェクトテンプレート</strong>（CI/CD、Helm charts、サービスのスキャフォールディング）を設計した。",
+    "testingLintingDocs": "従来存在しなかった<strong>エンドツーエンドテスト</strong>、厳格なリント基準、<strong>構造化ドキュメント</strong>、フロー図を導入した。",
+    "title": "貢献",
     "validationSchema": "データ整合性を確保するため、すべてのI/O操作（データベース、API、blob storage…）に対して<strong>ドキュメント検証スキーマ</strong>を実装した。"
+  },
+  "caseStudyDecisions": {
+    "kubernetes": "デバッグ性、運用上のコントロール、ベンダー依存からの独立性を取り戻すため、実行基盤をクラウド関数から<strong>Kubernetesベースのサービス</strong>へ移行。",
+    "orchestration": "<strong>ドメイン駆動設計</strong>を用いて新たな独立オーケストレーションサービスを設計し、パイプラインの関心事をプロダクトコードから意図的に分離することで、影響範囲（blast radius）と認知負荷を低減。",
+    "reframing": "音声→ノートのパイプラインを、場当たり的な関数の寄せ集めではなく、<strong>ミッションクリティカルな社内プロダクト</strong>として再定義。",
+    "singleWriter": "パイプラインの背後で<strong>全てのデータベース書き込みを一元化</strong>し、データ破損、競合状態、副作用を防ぐためにMLからの直接アクセスを明確に遮断。",
+    "telemetryObservability": "スケール時の信頼性を担保するため、<strong>テレメトリ</strong>および<strong>オブザーバビリティ</strong>の仕組みを必須化。",
+    "temporal": "リプレイ機能を備えた決定論的でデバッグ可能なワークフローを実現するため、ワークフロー実行レイヤーとして<strong>Temporalを選定</strong>。短期的な学習コストと引き換えに、長期的な信頼性と運用性を重視。",
+    "title": "主要な意思決定"
   },
   "config": {
     "dark": "ダーク",
@@ -117,30 +121,30 @@
   "contactInfo": {
     "download": "PDFをダウンロード",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "スタートアップCTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業エンジニア、シニア・スタッフエンジニア",
+    "professionalTitles": "スタートアップCTO、チーフアーキテクト、プリンシパルエンジニア、<1></1>創業エンジニア、シニアスタッフエンジニア",
     "relocation": "転居可能",
-    "residency": "米国永住権保有、EU市民",
-    "translationAlertMessage": "この履歴書は機械翻訳により自動的に翻訳されています。一部が正確に翻訳されていない可能性があります。最も正確な情報については、<1><strong>英語の原文</strong></1>をご参照ください。",
+    "residency": "米国永住権保持者、EU市民",
+    "translationAlertMessage": "この履歴書は機械翻訳により自動的に翻訳されています。一部は正確に翻訳されていない可能性があります。最も正確な情報については、<1><strong>英語版の原本</strong></1>をご参照ください。",
     "translationAlertTitle": "翻訳に関する注意事項"
   },
   "error": {
     "errorTitle": "エラー",
-    "notFoundDetails": "ご指定のページが見つかりませんでした。",
+    "notFoundDetails": "要求されたページが見つかりませんでした。",
     "notFoundTitle": "404",
     "oops": "おっと！",
     "unexpected": "予期しないエラーが発生しました。"
   },
   "exsum": {
     "20YearsOfExperience": "<strong>20年以上</strong>の<strong>ハンズオン</strong>によるソフトウェア・リーダーシップ。",
-    "creativeTechnologist": "複雑なテクノロジー施策を<strong>推進・実現</strong>するシニア・テクノロジスト。不明確なアイデアを、顧客向けプロダクト、エージェント型システム、分散クラウド環境を含む<strong>スケーラブルで本番運用に耐えるプラットフォーム</strong>へと落とし込みます。",
-    "engagement": "<strong>0→1、1→N、スケールアップの変曲点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化推論へ変換するシステムを構築。",
-    "managementResource": "<strong>技術水準の引き上げ、技術的方向性の定義、複雑な業務の遂行、チームおよびシステムのスケール</strong>のために参画。<strong>創業者、Cレベル、VP</strong>のアドバイザー。",
-    "practicalExperienceOnAllLayers": "技術ジェネラリスト：backend、web、mobile、desktop、data、ML/AI、QA、platform、infrastructure、DevOps。プロダクト、デザイン、UXの経験あり。<strong>ものづくり</strong>が好き。",
-    "problemSolver": "あなたの問いへの答え：<i>\"どうやってこれを作る？\"</i>",
-    "title": "エグゼクティブ・サマリー"
+    "creativeTechnologist": "<strong>複雑な技術イニシアチブを推進</strong>するシニア・テクノロジスト。曖昧なアイデアを、顧客向けプロダクト、エージェント型システム、分散クラウド環境を含む<strong>スケーラブルで本番運用可能なプラットフォーム</strong>へと落とし込む。",
+    "engagement": "<strong>0→1、1→N、スケールアップの転換点</strong>での実績。直近では、<strong>100時間超の音声</strong>を<strong>毎分</strong>構造化推論へ変換するシステムを構築。",
+    "managementResource": "<strong>技術水準の引き上げ、技術方針の策定、複雑な業務の遂行、チームとシステムのスケール</strong>のために招聘される。<strong>創業者、Cレベル、VP</strong>のアドバイザー。",
+    "practicalExperienceOnAllLayers": "技術ジェネラリスト：バックエンド、Web、モバイル、デスクトップ、データ、ML/AI、QA、プラットフォーム、インフラ、DevOps。プロダクト、デザイン、UXの経験。<strong>構築</strong>が好き。",
+    "problemSolver": "あなたの問いへの解：<i>\"どうやってこれを作る？\"</i>",
+    "title": "エグゼクティブサマリー"
   },
   "page": {
-    "resume": "職務経歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャおよび開発",
+    "resume": "職務経歴書 | Aleksi Asikainen | ソフトウェアアーキテクチャと開発",
     "untitled": "無題のページ"
   },
   "projects": {
@@ -149,11 +153,11 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "コードとしてのこの履歴書。極めて過剰設計。ここから開始。",
+      "description": "この履歴書をコードとして。極端に過剰設計。ここから始めてください。",
       "name": "Resume"
     },
     "tartarus": {
-      "description": "TypeScript向けにゼロから構築したディープラーニングフレームワーク。",
+      "description": "TypeScript向けのゼロから構築したディープラーニングフレームワーク。",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "参考プロジェクト"
@@ -161,71 +165,71 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "アーキテクチャ上の意思決定を主導し、事業成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、中核となる技術的方向性を推進。",
-        "growth": "ハイパーグロースおよび複数の資金調達ステージ（A16Z、Khosla Ventures、Elad Gil、IVP）を通じて事業運営を推進。",
-        "missions": "大規模なデータベース移行などの高リスク・高精度な社内イニシアチブを主導し、設計・実行・信頼性の成果までをエンドツーエンドで担当。",
-        "proposals": "音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、重要なコアシステムを提案・設計・実装。",
-        "role": "従業員約30名時にAbridgeに参画。会社初のSenior Staff Engineer。"
+        "architecture": "アーキテクチャの意思決定を主導し、事業の成長に合わせてスケールする基盤技術（例：Temporal）を選定することで、中核となる技術方針を推進。",
+        "growth": "ハイパーグロースおよび複数の資金調達ステージ（A16Z、Khosla Ventures、Elad Gil、IVP）を経験。",
+        "missions": "大規模なデータベース移行など、高リスクかつ高精度が求められる社内イニシアチブを主導し、設計・実行・信頼性の成果をエンドツーエンドで担当。",
+        "proposals": "音声を構造化された臨床ノートへ大規模にオーケストレーションする仕組みを含む、重要な中核システムを提案・設計・実装。",
+        "role": "従業員約30名時にAbridgeへ参画。会社初のSenior Staff Engineer。"
       },
-      "summary": "Healthcare AIスタートアップ | 従業員300名 | $700M series B-E",
-      "title": "Senior Staff Software Engineer"
+      "summary": "ヘルスケアAIスタートアップ | 従業員300名 | $700M シリーズB-E",
+      "title": "シニア・スタッフ・ソフトウェアエンジニア"
     },
     "arena": {
       "details": {
         "optimization": "技術運用コストを40%+削減。",
         "ownership": "エンジニアリング、アーキテクチャ、ITを統括。",
-        "practices": "エンジニアリングプラクティス（コードレビュー、CI、計画策定、メトリクス主導の運用、標準化された技術プロセス）を確立。",
-        "scale": "CRV、Craft Ventures、Artisanal Ventures、Vela Partnersが主導するSeries Aを通じてプラットフォームをスケール。"
+        "practices": "エンジニアリングプラクティスを確立：コードレビュー、CI、計画策定、メトリクス駆動の運用、標準化された技術プロセス。",
+        "scale": "CRV、Craft Ventures、Artisanal Ventures、Vela Partners主導のシリーズAまでプラットフォームをスケール。"
       },
-      "summary": "オーディエンス・エンゲージメントのスタートアップ | 従業員50名 | $13.6M series A",
-      "title": "Chief Technology Officer"
+      "summary": "オーディエンス・エンゲージメントのスタートアップ | 従業員50名 | $13.6M シリーズA",
+      "title": "最高技術責任者（CTO）"
     },
     "hpi": {
       "details": {
         "leader": "英国における車両履歴チェックの市場リーダー。",
-        "products": "新規コンシューマー向けプロダクトについて、構想からローンチまでのエンドツーエンドのプロダクト開発およびデリバリーを主導。"
+        "products": "新しいコンシューマー向け製品について、構想からローンチまでプロダクト開発とデリバリーをエンドツーエンドで主導。"
       },
       "notes": "（Soleraの子会社）",
-      "summary": "非公開企業 | 自動車データ & 資産保護 | 売上£20M",
-      "title": "Head of Technology"
+      "summary": "非公開企業 | 自動車データ＆資産保護 | 売上 £20M",
+      "title": "テクノロジー責任者"
     },
     "madbid": {
       "details": {
         "cofounder": "MadBidを共同創業。",
-        "orgScale": "急成長の中で、エンジニアリング組織全体を構築・運営。",
-        "technlogyLeadership": "ブートストラップからスケールまで、全ての技術およびソフトウェア開発を主導。"
+        "orgScale": "急成長を通じてエンジニアリング組織全体を構築・運営。",
+        "technlogyLeadership": "ブートストラップからスケールまで、技術およびソフトウェア開発全般を主導。"
       },
-      "summary": "エンタメ系ショッピング・スタートアップ | 従業員75名 | £4M Series A | 売上£10M",
-      "title": "Technical Director"
+      "summary": "エンターテインメント・ショッピングのスタートアップ | 従業員75名 | £4M シリーズA | 売上 £10M",
+      "title": "テクニカルディレクター"
     },
     "optym": {
       "details": {
-        "arch": "迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリ基準を整備。",
-        "customers": "顧客・パートナー・経営層と直接連携し、新規プロダクトを設計し、個別ソリューションを提供。",
+        "arch": "迅速なプロダクトローンチを可能にするため、共通アーキテクチャ、ポリシー、デリバリースタンダードを確立。",
+        "customers": "顧客・パートナー・エグゼクティブと直接連携し、新規プロダクトの設計および特注ソリューションの提供を実施。",
         "mentor": "シニアエンジニアおよび技術リーダーをメンタリングし、実行品質とエンジニアリング文化を強化。",
-        "saas": "OptymのSaaS技術ベンチャーを支援。"
+        "saas": "OptymのSaaS技術事業を支援。"
       },
-      "summary": "B2B SaaS | Optimization & Decision Science | 従業員250名 | 売上$25M",
-      "title": "Chief Technology Officer"
+      "summary": "B2B SaaS | 最適化＆意思決定科学 | 従業員250名 | 売上 $25M",
+      "title": "最高技術責任者（CTO）"
     },
     "presentlyWorkingHere": "現在",
     "solera": {
       "details": {
-        "emerging": "ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、企業導入に向けた新興技術を評価。",
-        "rnd": "CEO直轄組織において、戦略的R&Dおよびプロダクト・インキュベーションのイニシアチブを主導。"
+        "emerging": "ML、ブロックチェーン、AR/VR、IoT/テレマティクス、デジタルID、大規模データプラットフォーム、クラウドネイティブSaaS（AWS）など、エンタープライズ導入に向けた新興技術を評価。",
+        "rnd": "CEOオフィス向けに、戦略的なR&Dおよびプロダクトインキュベーションの取り組みを主導。"
       },
-      "summary": "多国籍企業 | リスクマネジメント & 資産保護 | 従業員6,000名 | 売上$1.1B",
-      "title": "Chief Architect"
+      "summary": "多国籍企業 | リスク管理＆資産保護 | 従業員6,000名 | 売上 $1.1B",
+      "title": "チーフアーキテクト"
     },
     "talmix": {
       "details": {
         "itTech": "技術運用全般を統括。",
-        "rebuild": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。検索およびマッチングの改善を主導し、コンサルタント推薦の関連性を向上。",
-        "search": "検索およびマッチングの改善を主導し、コンサルタント推薦の関連性を向上。"
+        "rebuild": "レガシープラットフォームを、スケーラブルな両面マーケットプレイスへ再構築。コンサルタント推薦の関連性を高めるため、検索およびマッチングの改善を主導。",
+        "search": "コンサルタント推薦の関連性を高めるため、検索およびマッチングの改善を主導。"
       },
-      "notes": "（旧称：MBA & Company）",
-      "summary": "経営コンサルティング・スタートアップ | タレントサーチ | £2M series A",
-      "title": "Chief Technology Officer"
+      "notes": "（旧社名：MBA & Company）",
+      "summary": "経営コンサルティングのスタートアップ | タレントサーチ | £2M シリーズA",
+      "title": "最高技術責任者（CTO）"
     },
     "title": "職務経歴"
   }

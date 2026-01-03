@@ -16,7 +16,7 @@
       "b2c": "B2C",
       "fintech": "Fintech",
       "healthcare": "Terveydenhuolto",
-      "homeAutomation": "Kodinautomaatio",
+      "homeAutomation": "Kotiautomaatio",
       "hwEmbedded": "Laitteisto & sulautetut järjestelmät",
       "paymentSolutions": "Maksuratkaisut",
       "realtime": "Reaaliaikainen",
@@ -30,20 +30,20 @@
       "planning": "Suunnittelu",
       "productDevelopment": "Tuotekehitys",
       "recruitment": "Rekrytointi",
-      "techLeadership": "Tekninen johtaminen",
+      "techLeadership": "Tekninen johtajuus",
       "techStrategy": "Tekninen strategia",
       "title": "Johtajuus"
     },
     "missionFit": {
       "devInfraTooling": "Kehitysinfra & työkalut",
-      "fixTeamsProjects": "Tiimien/projektien kunnostus",
+      "fixTeamsProjects": "Tiimien/projektien korjaaminen",
       "greenField": "Greenfield",
       "maintenance": "Ylläpito",
       "nextGen20": "Seuraavan sukupolven & 2.0",
       "productionOps": "Tuotanto-operaatiot",
       "rnd": "T&K",
       "scaling": "Skaalaus",
-      "title": "Tehtäväsopivuus"
+      "title": "Sopivuus tehtävään"
     },
     "technicalExperience": {
       "architecture": "Arkkitehtuuri",
@@ -77,36 +77,40 @@
     "title": "Yhteenveto"
   },
   "caseStudy": {
-    "collaborationContent": "Työskenteli tiiviissä yhteistyössä VP of Engineeringin kanssa, joka sponsoroi aloitteen kriittisenä liiketoiminnan mahdollistajana. Projekti käynnistettiin oma-aloitteisesti, ehdotettiin ja toteutettiin aluksi yksin, ennen kuin se siirrettiin omistetulle tiimille pitkäaikaista omistajuutta varten.",
+    "collaborationContent": "Työskenteli tiiviissä yhteistyössä Engineeringin VP:n kanssa, joka sponsoroi aloitteen kriittisenä liiketoiminnan mahdollistajana. Projekti oli oma-aloitteinen; se ehdotettiin ja toteutettiin aluksi yksin ennen kuin se siirrettiin omistautuneelle tiimille pitkäaikaista omistajuutta varten.",
     "collaborationTitle": "Yhteistyö",
-    "contextContent": "Liittyi pian Series B:n ($30M) jälkeen, kun yritys valmistautui ottamaan käyttöön ensimmäisen suuren enterprise-asiakkaansa. Engineering-organisaatio (~10–15 insinööriä) oli iteroinut nopeasti päästäkseen product-market fitiin, mikä jätti ydinaudio-to-notes-putken hauraaksi, läpinäkymättömäksi ja yhä riskialttiimmaksi skaalata.",
-    "contextTitle": "Tausta",
-    "contributionsDecisionsTitle": "Keskeiset panokset ja päätökset",
-    "outcomesArchitecture": "Arkkitehtuuri <strong>skaalautui yrityksen kasvun mukana</strong> ja muodostui perustaksi myöhemmälle pipeline-työlle.",
-    "outcomesCustomerMigration": "Siirsi ensimmäisen enterprise-asiakkaan onnistuneesti uuteen pipelineen ~7 kuukaudessa; toteutti <strong>täyden asiakasmigraation</strong> vaiheittain seuraavien ~2 kuukauden aikana riskin minimoimiseksi.",
-    "outcomesMonitoring": "Mahdollisti <strong>monitoroinnin ja hälytysten</strong> rakentamisen telemetriatietojen pohjalta, mikä lyhensi reagointiaikoja tuotanto-ongelmiin.",
-    "outcomesPipelineThroughput": "Pipeline käsittelee nyt yli <strong>100 tuntia audiota minuutissa</strong>.",
-    "outcomesReliability": "Saavutti selkeän harppauksen <strong>järjestelmän luotettavuudessa, debuggattavuudessa ja operatiivisessa näkyvyydessä</strong>; ensimmäistä kertaa insinöörit pystyivät tarkastelemaan live-työnkulun tilaa, diagnosoimaan vikoja deterministisesti ja palautumaan turvallisesti.",
-    "outcomesTemplates": "Perusti <strong>uudelleenkäytettävät projektipohjat</strong> (CI/CD, Helm chartit, palvelurakenne), jotka otettiin käyttöön koko engineering-organisaatiossa.",
-    "outcomesTemporalAdoption": "Temporalista tuli <strong>alustan vakioprimitiivi</strong>, jota hyödynnettiin laajasti alkuperäisen pipeline-projektin ulkopuolella.",
+    "contextContent": "Liittyi pian Series B:n ($30M) jälkeen, kun yritys valmistautui ottamaan käyttöön ensimmäisen suuren yritysasiakkaansa. Engineering-organisaatio (~10–15 insinööriä) oli iteroinut nopeasti saavuttaakseen product-market fitin, mikä jätti ydinaudio-muistiinpanot-putken hauraaksi, läpinäkymättömäksi ja yhä riskialttiimmaksi skaalata.",
+    "contextTitle": "Konteksti",
+    "outcomesArchitecture": "Arkkitehtuuri <strong>skaalautui yrityksen kasvun mukana</strong> ja muodostui perustaksi myöhemmälle putkityölle.",
+    "outcomesCustomerMigration": "Siirsi ensimmäisen yritysasiakkaan onnistuneesti uuteen putkeen noin ~7 kuukaudessa; toteutti <strong>täyden asiakassiirron</strong> vaiheittain seuraavien ~2 kuukauden aikana riskin minimoimiseksi.",
+    "outcomesMonitoring": "Mahdollisti <strong>valvonnan ja hälytysten</strong> rakentamisen telemetriaa vasten, jotta tuotanto-ongelmiin reagointiaikoja saatiin lyhennettyä.",
+    "outcomesPipelineThroughput": "Putki käsittelee nyt yli <strong>100 tuntia audiota minuutissa</strong>. Se on vastannut liiketoiminnan tarpeisiin asiakaskannan ja käyttövolyymin merkittävän kasvun aikana.",
+    "outcomesReliability": "Saavutti askelmuutoksen <strong>järjestelmän luotettavuudessa, debuggattavuudessa ja operatiivisessa näkyvyydessä</strong>; ensimmäistä kertaa insinöörit pystyivät tarkastelemaan työnkulkujen tilaa reaaliajassa, diagnosoimaan vikatilanteet deterministisesti ja palautumaan turvallisesti.",
+    "outcomesTemplates": "Vakiinnutti <strong>uudelleenkäytettävät projektipohjat</strong> (CI/CD, Helm-chartit, palvelun rakenne), jotka otettiin käyttöön koko engineering-organisaatiossa.",
+    "outcomesTemporalAdoption": "Temporalista tuli <strong>alustan standardi perusprimitiivi</strong>, jota käytettiin uudelleen paljon alkuperäisen putkiprojektin ulkopuolella.",
     "outcomesTitle": "Tulokset",
-    "roleScopeContent": "Toimi poikkileikkaavana vanhempana teknisenä johtajana ja otti omistajuuden läpileikkaavista järjestelmistä, joilla ei ollut luonnollista tuoteomistajaa. Johti useiden tuotevertikaalien käyttämän ydin audio-to-notes -käsittelyputken kokonaisvaltaista uudelleensuunnittelua; toimi ensisijaisena teknisenä päätöksentekijänä ja päivystysescalation-pisteenä, kunnes omistajuus siirtyi omistetulle tiimille.",
+    "roleScopeContent": "Toimi horisontaalisena vanhempana teknisenä johtajana ja otti omistajuuden poikkileikkaavista järjestelmistä, joilla ei ollut luontaista tuotteen omistajaa. Johti useiden tuoteyksiköiden käyttämän ydinaudio-muistiinpanot-käsittelyputken päästä päähän -uudelleensuunnittelua; toimi ensisijaisena teknisenä päätöksentekijänä ja päivystysescalation-pisteenä, kunnes omistajuus siirtyi omistautuneelle tiimille.",
     "roleScopeTitle": "Rooli ja laajuus",
-    "title": "Vaikuttavuus-case study – Abridge"
+    "title": "Vaikutuksen tapaustutkimus – Abridge"
+  },
+  "caseStudyContributions": {
+    "apiBoundary": "Vakiinnutti yhden <strong>standardoidun API-rajan</strong> kaikille pipelinen sisääntulopisteille, poistaen eriytyneet toteutukset ja tehden järjestelmän käyttäytymisestä havainnoitavaa ja ennustettavaa.",
+    "leadership": "Määritteli ja omisti uuden pipelinen <strong>arkkitehtuurin</strong>, <strong>teknisen tuotesuunnittelun</strong> ja <strong>toteutuksen</strong> alusta asti.",
+    "loadTests": "Rakensi ja ajoi <strong>kuormitustestit</strong> skaalautumiskäyttäytymisen validoimiseksi ennen laajaa asiakasmigraatiota.",
+    "reverseEngineering": "<strong>Käänteismallinsi</strong> implisiittisen järjestelmäkäyttäytymisen legacy-koodista eksplisiittisten lähtötason vaatimusten määrittämiseksi, ja määritteli sen jälkeen tulevaisuuteen katsovat vaatimukset epävarman mittakaavan ja muuttuvien tuotetarpeiden vallitessa.",
+    "templates": "Suunnitteli <strong>uudelleenkäytettävän infrastruktuurin</strong> ja <strong>projektimallit</strong> (CI/CD, Helm charts, palvelupohjat), joista tuli myöhemmin muiden engineering-ponnistelujen perusta.",
+    "testingLintingDocs": "Otti käyttöön <strong>end-to-end-testauksen</strong>, tiukat linting-standardit, <strong>strukturoidun dokumentaation</strong> sekä vuokaaviot tilanteessa, jossa niitä ei aiemmin ollut.",
+    "title": "Panokset",
+    "validationSchema": "Toteutti kaikille I/O-operaatioille (tietokanta, API:t, blob storage…) <strong>dokumenttien validointiskeemat</strong> tietojen eheyden varmistamiseksi."
   },
   "caseStudyDecisions": {
-    "apiBoundary": "Varmisti yhden <strong>standardoituun API-rajapinnan</strong> kaikille putken sisäänmenopisteille, poistaen toisistaan poikkeavat toteutukset ja tehden järjestelmän käyttäytymisestä havainnoitavaa ja ennustettavaa.",
-    "kubernetes": "Siirsi suorittamisen pilvifunktioista <strong>Kubernetes-pohjaisiin palveluihin</strong> palauttaakseen debuggattavuuden, operatiivisen hallinnan ja toimittajariippumattomuuden.",
-    "loadTests": "Rakensi ja ajoi <strong>kuormitustestit</strong> skaalautuvuuskäyttäytymisen validoimiseksi ennen laajamittaista asiakassiirtoa.",
-    "orchestration": "Suunnitteli ja toteutti uuden eriytetyn orkestrointipalvelun käyttäen <strong>domain-driven design</strong> -lähestymistapaa, erottaen tarkoituksellisesti putken vastuut tuotteen koodista pienentääkseen vaikutusaluetta ja kognitiivista kuormaa.",
-    "reframing": "Uudelleenkehysti audio–muistiinpanot-putken <strong>liiketoimintakriittiseksi sisäiseksi tuotteeksi</strong> sen sijaan, että se olisi ad hoc -funktioiden kokoelma.",
-    "reverseEngineering": "<strong>Käänteismallinsi</strong> legacy-koodista implisiittisen järjestelmäkäyttäytymisen määrittääkseen eksplisiittiset perusvaatimukset, ja määritteli sen jälkeen eteenpäin katsovat vaatimukset epävarman mittakaavan ja kehittyvien tuotetarpeiden puitteissa.",
-    "singleWriter": "<strong>Keskitti kaikki tietokantakirjoitukset</strong> putken taakse, estäen nimenomaisesti suoran ML-pääsyn datan korruptoitumisen, kilpailutilanteiden ja sivuvaikutusten ehkäisemiseksi.",
-    "telemetry": "Otti käyttöön <strong>kattavan telemetrian</strong> (lokit, metriikat, työnkulun näkyvyys) tehdäkseen järjestelmän käyttäytymisestä ymmärrettävää laajemmalle engineering-organisaatiolle.",
-    "templates": "Suunnitteli <strong>uudelleenkäytettävän infrastruktuurin</strong> ja <strong>projektimallit</strong> (CI/CD, Helm chartit, palvelurungot), joista tuli myöhemmin muiden engineering-ponnistelujen perusta.",
-    "temporal": "<strong>Valitsi Temporal</strong> työnkulkujen suorituskerrokseksi mahdollistaakseen deterministiset, debuggattavat työnkulut uudelleentoistokyvykkyydellä — vaihtaen lyhyen aikavälin oppimiskustannuksen pitkän aikavälin luotettavuuteen ja operoitavuuteen.",
-    "testingLintingDocs": "Otti käyttöön <strong>päästä päähän -testauksen</strong>, tiukat linttausstandardit, <strong>strukturoidun dokumentaation</strong> sekä vuokaaviot siellä, missä niitä ei aiemmin ollut.",
-    "validationSchema": "Toteutti <strong>dokumenttien validointiskeemat</strong> kaikille I/O-operaatioille (tietokanta, API:t, blob storage…) datan eheyden varmistamiseksi."
+    "kubernetes": "Siirsi ajon pilvifunktioista <strong>Kubernetes-pohjaisiin palveluihin</strong> debuggattavuuden, operatiivisen hallinnan ja toimittajariippumattomuuden palauttamiseksi.",
+    "orchestration": "Arkkitehtoi uuden eriytetyn orkestrointipalvelun käyttäen <strong>domain-driven design</strong> -lähestymistapaa, erottaen tietoisesti putkiston vastuut tuotekoodista vaikutusalueen ja kognitiivisen kuorman pienentämiseksi.",
+    "reframing": "Uudelleenkehysti audio-to-notes-putkiston <strong>liiketoimintakriittiseksi sisäiseksi tuotteeksi</strong> ad-hoc-funktioiden kokoelman sijaan.",
+    "singleWriter": "<strong>Keskitti kaikki tietokantakirjoitukset</strong> putkiston taakse, estäen nimenomaisesti suoran ML-pääsyn datakorruption, kilpailutilanteiden ja sivuvaikutusten ehkäisemiseksi.",
+    "telemetryObservability": "Edellytti <strong>telemetria</strong>- ja <strong>havainnoitavuus</strong>mekanismeja luotettavuuden varmistamiseksi mittakaavassa.",
+    "temporal": "<strong>Valitsi Temporal</strong>-ratkaisun työnkulkujen suorituskerrokseksi mahdollistamaan deterministiset, debuggattavat työnkulut replay-ominaisuudella — vaihtokauppana lyhyen aikavälin oppimiskustannus pitkän aikavälin luotettavuuden ja operoitavuuden hyväksi.",
+    "title": "Keskeiset päätökset"
   },
   "config": {
     "dark": "Tumma",
@@ -117,10 +121,10 @@
   "contactInfo": {
     "download": "Lataa PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "Startup-CTO, Pääarkkitehti, Pääinsinööri, <1></1>Perustaja-insinööri, vanhempi henkilöstöinsinööri",
-    "relocation": "Valmis muuttamaan",
-    "residency": "Yhdysvaltain pysyvä oleskelulupa, EU-kansalainen",
-    "translationAlertMessage": "Tämä ansioluettelo on käännetty automaattisesti konekäännöksellä. Joidenkin osien käännös ei välttämättä ole tarkka. Katso tarkimman tiedon saamiseksi <1><strong>alkuperäistä englanninkielistä versiota</strong></1>.",
+    "professionalTitles": "Startup-CTO, Pääarkkitehti, Pääinsinööri, <1></1>Perustaja-insinööri, Vanhempi henkilöstöinsinööri",
+    "relocation": "Voin muuttaa",
+    "residency": "Yhdysvaltain pysyvä oleskeluluvan haltija, EU-kansalainen",
+    "translationAlertMessage": "Tämä ansioluettelo on käännetty automaattisesti konekäännöksellä. Joitakin osia ei ehkä ole käännetty tarkasti. Katso tarkimpia tietoja varten <1><strong>alkuperäinen englanninkielinen versio</strong></1>.",
     "translationAlertTitle": "Käännöshuomautus"
   },
   "error": {
@@ -131,13 +135,13 @@
     "unexpected": "Tapahtui odottamaton virhe."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20+ vuotta</strong> <strong>käytännönläheistä</strong> ohjelmistojohtamista.",
-    "creativeTechnologist": "Senior-tason teknologia-asiantuntija, joka <strong>toteuttaa monimutkaisia teknologiainitiatiiveja</strong>. Muuntaa epäselvät ideat <strong>skaalautuviksi, tuotantokelpoisiksi alustoiksi</strong> – mukaan lukien asiakkaille suunnatut tuotteet, agenttiset järjestelmät ja hajautetut pilviympäristöt.",
-    "engagement": "Näyttöä <strong>0→1-, 1→N- ja scale-up-käännekohdissa</strong>. Rakensi äskettäin järjestelmän, joka muuntaa <strong>100+ tuntia audiota</strong> jäsennellyksi inferenssiksi <strong>joka minuutti</strong>.",
-    "managementResource": "Kutsutaan mukaan <strong>nostamaan teknistä tasoa, määrittämään tekninen suunta, toteuttamaan monimutkaista työtä sekä skaalaamaan tiimejä ja järjestelmiä</strong>. Neuvonantaja <strong>perustajille, C-level-johdolle ja VP-tason johtajille</strong>.",
-    "practicalExperienceOnAllLayers": "Teknologia-generalisti: backend, web, mobiili, työpöytä, data, ML/AI, QA, alusta, infrastruktuuri ja DevOps. Kokemusta tuotteesta, designista ja UX:stä. Rakastaa <strong>rakentaa</strong>.",
+    "20YearsOfExperience": "<strong>20+ vuotta</strong> <strong>käytännönläheistä</strong> ohjelmistokehityksen johtamiskokemusta.",
+    "creativeTechnologist": "Kokenut teknologia-asiantuntija, joka <strong>vie läpi monimutkaisia teknologiakokonaisuuksia</strong>. Muuntaa epäselvät ideat <strong>skaalautuviksi, tuotantovalmiiksi alustoiksi</strong> – mukaan lukien asiakasrajapinnan tuotteet, agenttiset järjestelmät ja hajautetut pilviympäristöt.",
+    "engagement": "Näytöt <strong>0→1-, 1→N- ja skaalautumisen käännekohdissa</strong>. Rakensi hiljattain järjestelmän, joka muuntaa <strong>100+ tuntia äänidataa</strong> strukturoiduksi päättelyksi <strong>joka minuutti</strong>.",
+    "managementResource": "Kutsuttu mukaan <strong>nostamaan teknistä tasoa, määrittämään tekninen suunta, toteuttamaan vaativaa työtä sekä skaalaamaan tiimejä ja järjestelmiä</strong>. Neuvonantaja <strong>perustajille, C-tasolle ja VP:ille</strong>.",
+    "practicalExperienceOnAllLayers": "Teknologiageneralisti: backend, web, mobiili, työpöytä, data, ML/AI, QA, alusta, infrastruktuuri ja DevOps. Kokemusta tuotteesta, designista ja UX:stä. Rakastaa <strong>rakentamista</strong>.",
     "problemSolver": "Ratkaisusi kysymykseen: <i>\"Miten rakennamme tämän?\"</i>",
-    "title": "Johdon tiivistelmä"
+    "title": "Johtotiivistelmä"
   },
   "page": {
     "resume": "Ansioluettelo | Aleksi Asikainen | Ohjelmistoarkkitehtuuri ja kehitys",
@@ -145,77 +149,77 @@
   },
   "projects": {
     "jsvfx": {
-      "description": "Visuaaliset tehosteet kirjoitettuna puhtaalla JavaScriptillä.",
+      "description": "Visuaaliset tehosteet kirjoitettu puhtaalla JavaScriptillä.",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "Tämä ansioluettelo koodina. Erittäin ylisuunniteltu. Aloita tästä.",
+      "description": "Tämä ansioluettelo koodina. Äärimmäisen ylisuunniteltu. Aloita tästä.",
       "name": "Ansioluettelo"
     },
     "tartarus": {
       "description": "Alusta asti rakennettu syväoppimiskehys TypeScriptille.",
       "name": "Tartarus Deep Learning Framework"
     },
-    "title": "Referenssiprojektit"
+    "title": "Viiteprojektit"
   },
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "Ohjasi ydinteknistä suuntaa johtamalla arkkitehtuuripäätöksiä ja valitsemalla perustavanlaatuisia teknologioita (esim. Temporal), jotka skaalautuivat liiketoiminnan kasvun mukana.",
-        "growth": "Työskenteli hyperkasvun ja useiden rahoitusvaiheiden läpi (A16Z, Khosla Ventures, Elad Gil, IVP).",
-        "missions": "Johti riskialttiita, merkittävää tarkkuutta vaativia sisäisiä aloitteita, kuten suuria tietokantamigraatioita, omistaen suunnittelun, toteutuksen ja luotettavuuden lopputulokset alusta loppuun.",
-        "proposals": "Ehdotti, suunnitteli ja toteutti kriittisiä ydinjärjestelmiä, mukaan lukien laajamittaisen ääniaineiston orkestroinnin strukturoiduiksi kliinisiksi muistiinpanoiksi.",
+        "architecture": "Ohjasi ydinteknistä suuntaa johtamalla arkkitehtuuripäätöksiä ja valitsemalla perustavanlaatuiset teknologiat (esim. Temporal), jotka skaalautuivat liiketoiminnan mukana.",
+        "growth": "Toimi hyperkasvun ja useiden rahoitusvaiheiden aikana (A16Z, Khosla Ventures, Elad Gil, IVP).",
+        "missions": "Johti korkean riskin ja suurta tarkkuutta vaativia sisäisiä aloitteita, kuten merkittäviä tietokantamigraatioita, omistaen suunnittelun, toteutuksen ja luotettavuustulokset alusta loppuun.",
+        "proposals": "Ehdotti, arkkitehtoi ja toteutti kriittisiä ydinjärjestelmiä, mukaan lukien laajamittainen äänen orkestrointi strukturoiduiksi kliinisiksi muistiinpanoiksi.",
         "role": "Liittyi Abridgeen, kun työntekijöitä oli ~30. Yrityksen ensimmäinen senior staff -ohjelmistoinsinööri."
       },
-      "summary": "Healthcare AI -startup | 300 työntekijää | $700M Series B–E",
+      "summary": "Terveydenhuollon AI-startup | 300 työntekijää | $700M series B-E",
       "title": "Senior Staff Software Engineer"
     },
     "arena": {
       "details": {
         "optimization": "Leikkasi teknisten operaatioiden kustannuksia 40%+.",
-        "ownership": "Omisti engineeringin, arkkitehtuurin ja IT:n.",
-        "practices": "Vakiinnutti engineering-käytännöt: koodikatselmoinnit, CI, suunnittelu, mittareihin perustuva operointi ja standardoidut tekniset prosessit.",
-        "scale": "Skaalasi alustaa Series A -vaiheeseen, jota johtivat CRV, Craft Ventures, Artisanal Ventures ja Vela Partners."
+        "ownership": "Omisti ohjelmistokehityksen, arkkitehtuurin ja IT:n.",
+        "practices": "Vakiinnutti ohjelmistokehityskäytännöt: koodikatselmoinnit, CI, suunnittelu, metriikkaohjattu operointi sekä standardoidut tekniset prosessit.",
+        "scale": "Skaalasi alustan Series A -vaiheen läpi, jonka vetäjinä toimivat CRV, Craft Ventures, Artisanal Ventures ja Vela Partners."
       },
-      "summary": "Yleisöosallistamisen startup | 50 työntekijää | $13.6M Series A",
+      "summary": "Yleisön sitouttamiseen keskittyvä startup | 50 työntekijää | $13.6M series A",
       "title": "Chief Technology Officer"
     },
     "hpi": {
       "details": {
-        "leader": "Ison-Britannian markkinajohtaja ajoneuvojen historiatarkastuksissa.",
-        "products": "Johti uusien kuluttajatuotteiden tuotekehitystä ja toimitusta päästä päähän konseptista julkaisuun."
+        "leader": "Ajoneuvojen historiatarkistusten markkinajohtaja Isossa-Britanniassa.",
+        "products": "Johti uusien kuluttajatuotteiden tuotekehitystä ja toimitusta päästä päähän, konseptista julkaisuun."
       },
       "notes": "(Solera-konsernin tytäryhtiö)",
-      "summary": "Yksityinen yritys | Autodataa & omaisuudensuojaus | £20M liikevaihto",
-      "title": "Head of Technology"
+      "summary": "Yksityinen yritys | Autodataa & omaisuudensuojausta | £20M liikevaihto",
+      "title": "Teknologiajohtaja"
     },
     "madbid": {
       "details": {
-        "cofounder": "Perustajajäsenenä MadBidissä.",
-        "orgScale": "Rakensi ja johti koko engineering-organisaation nopean kasvun läpi.",
-        "technlogyLeadership": "Johti kaikkea teknologiaa ja ohjelmistokehitystä bootstrap-vaiheesta skaalaukseen."
+        "cofounder": "Oli perustamassa MadBidia.",
+        "orgScale": "Rakensi ja johti koko ohjelmistokehitysorganisaatiota nopean kasvun läpi.",
+        "technlogyLeadership": "Johti kaikkea teknologiaa ja ohjelmistokehitystä bootstrap-vaiheesta skaalautumiseen."
       },
-      "summary": "Viihdeostamisen startup | 75 työntekijää | £4M Series A | £10M liikevaihto",
+      "summary": "Viihteellinen ostosstartup | 75 työntekijää | £4M Series A | £10M liikevaihto",
       "title": "Tekninen johtaja"
     },
     "optym": {
       "details": {
-        "arch": "Vakiinnutti jaetut arkkitehtuurit, käytännöt ja toimitusstandardit nopeiden tuotelaunchausten mahdollistamiseksi.",
+        "arch": "Vakiinnutti yhteiset arkkitehtuurit, linjaukset ja toimitusstandardit nopeiden tuotelanseerausten mahdollistamiseksi.",
         "customers": "Työskenteli suoraan asiakkaiden, kumppaneiden ja johtajien kanssa uusien tuotteiden suunnittelemiseksi ja räätälöityjen ratkaisujen toimittamiseksi.",
         "mentor": "Mentoroi senior-insinöörejä ja teknisiä johtajia vahvistaen toteutuksen laatua ja engineering-kulttuuria.",
         "saas": "Tuki Optym’in SaaS-teknologiahankkeita."
       },
-      "summary": "B2B SaaS | Optimointi & Decision Science | 250 työntekijää | $25M liikevaihto",
+      "summary": "B2B SaaS | Optimointi & päätöstiede | 250 työntekijää | $25M liikevaihto",
       "title": "Chief Technology Officer"
     },
     "presentlyWorkingHere": "Nykyhetki",
     "solera": {
       "details": {
-        "emerging": "Arvioi nousevia teknologioita yrityskäyttöön, mukaan lukien ML, blockchain, AR/VR, IoT/telematiikka, digitaalinen identiteetti, laajamittaiset dataplatformit ja cloud-native SaaS (AWS).",
-        "rnd": "Johti strategisia T&K- ja tuoteinkubaatioaloitteita toimitusjohtajan toimiston puolesta."
+        "emerging": "Arvioi nousevia teknologioita yritystason käyttöönottoa varten, mukaan lukien ML, blockchain, AR/VR, IoT/telematiikka, digitaalinen identiteetti, laajamittaiset dataplatformit sekä cloud-native SaaS (AWS).",
+        "rnd": "Johti strategisia T&K- ja tuoteinkubaation aloitteita toimitusjohtajan toimiston alaisuudessa."
       },
       "summary": "Monikansallinen | Riskienhallinta & omaisuudensuojaus | 6,000 työntekijää | $1.1B liikevaihto",
-      "title": "Chief Architect"
+      "title": "Pääarkkitehti"
     },
     "talmix": {
       "details": {
@@ -224,7 +228,7 @@
         "search": "Johti haku- ja matching-parannuksia konsulttisuositusten relevanssin lisäämiseksi."
       },
       "notes": "(Aiemmin tunnettu nimellä MBA & Company)",
-      "summary": "Johtamiskonsultoinnin startup | Talent search | £2M Series A",
+      "summary": "Johtamiskonsultoinnin startup | Osaajahaku | £2M series A",
       "title": "Chief Technology Officer"
     },
     "title": "Työhistoria"

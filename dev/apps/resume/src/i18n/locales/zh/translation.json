@@ -8,10 +8,10 @@
       "mgmtAdmin": "管理与行政",
       "programming": "编程",
       "strategy": "战略",
-      "title": "重点方向"
+      "title": "关注重点"
     },
     "industryExperience": {
-      "automotive": "汽车",
+      "automotive": "汽车行业",
       "b2b": "B2B",
       "b2c": "B2C",
       "fintech": "金融科技",
@@ -25,7 +25,7 @@
       "videoGames": "电子游戏"
     },
     "leadershipExperience": {
-      "mentoringTraining": "辅导与培训",
+      "mentoringTraining": "指导与培训",
       "MgmtAdmin": "管理与行政",
       "planning": "规划",
       "productDevelopment": "产品开发",
@@ -37,9 +37,9 @@
     "missionFit": {
       "devInfraTooling": "开发基础设施与工具",
       "fixTeamsProjects": "修复团队/项目",
-      "greenField": "从零到一",
+      "greenField": "从零开始",
       "maintenance": "维护",
-      "nextGen20": "下一代与2.0",
+      "nextGen20": "下一代与 2.0",
       "productionOps": "生产运维",
       "rnd": "研发",
       "scaling": "扩展",
@@ -50,7 +50,7 @@
       "backend": "后端",
       "devops": "DevOps",
       "frontend": "前端",
-      "llmAgenticAI": "LLM/ Agentic AI",
+      "llmAgenticAI": "LLM/智能体 AI",
       "mobile": "移动端",
       "technicalWriting": "技术写作",
       "testingQa": "测试/QA",
@@ -74,39 +74,43 @@
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "一览"
+    "title": "概览"
   },
   "caseStudy": {
-    "collaborationContent": "与工程副总裁密切合作，其作为关键业务推动因素赞助了该项目。该项目由本人自主发起与提案，最初由个人独立实施，随后移交给专门团队进行长期负责。",
+    "collaborationContent": "与工程副总裁（VP of Engineering）紧密合作，其作为关键业务推动因素赞助了该项计划。该项目由本人主动发起并提出，初期由本人独立实施，随后移交给专门团队进行长期负责与维护。",
     "collaborationTitle": "协作",
-    "contextContent": "在 B 轮（$30M）后不久加入，当时公司正准备接入首个大型企业客户。工程组织（约 10–15 名工程师）为实现产品市场契合度进行了快速迭代，使核心“音频到笔记”流水线变得脆弱、不透明，且规模化风险日益增加。",
+    "contextContent": "在 B 轮融资（$30M）后不久加入，公司正准备接入首个大型企业客户。工程团队（约 10–15 名工程师）为实现产品市场契合度快速迭代，导致核心“音频到笔记”流水线脆弱、不透明，且扩展风险日益增加。",
     "contextTitle": "背景",
-    "contributionsDecisionsTitle": "关键贡献与决策",
     "outcomesArchitecture": "架构<strong>随公司增长实现扩展</strong>，并成为后续流水线工作的基础。",
-    "outcomesCustomerMigration": "在约 7 个月内成功将首个企业客户迁移至新流水线；随后约 2 个月内以增量方式完成<strong>全量客户迁移</strong>，以将风险降至最低。",
+    "outcomesCustomerMigration": "在约 7 个月内成功将首个企业客户迁移至新流水线；随后约 2 个月内以增量方式完成<strong>全部客户迁移</strong>，以降低风险。",
     "outcomesMonitoring": "具备基于遥测构建<strong>监控与告警</strong>的能力，从而缩短对生产问题的响应时间。",
-    "outcomesPipelineThroughput": "该流水线现可处理超过<strong>每分钟 100 小时的音频</strong>。",
-    "outcomesReliability": "在<strong>系统可靠性、可调试性与运维可观测性</strong>方面实现阶跃式提升；工程师首次能够检查实时工作流状态、确定性诊断故障并安全恢复。",
-    "outcomesTemplates": "建立了在工程组织范围内被采用的<strong>可复用项目模板</strong>（CI/CD、Helm charts、服务布局）。",
-    "outcomesTemporalAdoption": "Temporal 成为<strong>标准的平台基础能力</strong>，其复用范围远超最初的流水线项目。",
+    "outcomesPipelineThroughput": "该流水线目前每分钟可处理超过<strong>100 小时音频</strong>。在客户规模与使用量显著增长过程中，持续满足业务需求。",
+    "outcomesReliability": "在<strong>系统可靠性、可调试性与运维可视性</strong>方面实现阶跃式提升；工程师首次能够检查实时工作流状态、以确定性方式诊断故障，并安全恢复。",
+    "outcomesTemplates": "建立了<strong>可复用的项目模板</strong>（CI/CD、Helm charts、服务布局），并在整个工程组织中推广采用。",
+    "outcomesTemporalAdoption": "Temporal 成为<strong>标准平台基础组件</strong>，其复用范围远超最初的流水线项目。",
     "outcomesTitle": "成果",
-    "roleScopeContent": "作为横向资深技术负责人，接手没有自然产品负责人的跨领域系统。主导对多条产品线使用的核心“音频到笔记”处理流水线进行端到端重构；在所有权移交给专门团队之前，担任主要技术决策者与值班升级联络点。",
+    "roleScopeContent": "担任横向资深技术负责人，负责那些缺乏自然产品负责人、跨领域的系统。主导对多个产品线使用的核心“音频到笔记”处理流水线进行端到端重构；在所有权移交给专门团队之前，作为主要技术决策者及值班升级（on-call escalation）节点。",
     "roleScopeTitle": "角色与范围",
     "title": "影响力案例研究 – Abridge"
   },
-  "caseStudyDecisions": {
-    "apiBoundary": "为所有流水线入口点强制实施单一的<strong>标准化 API 边界</strong>，消除分歧实现，使系统行为可观测且可预测。",
-    "kubernetes": "将执行从云函数迁移到<strong>基于 Kubernetes 的服务</strong>，以恢复可调试性、运营控制与供应商独立性。",
+  "caseStudyContributions": {
+    "apiBoundary": "为所有流水线入口点强制执行单一<strong>标准化 API 边界</strong>，消除分歧实现，使系统行为可观测且可预测。",
+    "leadership": "从零开始定义并负责新流水线的<strong>架构</strong>、<strong>技术产品设计</strong>与<strong>实现</strong>。",
     "loadTests": "构建并运行<strong>负载测试</strong>，在大范围客户迁移前验证扩展行为。",
-    "orchestration": "采用<strong>领域驱动设计</strong>设计并实现新的隔离编排服务，有意将流水线关注点与产品代码分离，以降低影响范围与认知负担。",
-    "reframing": "将音频转笔记流水线重新定位为<strong>关键任务的内部产品</strong>，而非一组临时拼凑的函数集合。",
-    "reverseEngineering": "从遗留代码中<strong>逆向工程</strong>隐式系统行为以建立明确的基线需求，然后在规模不确定且产品需求演进的情况下定义面向未来的需求。",
-    "singleWriter": "在流水线之后<strong>集中所有数据库写入</strong>，明确阻止 ML 直接访问，以防止数据损坏、竞态条件和副作用。",
-    "telemetry": "引入<strong>全面的遥测</strong>（日志、指标、工作流可视性），使更广泛的工程组织能够理解系统行为。",
+    "reverseEngineering": "<strong>逆向工程</strong>遗留代码中的隐式系统行为，以建立明确的基线需求；随后在规模不确定且产品需求演进的情况下定义前瞻性需求。",
     "templates": "设计<strong>可复用的基础设施</strong>与<strong>项目模板</strong>（CI/CD、Helm charts、服务脚手架），后来成为其他工程工作的基础。",
-    "temporal": "<strong>选择 Temporal</strong>作为工作流执行层，以实现具备重放能力的确定性、可调试工作流——以短期学习成本换取长期可靠性与可运维性。",
-    "testingLintingDocs": "引入<strong>端到端测试</strong>、严格的 linting 标准、<strong>结构化文档</strong>，以及此前不存在的流程图。",
-    "validationSchema": "为所有 I/O 操作（数据库、API、blob 存储…）实现<strong>文档校验 schema</strong>，以确保数据完整性。"
+    "testingLintingDocs": "在此前不存在的情况下，引入<strong>端到端测试</strong>、严格的 linting 标准、<strong>结构化文档</strong>与流程图。",
+    "title": "贡献",
+    "validationSchema": "为所有 I/O 操作（数据库、API、blob storage…）实现<strong>文档验证 schema</strong>，确保数据完整性。"
+  },
+  "caseStudyDecisions": {
+    "kubernetes": "将执行从云函数迁移到<strong>基于 Kubernetes 的服务</strong>，以重新获得可调试性、运维控制力以及对供应商的独立性。",
+    "orchestration": "采用<strong>领域驱动设计</strong>架构全新的隔离式编排服务，有意将流水线关注点与产品代码分离，以降低影响范围与认知负担。",
+    "reframing": "将音频转笔记流水线重新定位为<strong>关键任务的内部产品</strong>，而非一组临时拼凑的函数。",
+    "singleWriter": "在流水线之后<strong>集中所有数据库写入</strong>，明确阻止 ML 直接访问，以防止数据损坏、竞态条件和副作用。",
+    "telemetryObservability": "要求具备<strong>遥测</strong>与<strong>可观测性</strong>机制，以确保在规模化下的可靠性。",
+    "temporal": "<strong>选择 Temporal</strong>作为工作流执行层，以实现具备回放能力的确定性、可调试工作流——以短期学习成本换取长期的可靠性与可运维性。",
+    "title": "关键决策"
   },
   "config": {
     "dark": "深色",
@@ -117,26 +121,26 @@
   "contactInfo": {
     "download": "下载 PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "创业公司 CTO，首席架构师，首席工程师，<1></1>创始工程师，高级 Staff 工程师",
+    "professionalTitles": "初创公司 CTO，首席架构师，首席工程师，<1></1>创始工程师，高级 Staff 工程师",
     "relocation": "可搬迁",
     "residency": "美国永久居民，欧盟公民",
-    "translationAlertMessage": "本简历已使用机器翻译自动翻译。部分内容可能不够准确。请参阅<1><strong>英文原版</strong></1>以获取最准确的信息。",
+    "translationAlertMessage": "本简历已使用机器翻译自动翻译，部分内容可能不够准确。为获取最准确的信息，请参阅 <1><strong>英文原版</strong></1>。",
     "translationAlertTitle": "翻译提示"
   },
   "error": {
     "errorTitle": "错误",
-    "notFoundDetails": "未找到请求的页面。",
+    "notFoundDetails": "无法找到请求的页面。",
     "notFoundTitle": "404",
     "oops": "糟糕！",
     "unexpected": "发生了意外错误。"
   },
   "exsum": {
-    "20YearsOfExperience": "拥有<strong>20+ 年</strong>的<strong>亲身实践</strong>软件领导经验。",
-    "creativeTechnologist": "资深技术专家，能够<strong>交付复杂的技术计划</strong>。将模糊的想法转化为<strong>可扩展、生产级的平台</strong>——包括面向客户的产品、Agentic 系统以及分布式云环境。",
-    "engagement": "在<strong>0→1、1→N 以及规模化拐点</strong>方面经验验证充分。近期构建了一个系统，可将<strong>100+ 小时的音频</strong>在<strong>每分钟</strong>转化为结构化推理。",
-    "managementResource": "受邀<strong>提升技术标准、定义技术方向、执行复杂工作，并扩展团队与系统</strong>。为<strong>创始人、C-level 及 VP</strong>提供顾问支持。",
+    "20YearsOfExperience": "<strong>20+ 年</strong>的<strong>亲身实践</strong>软件领导经验。",
+    "creativeTechnologist": "资深技术专家，能够<strong>交付复杂技术项目</strong>。将模糊想法转化为<strong>可扩展、生产级平台</strong>——包括面向客户的产品、agentic 系统以及分布式云环境。",
+    "engagement": "在<strong>0→1、1→N 以及规模化拐点</strong>方面有充分验证。近期构建了一个系统，可将<strong>100+ 小时音频</strong>在<strong>每分钟</strong>转化为结构化推理结果。",
+    "managementResource": "受邀<strong>提高技术标准、定义技术方向、推进复杂工作，并扩展团队与系统</strong>。担任<strong>创始人、C-level 与 VP</strong>顾问。",
     "practicalExperienceOnAllLayers": "技术通才：后端、Web、移动端、桌面端、数据、ML/AI、QA、平台、基础设施与 DevOps。具备产品、设计与 UX 经验。热爱<strong>构建</strong>。",
-    "problemSolver": "您的解决方案：<i>“我们该如何构建这个？”</i>",
+    "problemSolver": "你的解决方案：<i>\"我们要如何构建这个？\"</i>",
     "title": "高管摘要"
   },
   "page": {
@@ -161,29 +165,29 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "通过主导架构决策并选择可随业务扩展的基础技术（如 Temporal），推动核心技术方向。",
-        "growth": "在高速增长及多轮融资阶段中运作（A16Z、Khosla Ventures、Elad Gil、IVP）。",
-        "missions": "领导高风险、高精度的内部关键项目，例如大型数据库迁移，全程负责设计、执行与可靠性结果。",
+        "architecture": "通过主导架构决策并选定可随业务扩展的基础技术（例如 Temporal），推动核心技术方向。",
+        "growth": "经历高速增长与多轮融资阶段（A16Z、Khosla Ventures、Elad Gil、IVP）。",
+        "missions": "主导高风险、高精度的内部关键项目，如大型数据库迁移，全程负责设计、执行与可靠性结果。",
         "proposals": "提出、架构并实现关键核心系统，包括将音频大规模编排为结构化临床笔记。",
         "role": "在 Abridge 约 30 名员工时加入。公司首位高级 Staff 工程师。"
       },
-      "summary": "医疗健康 AI 初创公司 | 300 名员工 | $700M B-E 轮融资",
+      "summary": "医疗健康 AI 初创公司 | 300 名员工 | $700M B-E 轮",
       "title": "高级 Staff 软件工程师"
     },
     "arena": {
       "details": {
-        "optimization": "将技术运营成本降低 40%+。",
+        "optimization": "将技术运营成本降低 40% 以上。",
         "ownership": "负责工程、架构与 IT。",
         "practices": "建立工程实践：代码评审、CI、规划、指标驱动的运营，以及标准化技术流程。",
-        "scale": "在 CRV、Craft Ventures、Artisanal Ventures 与 Vela Partners 领投的 A 轮融资期间扩展平台规模。"
+        "scale": "在 CRV、Craft Ventures、Artisanal Ventures 与 Vela Partners 领投的 A 轮期间推动平台规模化。"
       },
-      "summary": "受众互动初创公司 | 50 名员工 | $13.6M A 轮融资",
+      "summary": "受众互动初创公司 | 50 名员工 | $13.6M A 轮",
       "title": "首席技术官"
     },
     "hpi": {
       "details": {
         "leader": "英国车辆历史查询市场领导者。",
-        "products": "领导面向新消费产品的端到端产品开发与交付，从概念到上线发布。"
+        "products": "主导新消费级产品从概念到上线的端到端产品开发与交付。"
       },
       "notes": "（Solera 子公司）",
       "summary": "私营公司 | 汽车数据与资产保护 | £20M 营收",
@@ -192,17 +196,17 @@
     "madbid": {
       "details": {
         "cofounder": "共同创立 MadBid。",
-        "orgScale": "在快速增长期间搭建并管理整个工程组织。",
-        "technlogyLeadership": "从自筹到规模化阶段，领导全部技术与软件开发。"
+        "orgScale": "在快速增长过程中搭建并运营整个工程组织。",
+        "technlogyLeadership": "从自筹到规模化阶段主导全部技术与软件开发。"
       },
-      "summary": "娱乐购物初创公司 | 75 名员工 | £4M A 轮融资 | £10M 营收",
+      "summary": "娱乐购物初创公司 | 75 名员工 | £4M A 轮 | £10M 营收",
       "title": "技术总监"
     },
     "optym": {
       "details": {
         "arch": "建立共享架构、政策与交付标准，以支持快速产品上线。",
-        "customers": "直接与客户、合作伙伴及高管合作，设计新产品并交付定制化解决方案。",
-        "mentor": "指导高级工程师与技术负责人，强化执行质量与工程文化。",
+        "customers": "与客户、合作伙伴及高管直接合作，设计新产品并交付定制化解决方案。",
+        "mentor": "辅导资深工程师与技术负责人，强化交付质量与工程文化。",
         "saas": "支持 Optym 的 SaaS 技术业务。"
       },
       "summary": "B2B SaaS | 优化与决策科学 | 250 名员工 | $25M 营收",
@@ -211,8 +215,8 @@
     "presentlyWorkingHere": "至今",
     "solera": {
       "details": {
-        "emerging": "评估用于企业采用的新兴技术，包括 ML、区块链、AR/VR、IoT/车联网（telematics）、数字身份、大规模数据平台，以及云原生 SaaS（AWS）。",
-        "rnd": "为 CEO 办公室领导战略性 R&D 与产品孵化计划。"
+        "emerging": "评估用于企业落地的新兴技术，包括 ML、区块链、AR/VR、IoT/telematics、数字身份、大规模数据平台，以及云原生 SaaS（AWS）。",
+        "rnd": "为 CEO 办公室主导战略性 R&D 与产品孵化项目。"
       },
       "summary": "跨国公司 | 风险管理与资产保护 | 6,000 名员工 | $1.1B 营收",
       "title": "首席架构师"
@@ -220,11 +224,11 @@
     "talmix": {
       "details": {
         "itTech": "负责全部技术运营。",
-        "rebuild": "将遗留平台重建为可扩展的双边市场。主导搜索与匹配改进，提高顾问推荐的相关性。",
-        "search": "主导搜索与匹配改进，提高顾问推荐的相关性。"
+        "rebuild": "将遗留平台重建为可扩展的双边市场平台。主导搜索与匹配改进，提升顾问推荐的相关性。",
+        "search": "主导搜索与匹配改进，提升顾问推荐的相关性。"
       },
       "notes": "（原名 MBA & Company）",
-      "summary": "管理咨询初创公司 | 人才搜索 | £2M A 轮融资",
+      "summary": "管理咨询初创公司 | 人才搜索 | £2M A 轮",
       "title": "首席技术官"
     },
     "title": "工作经历"
