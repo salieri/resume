@@ -31,7 +31,7 @@
   }
 
   :global(.caseStudySection) {
-    :global(.noBreak) {
+    :global(.caseStudySubSection) {
       margin-bottom: 0;
     }
   }

@@ -1,4 +1,7 @@
 .noBreak {
   break-inside: avoid;
+}
+
+.caseStudySubSection {
   margin-bottom: 2.5rem;
 }

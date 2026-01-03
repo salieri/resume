@@ -10,7 +10,7 @@ export const CaseStudy = () => {
     <Section className={`${classes.caseStudy} caseStudySection section`}>
       <Title order={2}><Trans i18nKey='caseStudy.title'>Impact Case Study – Abridge</Trans></Title>
 
-      <Box className={`${classes.noBreak} noBreak`}>
+      <Box className={`${classes.noBreak} ${classes.caseStudySubSection} caseStudySubSection`}>
         <Title order={3}><Trans i18nKey='caseStudy.contextTitle'>Context</Trans></Title>
         <Text>
           <Trans i18nKey='caseStudy.contextContent'>
@@ -21,7 +21,7 @@ export const CaseStudy = () => {
         </Text>
       </Box>
 
-      <Box className={`${classes.noBreak} noBreak`}>
+      <Box className={`${classes.noBreak} ${classes.caseStudySubSection} caseStudySubSection`}>
         <Title order={3}><Trans i18nKey='caseStudy.roleScopeTitle'>Role & Scope</Trans></Title>
         <Text>
           <Trans i18nKey='caseStudy.roleScopeContent'>
@@ -32,8 +32,8 @@ export const CaseStudy = () => {
         </Text>
       </Box>
 
-      <Box className={`${classes.noBreak} noBreak`}>
-        <Title order={3}><Trans i18nKey='caseStudy.contributionsDecisionsTitle'>Key Contributions & Decisions</Trans></Title>
+      <Box className={`${classes.noBreak} ${classes.caseStudySubSection} caseStudySubSection`}>
+        <Title order={3}><Trans i18nKey='caseStudyDecisions.title'>Key Decisions</Trans></Title>
         <List>
           <List.Item>
             <Trans i18nKey='caseStudyDecisions.reframing'>
@@ -43,24 +43,9 @@ export const CaseStudy = () => {
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.reverseEngineering'>
-              <strong>Reverse-engineered</strong> implicit system behavior from
-              legacy code to establish explicit baseline requirements,
-              then defined forward-looking requirements under uncertain scale and evolving product needs.
-            </Trans>
-          </List.Item>
-
-          <List.Item>
             <Trans i18nKey='caseStudyDecisions.orchestration'>
-              Designed and implemented a new isolated orchestration service using <strong>domain-driven design</strong>,
+              Architected the new isolated orchestration service using <strong>domain-driven design</strong>,
               deliberately separating pipeline concerns from product code to reduce blast radius and cognitive load.
-            </Trans>
-          </List.Item>
-
-          <List.Item>
-            <Trans i18nKey='caseStudyDecisions.kubernetes'>
-              Migrated execution from cloud functions to <strong>Kubernetes-based services</strong> to
-              regain debuggability, operational control, and vendor independence.
             </Trans>
           </List.Item>
 
@@ -73,16 +58,9 @@ export const CaseStudy = () => {
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.apiBoundary'>
-              Enforced a single <strong>standardized API boundary</strong> for all pipeline entry points,
-              eliminating divergent implementations and making system behavior observable and predictable.
-            </Trans>
-          </List.Item>
-
-          <List.Item>
-            <Trans i18nKey='caseStudyDecisions.validationSchema'>
-              Implemented <strong>document validation schemas</strong> for all I/O operations
-              (database, APIs, blob storage…) to ensure data integrity.
+            <Trans i18nKey='caseStudyDecisions.kubernetes'>
+              Moved execution from cloud functions to <strong>Kubernetes-based services</strong> to
+              regain debuggability, operational control, and vendor independence.
             </Trans>
           </List.Item>
 
@@ -95,27 +73,61 @@ export const CaseStudy = () => {
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.testingLintingDocs'>
+            <Trans i18nKey='caseStudyDecisions.singleWriter'>
+              Required <strong>telemetry</strong> and <strong>observability</strong> mechanisms
+              to ensure reliability at scale.
+            </Trans>
+          </List.Item>
+        </List>
+      </Box>
+
+      <Box className={`${classes.caseStudySubSection} caseStudySubSection`}>
+        <Title order={3}><Trans i18nKey='caseStudyContributions.title'>Contributions</Trans></Title>
+        <List>
+          <List.Item>
+            <Trans i18nKey='caseStudyContributions.leadership'>
+              Defined and owned <strong>architecture</strong>, <strong>technical product design</strong>, and{' '}
+              <strong>implementation</strong> of the new pipeline from the ground up.
+            </Trans>
+          </List.Item>
+
+          <List.Item>
+            <Trans i18nKey='caseStudyContributions.reverseEngineering'>
+              <strong>Reverse-engineered</strong> implicit system behavior from
+              legacy code to establish explicit baseline requirements,
+              then defined forward-looking requirements under uncertain scale and evolving product needs.
+            </Trans>
+          </List.Item>
+
+          <List.Item>
+            <Trans i18nKey='caseStudyContributions.apiBoundary'>
+              Enforced a single <strong>standardized API boundary</strong> for all pipeline entry points,
+              eliminating divergent implementations and making system behavior observable and predictable.
+            </Trans>
+          </List.Item>
+
+          <List.Item>
+            <Trans i18nKey='caseStudyContributions.validationSchema'>
+              Implemented <strong>document validation schemas</strong> for all I/O operations
+              (database, APIs, blob storage…) to ensure data integrity.
+            </Trans>
+          </List.Item>
+
+          <List.Item>
+            <Trans i18nKey='caseStudyContributions.testingLintingDocs'>
               Introduced <strong>end-to-end testing</strong>, strict linting standards,{' '}
               <strong>structured documentation</strong>, flow diagrams where none previously existed.
             </Trans>
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.telemetry'>
-              Introduced <strong>comprehensive telemetry</strong> (logs, metrics, workflow visibility)
-              to make system behavior understandable to the broader engineering organization.
-            </Trans>
-          </List.Item>
-
-          <List.Item>
-            <Trans i18nKey='caseStudyDecisions.loadTests'>
+            <Trans i18nKey='caseStudyContributions.loadTests'>
               Built and ran <strong>load tests</strong> to validate scaling behavior prior to broad customer migration.
             </Trans>
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.templates'>
+            <Trans i18nKey='caseStudyContributions.templates'>
               Designed <strong>reusable infrastructure</strong> and <strong>project templates</strong>{' '}
               (CI/CD, Helm charts, service scaffolding) that later became the foundation for other engineering efforts.
             </Trans>
@@ -123,7 +135,7 @@ export const CaseStudy = () => {
         </List>
       </Box>
 
-      <Box className={`${classes.noBreak} noBreak`}>
+      <Box className={`${classes.noBreak} ${classes.caseStudySubSection} caseStudySubSection`}>
         <Title order={3}><Trans i18nKey='caseStudy.outcomesTitle'>Outcomes</Trans></Title>
         <List>
           <List.Item>
@@ -135,7 +147,8 @@ export const CaseStudy = () => {
 
           <List.Item>
             <Trans i18nKey='caseStudy.outcomesPipelineThroughput'>
-              The pipeline now processes over <strong>100 hours of audio per minute</strong>.
+              The pipeline now processes over <strong>100 hours of audio per minute</strong>. It has met the needs
+              of the business through significant growth in customer base and usage volume.
             </Trans>
           </List.Item>
 
@@ -174,7 +187,7 @@ export const CaseStudy = () => {
         </List>
       </Box>
 
-      <Box className={`${classes.noBreak} noBreak`}>
+      <Box className={`${classes.noBreak} ${classes.caseStudySubSection} caseStudySubSection`}>
         <Title order={3}><Trans i18nKey='caseStudy.collaborationTitle'>Collaboration</Trans></Title>
         <Text>
           <Trans i18nKey='caseStudy.collaborationContent'>
