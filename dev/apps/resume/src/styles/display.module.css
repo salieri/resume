@@ -68,3 +68,15 @@ h1 {
 
 .displayRoot { /* intentionally empty */ }
 .printRoot { /* intentionally empty */ }
+
+
+:global(.section) :where(ul, ol):not([data-type='taskList']) {
+  padding-inline-start: var(--mantine-spacing-md);
+
+  margin-bottom: 0;
+
+  li {
+    margin-bottom: 0.6rem;
+    line-height: 1.75rem;
+  }
+}

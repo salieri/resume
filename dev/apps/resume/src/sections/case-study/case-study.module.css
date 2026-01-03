@@ -1,0 +1,4 @@
+.noBreak {
+  break-inside: avoid;
+  margin-bottom: 2.5rem;
+}

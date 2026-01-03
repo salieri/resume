@@ -30,7 +30,7 @@ export const data = (t: TranslatorFn): WorkHistory[] => {
       company: 'Abridge',
       startDate: '01/2024',
       endDate: t(`${baseKey}.presentlyWorkingHere`, 'Present'),
-      summary: t(`${baseKey}.abridge.summary`, 'Healthcare AI startup | 300 employees | $700M series C-E'),
+      summary: t(`${baseKey}.abridge.summary`, 'Healthcare AI startup | 300 employees | $700M series B-E'),
       details: [
         t(`${baseKey}.abridge.details.role`, 'Joined Abridge at ~30 employees. Company\'s first senior staff engineer.'),
         t(`${baseKey}.abridge.details.growth`, 'Operated through hyper-growth and multiple funding stages (A16Z, Khosla Ventures, Elad Gil, IVP).'),

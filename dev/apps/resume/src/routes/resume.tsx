@@ -4,6 +4,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Page } from '~/components/page/page';
 import type { TranslatableHandle } from '~/i18n/i18n-title-manager';
 import { AtAGlance } from '~/sections/at-a-glance/at-a-glance';
+import { CaseStudy } from '~/sections/case-study/case-study';
 import { ContactInfo } from '~/sections/contact-info/contact-info';
 import { ExecutiveSummary } from '~/sections/executive-summary/executive-summary';
 import { Projects } from '~/sections/projects/projects';
@@ -24,7 +25,7 @@ export default function Resume() {
       <Page>
         <Title order={1}>{t('contactInfo.name', 'Aleksi Asikainen')}</Title>
 
-        <Title order={5} component='p' fs='0.9rem'>
+        <Title order={5} component='p' fz='0.9rem'>
           <Trans i18nKey='contactInfo.professionalTitles' t={t}>
             Startup CTO, Chief Architect, Principal Engineer, <wbr />
             Founding Engineer, Senior Staff Engineer
@@ -36,13 +37,9 @@ export default function Resume() {
         <AtAGlance />
       </Page>
 
-      <Page>
-        <WorkHistory />
-      </Page>
-
-      <Page>
-        <Projects />
-      </Page>
+      <CaseStudy />
+      <WorkHistory />
+      <Projects />
     </Box>
   );
 }
