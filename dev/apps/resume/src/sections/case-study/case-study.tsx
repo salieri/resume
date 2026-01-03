@@ -73,7 +73,7 @@ export const CaseStudy = () => {
           </List.Item>
 
           <List.Item>
-            <Trans i18nKey='caseStudyDecisions.singleWriter'>
+            <Trans i18nKey='caseStudyDecisions.telemetryObservability'>
               Required <strong>telemetry</strong> and <strong>observability</strong> mechanisms
               to ensure reliability at scale.
             </Trans>
