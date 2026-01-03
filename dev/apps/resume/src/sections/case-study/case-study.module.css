@@ -1,9 +1,8 @@
-
-
 .caseStudySection {
-
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-
 
 .noBreak {
   break-inside: avoid;

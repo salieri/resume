@@ -7,7 +7,7 @@ import classes from './case-study.module.css';
 
 export const CaseStudy = () => {
   return (
-    <Section className={`${classes.caseStudy} caseStudySection section`}>
+    <Section className={`${classes.caseStudySection} caseStudySection section`}>
       <Title order={2}><Trans i18nKey='caseStudy.title'>Impact Case Study – Abridge</Trans></Title>
 
       <Box className={`${classes.noBreak} noBreak`}>
