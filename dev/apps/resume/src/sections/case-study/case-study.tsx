@@ -175,9 +175,9 @@ export const CaseStudy = () => {
       </Box>
 
       <Box className={`${classes.noBreak} noBreak`}>
-        <Title order={3}><Trans i18nKey='caseStudy.collaboration'>Collaboration</Trans></Title>
+        <Title order={3}><Trans i18nKey='caseStudy.collaborationTitle'>Collaboration</Trans></Title>
         <Text>
-          <Trans i18nKey='caseStudy.collaboration'>
+          <Trans i18nKey='caseStudy.collaborationContent'>
             Worked in close partnership with the VP of Engineering, who sponsored the initiative as a critical business enabler.
             The project was self-initiated, proposed, and initially implemented
             solo before being transitioned to a dedicated team for long-term ownership.
