@@ -48,17 +48,6 @@ p.companyAndDate {
   line-height: 125%;
 }
 
-.details:where(ul, ol):not([data-type='taskList']) {
-  padding-inline-start: var(--mantine-spacing-md);
-
-  margin-bottom: 0;
-
-  li {
-    margin-bottom: 0.4rem;
-    line-height: 1.60rem;
-  }
-}
-
 @media print {
   .workHistoryItem {
     p {
