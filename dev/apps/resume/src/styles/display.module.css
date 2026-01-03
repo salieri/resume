@@ -70,7 +70,7 @@ h1 {
 .printRoot { /* intentionally empty */ }
 
 
-:where(ul, ol):not([data-type='taskList']) {
+:global(.section) :where(ul, ol):not([data-type='taskList']) {
   padding-inline-start: var(--mantine-spacing-md);
 
   margin-bottom: 0;

@@ -37,17 +37,9 @@ export default function Resume() {
         <AtAGlance />
       </Page>
 
-      <Page>
-        <CaseStudy />
-      </Page>
-
-      <Page>
-        <WorkHistory />
-      </Page>
-
-      <Page>
-        <Projects />
-      </Page>
+      <CaseStudy />
+      <WorkHistory />
+      <Projects />
     </Box>
   );
 }

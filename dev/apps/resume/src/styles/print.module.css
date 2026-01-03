@@ -6,6 +6,7 @@
 @media print {
   :global(html) {
     font-size: 12pt; /* manages rem */
+    background-color: transparent !important;
   }
 
   :global(body) {
@@ -20,6 +21,20 @@
 
   :global(.page) > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
   :global(.page) > :global(.section) > :is(h1,h2,h3,h4,h5,h6):first-child { margin-top: 0 !important; }
+
+  :global(.section), :global(.page) {
+     margin-bottom: 2rem;
+  }
+
+  :global(.contactInfoSection.section), :global(.executiveSummarySection.section) {
+    margin-bottom: 0;
+  }
+
+  :global(.caseStudySection) {
+    :global(.noBreak) {
+      margin-bottom: 0;
+    }
+  }
 
   :global(h1) {
     font-size: 2.75rem !important;
@@ -46,8 +61,9 @@
   }
 
   :global(p), :global(a) {
-    font-size: 75% !important;
-    line-height: 155% !important;
+    font-size: 0.79rem !important;
+    line-height: 1.224rem !important;
+
     margin-bottom: var(--mantine-spacing-sm) !important;
   }
 
@@ -62,6 +78,20 @@
       :global(a) {
         font-size: var(--mantine-font-size-xs) !important;
       }
+    }
+  }
+
+  :global(.contactInfoSection) {
+    li {
+      line-height: 1 !important;
+      margin-bottom: 0;
+    }
+  }
+
+  :global(.section) :where(ul, ol):not([data-type='taskList']) {
+    :global(li), :global(li) :global(.mantine-List-itemLabel) {
+      font-size: 0.77rem !important;
+      line-height: 1.05rem !important;
     }
   }
 
@@ -88,7 +118,7 @@
 
   :global(.atAGlanceSection) {
     :global(.title) {
-      font-size: 70% !important;
+      font-size: 0.71rem !important;
     }
   }
 }
