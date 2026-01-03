@@ -3,15 +3,15 @@
     "focusFit": {
       "architecture": "Architektur",
       "collaboration": "Zusammenarbeit",
-      "deepWork": "Fokussiertes Arbeiten",
+      "deepWork": "Deep Work",
       "devops": "DevOps",
       "mgmtAdmin": "Management & Administration",
       "programming": "Programmierung",
       "strategy": "Strategie",
-      "title": "Fokus"
+      "title": "Schwerpunkt"
     },
     "industryExperience": {
-      "automotive": "Automotive",
+      "automotive": "Automobilbranche",
       "b2b": "B2B",
       "b2c": "B2C",
       "fintech": "Fintech",
@@ -35,12 +35,12 @@
       "title": "Führung"
     },
     "missionFit": {
-      "devInfraTooling": "Entw.-Infrastruktur & Tooling",
-      "fixTeamsProjects": "Teams/Projekte stabilisieren",
+      "devInfraTooling": "Dev.-Infrastruktur & Tooling",
+      "fixTeamsProjects": "Teams/Projekte sanieren",
       "greenField": "Greenfield",
       "maintenance": "Wartung",
       "nextGen20": "Next-Gen & 2.0",
-      "productionOps": "Produktionsbetrieb",
+      "productionOps": "Production Ops",
       "rnd": "F&E",
       "scaling": "Skalierung",
       "title": "Mission Fit"
@@ -76,40 +76,72 @@
     },
     "title": "Auf einen Blick"
   },
+  "caseStudy": {
+    "collaborationContent": "Enge Zusammenarbeit mit dem VP of Engineering, der die Initiative als kritischen Business-Enabler unterstützte. Das Projekt wurde eigeninitiativ gestartet, vorgeschlagen und zunächst allein umgesetzt, bevor es zur langfristigen Verantwortung an ein dediziertes Team übergeben wurde.",
+    "collaborationTitle": "Zusammenarbeit",
+    "contextContent": "Eintritt kurz nach Series B ($30M), während das Unternehmen sich darauf vorbereitete, seinen ersten großen Enterprise-Kunden zu onboarden. Die Engineering-Organisation (~10–15 Engineers) hatte schnell iteriert, um Product-Market-Fit zu erreichen, wodurch die zentrale Audio-to-Notes-Pipeline fragil, intransparent und zunehmend riskant zu skalieren war.",
+    "contextTitle": "Kontext",
+    "contributionsDecisionsTitle": "Wesentliche Beiträge & Entscheidungen",
+    "outcomesArchitecture": "Architektur <strong>skalierte mit dem Unternehmenswachstum</strong> und wurde zur Grundlage für nachfolgende Pipeline-Arbeiten.",
+    "outcomesCustomerMigration": "Erfolgreiche Migration des ersten Enterprise-Kunden auf die neue Pipeline innerhalb von ~7 Monaten; <strong>vollständige Kundenmigration</strong> anschließend schrittweise über die nächsten ~2 Monate abgeschlossen, um das Risiko zu minimieren.",
+    "outcomesMonitoring": "Ermöglichte den Aufbau von <strong>Monitoring und Alarmen</strong> auf Basis von Telemetrie, um Reaktionszeiten auf Produktionsprobleme zu verkürzen.",
+    "outcomesPipelineThroughput": "Die Pipeline verarbeitet nun über <strong>100 Stunden Audio pro Minute</strong>.",
+    "outcomesReliability": "Erzielte eine sprunghafte Verbesserung der <strong>Systemzuverlässigkeit, Debuggability und operativen Transparenz</strong>; erstmals konnten Engineers den Live-Workflow-Zustand einsehen, Ausfälle deterministisch diagnostizieren und sicher wiederherstellen.",
+    "outcomesTemplates": "Etabliert <strong>wiederverwendbare Projekt-Templates</strong> (CI/CD, Helm-Charts, Service-Layout), die in der gesamten Engineering-Organisation übernommen wurden.",
+    "outcomesTemporalAdoption": "Temporal wurde zu einem <strong>Standard-Platform-Primitive</strong>, das weit über das ursprüngliche Pipeline-Projekt hinaus wiederverwendet wurde.",
+    "outcomesTitle": "Ergebnisse",
+    "roleScopeContent": "Tätigkeit als horizontaler Senior Technical Leader, mit Verantwortung für querschnittliche Systeme ohne natürlichen Product Owner. Leitung der End-to-End-Neugestaltung der zentralen Audio-to-Notes-Verarbeitungspipeline, die von mehreren Produkt-Vertikalen genutzt wird; Rolle als primärer technischer Entscheider und On-Call-Eskalationspunkt, bis die Verantwortung an ein dediziertes Team überging.",
+    "roleScopeTitle": "Rolle & Umfang",
+    "title": "Impact Case Study – Abridge"
+  },
+  "caseStudyDecisions": {
+    "apiBoundary": "Durchsetzung einer einzigen <strong>standardisierten API-Grenze</strong> für alle Pipeline-Einstiegspunkte, wodurch divergierende Implementierungen eliminiert und das Systemverhalten beobachtbar und vorhersehbar gemacht wurde.",
+    "kubernetes": "Migration der Ausführung von Cloud Functions zu <strong>Kubernetes-basierten Services</strong>, um Debuggability, operative Kontrolle und Anbieterunabhängigkeit zurückzugewinnen.",
+    "loadTests": "Aufbau und Durchführung von <strong>Lasttests</strong>, um das Skalierungsverhalten vor der breiten Kundenmigration zu validieren.",
+    "orchestration": "Entwurf und Implementierung eines neuen, isolierten Orchestrierungs-Services unter Einsatz von <strong>Domain-Driven Design</strong>, wobei Pipeline-Belange bewusst vom Produktcode getrennt wurden, um Blast Radius und kognitive Belastung zu reduzieren.",
+    "reframing": "Neuausrichtung der Audio-to-Notes-Pipeline als <strong>geschäftskritisches internes Produkt</strong> statt als Sammlung ad-hoc-Funktionen.",
+    "reverseEngineering": "<strong>Reverse Engineering</strong> des impliziten Systemverhaltens aus Legacy-Code, um explizite Baseline-Anforderungen festzulegen, und anschließend Definition zukunftsorientierter Anforderungen unter unsicherer Skalierung und sich wandelnden Produktanforderungen.",
+    "singleWriter": "<strong>Zentralisierung aller Datenbankschreibvorgänge</strong> hinter der Pipeline, mit expliziter Unterbindung direkten ML-Zugriffs zur Vermeidung von Datenkorruption, Race Conditions und Nebenwirkungen.",
+    "telemetry": "Einführung von <strong>umfassender Telemetrie</strong> (Logs, Metriken, Workflow-Transparenz), um das Systemverhalten für die breitere Engineering-Organisation verständlich zu machen.",
+    "templates": "Entwurf <strong>wiederverwendbarer Infrastruktur</strong> und <strong>Projektvorlagen</strong> (CI/CD, Helm-Charts, Service-Scaffolding), die später zur Grundlage weiterer Engineering-Initiativen wurden.",
+    "temporal": "<strong>Auswahl von Temporal</strong> als Workflow-Ausführungsschicht, um deterministische, gut debuggable Workflows mit Replay-Fähigkeit zu ermöglichen — unter Inkaufnahme kurzfristiger Lernkosten zugunsten langfristiger Zuverlässigkeit und Operabilität.",
+    "testingLintingDocs": "Einführung von <strong>End-to-End-Tests</strong>, strikten Linting-Standards, <strong>strukturierter Dokumentation</strong> sowie Flussdiagrammen, wo zuvor keine existierten.",
+    "validationSchema": "Implementierung von <strong>Dokumentvalidierungsschemas</strong> für alle I/O-Operationen (Datenbank, APIs, Blob Storage …), um Datenintegrität sicherzustellen."
+  },
   "config": {
     "dark": "Dunkel",
-    "darkMode": "Dunkler Modus",
+    "darkMode": "Dunkelmodus",
     "light": "Hell",
-    "lightMode": "Heller Modus"
+    "lightMode": "Hellmodus"
   },
   "contactInfo": {
     "download": "PDF herunterladen",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "Startup-CTO, Chefarchitekt, Leitender Ingenieur, <1></1>Gründungsingenieur, Senior Staff Engineer",
-    "relocation": "Umzugsbereit",
-    "residency": "US-Daueraufenthaltsberechtigter, EU-Bürger",
-    "translationAlertMessage": "Dieser Lebenslauf wurde automatisch per maschineller Übersetzung übersetzt. Einige Teile sind möglicherweise nicht korrekt übersetzt. Bitte beziehen Sie sich für die genauesten Informationen auf die <1><strong>originale englische Version</strong></1>.",
+    "professionalTitles": "Startup-CTO, Chefarchitekt, Principal Engineer, <1></1>Gründungsingenieur, Senior Staff Engineer",
+    "relocation": "Umzug möglich",
+    "residency": "Daueraufenthaltsberechtigung USA, EU-Bürger",
+    "translationAlertMessage": "Dieser Lebenslauf wurde automatisch mittels maschineller Übersetzung erstellt. Einige Teile sind möglicherweise nicht korrekt übersetzt. Bitte beziehen Sie sich für die genauesten Informationen auf die <1><strong>ursprüngliche englische Version</strong></1>.",
     "translationAlertTitle": "Hinweis zur Übersetzung"
   },
   "error": {
     "errorTitle": "Fehler",
     "notFoundDetails": "Die angeforderte Seite konnte nicht gefunden werden.",
     "notFoundTitle": "404",
-    "oops": "Hoppla!",
+    "oops": "Ups!",
     "unexpected": "Ein unerwarteter Fehler ist aufgetreten."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20+ Jahre</strong> <strong>praktische</strong> Software-Leadership.",
+    "20YearsOfExperience": "<strong>20+ Jahre</strong> <strong>praktische</strong> Führungserfahrung in der Softwareentwicklung.",
     "creativeTechnologist": "Senior-Technologe, der <strong>komplexe Technologieinitiativen umsetzt</strong>. Übersetzt vage Ideen in <strong>skalierbare, produktionsreife Plattformen</strong> – einschließlich kundenorientierter Produkte, agentischer Systeme und verteilter Cloud-Umgebungen.",
-    "engagement": "Bewährt bei <strong>0→1, 1→N und Scale-up-Inflektionspunkten</strong>. Kürzlich ein System aufgebaut, das <strong>100+ Stunden Audio</strong> in strukturierte Inferenz <strong>jede Minute</strong> umwandelt.",
-    "managementResource": "Hinzugezogen, um <strong>die technische Messlatte anzuheben, die technische Richtung zu definieren, komplexe Arbeit umzusetzen und Teams und Systeme zu skalieren</strong>. Berater für <strong>Gründer, C-Level und VPs</strong>.",
-    "practicalExperienceOnAllLayers": "Technologie-Generalist: Backend, Web, Mobile, Desktop, Daten, ML/AI, QA, Plattform, Infrastruktur und DevOps. Erfahrung in Produkt, Design und UX. Liebt <strong>Bauen</strong>.",
+    "engagement": "Bewährt bei <strong>0→1, 1→N und Scale-up-Wendepunkten</strong>. Kürzlich ein System entwickelt, das <strong>100+ Stunden Audio</strong> <strong>jede Minute</strong> in strukturierte Inferenz umwandelt.",
+    "managementResource": "Hinzugezogen, um <strong>den technischen Maßstab zu erhöhen, die technische Richtung festzulegen, komplexe Arbeit umzusetzen und Teams sowie Systeme zu skalieren</strong>. Berater für <strong>Gründer, C-Level und VPs</strong>.",
+    "practicalExperienceOnAllLayers": "Technologie-Generalist: Backend, Web, Mobile, Desktop, Daten, ML/AI, QA, Plattform, Infrastruktur und DevOps. Erfahrung in Produkt, Design und UX. Liebt das <strong>Bauen</strong>.",
     "problemSolver": "Ihre Lösung für: <i>\"Wie bauen wir das?\"</i>",
     "title": "Zusammenfassung"
   },
   "page": {
     "resume": "Lebenslauf | Aleksi Asikainen | Softwarearchitektur und -entwicklung",
-    "untitled": "Unbenannte Seite"
+    "untitled": "Unbetitelte Seite"
   },
   "projects": {
     "jsvfx": {
@@ -117,7 +149,7 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "Dieser Lebenslauf als Code. Extrem überkonstruiert. Hier anfangen.",
+      "description": "Dieser Lebenslauf als Code. Extrem überkonstruiert. Starten Sie hier.",
       "name": "Lebenslauf"
     },
     "tartarus": {
@@ -129,49 +161,49 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "Technische Kernausrichtung vorangetrieben durch Leitung von Architekturentscheidungen und Auswahl grundlegender Technologien (z. B. Temporal), die mit dem Unternehmen skalierten.",
-        "growth": "Während Hyperwachstum und mehrerer Finanzierungsrunden (A16Z, Khosla Ventures, Elad Gil, IVP) tätig.",
-        "missions": "Hochriskante, hochpräzise interne Initiativen geleitet, z. B. große Datenbankmigrationen, mit Verantwortung für Design, Umsetzung und Zuverlässigkeit Ende-zu-Ende.",
-        "proposals": "Kritische Kernsysteme vorgeschlagen, entworfen und implementiert, einschließlich großskaliger Orchestrierung von Audio zu strukturierten klinischen Notizen.",
-        "role": "Bei Abridge bei ~30 Mitarbeitenden eingestiegen. Erster Senior Staff Engineer des Unternehmens."
+        "architecture": "Kerntechnische Ausrichtung vorangetrieben durch Leitung von Architekturentscheidungen und Auswahl grundlegender Technologien (z. B. Temporal), die mit dem Unternehmenswachstum skalierten.",
+        "growth": "Während Hyperwachstum und mehrerer Finanzierungsrunden gearbeitet (A16Z, Khosla Ventures, Elad Gil, IVP).",
+        "missions": "Hochriskante, hochpräzise interne Initiativen geleitet, z. B. umfangreiche Datenbankmigrationen, mit Verantwortung für Design, Umsetzung und Zuverlässigkeitsergebnisse Ende-zu-Ende.",
+        "proposals": "Kritische Kernsysteme vorgeschlagen, entworfen und implementiert, einschließlich großskaliger Orchestrierung von Audio in strukturierte klinische Notizen.",
+        "role": "Abridge bei ~30 Mitarbeitenden beigetreten. Erster Senior Staff Engineer des Unternehmens."
       },
-      "summary": "Healthcare-AI-Startup | 300 Mitarbeitende | $700M Series C–E",
+      "summary": "Healthcare-AI-Startup | 300 Mitarbeitende | $700M Series B-E",
       "title": "Senior Staff Software Engineer"
     },
     "arena": {
       "details": {
         "optimization": "Kosten für den technischen Betrieb um 40%+ gesenkt.",
         "ownership": "Verantwortung für Engineering, Architektur und IT übernommen.",
-        "practices": "Engineering-Praktiken etabliert: Code Reviews, CI, Planung, kennzahlengetriebener Betrieb und standardisierte technische Prozesse.",
-        "scale": "Die Plattform durch die Series A skaliert, angeführt von CRV, Craft Ventures, Artisanal Ventures und Vela Partners."
+        "practices": "Engineering-Praktiken etabliert: Code-Reviews, CI, Planung, kennzahlengetriebener Betrieb und standardisierte technische Prozesse.",
+        "scale": "Die Plattform durch die Series A skaliert, geführt von CRV, Craft Ventures, Artisanal Ventures und Vela Partners."
       },
-      "summary": "Audience-Engagement-Startup | 50 Mitarbeitende | $13.6M Series A",
+      "summary": "Startup für Audience Engagement | 50 Mitarbeitende | $13.6M Series A",
       "title": "Chief Technology Officer"
     },
     "hpi": {
       "details": {
-        "leader": "Marktführer im Vereinigten Königreich bei Fahrzeughistorienprüfungen.",
-        "products": "End-to-End-Produktentwicklung und -Auslieferung für neue Consumer-Produkte geleitet, von der Konzeption bis zum Launch."
+        "leader": "UK-Marktführer bei Fahrzeughistorie-Prüfungen.",
+        "products": "End-to-End-Produktentwicklung und -Auslieferung für neue Consumer-Produkte geleitet, von der Idee bis zum Launch."
       },
       "notes": "(Tochtergesellschaft von Solera)",
-      "summary": "Privates Unternehmen | Automotive-Daten & Asset Protection | £20M Umsatz",
+      "summary": "Privatunternehmen | Automotive-Daten & Asset Protection | £20M Umsatz",
       "title": "Head of Technology"
     },
     "madbid": {
       "details": {
         "cofounder": "MadBid mitgegründet.",
         "orgScale": "Die gesamte Engineering-Organisation während schnellen Wachstums aufgebaut und geführt.",
-        "technlogyLeadership": "Gesamte Technologie- und Softwareentwicklung von Bootstrap bis Scale geleitet."
+        "technlogyLeadership": "Die gesamte Technologie- und Softwareentwicklung vom Bootstrap bis zur Skalierung geleitet."
       },
       "summary": "Entertainment-Shopping-Startup | 75 Mitarbeitende | £4M Series A | £10M Umsatz",
       "title": "Technischer Direktor"
     },
     "optym": {
       "details": {
-        "arch": "Gemeinsame Architekturen, Richtlinien und Delivery-Standards etabliert, um schnelle Produkt-Launches zu ermöglichen.",
+        "arch": "Gemeinsame Architekturen, Richtlinien und Lieferstandards etabliert, um schnelle Produkt-Launches zu ermöglichen.",
         "customers": "Direkt mit Kunden, Partnern und Führungskräften gearbeitet, um neue Produkte zu entwerfen und maßgeschneiderte Lösungen zu liefern.",
-        "mentor": "Senior Engineers und technische Führungskräfte gecoacht und damit Ausführungsqualität und Engineering-Kultur gestärkt.",
-        "saas": "Optyms SaaS-Technologievorhaben unterstützt."
+        "mentor": "Senior Engineers und technische Führungskräfte gecoacht und dabei Ausführungsqualität und Engineering-Kultur gestärkt.",
+        "saas": "Optyms SaaS-Technologieinitiativen unterstützt."
       },
       "summary": "B2B SaaS | Optimierung & Decision Science | 250 Mitarbeitende | $25M Umsatz",
       "title": "Chief Technology Officer"
@@ -179,7 +211,7 @@
     "presentlyWorkingHere": "Aktuell",
     "solera": {
       "details": {
-        "emerging": "Aufkommende Technologien für die unternehmensweite Einführung bewertet, einschließlich ML, Blockchain, AR/VR, IoT/Telematik, digitale Identität, großskalige Datenplattformen und Cloud-native SaaS (AWS).",
+        "emerging": "Aufkommende Technologien für den Unternehmenseinsatz bewertet, einschließlich ML, Blockchain, AR/VR, IoT/Telematik, digitale Identität, großskalige Datenplattformen und Cloud-native SaaS (AWS).",
         "rnd": "Strategische F&E- und Produkt-Inkubationsinitiativen für das Büro des CEO geleitet."
       },
       "summary": "Multinational | Risikomanagement & Asset Protection | 6.000 Mitarbeitende | $1.1B Umsatz",
@@ -187,14 +219,14 @@
     },
     "talmix": {
       "details": {
-        "itTech": "Verantwortung für den gesamten technischen Betrieb übernommen.",
-        "rebuild": "Eine Legacy-Plattform zu einem skalierbaren zweiseitigen Marktplatz neu aufgebaut. Verbesserungen bei Suche und Matching geleitet, um die Relevanz von Beraterempfehlungen zu erhöhen.",
-        "search": "Verbesserungen bei Suche und Matching geleitet, um die Relevanz von Beraterempfehlungen zu erhöhen."
+        "itTech": "Den gesamten technischen Betrieb verantwortet.",
+        "rebuild": "Eine Legacy-Plattform zu einem skalierbaren zweiseitigen Marktplatz neu aufgebaut. Verbesserungen an Suche und Matching geleitet, um die Relevanz von Beraterempfehlungen zu erhöhen.",
+        "search": "Verbesserungen an Suche und Matching geleitet, um die Relevanz von Beraterempfehlungen zu erhöhen."
       },
       "notes": "(Früher bekannt als MBA & Company)",
       "summary": "Management-Consulting-Startup | Talent Search | £2M Series A",
       "title": "Chief Technology Officer"
     },
-    "title": "Berufserfahrung"
+    "title": "Beruflicher Werdegang"
   }
 }

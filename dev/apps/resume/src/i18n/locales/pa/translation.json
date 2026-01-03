@@ -7,40 +7,40 @@
       "devops": "DevOps",
       "mgmtAdmin": "ਪ੍ਰਬੰਧਨ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨ",
       "programming": "ਪ੍ਰੋਗ੍ਰਾਮਿੰਗ",
-      "strategy": "ਰਣਨੀਤੀ",
+      "strategy": "ਰਨਨੀਤੀ",
       "title": "ਫੋਕਸ"
     },
     "industryExperience": {
       "automotive": "ਆਟੋਮੋਟਿਵ",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "Fintech",
+      "fintech": "ਫਿਨਟੈਕ",
       "healthcare": "ਹੈਲਥਕੇਅਰ",
-      "homeAutomation": "ਘਰ ਆਟੋਮੇਸ਼ਨ",
-      "hwEmbedded": "HW ਅਤੇ ਐਮਬੈੱਡਡ",
+      "homeAutomation": "ਘਰੇਲੂ ਆਟੋਮੇਸ਼ਨ",
+      "hwEmbedded": "HW ਅਤੇ ਐਂਬੈਡਿਡ",
       "paymentSolutions": "ਭੁਗਤਾਨ ਹੱਲ",
       "realtime": "ਰੀਅਲ-ਟਾਈਮ",
-      "talentSearch": "ਟੈਲੇਂਟ ਖੋਜ",
-      "title": "ਉਦਯੋਗ ਅਨੁਭਵ",
+      "talentSearch": "ਟੈਲੈਂਟ ਖੋਜ",
+      "title": "ਉદ્યોગ ਅਨੁਭਵ",
       "videoGames": "ਵੀਡੀਓ ਗੇਮਜ਼"
     },
     "leadershipExperience": {
-      "mentoringTraining": "ਮੈਂਟਰਿੰਗ ਅਤੇ ਟ੍ਰੇਨਿੰਗ",
+      "mentoringTraining": "ਮੈਂਟੋਰਿੰਗ ਅਤੇ ਟ੍ਰੇਨਿੰਗ",
       "MgmtAdmin": "ਪ੍ਰਬੰਧਨ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨ",
       "planning": "ਯੋਜਨਾ ਬਣਾਉਣਾ",
       "productDevelopment": "ਉਤਪਾਦ ਵਿਕਾਸ",
       "recruitment": "ਭਰਤੀ",
-      "techLeadership": "ਟੈਕ. ਨੇਤ੍ਰਿਤਵ",
-      "techStrategy": "ਟੈਕ. ਰਣਨੀਤੀ",
-      "title": "ਨੇਤ੍ਰਿਤਵ"
+      "techLeadership": "ਤਕਨੀਕੀ ਨੇਤ੍ਰਤਵ",
+      "techStrategy": "ਤਕਨੀਕੀ ਰਣਨੀਤੀ",
+      "title": "ਲੀਡਰਸ਼ਿਪ"
     },
     "missionFit": {
-      "devInfraTooling": "ਡਿਵੈਲਪਮੈਂਟ ਇੰਫਰਾਸਟਰੱਕਚਰ ਅਤੇ ਟੂਲਿੰਗ",
-      "fixTeamsProjects": "ਟੀਮਾਂ/ਪਰੋਜੈਕਟ ਠੀਕ ਕਰਨਾ",
+      "devInfraTooling": "ਡਿਵ. ਇਨਫ੍ਰਾਸਟਰੱਕਚਰ ਅਤੇ ਟੂਲਿੰਗ",
+      "fixTeamsProjects": "ਟੀਮਾਂ/ਪ੍ਰੋਜੈਕਟ ਠੀਕ ਕਰਨਾ",
       "greenField": "ਗ੍ਰੀਨ-ਫੀਲਡ",
-      "maintenance": "ਰੱਖ-ਰਖਾਵ",
-      "nextGen20": "ਅਗਲੀ-ਪੀੜ੍ਹੀ ਅਤੇ 2.0",
-      "productionOps": "ਪ੍ਰੋਡਕਸ਼ਨ ਓਪਸ",
+      "maintenance": "ਰਖ-ਰਖਾਵ",
+      "nextGen20": "ਅਗਲੀ ਪੀੜ੍ਹੀ ਅਤੇ 2.0",
+      "productionOps": "ਪ੍ਰੋਡਕਸ਼ਨ ਓਪਰੇਸ਼ਨਜ਼",
       "rnd": "R&D",
       "scaling": "ਸਕੇਲਿੰਗ",
       "title": "ਮਿਸ਼ਨ ਫਿਟ"
@@ -76,6 +76,38 @@
     },
     "title": "ਇੱਕ ਨਜ਼ਰ ਵਿੱਚ"
   },
+  "caseStudy": {
+    "collaborationContent": "Engineering ਦੇ VP ਨਾਲ ਨਜ਼ਦੀਕੀ ਸਾਂਝਦਾਰੀ ਵਿੱਚ ਕੰਮ ਕੀਤਾ, ਜਿਨ੍ਹਾਂ ਨੇ ਇਸ ਪਹਿਲ ਨੂੰ ਇੱਕ ਅਹੰਮ ਕਾਰੋਬਾਰੀ ਸਮਰਥਕ ਵਜੋਂ ਸਪਾਂਸਰ ਕੀਤਾ। ਪ੍ਰੋਜੈਕਟ ਆਪਣੀ ਪਹਲ 'ਤੇ ਸ਼ੁਰੂ ਕੀਤਾ, ਪ੍ਰਸਤਾਵਿਤ ਕੀਤਾ, ਅਤੇ ਸ਼ੁਰੂ ਵਿੱਚ ਅਕੇਲੇ ਹੀ ਲਾਗੂ ਕੀਤਾ; ਇਸ ਤੋਂ ਬਾਅਦ ਲੰਬੇ ਸਮੇਂ ਦੀ ਮਲਕੀਅਤ ਲਈ ਇੱਕ ਸਮਰਪਿਤ ਟੀਮ ਨੂੰ ਹਵਾਲੇ ਕੀਤਾ ਗਿਆ।",
+    "collaborationTitle": "ਸਹਿਯੋਗ",
+    "contextContent": "Series B ($30M) ਤੋਂ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਸ਼ਾਮਲ ਹੋਇਆ, ਜਦੋਂ ਕੰਪਨੀ ਆਪਣਾ ਪਹਿਲਾ ਵੱਡਾ enterprise ਗਾਹਕ onboard ਕਰਨ ਦੀ ਤਿਆਰੀ ਕਰ ਰਹੀ ਸੀ। Engineering org (~10–15 engineers) ਨੇ product-market fit ਤੱਕ ਪਹੁੰਚਣ ਲਈ ਤੇਜ਼ੀ ਨਾਲ iterations ਕੀਤੀਆਂ, ਜਿਸ ਕਾਰਨ core audio-to-notes pipeline ਨਾਜ਼ੁਕ, ਗੈਰ-ਪਾਰਦਰਸ਼ੀ, ਅਤੇ scale ਕਰਨ ਲਈ ਵਧਦੀ ਤਰ੍ਹਾਂ ਜੋਖਿਮਭਰੀ ਰਹਿ ਗਈ।",
+    "contextTitle": "ਪ੍ਰਸੰਗ",
+    "contributionsDecisionsTitle": "ਮੁੱਖ ਯੋਗਦਾਨ ਅਤੇ ਫੈਸਲੇ",
+    "outcomesArchitecture": "Architecture <strong>ਕੰਪਨੀ ਦੇ ਵਾਧੇ ਨਾਲ scale ਹੋਈ</strong> ਅਤੇ ਅਗਲੇ pipeline ਕੰਮ ਲਈ ਬੁਨਿਆਦ ਬਣੀ।",
+    "outcomesCustomerMigration": "ਪਹਿਲੇ enterprise ਗਾਹਕ ਨੂੰ ~7 ਮਹੀਨਿਆਂ ਵਿੱਚ ਨਵੇਂ pipeline 'ਤੇ ਸਫਲਤਾਪੂਰਵਕ migrate ਕੀਤਾ; ਜੋਖਿਮ ਘਟਾਉਣ ਲਈ ਅਗਲੇ ~2 ਮਹੀਨਿਆਂ ਦੌਰਾਨ ਕਦਮ-ਦਰ-ਕਦਮ <strong>ਪੂਰਾ ਗਾਹਕ migration</strong> ਪੂਰਾ ਕੀਤਾ।",
+    "outcomesMonitoring": "Production ਸਮੱਸਿਆਵਾਂ ਲਈ ਪ੍ਰਤੀਕਿਰਿਆ ਸਮਾਂ ਘਟਾਉਣ ਵਾਸਤੇ telemetry ਦੇ ਖ਼ਿਲਾਫ਼ <strong>monitoring ਅਤੇ alarms</strong> ਬਣਾਉਣ ਦੀ ਸਮਰੱਥਾ ਯੋਗ ਬਣਾਈ।",
+    "outcomesPipelineThroughput": "Pipeline ਹੁਣ <strong>ਹਰ ਮਿੰਟ 100 ਘੰਟਿਆਂ ਤੋਂ ਵੱਧ ਆਡੀਓ</strong> ਪ੍ਰੋਸੈਸ ਕਰਦੀ ਹੈ।",
+    "outcomesReliability": "<strong>ਸਿਸਟਮ ਦੀ ਭਰੋਸੇਮੰਦਤਾ, debuggability, ਅਤੇ ਓਪਰੇਸ਼ਨਲ ਦ੍ਰਿਸ਼ਯਤਾ</strong> ਵਿੱਚ ਇੱਕ ਕਦਮੀ-ਬਦਲਾਅ ਵਾਲਾ ਸੁਧਾਰ ਹਾਸਲ ਕੀਤਾ; ਪਹਿਲੀ ਵਾਰ, engineers live workflow state ਦੀ ਜਾਂਚ ਕਰ ਸਕਦੇ ਸਨ, failures ਨੂੰ deterministically diagnose ਕਰ ਸਕਦੇ ਸਨ, ਅਤੇ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ recover ਕਰ ਸਕਦੇ ਸਨ।",
+    "outcomesTemplates": "<strong>ਮੁੜ ਵਰਤੋਂਯੋਗ project templates</strong> (CI/CD, Helm charts, service layout) ਸਥਾਪਿਤ ਕੀਤੇ, ਜੋ ਪੂਰੇ engineering organization ਵਿੱਚ ਅਪਨਾਏ ਗਏ।",
+    "outcomesTemporalAdoption": "Temporal ਇੱਕ <strong>ਮਿਆਰੀ platform primitive</strong> ਬਣ ਗਿਆ, ਜੋ ਮੂਲ pipeline ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਕਾਫ਼ੀ ਪਰੇ ਤੱਕ ਮੁੜ ਵਰਤਿਆ ਗਿਆ।",
+    "outcomesTitle": "ਨਤੀਜੇ",
+    "roleScopeContent": "ਇੱਕ horizontal senior technical leader ਵਜੋਂ ਕੰਮ ਕੀਤਾ, ਅਤੇ ਉਹ cross-cutting systems ਦੀ ਮਲਕੀਅਤ ਲਈ ਜ਼ਿੰਮੇਵਾਰੀ ਲਈ ਜਿਨ੍ਹਾਂ ਦਾ ਕੋਈ ਕੁਦਰਤੀ product owner ਨਹੀਂ ਸੀ। ਕਈ product verticals ਦੁਆਰਾ ਵਰਤੇ ਜਾਂਦੇ core audio-to-notes processing pipeline ਦੀ end-to-end ਮੁੜ-ਡਿਜ਼ਾਈਨ ਦੀ ਅਗਵਾਈ ਕੀਤੀ; ਮਲਕੀਅਤ ਇੱਕ ਸਮਰਪਿਤ ਟੀਮ ਨੂੰ ਸੌਂਪਣ ਤੱਕ primary technical decision-maker ਅਤੇ on-call escalation point ਵਜੋਂ ਸੇਵਾ ਨਿਭਾਈ।",
+    "roleScopeTitle": "ਭੂਮਿਕਾ ਅਤੇ ਦਾਇਰਾ",
+    "title": "ਪ੍ਰਭਾਵ ਕੇਸ ਸਟੱਡੀ – Abridge"
+  },
+  "caseStudyDecisions": {
+    "apiBoundary": "ਸਾਰੇ ਪਾਈਪਲਾਈਨ ਐਂਟਰੀ ਪੁਆਇੰਟਾਂ ਲਈ ਇੱਕੋ <strong>ਮਿਆਰੀਕ੍ਰਿਤ API ਸੀਮਾ</strong> ਲਾਗੂ ਕੀਤੀ, ਵੱਖ-ਵੱਖ ਇੰਪਲੀਮੈਂਟੇਸ਼ਨਾਂ ਨੂੰ ਖਤਮ ਕੀਤਾ ਅਤੇ ਸਿਸਟਮ ਦੇ ਵਿਹਾਰ ਨੂੰ ਦਿੱਖਣਯੋਗ ਤੇ ਅਨੁਮਾਨਯੋਗ ਬਣਾਇਆ।",
+    "kubernetes": "ਡੀਬੱਗ ਕਰਨ ਦੀ ਸਮਰੱਥਾ, ਓਪਰੇਸ਼ਨਲ ਕੰਟਰੋਲ ਅਤੇ ਵੇਂਡਰ ਤੋਂ ਸੁਤੰਤਰਤਾ ਮੁੜ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਐਕਜ਼ੀਕਿਊਸ਼ਨ ਨੂੰ ਕਲਾਉਡ ਫੰਕਸ਼ਨਾਂ ਤੋਂ <strong>Kubernetes-ਆਧਾਰਿਤ ਸੇਵਾਵਾਂ</strong> ਵੱਲ ਮਾਈਗਰੇਟ ਕੀਤਾ।",
+    "loadTests": "ਵਿਆਪਕ ਗਾਹਕ ਮਾਈਗ੍ਰੇਸ਼ਨ ਤੋਂ ਪਹਿਲਾਂ ਸਕੇਲਿੰਗ ਵਿਹਾਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ <strong>ਲੋਡ ਟੈਸਟ</strong> ਬਣਾਏ ਅਤੇ ਚਲਾਏ।",
+    "orchestration": "<strong>domain-driven design</strong> ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਇੱਕ ਨਵੀਂ ਇਕਾਂਤ orchestration ਸੇਵਾ ਡਿਜ਼ਾਈਨ ਅਤੇ ਇੰਪਲੀਮੈਂਟ ਕੀਤੀ, ਪਾਈਪਲਾਈਨ ਸੰਬੰਧੀ ਚਿੰਤਾਵਾਂ ਨੂੰ ਉਤਪਾਦ ਕੋਡ ਤੋਂ ਜਾਣ-ਬੁੱਝ ਕੇ ਵੱਖ ਕੀਤਾ ਤਾਂ ਜੋ blast radius ਅਤੇ cognitive load ਘਟ ਸਕੇ।",
+    "reframing": "ਆਡੀਓ-ਤੋਂ-ਨੋਟਸ ਪਾਈਪਲਾਈਨ ਨੂੰ ad-hoc ਫੰਕਸ਼ਨਾਂ ਦੇ ਇਕੱਠ ਦੀ ਬਜਾਏ ਇੱਕ <strong>ਮਿਸ਼ਨ-ਕ੍ਰਿਟਿਕਲ ਅੰਦਰੂਨੀ ਉਤਪਾਦ</strong> ਵਜੋਂ ਦੁਬਾਰਾ ਫਰੇਮ ਕੀਤਾ।",
+    "reverseEngineering": "ਲੈਗਸੀ ਕੋਡ ਤੋਂ ਅੰਤਰਨਿਹਿਤ ਸਿਸਟਮ ਵਿਹਾਰ ਨੂੰ <strong>Reverse-engineered</strong> ਕਰਕੇ ਸਪਸ਼ਟ ਬੇਸਲਾਈਨ ਲੋੜਾਂ ਸਥਾਪਿਤ ਕੀਤੀਆਂ, ਫਿਰ ਅਣਿਸ਼ਚਿਤ ਸਕੇਲ ਅਤੇ ਵਿਕਸਿਤ ਹੋ ਰਹੀਆਂ ਉਤਪਾਦ ਲੋੜਾਂ ਹੇਠ ਅਗਾਂਹ-ਵੱਲ ਦੇਖਦੀਆਂ ਲੋੜਾਂ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤੀਆਂ।",
+    "singleWriter": "ਪਾਈਪਲਾਈਨ ਦੇ ਪਿੱਛੇ <strong>ਸਾਰੀਆਂ ਡਾਟਾਬੇਸ ਲਿਖਤਾਂ ਨੂੰ ਕੇਂਦਰੀਕ੍ਰਿਤ ਕੀਤਾ</strong>, ਡਾਟਾ ਕਰਪਸ਼ਨ, ਰੇਸ ਕੰਡੀਸ਼ਨ ਅਤੇ ਸਾਈਡ ਇਫੈਕਟ ਤੋਂ ਬਚਾਉਣ ਲਈ ਸਿੱਧੀ ML ਪਹੁੰਚ ਨੂੰ ਖਾਸ ਤੌਰ ‘ਤੇ ਰੋਕਿਆ।",
+    "telemetry": "ਵਿਆਪਕ ਇੰਜੀਨੀਅਰਿੰਗ ਸੰਸਥਾ ਲਈ ਸਿਸਟਮ ਵਿਹਾਰ ਨੂੰ ਸਮਝਣਯੋਗ ਬਣਾਉਣ ਲਈ <strong>ਵਿਆਪਕ ਟੈਲੀਮੈਟਰੀ</strong> (logs, metrics, workflow visibility) ਪੇਸ਼ ਕੀਤੀ।",
+    "templates": "<strong>ਦੁਬਾਰਾ ਵਰਤਣਯੋਗ ਇੰਫ੍ਰਾਸਟਰੱਕਚਰ</strong> ਅਤੇ <strong>ਪਰੋਜੈਕਟ ਟੈਮਪਲੇਟ</strong> (CI/CD, Helm charts, service scaffolding) ਡਿਜ਼ਾਈਨ ਕੀਤੇ ਜੋ ਬਾਅਦ ਵਿੱਚ ਹੋਰ ਇੰਜੀਨੀਅਰਿੰਗ ਯਤਨਾਂ ਲਈ ਬੁਨਿਆਦ ਬਣੇ।",
+    "temporal": "ਰੀਪਲੇ ਸਮਰੱਥਾ ਨਾਲ ਨਿਰਧਾਰਿਤ, ਡੀਬੱਗ ਕਰਨਯੋਗ ਵਰਕਫਲੋਜ਼ ਯੋਗ ਬਣਾਉਣ ਲਈ ਵਰਕਫਲੋ ਐਕਜ਼ੀਕਿਊਸ਼ਨ ਲੇਅਰ ਵਜੋਂ <strong>Temporal ਚੁਣਿਆ</strong> — ਲੰਬੇ ਸਮੇਂ ਦੀ ਭਰੋਸੇਯੋਗਤਾ ਅਤੇ ਓਪਰੇਬਿਲਿਟੀ ਲਈ ਛੋਟੇ ਸਮੇਂ ਦੀ ਸਿੱਖਣ ਲਾਗਤ ਦਾ ਸੌਦਾ ਕਰਦਿਆਂ।",
+    "testingLintingDocs": "<strong>end-to-end testing</strong>, ਸਖ਼ਤ linting ਮਿਆਰ, <strong>ਸੰਰਚਿਤ ਦਸਤਾਵੇਜ਼ੀਕਰਨ</strong>, ਅਤੇ ਫਲੋ ਡਾਇਗ੍ਰਾਮ—ਜਿੱਥੇ ਪਹਿਲਾਂ ਕੁਝ ਵੀ ਮੌਜੂਦ ਨਹੀਂ ਸੀ—ਪੇਸ਼ ਕੀਤੇ।",
+    "validationSchema": "ਡਾਟਾ ਅਖੰਡਤਾ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਸਾਰੀਆਂ I/O ਕਾਰਵਾਈਆਂ (database, APIs, blob storage…) ਲਈ <strong>ਡੌਕਯੂਮੈਂਟ ਵੈਲੀਡੇਸ਼ਨ ਸਕੀਮਾਵਾਂ</strong> ਇੰਪਲੀਮੈਂਟ ਕੀਤੀਆਂ।"
+  },
   "config": {
     "dark": "ਡਾਰਕ",
     "darkMode": "ਡਾਰਕ ਮੋਡ",
@@ -85,43 +117,43 @@
   "contactInfo": {
     "download": "PDF ਡਾਊਨਲੋਡ ਕਰੋ",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "Startup CTO, Chief Architect, Principal Engineer, <1></1>Founding Engineer, Senior Staff Engineer",
-    "relocation": "ਸਥਾਨ-ਬਦਲੀ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ",
+    "professionalTitles": "ਸਟਾਰਟਅਪ CTO, ਮੁੱਖ ਆਰਕੀਟੈਕਟ, ਪ੍ਰਿੰਸੀਪਲ ਇੰਜੀਨੀਅਰ, <1></1>ਸਥਾਪਕ ਇੰਜੀਨੀਅਰ, ਸੀਨੀਅਰ ਸਟਾਫ਼ ਇੰਜੀਨੀਅਰ",
+    "relocation": "ਰੀਲੋਕੇਟ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",
     "residency": "US ਸਥਾਈ ਨਿਵਾਸੀ, EU ਨਾਗਰਿਕ",
-    "translationAlertMessage": "ਇਹ ਰੇਜ਼ਿਊਮੇ ਮਸ਼ੀਨੀ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਨਾਲ ਆਪਣੇ ਆਪ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਕੁਝ ਹਿੱਸੇ ਸ਼ਾਇਦ ਸਹੀ ਤਰ੍ਹਾਂ ਅਨੁਵਾਦ ਨਾ ਹੋਏ ਹੋਣ। ਸਭ ਤੋਂ ਸਹੀ ਜਾਣਕਾਰੀ ਲਈ ਕਿਰਪਾ ਕਰਕੇ <1><strong>ਮੂਲ ਅੰਗਰੇਜ਼ੀ ਵਰਜਨ</strong></1> ਵੇਖੋ।",
+    "translationAlertMessage": "ਇਹ ਰਿਜ਼ਯੂਮੇ ਮਸ਼ੀਨ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਨਾਲ ਆਪਣੇ ਆਪ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਕੁਝ ਹਿੱਸੇ ਸਹੀ ਤਰ੍ਹਾਂ ਅਨੁਵਾਦਿਤ ਨਹੀਂ ਹੋ ਸਕਦੇ। ਸਭ ਤੋਂ ਸਹੀ ਜਾਣਕਾਰੀ ਲਈ ਕਿਰਪਾ ਕਰਕੇ <1><strong>ਮੂਲ ਅੰਗਰੇਜ਼ੀ ਸੰਸਕਰਣ</strong></1> ਵੇਖੋ।",
     "translationAlertTitle": "ਅਨੁਵਾਦ ਸਲਾਹ"
   },
   "error": {
     "errorTitle": "ਗਲਤੀ",
-    "notFoundDetails": "ਮੰਗਿਆ ਗਿਆ ਸਫ਼ਾ ਨਹੀਂ ਮਿਲਿਆ।",
+    "notFoundDetails": "ਮੰਗਿਆ ਗਿਆ ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ।",
     "notFoundTitle": "404",
     "oops": "ਓਹੋ!",
-    "unexpected": "ਇੱਕ ਅਣਉਮੀਦ ਗਲਤੀ ਹੋਈ।"
+    "unexpected": "ਇੱਕ ਅਣਉਮੀਦ ਗਲਤੀ ਵਾਪਰੀ।"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20+ ਸਾਲ</strong> ਦਾ <strong>ਹੱਥੋਂ-ਹੱਥ</strong> ਸਾਫਟਵੇਅਰ ਲੀਡਰਸ਼ਿਪ ਅਨੁਭਵ।",
-    "creativeTechnologist": "ਸੀਨੀਅਰ ਟੈਕਨੋਲੋਜਿਸਟ ਜੋ <strong>ਜਟਿਲ ਟੈਕਨੋਲੋਜੀ ਪਹਲਾਂ ਡਿਲੀਵਰ ਕਰਦਾ ਹੈ</strong>। ਅਸਪਸ਼ਟ ਵਿਚਾਰਾਂ ਨੂੰ <strong>ਸਕੇਲੇਬਲ, ਪ੍ਰੋਡਕਸ਼ਨ-ਗ੍ਰੇਡ ਪਲੇਟਫਾਰਮਾਂ</strong> ਵਿੱਚ ਤਬਦੀਲ ਕਰਦਾ ਹੈ, – ਜਿਸ ਵਿੱਚ ਗਾਹਕ-ਸੰਬੰਧੀ ਉਤਪਾਦ, ਏਜੈਂਟਿਕ ਸਿਸਟਮ, ਅਤੇ ਵੰਡੇ ਹੋਏ ਕਲਾਉਡ ਮਾਹੌਲ ਸ਼ਾਮਲ ਹਨ।",
-    "engagement": "<strong>0→1, 1→N, ਅਤੇ ਸਕੇਲ-ਅੱਪ ਇਨਫਲੇਕਸ਼ਨ ਪਾਇੰਟਸ</strong> 'ਤੇ ਸਾਬਤਸ਼ੁਦਾ। ਹਾਲ ਹੀ ਵਿੱਚ ਇੱਕ ਸਿਸਟਮ ਬਣਾਇਆ ਜੋ <strong>100+ ਘੰਟਿਆਂ ਦੇ ਆਡੀਓ</strong> ਨੂੰ <strong>ਹਰ ਮਿੰਟ</strong> ਸੰਰਚਿਤ ਇਨਫਰੈਂਸ ਵਿੱਚ ਤਬਦੀਲ ਕਰਦਾ ਹੈ।",
-    "managementResource": "<strong>ਟੈਕਨੀਕਲ ਮਿਆਰ ਉੱਚਾ ਕਰਨ, ਟੈਕਨੀਕਲ ਦਿਸ਼ਾ ਨਿਰਧਾਰਤ ਕਰਨ, ਜਟਿਲ ਕੰਮ ਅਮਲ ਵਿੱਚ ਲਿਆਉਣ, ਅਤੇ ਟੀਮਾਂ ਤੇ ਸਿਸਟਮਾਂ ਨੂੰ ਸਕੇਲ ਕਰਨ</strong> ਲਈ ਲਿਆਂਦਾ ਜਾਂਦਾ ਹੈ। <strong>ਫਾਊਂਡਰਜ਼, C-level, ਅਤੇ VPs</strong> ਲਈ ਸਲਾਹਕਾਰ।",
-    "practicalExperienceOnAllLayers": "ਟੈਕਨੋਲੋਜੀ ਜਨਰਲਿਸਟ: backend, web, mobile, desktop, data, ML/AI, QA, platform, infrastructure, ਅਤੇ DevOps। product, design, ਅਤੇ UX ਵਿੱਚ ਅਨੁਭਵ। <strong>ਬਨਾਉਣਾ</strong> ਪਸੰਦ ਹੈ।",
+    "20YearsOfExperience": "<strong>20+ ਸਾਲ</strong> ਦੀ <strong>ਹੱਥੋਂ-ਹੱਥ</strong> ਸੌਫਟਵੇਅਰ ਲੀਡਰਸ਼ਿਪ।",
+    "creativeTechnologist": "ਸੀਨੀਅਰ ਟੈਕਨੋਲੋਜਿਸਟ ਜੋ <strong>ਜਟਿਲ ਟੈਕਨੋਲੋਜੀ ਪਹਿਲਕਦਮੀਆਂ ਨੂੰ ਡਿਲਿਵਰ ਕਰਦਾ ਹੈ</strong>। ਅਸਪਸ਼ਟ ਵਿਚਾਰਾਂ ਨੂੰ <strong>ਸਕੇਲ ਕਰਨ ਯੋਗ, ਪ੍ਰੋਡਕਸ਼ਨ-ਗਰੇਡ ਪਲੇਟਫਾਰਮਾਂ</strong> ਵਿੱਚ ਤਬਦੀਲ ਕਰਦਾ ਹੈ — ਜਿਸ ਵਿੱਚ ਗਾਹਕ-ਮੁੱਖ ਉਤਪਾਦ, agentic ਸਿਸਟਮ, ਅਤੇ ਵਿਤਰਿਤ ਕਲਾਉਡ ਇਨਵਾਇਰਨਮੈਂਟ ਸ਼ਾਮਲ ਹਨ।",
+    "engagement": "<strong>0→1, 1→N, ਅਤੇ ਸਕੇਲ-ਅੱਪ ਇਨਫਲੈਕਸ਼ਨ ਪੌਇੰਟਸ</strong> ‘ਤੇ ਪ੍ਰਮਾਣਿਤ। ਹਾਲ ਹੀ ਵਿੱਚ ਇੱਕ ਸਿਸਟਮ ਬਣਾਇਆ ਜੋ <strong>100+ ਘੰਟਿਆਂ ਦੀ ਆਡੀਓ</strong> ਨੂੰ <strong>ਹਰ ਮਿੰਟ</strong> ਸੰਰਚਿਤ ਇਨਫਰੈਂਸ ਵਿੱਚ ਤਬਦੀਲ ਕਰਦਾ ਹੈ।",
+    "managementResource": "<strong>ਟੈਕਨੀਕਲ ਬਾਰ ਉੱਚਾ ਕਰਨ, ਟੈਕਨੀਕਲ ਦਿਸ਼ਾ ਪਰਿਭਾਸ਼ਿਤ ਕਰਨ, ਜਟਿਲ ਕੰਮ ਐਕਜ਼ਿਕਿਊਟ ਕਰਨ, ਅਤੇ ਟੀਮਾਂ ਤੇ ਸਿਸਟਮਾਂ ਨੂੰ ਸਕੇਲ ਕਰਨ</strong> ਲਈ ਲਿਆਂਦਾ ਜਾਂਦਾ ਹੈ। <strong>ਫਾਊਂਡਰਜ਼, C-level, ਅਤੇ VPs</strong> ਲਈ ਸਲਾਹਕਾਰ।",
+    "practicalExperienceOnAllLayers": "ਟੈਕਨੋਲੋਜੀ ਜਨਰਲਿਸਟ: backend, web, mobile, desktop, data, ML/AI, QA, platform, infrastructure, ਅਤੇ DevOps। product, design, ਅਤੇ UX ਵਿੱਚ ਤਜਰਬਾ। <strong>ਬਿਲਡ ਕਰਨ</strong> ਦਾ ਸ਼ੌਕੀਨ।",
     "problemSolver": "ਤੁਹਾਡਾ ਹੱਲ: <i>\"ਅਸੀਂ ਇਹ ਕਿਵੇਂ ਬਣਾਈਏ?\"</i>",
-    "title": "ਕਾਰਜਕਾਰੀ ਸਾਰਾਂਸ਼"
+    "title": "ਕਾਰਜਕਾਰੀ ਸੰਖੇਪ"
   },
   "page": {
-    "resume": "ਰੈਜ਼ਿਊਮੇ | Aleksi Asikainen | ਸਾਫਟਵੇਅਰ ਆਰਕੀਟੈਕਚਰ ਅਤੇ ਵਿਕਾਸ",
-    "untitled": "ਬਿਨਾਂ ਸਿਰਲੇਖ ਵਾਲਾ ਪੰਨਾ"
+    "resume": "ਰਿਜ਼ਿਊਮੇ | Aleksi Asikainen | ਸਾਫਟਵੇਅਰ ਆਰਕੀਟੈਕਚਰ ਅਤੇ ਵਿਕਾਸ",
+    "untitled": "ਬਿਨਾ ਸਿਰਲੇਖ ਵਾਲਾ ਪੰਨਾ"
   },
   "projects": {
     "jsvfx": {
-      "description": "ਸ਼ੁੱਧ JavaScript ਵਿੱਚ ਲਿਖੇ ਵਿਜ਼ੂਅਲ ਇਫੈਕਟਸ।",
+      "description": "ਖਾਲਿਸ JavaScript ਵਿੱਚ ਲਿਖੇ ਵਿਜ਼ੂਅਲ ਇਫੈਕਟਸ।",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "ਇਹ ਰਿਜ਼ਿਊਮੇ ਕੋਡ ਵਜੋਂ। ਬੇਹੱਦ ਓਵਰ-ਇੰਜੀਨੀਅਰਡ। ਇਥੋਂ ਸ਼ੁਰੂ ਕਰੋ।",
-      "name": "ਰਿਜ਼ਿਊਮੇ"
+      "description": "ਇਹ ਰੇਜ਼ਿਊਮੇ ਕੋਡ ਵਜੋਂ। ਬਹੁਤ ਹੀ ਜ਼ਿਆਦਾ ਓਵਰ-ਇੰਜੀਨੀਅਰਡ। ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ।",
+      "name": "ਰੇਜ਼ਿਊਮੇ"
     },
     "tartarus": {
-      "description": "TypeScript ਲਈ ਬੁਨਿਆਦ ਤੋਂ ਬਣਾਇਆ ਡੀਪ ਲਰਨਿੰਗ ਫਰੇਮਵਰਕ।",
+      "description": "TypeScript ਲਈ ਜੜ੍ਹ ਤੋਂ ਬਣਾਇਆ ਡੀਪ ਲਰਨਿੰਗ ਫ੍ਰੇਮਵਰਕ।",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "ਹਵਾਲਾ ਪ੍ਰੋਜੈਕਟ"
@@ -129,72 +161,72 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "ਆਰਕੀਟੈਕਚਰ ਸੰਬੰਧੀ ਫੈਸਲਿਆਂ ਦੀ ਅਗਵਾਈ ਕਰਕੇ ਅਤੇ ਬੁਨਿਆਦੀ ਤਕਨਾਲੋਜੀਆਂ (ਜਿਵੇਂ, Temporal) ਚੁਣ ਕੇ ਮੁੱਖ ਤਕਨੀਕੀ ਦਿਸ਼ਾ ਨੂੰ ਅੱਗੇ ਵਧਾਇਆ, ਜੋ ਵਪਾਰ ਨਾਲ ਨਾਲ ਸਕੇਲ ਹੋਈਆਂ।",
-        "growth": "ਹਾਇਪਰ-ਗ੍ਰੋਥ ਅਤੇ ਕਈ ਫੰਡਿੰਗ ਪੜਾਵਾਂ (A16Z, Khosla Ventures, Elad Gil, IVP) ਦੌਰਾਨ ਕੰਮ ਕੀਤਾ।",
-        "missions": "ਵੱਡੀਆਂ ਡਾਟਾਬੇਸ ਮਾਈਗ੍ਰੇਸ਼ਨਾਂ ਵਰਗੀਆਂ ਉੱਚ-ਖਤਰੇ, ਉੱਚ-ਸੁਚਤਾ ਵਾਲੀਆਂ ਅੰਦਰੂਨੀ ਪਹਿਲਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ, ਅਤੇ ਡਿਜ਼ਾਈਨ, ਨਿਵੇੜੇ ਅਤੇ ਭਰੋਸੇਯੋਗਤਾ ਦੇ ਨਤੀਜਿਆਂ ਦੀ ਅੰਤ-ਤਕ ਮਾਲਕੀ ਲਈ।",
-        "proposals": "ਮਹੱਤਵਪੂਰਨ ਕੋਰ ਸਿਸਟਮਾਂ ਦਾ ਪ੍ਰਸਤਾਵ ਕੀਤਾ, ਆਰਕੀਟੈਕਚਰ ਬਣਾਇਆ ਅਤੇ ਲਾਗੂ ਕੀਤਾ, ਜਿਸ ਵਿੱਚ ਆਡੀਓ ਨੂੰ ਸੰਰਚਿਤ ਕਲੀਨੀਕਲ ਨੋਟਸ ਵਿੱਚ ਵੱਡੇ ਪੈਮਾਨੇ ‘ਤੇ ਔਰਕੇਸਟ੍ਰੇਸ਼ਨ ਵੀ ਸ਼ਾਮਲ ਸੀ।",
-        "role": "~30 ਕਰਮਚਾਰੀਆਂ ਦੇ ਸਮੇਂ Abridge ਨਾਲ ਜੁੜਿਆ। ਕੰਪਨੀ ਦਾ ਪਹਿਲਾ ਸੀਨੀਅਰ ਸਟਾਫ ਇੰਜੀਨੀਅਰ।"
+        "architecture": "ਆਰਕੀਟੈਕਚਰ ਫੈਸਲਿਆਂ ਦੀ ਅਗਵਾਈ ਕਰਕੇ ਅਤੇ ਬੁਨਿਆਦੀ ਤਕਨਾਲੋਜੀਆਂ (ਉਦਾਹਰਨ ਵਜੋਂ, Temporal) ਚੁਣ ਕੇ, ਜੋ ਕਾਰੋਬਾਰ ਦੇ ਨਾਲ ਸਕੇਲ ਹੋਈਆਂ, ਮੁੱਖ ਤਕਨੀਕੀ ਦਿਸ਼ਾ ਨੂੰ ਆਗੇ ਵਧਾਇਆ।",
+        "growth": "ਹਾਇਪਰ-ਗ੍ਰੋਥ ਅਤੇ ਕਈ ਫੰਡਿੰਗ ਚਰਨਾਂ (A16Z, Khosla Ventures, Elad Gil, IVP) ਦੌਰਾਨ ਕੰਮ ਕੀਤਾ।",
+        "missions": "ਵੱਡੀਆਂ ਡਾਟਾਬੇਸ ਮਾਈਗ੍ਰੇਸ਼ਨਾਂ ਵਰਗੀਆਂ ਉੱਚ-ਖ਼ਤਰੇ, ਉੱਚ-ਸੂਖਮਤਾ ਵਾਲੀਆਂ ਅੰਦਰੂਨੀ ਪਹਿਲਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ, ਡਿਜ਼ਾਇਨ, ਐਗਜ਼ਿਕਿਊਸ਼ਨ ਅਤੇ ਭਰੋਸੇਯੋਗਤਾ ਦੇ ਨਤੀਜਿਆਂ ਦੀ ਐਂਡ-ਟੂ-ਐਂਡ ਮਾਲਕੀ ਨਾਲ।",
+        "proposals": "ਨਾਜ਼ੁਕ ਕੋਰ ਸਿਸਟਮਾਂ ਦਾ ਪ੍ਰਸਤਾਵ ਦਿੱਤਾ, ਆਰਕੀਟੈਕਚਰ ਤਿਆਰ ਕੀਤਾ ਅਤੇ ਲਾਗੂ ਕੀਤਾ, ਜਿਸ ਵਿੱਚ ਆਡੀਓ ਨੂੰ ਸੰਰਚਿਤ ਕਲੀਨੀਕਲ ਨੋਟਸ ਵਿੱਚ ਵੱਡੇ ਪੱਧਰ ‘ਤੇ ਆਰਕੇਸਟ੍ਰੇਸ਼ਨ ਸ਼ਾਮਲ ਹੈ।",
+        "role": "Abridge ਵਿੱਚ ~30 ਕਰਮਚਾਰੀਆਂ ਦੇ ਸਮੇਂ ਸ਼ਾਮਲ ਹੋਇਆ। ਕੰਪਨੀ ਦਾ ਪਹਿਲਾ senior staff engineer।"
       },
-      "summary": "Healthcare AI startup | 300 employees | $700M series C-E",
-      "title": "ਸੀਨੀਅਰ ਸਟਾਫ ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰ"
+      "summary": "Healthcare AI ਸਟਾਰਟਅੱਪ | 300 ਕਰਮਚਾਰੀ | $700M ਸੀਰੀਜ਼ B-E",
+      "title": "Senior Staff Software Engineer"
     },
     "arena": {
       "details": {
-        "optimization": "ਤਕਨੀਕੀ ਓਪਰੇਸ਼ਨ ਖਰਚੇ 40%+ ਘਟਾਏ।",
-        "ownership": "ਇੰਜੀਨੀਅਰਿੰਗ, ਆਰਕੀਟੈਕਚਰ ਅਤੇ IT ਦੀ ਮਾਲਕੀ ਲਈ।",
-        "practices": "ਇੰਜੀਨੀਅਰਿੰਗ ਪ੍ਰੈਕਟਿਸਾਂ ਸਥਾਪਤ ਕੀਤੀਆਂ: ਕੋਡ ਰਿਵਿਊ, CI, ਪਲਾਨਿੰਗ, ਮੈਟ੍ਰਿਕਸ-ਆਧਾਰਿਤ ਓਪਰੇਸ਼ਨ, ਅਤੇ ਮਿਆਰੀਕ੍ਰਿਤ ਤਕਨੀਕੀ ਪ੍ਰਕਿਰਿਆਵਾਂ।",
-        "scale": "CRV, Craft Ventures, Artisanal Ventures ਅਤੇ Vela Partners ਦੀ ਅਗਵਾਈ ਵਾਲੀ Series A ਤੱਕ ਪਲੇਟਫਾਰਮ ਨੂੰ ਸਕੇਲ ਕੀਤਾ।"
+        "optimization": "ਤਕਨੀਕੀ ਓਪਰੇਸ਼ਨਲ ਖਰਚੇ 40%+ ਘਟਾਏ।",
+        "ownership": "ਇੰਜੀਨੀਅਰਿੰਗ, ਆਰਕੀਟੈਕਚਰ ਅਤੇ IT ਦੀ ਮਾਲਕੀ ਸੰਭਾਲੀ।",
+        "practices": "ਇੰਜੀਨੀਅਰਿੰਗ ਪ੍ਰੈਕਟਿਸਾਂ ਸਥਾਪਿਤ ਕੀਤੀਆਂ: ਕੋਡ ਰਿਵਿਊ, CI, ਯੋਜਨਾ ਬਣਾਉਣਾ, ਮੈਟ੍ਰਿਕਸ-ਆਧਾਰਿਤ ਓਪਰੇਸ਼ਨ, ਅਤੇ ਮਿਆਰੀਕ੍ਰਿਤ ਤਕਨੀਕੀ ਪ੍ਰਕਿਰਿਆਵਾਂ।",
+        "scale": "CRV, Craft Ventures, Artisanal Ventures, ਅਤੇ Vela Partners ਵੱਲੋਂ ਲੀਡ ਕੀਤੀ ਸੀਰੀਜ਼ A ਤੱਕ ਪਲੇਟਫਾਰਮ ਨੂੰ ਸਕੇਲ ਕੀਤਾ।"
       },
-      "summary": "Audience engagement startup | 50 employees | $13.6M series A",
-      "title": "ਚੀਫ਼ ਟੈਕਨਾਲੋਜੀ ਅਫਸਰ"
+      "summary": "ਆਡੀਅੰਸ ਐਂਗੇਜਮੈਂਟ ਸਟਾਰਟਅੱਪ | 50 ਕਰਮਚਾਰੀ | $13.6M ਸੀਰੀਜ਼ A",
+      "title": "Chief Technology Officer"
     },
     "hpi": {
       "details": {
         "leader": "ਵਾਹਨ ਇਤਿਹਾਸ ਜਾਂਚਾਂ ਵਿੱਚ UK ਦਾ ਮਾਰਕੀਟ ਲੀਡਰ।",
-        "products": "ਨਵੇਂ ਉਪਭੋਗਤਾ ਉਤਪਾਦਾਂ ਲਈ ਕਾਂਸੈਪਟ ਤੋਂ ਲਾਂਚ ਤੱਕ ਐਂਡ-ਟੂ-ਐਂਡ ਪ੍ਰੋਡਕਟ ਡਿਵੈਲਪਮੈਂਟ ਅਤੇ ਡਿਲਿਵਰੀ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
+        "products": "ਨਵੀਂ ਉਪਭੋਗਤਾ ਉਤਪਾਦਾਂ ਲਈ, ਸੰਕਲਪ ਤੋਂ ਲਾਂਚ ਤੱਕ, ਐਂਡ-ਟੂ-ਐਂਡ ਉਤਪਾਦ ਵਿਕਾਸ ਅਤੇ ਡਿਲਿਵਰੀ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
       },
-      "notes": "(Solera ਦੀ ਸਹਾਇਕ ਕੰਪਨੀ)",
-      "summary": "Private company | Automotive data & asset protection | £20M revenue",
-      "title": "ਹੈੱਡ ਆਫ਼ ਟੈਕਨਾਲੋਜੀ"
+      "notes": "(Solera ਦੀ ਸਬਸਿਡਰੀ)",
+      "summary": "ਪ੍ਰਾਈਵੇਟ ਕੰਪਨੀ | Automotive ਡਾਟਾ ਅਤੇ ਐਸੈੱਟ ਪ੍ਰੋਟੈਕਸ਼ਨ | £20M ਰੇਵਿਨਿਊ",
+      "title": "Head of Technology"
     },
     "madbid": {
       "details": {
-        "cofounder": "MadBid ਦੀ ਸਹਿ-ਸਥਾਪਨਾ ਕੀਤੀ।",
-        "orgScale": "ਤੇਜ਼ ਵਾਧੇ ਦੌਰਾਨ ਪੂਰੀ ਇੰਜੀਨੀਅਰਿੰਗ ਸੰਸਥਾ ਬਣਾਈ ਅਤੇ ਚਲਾਈ।",
-        "technlogyLeadership": "ਬੂਟਸਟ੍ਰੈਪ ਤੋਂ ਸਕੇਲ ਤੱਕ ਸਾਰੀ ਤਕਨਾਲੋਜੀ ਅਤੇ ਸਾਫਟਵੇਅਰ ਡਿਵੈਲਪਮੈਂਟ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
+        "cofounder": "MadBid ਦਾ ਸਹਿ-ਸੰਸਥਾਪਕ।",
+        "orgScale": "ਤੇਜ਼ ਗ੍ਰੋਥ ਦੌਰਾਨ ਪੂਰੀ ਇੰਜੀਨੀਅਰਿੰਗ ਸੰਸਥਾ ਬਣਾਈ ਅਤੇ ਚਲਾਈ।",
+        "technlogyLeadership": "ਬੂਟਸਟਰੈਪ ਤੋਂ ਸਕੇਲ ਤੱਕ ਸਾਰੀ ਤਕਨਾਲੋਜੀ ਅਤੇ ਸਾਫਟਵੇਅਰ ਡਿਵੈਲਪਮੈਂਟ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
       },
-      "summary": "Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue",
-      "title": "ਟੈਕਨੀਕਲ ਡਾਇਰੈਕਟਰ"
+      "summary": "ਐਂਟਰਟੇਨਮੈਂਟ ਸ਼ਾਪਿੰਗ ਸਟਾਰਟਅੱਪ | 75 ਕਰਮਚਾਰੀ | £4M ਸੀਰੀਜ਼ A | £10M ਰੇਵਿਨਿਊ",
+      "title": "Technical Director"
     },
     "optym": {
       "details": {
-        "arch": "ਤੇਜ਼ ਉਤਪਾਦ ਲਾਂਚਾਂ ਨੂੰ ਯੋਗ ਬਣਾਉਣ ਲਈ ਸਾਂਝੇ ਆਰਕੀਟੈਕਚਰ, ਨੀਤੀਆਂ ਅਤੇ ਡਿਲਿਵਰੀ ਮਿਆਰ ਸਥਾਪਤ ਕੀਤੇ।",
-        "customers": "ਨਵੇਂ ਉਤਪਾਦਾਂ ਦੀ ਡਿਜ਼ਾਈਨ ਅਤੇ ਖਾਸ ਹੱਲਾਂ ਦੀ ਡਿਲਿਵਰੀ ਲਈ ਗਾਹਕਾਂ, ਭਾਈਦਾਰਾਂ ਅਤੇ ਏਗਜ਼ਿਕਿਊਟਿਵਜ਼ ਨਾਲ ਸਿੱਧਾ ਕੰਮ ਕੀਤਾ।",
-        "mentor": "ਸੀਨੀਅਰ ਇੰਜੀਨੀਅਰਾਂ ਅਤੇ ਤਕਨੀਕੀ ਲੀਡਰਾਂ ਨੂੰ ਮਾਰਗਦਰਸ਼ਨ ਦਿੱਤਾ, ਨਿਵੇੜਾ ਗੁਣਵੱਤਾ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਸੰਸਕ੍ਰਿਤੀ ਨੂੰ ਮਜ਼ਬੂਤ ਕੀਤਾ।",
-        "saas": "Optym ਦੇ SaaS ਤਕਨਾਲੋਜੀ ਵੈਂਚਰਾਂ ਨੂੰ ਸਹਾਇਤਾ ਦਿੱਤੀ।"
+        "arch": "ਤੇਜ਼ ਉਤਪਾਦ ਲਾਂਚਾਂ ਨੂੰ ਯੋਗ ਬਣਾਉਣ ਲਈ ਸਾਂਝੇ ਆਰਕੀਟੈਕਚਰ, ਨੀਤੀਆਂ, ਅਤੇ ਡਿਲਿਵਰੀ ਮਿਆਰ ਸਥਾਪਿਤ ਕੀਤੇ।",
+        "customers": "ਨਵੀਂ ਉਤਪਾਦ ਡਿਜ਼ਾਇਨ ਕਰਨ ਅਤੇ ਕਸਟਮ ਹੱਲ ਡਿਲਿਵਰ ਕਰਨ ਲਈ ਗਾਹਕਾਂ, ਭਾਗੀਦਾਰਾਂ, ਅਤੇ ਏਗਜ਼ਿਕਿਊਟਿਵਜ਼ ਨਾਲ ਸਿੱਧਾ ਕੰਮ ਕੀਤਾ।",
+        "mentor": "ਸੀਨੀਅਰ ਇੰਜੀਨੀਅਰਾਂ ਅਤੇ ਤਕਨੀਕੀ ਲੀਡਰਾਂ ਨੂੰ ਮੈਨਟਰ ਕੀਤਾ, ਐਗਜ਼ਿਕਿਊਸ਼ਨ ਗੁਣਵੱਤਾ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਸਭਿਆਚਾਰ ਨੂੰ ਮਜ਼ਬੂਤ ਕੀਤਾ।",
+        "saas": "Optym ਦੇ SaaS ਤਕਨਾਲੋਜੀ ਵੈਂਚਰਾਂ ਨੂੰ ਸਹਿਯੋਗ ਦਿੱਤਾ।"
       },
-      "summary": "B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue",
-      "title": "ਚੀਫ਼ ਟੈਕਨਾਲੋਜੀ ਅਫਸਰ"
+      "summary": "B2B SaaS | Optimization & Decision Science | 250 ਕਰਮਚਾਰੀ | $25M ਰੇਵਿਨਿਊ",
+      "title": "Chief Technology Officer"
     },
     "presentlyWorkingHere": "ਵਰਤਮਾਨ",
     "solera": {
       "details": {
-        "emerging": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਅਪਨਾਉਣ ਲਈ ਉਭਰਦੀਆਂ ਤਕਨਾਲੋਜੀਆਂ ਦਾ ਮੁਲਾਂਕਣ ਕੀਤਾ, ਜਿਸ ਵਿੱਚ ML, blockchain, AR/VR, IoT/telematics, digital identity, ਵੱਡੇ ਪੈਮਾਨੇ ਦੇ ਡਾਟਾ ਪਲੇਟਫਾਰਮ, ਅਤੇ cloud-native SaaS (AWS) ਸ਼ਾਮਲ ਸਨ।",
+        "emerging": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਅਡਾਪਸ਼ਨ ਲਈ ਉਭਰਦੀਆਂ ਤਕਨਾਲੋਜੀਆਂ ਦਾ ਮੁਲਾਂਕਣ ਕੀਤਾ, ਜਿਸ ਵਿੱਚ ML, blockchain, AR/VR, IoT/telematics, ਡਿਜ਼ੀਟਲ ਆਈਡੈਂਟਿਟੀ, ਵੱਡੇ ਪੱਧਰ ਦੇ ਡਾਟਾ ਪਲੇਟਫਾਰਮ, ਅਤੇ ਕਲਾਊਡ-ਨੇਟਿਵ SaaS (AWS) ਸ਼ਾਮਲ ਹਨ।",
         "rnd": "CEO ਦੇ ਦਫ਼ਤਰ ਲਈ ਰਣਨੀਤਿਕ R&D ਅਤੇ ਉਤਪਾਦ ਇਨਕਿਊਬੇਸ਼ਨ ਪਹਿਲਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
       },
-      "summary": "Multinational | Risk management & asset protection | 6,000 employees | $1.1B revenue",
-      "title": "ਚੀਫ਼ ਆਰਕੀਟੈਕਟ"
+      "summary": "ਮਲਟੀਨੈਸ਼ਨਲ | ਰਿਸਕ ਮੈਨੇਜਮੈਂਟ ਅਤੇ ਐਸੈੱਟ ਪ੍ਰੋਟੈਕਸ਼ਨ | 6,000 ਕਰਮਚਾਰੀ | $1.1B ਰੇਵਿਨਿਊ",
+      "title": "Chief Architect"
     },
     "talmix": {
       "details": {
-        "itTech": "ਸਾਰੀ ਤਕਨੀਕੀ ਓਪਰੇਸ਼ਨ ਦੀ ਮਾਲਕੀ ਲਈ।",
-        "rebuild": "ਲੇਗੇਸੀ ਪਲੇਟਫਾਰਮ ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਕੇ ਸਕੇਲਏਬਲ ਦੋ-ਪੱਖੀ ਮਾਰਕੀਟਪਲੇਸ ਬਣਾਇਆ। ਕਨਸਲਟੈਂਟ ਸਿਫਾਰਸ਼ਾਂ ਦੀ ਸਬੰਧਿਤਤਾ ਵਧਾਉਣ ਲਈ ਖੋਜ ਅਤੇ ਮੈਚਿੰਗ ਸੁਧਾਰਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।",
-        "search": "ਕਨਸਲਟੈਂਟ ਸਿਫਾਰਸ਼ਾਂ ਦੀ ਸਬੰਧਿਤਤਾ ਵਧਾਉਣ ਲਈ ਖੋਜ ਅਤੇ ਮੈਚਿੰਗ ਸੁਧਾਰਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
+        "itTech": "ਸਾਰੀ ਤਕਨੀਕੀ ਓਪਰੇਸ਼ਨ ਦੀ ਮਾਲਕੀ ਸੰਭਾਲੀ।",
+        "rebuild": "ਇੱਕ ਲੈਗਸੀ ਪਲੇਟਫਾਰਮ ਨੂੰ ਸਕੇਲਯੋਗ ਦੋ-ਪੱਖੀ ਮਾਰਕੀਟਪਲੇਸ ਵਜੋਂ ਦੁਬਾਰਾ ਬਣਾਇਆ। ਕਨਸਲਟੈਂਟ ਸਿਫ਼ਾਰਸ਼ਾਂ ਦੀ ਪ੍ਰਸੰਗਿਕਤਾ ਵਧਾਉਣ ਲਈ ਸਰਚ ਅਤੇ ਮੈਚਿੰਗ ਸੁਧਾਰਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।",
+        "search": "ਕਨਸਲਟੈਂਟ ਸਿਫ਼ਾਰਸ਼ਾਂ ਦੀ ਪ੍ਰਸੰਗਿਕਤਾ ਵਧਾਉਣ ਲਈ ਸਰਚ ਅਤੇ ਮੈਚਿੰਗ ਸੁਧਾਰਾਂ ਦੀ ਅਗਵਾਈ ਕੀਤੀ।"
       },
-      "notes": "(ਪਹਿਲਾਂ MBA & Company ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਸੀ)",
-      "summary": "Management consulting startup | Talent search | £2M series A",
-      "title": "ਚੀਫ਼ ਟੈਕਨਾਲੋਜੀ ਅਫਸਰ"
+      "notes": "(ਪਹਿਲਾਂ MBA & Company ਦੇ ਨਾਮ ਨਾਲ ਜਾਣਿਆ ਜਾਂਦਾ ਸੀ)",
+      "summary": "ਮੈਨੇਜਮੈਂਟ ਕਨਸਲਟਿੰਗ ਸਟਾਰਟਅੱਪ | Talent search | £2M ਸੀਰੀਜ਼ A",
+      "title": "Chief Technology Officer"
     },
-    "title": "ਕੰਮ ਦਾ ਇਤਿਹਾਸ"
+    "title": "ਵਰਕ ਹਿਸਟਰੀ"
   }
 }
