@@ -6,7 +6,7 @@
       "deepWork": "深度工作",
       "devops": "DevOps",
       "mgmtAdmin": "管理及行政",
-      "programming": "程式開發",
+      "programming": "程式編寫",
       "strategy": "策略",
       "title": "重點"
     },
@@ -14,9 +14,9 @@
       "automotive": "汽車",
       "b2b": "B2B",
       "b2c": "B2C",
-      "fintech": "金融科技",
+      "fintech": "Fintech",
       "healthcare": "醫療保健",
-      "homeAutomation": "智能家居",
+      "homeAutomation": "家居自動化",
       "hwEmbedded": "硬件及嵌入式",
       "paymentSolutions": "支付方案",
       "realtime": "即時",
@@ -36,14 +36,14 @@
     },
     "missionFit": {
       "devInfraTooling": "開發基建及工具",
-      "fixTeamsProjects": "整頓團隊／項目",
+      "fixTeamsProjects": "修復團隊／項目",
       "greenField": "綠地項目",
       "maintenance": "維護",
       "nextGen20": "下一代及 2.0",
       "productionOps": "生產運維",
       "rnd": "R&D",
       "scaling": "擴展",
-      "title": "任務匹配"
+      "title": "任務契合度"
     },
     "technicalExperience": {
       "architecture": "架構",
@@ -74,7 +74,39 @@
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "一覽"
+    "title": "一目了然"
+  },
+  "caseStudy": {
+    "collaborationContent": "與工程副總裁密切合作；對方以關鍵業務推動因素贊助此項目。項目由本人主動發起、提出，並在初期以個人方式實作，之後移交予專責團隊作長期擁有。",
+    "collaborationTitle": "協作",
+    "contextContent": "於 B 輪融資（$30M）後不久加入，當時公司正準備接入首個大型企業客戶。工程團隊（約 10–15 名工程師）為達到產品市場契合度而快速迭代，令核心「音訊轉筆記」管道變得脆弱、不透明，且擴展風險日益增加。",
+    "contextTitle": "背景",
+    "contributionsDecisionsTitle": "主要貢獻與決策",
+    "outcomesArchitecture": "架構<strong>隨公司成長而擴展</strong>，並成為後續管道工作的基礎。",
+    "outcomesCustomerMigration": "於約 7 個月內成功將首個企業客戶遷移至新管道；其後約 2 個月內以漸進方式完成<strong>全量客戶遷移</strong>，以降低風險。",
+    "outcomesMonitoring": "建立基於遙測的<strong>監控與告警</strong>能力，縮短對生產問題的反應時間。",
+    "outcomesPipelineThroughput": "該管道現可處理超過<strong>每分鐘 100 小時音訊</strong>。",
+    "outcomesReliability": "在<strong>系統可靠性、可除錯性與營運可視性</strong>方面達到躍升式改善；工程師首次可檢視即時工作流程狀態、以確定性方式診斷故障，並安全復原。",
+    "outcomesTemplates": "建立並推行<strong>可重用的專案範本</strong>（CI/CD、Helm charts、服務佈局），在整個工程組織內採用。",
+    "outcomesTemporalAdoption": "Temporal 成為<strong>標準平台基元</strong>，其重用範圍遠超原本的管道項目。",
+    "outcomesTitle": "成果",
+    "roleScopeContent": "擔任橫向的資深技術領導者，負責無自然產品負責人的跨領域系統。主導多個產品垂直線使用的核心音訊轉筆記處理管道端到端重設計；在所有權移交至專責團隊之前，作為主要技術決策者及 on-call 升級點。",
+    "roleScopeTitle": "角色與範圍",
+    "title": "影響力案例研究 – Abridge"
+  },
+  "caseStudyDecisions": {
+    "apiBoundary": "為所有 pipeline 入口點強制採用單一<strong>標準化 API 邊界</strong>，消除分歧嘅實作，令系統行為可觀測同可預測。",
+    "kubernetes": "將執行由 cloud functions 遷移到<strong>以 Kubernetes 為基礎嘅服務</strong>，以重新獲得可除錯性、營運控制同供應商獨立性。",
+    "loadTests": "建立並執行<strong>負載測試</strong>，喺大規模客戶遷移前驗證擴展行為。",
+    "orchestration": "採用<strong>domain-driven design</strong>設計並實作一個新嘅隔離式 orchestration 服務，刻意將 pipeline 關注點同產品程式碼分離，以降低影響範圍同認知負擔。",
+    "reframing": "將 audio-to-notes pipeline 重新定位為<strong>關鍵任務嘅內部產品</strong>，而唔係一堆臨時（ad-hoc）功能。",
+    "reverseEngineering": "從舊有程式碼中<strong>逆向工程</strong>隱含嘅系統行為，以建立明確嘅基線需求，並喺規模不確定同產品需求演進之下定義前瞻性需求。",
+    "singleWriter": "將所有資料庫寫入<strong>集中化</strong>到 pipeline 之後，明確阻止 ML 直接存取，以防止資料損壞、競態條件同副作用。",
+    "telemetry": "引入<strong>全面嘅 telemetry</strong>（logs、metrics、workflow 可視性），令更廣泛嘅工程團隊都能理解系統行為。",
+    "templates": "設計<strong>可重用嘅基礎設施</strong>同<strong>專案模板</strong>（CI/CD、Helm charts、service scaffolding），之後成為其他工程工作嘅基礎。",
+    "temporal": "<strong>選用 Temporal</strong>作為 workflow 執行層，以支援具重播能力、確定性且可除錯嘅 workflows——以短期學習成本換取長期可靠性同可營運性。",
+    "testingLintingDocs": "引入<strong>端到端測試</strong>、嚴格嘅 linting 標準、<strong>結構化文件</strong>，以及過往欠缺嘅流程圖。",
+    "validationSchema": "為所有 I/O 操作（資料庫、APIs、blob storage…）實作<strong>文件驗證 schema</strong>，以確保資料完整性。"
   },
   "config": {
     "dark": "深色",
@@ -85,27 +117,27 @@
   "contactInfo": {
     "download": "下載 PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "初創公司 CTO，首席架構師，首席工程師，<1></1>創始工程師，資深員工工程師",
+    "professionalTitles": "初創公司 CTO，首席架構師，首席工程師，<1></1>創始工程師，資深 Staff 工程師",
     "relocation": "可搬遷",
     "residency": "美國永久居民，歐盟公民",
-    "translationAlertMessage": "此履歷已使用機器翻譯自動翻譯。部分內容可能未能準確翻譯。請參閱 <1><strong>原英文版本</strong></1> 以獲取最準確資訊。",
+    "translationAlertMessage": "本履歷已使用機器翻譯自動翻譯，部分內容可能未必準確。請參閱 <1><strong>英文原版</strong></1> 以獲取最準確資訊。",
     "translationAlertTitle": "翻譯提示"
   },
   "error": {
     "errorTitle": "錯誤",
-    "notFoundDetails": "未能搵到所要求嘅頁面。",
+    "notFoundDetails": "無法搵到你要求嘅頁面。",
     "notFoundTitle": "404",
     "oops": "哎呀！",
-    "unexpected": "發生咗一個意外錯誤。"
+    "unexpected": "發生咗意料之外嘅錯誤。"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20+ 年</strong>嘅<strong>親身參與</strong>軟件技術領導經驗。",
-    "creativeTechnologist": "資深技術專才，能<strong>交付複雜技術項目</strong>。將模糊想法轉化為<strong>可擴展、生產級平台</strong>——包括面向客戶產品、agentic 系統，以及分佈式雲端環境。",
-    "engagement": "已證明擅長應對<strong>0→1、1→N 以及 scale-up 轉折點</strong>。最近建立一套系統，將<strong>100+ 小時音頻</strong>於<strong>每分鐘</strong>轉換為結構化推論。",
-    "managementResource": "受邀加入以<strong>提升技術門檻、定義技術方向、執行複雜工作，並擴展團隊與系統</strong>。為<strong>創辦人、C-level 及 VP</strong>提供顧問支援。",
-    "practicalExperienceOnAllLayers": "技術通才：backend、web、mobile、desktop、data、ML/AI、QA、platform、infrastructure 及 DevOps。具產品、設計及 UX 經驗。熱愛<strong>建造</strong>。",
-    "problemSolver": "你對以下問題的解決方案：<i>\"我哋點樣建立呢？\"</i>",
-    "title": "高層摘要"
+    "20YearsOfExperience": "具備<strong>20+ 年</strong> <strong>親身落手</strong>嘅軟件領導經驗。",
+    "creativeTechnologist": "資深技術專家，能夠<strong>交付複雜嘅技術項目</strong>。將模糊嘅構想轉化為<strong>可擴展、符合生產級要求嘅平台</strong>——包括面向客戶嘅產品、代理式系統，以及分散式雲端環境。",
+    "engagement": "喺<strong>0→1、1→N，以及規模化轉捩點</strong>具備實證經驗。最近打造咗一個系統，每<strong>分鐘</strong>將<strong>100+ 小時音訊</strong>轉換為結構化推理結果。",
+    "managementResource": "受聘以<strong>提升技術標準、定義技術方向、執行複雜工作，並擴展團隊同系統</strong>。擔任<strong>創辦人、C-level 及 VP</strong>顧問。",
+    "practicalExperienceOnAllLayers": "技術通才：backend、web、mobile、desktop、data、ML/AI、QA、platform、infrastructure，同 DevOps。亦具備產品、設計同 UX 經驗。熱衷於<strong>打造</strong>。",
+    "problemSolver": "你嘅解答：<i>\"我哋點樣去建造呢？\"</i>",
+    "title": "行政摘要"
   },
   "page": {
     "resume": "履歷 | Aleksi Asikainen | 軟件架構與開發",
@@ -113,88 +145,88 @@
   },
   "projects": {
     "jsvfx": {
-      "description": "以純 JavaScript 編寫的視覺特效。",
+      "description": "以純 JavaScript 編寫嘅視覺特效。",
       "name": "JS VFX"
     },
     "resume": {
-      "description": "以程式碼呈現此履歷。極度過度工程化。由此開始。",
+      "description": "呢份履歷以 code 形式呈現。極度過度工程化。由呢度開始。",
       "name": "履歷"
     },
     "tartarus": {
-      "description": "為 TypeScript 從零開始打造的深度學習框架。",
-      "name": "Tartarus Deep Learning Framework"
+      "description": "由零開始為 TypeScript 打造嘅深度學習框架。",
+      "name": "Tartarus 深度學習框架"
     },
-    "title": "參考專案"
+    "title": "參考項目"
   },
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "透過主導架構決策並選擇可隨業務擴展嘅基礎技術（例如 Temporal），推動核心技術方向。",
-        "growth": "喺高速增長及多輪融資階段中運作（A16Z、Khosla Ventures、Elad Gil、IVP）。",
-        "missions": "帶領高風險、高精準度嘅內部項目，例如大型資料庫遷移，全程負責設計、執行同可靠性成果。",
-        "proposals": "提出、設計架構並實作關鍵核心系統，包括將音訊大規模編排成結構化臨床筆記。",
-        "role": "於 Abridge 約 30 名員工時加入。公司第一位 senior staff engineer。"
+        "architecture": "透過主導架構決策並選用可隨業務擴展的基礎技術（例如 Temporal），推動核心技術方向。",
+        "growth": "在超高速增長及多輪融資階段期間運作（A16Z、Khosla Ventures、Elad Gil、IVP）。",
+        "missions": "主導高風險、高精準度的內部項目，例如大型資料庫遷移，端到端負責設計、執行及可靠性成果。",
+        "proposals": "提出、設計架構並實作關鍵核心系統，包括將音訊以大規模編排轉換為結構化臨床筆記。",
+        "role": "於 Abridge 約 30 名員工時加入。公司首位 senior staff engineer。"
       },
-      "summary": "Healthcare AI 初創 | 300 名員工 | $700M C-E 輪融資",
-      "title": "資深 Staff 軟件工程師"
+      "summary": "醫療保健 AI 初創 | 300 名員工 | $700M B–E 輪融資",
+      "title": "Senior Staff Software Engineer"
     },
     "arena": {
       "details": {
         "optimization": "將技術營運成本削減 40%+。",
-        "ownership": "負責工程、架構及 IT。",
-        "practices": "建立工程實踐：code review、CI、規劃、以指標驅動嘅營運，以及標準化技術流程。",
-        "scale": "喺 CRV、Craft Ventures、Artisanal Ventures 同 Vela Partners 主導嘅 A 輪融資期間擴展平台規模。"
+        "ownership": "全面負責工程、架構及 IT。",
+        "practices": "建立工程實務：code review、CI、規劃、以指標驅動的營運，以及標準化技術流程。",
+        "scale": "在 CRV、Craft Ventures、Artisanal Ventures 及 Vela Partners 主導的 A 輪融資期間擴展平台。"
       },
-      "summary": "受眾互動初創 | 50 名員工 | $13.6M A 輪融資",
-      "title": "首席技術官"
+      "summary": "觀眾互動初創 | 50 名員工 | $13.6M A 輪融資",
+      "title": "Chief Technology Officer"
     },
     "hpi": {
       "details": {
         "leader": "英國車輛歷史查核市場領導者。",
-        "products": "主導新消費者產品由概念到推出嘅端到端產品開發與交付。"
+        "products": "主導新消費者產品由概念到上線的端到端產品開發與交付。"
       },
-      "notes": "（Solera 旗下公司）",
-      "summary": "私人公司 | 汽車數據及資產保護 | £20M 收入",
+      "notes": "（Solera 旗下子公司）",
+      "summary": "私人公司 | 汽車數據與資產保護 | £20M 收入",
       "title": "技術主管"
     },
     "madbid": {
       "details": {
         "cofounder": "共同創辦 MadBid。",
-        "orgScale": "喺快速增長期間建立並營運整個工程組織。",
-        "technlogyLeadership": "由自籌資金到規模化，全程帶領所有技術與軟件開發。"
+        "orgScale": "在快速增長期間建立並營運整個工程組織。",
+        "technlogyLeadership": "由 bootstrap 到規模化期間主導所有技術與軟件開發。"
       },
       "summary": "娛樂購物初創 | 75 名員工 | £4M A 輪融資 | £10M 收入",
       "title": "技術總監"
     },
     "optym": {
       "details": {
-        "arch": "建立共用架構、政策及交付標準，以支援快速產品推出。",
+        "arch": "建立共享架構、政策及交付標準，以支援快速產品上線。",
         "customers": "直接與客戶、合作夥伴及高層合作，設計新產品並交付度身訂造方案。",
-        "mentor": "指導資深工程師及技術領導者，強化執行質量與工程文化。",
-        "saas": "支援 Optym 嘅 SaaS 技術項目。"
+        "mentor": "指導資深工程師及技術領導者，強化交付品質及工程文化。",
+        "saas": "支援 Optym 的 SaaS 技術業務。"
       },
-      "summary": "B2B SaaS | Optimization & Decision Science | 250 名員工 | $25M 收入",
-      "title": "首席技術官"
+      "summary": "B2B SaaS | 最佳化與決策科學 | 250 名員工 | $25M 收入",
+      "title": "Chief Technology Officer"
     },
-    "presentlyWorkingHere": "現任",
+    "presentlyWorkingHere": "現職",
     "solera": {
       "details": {
-        "emerging": "評估適用於企業採用嘅新興技術，包括 ML、blockchain、AR/VR、IoT/telematics、數碼身份、大規模數據平台，以及 cloud-native SaaS（AWS）。",
-        "rnd": "為 CEO 辦公室帶領策略性 R&D 及產品孵化項目。"
+        "emerging": "評估供企業採用的新興技術，包括 ML、blockchain、AR/VR、IoT/telematics、數碼身份、大規模數據平台，以及雲原生 SaaS（AWS）。",
+        "rnd": "為 CEO 辦公室主導策略性 R&D 及產品孵化項目。"
       },
-      "summary": "跨國企業 | 風險管理及資產保護 | 6,000 名員工 | $1.1B 收入",
+      "summary": "跨國企業 | 風險管理與資產保護 | 6,000 名員工 | $1.1B 收入",
       "title": "首席架構師"
     },
     "talmix": {
       "details": {
-        "itTech": "負責所有技術營運。",
-        "rebuild": "將舊有平台重建為可擴展嘅雙邊市場。帶領搜尋與配對改進，提高顧問推薦嘅相關性。",
-        "search": "帶領搜尋與配對改進，提高顧問推薦嘅相關性。"
+        "itTech": "全面負責所有技術營運。",
+        "rebuild": "將傳統平台重建為可擴展的雙邊市場平台。主導搜尋及配對改進，以提升顧問推薦的相關性。",
+        "search": "主導搜尋及配對改進，以提升顧問推薦的相關性。"
       },
       "notes": "（前稱 MBA & Company）",
       "summary": "管理顧問初創 | 人才搜尋 | £2M A 輪融資",
-      "title": "首席技術官"
+      "title": "Chief Technology Officer"
     },
-    "title": "工作經歷"
+    "title": "工作履歷"
   }
 }

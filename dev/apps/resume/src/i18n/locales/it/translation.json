@@ -3,7 +3,7 @@
     "focusFit": {
       "architecture": "Architettura",
       "collaboration": "Collaborazione",
-      "deepWork": "Lavoro approfondito",
+      "deepWork": "Deep Work",
       "devops": "DevOps",
       "mgmtAdmin": "Gestione & Amministrazione",
       "programming": "Programmazione",
@@ -19,7 +19,7 @@
       "homeAutomation": "Domotica",
       "hwEmbedded": "HW & Embedded",
       "paymentSolutions": "Soluzioni di pagamento",
-      "realtime": "Tempo reale",
+      "realtime": "In tempo reale",
       "talentSearch": "Ricerca di talenti",
       "title": "Esperienza di settore",
       "videoGames": "Videogiochi"
@@ -29,19 +29,19 @@
       "MgmtAdmin": "Gestione & Amministrazione",
       "planning": "Pianificazione",
       "productDevelopment": "Sviluppo prodotto",
-      "recruitment": "Recruitment",
+      "recruitment": "Selezione del personale",
       "techLeadership": "Leadership tecnica",
       "techStrategy": "Strategia tecnica",
       "title": "Leadership"
     },
     "missionFit": {
-      "devInfraTooling": "Infra di sviluppo & Tooling",
-      "fixTeamsProjects": "Rimettere in carreggiata team/progetti",
+      "devInfraTooling": "Infrastruttura di sviluppo & Strumenti",
+      "fixTeamsProjects": "Risanamento team/progetti",
       "greenField": "Greenfield",
       "maintenance": "Manutenzione",
       "nextGen20": "Next-Gen & 2.0",
       "productionOps": "Operazioni di produzione",
-      "rnd": "R&D",
+      "rnd": "R&S",
       "scaling": "Scalabilità",
       "title": "Allineamento alla missione"
     },
@@ -52,8 +52,8 @@
       "frontend": "Frontend",
       "llmAgenticAI": "LLM/ Agentic AI",
       "mobile": "Mobile",
-      "technicalWriting": "Scrittura tecnica",
-      "testingQa": "Testing/QA",
+      "technicalWriting": "Redazione tecnica",
+      "testingQa": "Test/QA",
       "title": "Punti di forza tecnici"
     },
     "technologyFit": {
@@ -76,6 +76,38 @@
     },
     "title": "In sintesi"
   },
+  "caseStudy": {
+    "collaborationContent": "Lavorato in stretta collaborazione con il VP of Engineering, che ha sponsorizzato l’iniziativa come abilitatore critico per il business. Il progetto è stato auto-avviato, proposto e inizialmente implementato in autonomia, prima di essere trasferito a un team dedicato per l’assunzione della proprietà a lungo termine.",
+    "collaborationTitle": "Collaborazione",
+    "contextContent": "Entrato poco dopo il round Series B ($30M), mentre l’azienda si preparava a integrare il suo primo grande cliente enterprise. L’organizzazione di ingegneria (~10–15 ingegneri) aveva iterato rapidamente per raggiungere il product-market fit, lasciando la pipeline principale audio-to-notes fragile, opaca e con rischi crescenti nella scalabilità.",
+    "contextTitle": "Contesto",
+    "contributionsDecisionsTitle": "Contributi e Decisioni Chiave",
+    "outcomesArchitecture": "L’architettura <strong>ha scalato con la crescita dell’azienda</strong> ed è diventata la base per il lavoro successivo sulla pipeline.",
+    "outcomesCustomerMigration": "Migrato con successo il primo cliente enterprise sulla nuova pipeline entro ~7 mesi; completata la <strong>migrazione completa dei clienti</strong> in modo incrementale nei successivi ~2 mesi per ridurre al minimo il rischio.",
+    "outcomesMonitoring": "Abilitata la capacità di realizzare <strong>monitoraggio e allarmi</strong> sulla telemetria per ridurre i tempi di reazione ai problemi in produzione.",
+    "outcomesPipelineThroughput": "La pipeline ora elabora oltre <strong>100 ore di audio al minuto</strong>.",
+    "outcomesReliability": "Ottenuto un miglioramento di livello significativo in <strong>affidabilità del sistema, debuggabilità e visibilità operativa</strong>; per la prima volta, gli ingegneri hanno potuto ispezionare lo stato dei workflow in tempo reale, diagnosticare i guasti in modo deterministico e ripristinare in sicurezza.",
+    "outcomesTemplates": "Stabiliti <strong>template di progetto riutilizzabili</strong> (CI/CD, chart Helm, layout dei servizi) adottati in tutta l’organizzazione di ingegneria.",
+    "outcomesTemporalAdoption": "Temporal è diventato una <strong>primitiva standard della piattaforma</strong>, riutilizzata ben oltre il progetto originale della pipeline.",
+    "outcomesTitle": "Risultati",
+    "roleScopeContent": "Operato come leader tecnico senior trasversale, assumendo la responsabilità di sistemi trasversali senza un naturale product owner. Guidato il redesign end-to-end della pipeline principale di elaborazione audio-to-notes utilizzata da più verticali di prodotto; svolto il ruolo di principale decisore tecnico e punto di escalation per l’on-call fino al passaggio della proprietà a un team dedicato.",
+    "roleScopeTitle": "Ruolo e Ambito",
+    "title": "Case Study d’Impatto – Abridge"
+  },
+  "caseStudyDecisions": {
+    "apiBoundary": "Imposta un unico <strong>confine API standardizzato</strong> per tutti i punti di ingresso della pipeline, eliminando implementazioni divergenti e rendendo il comportamento del sistema osservabile e prevedibile.",
+    "kubernetes": "Migrata l’esecuzione da funzioni cloud a <strong>servizi basati su Kubernetes</strong> per recuperare debuggabilità, controllo operativo e indipendenza dal vendor.",
+    "loadTests": "Sviluppati ed eseguiti <strong>test di carico</strong> per validare il comportamento di scalabilità prima di una migrazione clienti su ampia scala.",
+    "orchestration": "Progettato e implementato un nuovo servizio di orchestrazione isolato utilizzando <strong>domain-driven design</strong>, separando deliberatamente le responsabilità della pipeline dal codice di prodotto per ridurre blast radius e carico cognitivo.",
+    "reframing": "Riformulata la pipeline audio-to-notes come un <strong>prodotto interno mission-critical</strong> anziché come una raccolta di funzioni ad-hoc.",
+    "reverseEngineering": "<strong>Effettuato reverse engineering</strong> del comportamento implicito del sistema a partire dal codice legacy per definire requisiti di base espliciti, quindi definiti requisiti orientati al futuro in condizioni di scala incerta e con esigenze di prodotto in evoluzione.",
+    "singleWriter": "<strong>Centralizzate tutte le scritture su database</strong> dietro la pipeline, bloccando esplicitamente l’accesso diretto da parte dell’ML per prevenire corruzione dei dati, race condition ed effetti collaterali.",
+    "telemetry": "Introdotta <strong>telemetria completa</strong> (log, metriche, visibilità dei workflow) per rendere il comportamento del sistema comprensibile all’intera organizzazione di engineering.",
+    "templates": "Progettate <strong>infrastrutture riutilizzabili</strong> e <strong>template di progetto</strong> (CI/CD, Helm chart, scaffolding dei servizi) che in seguito sono diventati la base per altri sforzi di engineering.",
+    "temporal": "<strong>Scelto Temporal</strong> come livello di esecuzione dei workflow per abilitare workflow deterministici e debuggabili, con capacità di replay — scambiando un costo di apprendimento nel breve termine con affidabilità e operabilità nel lungo termine.",
+    "testingLintingDocs": "Introdotti <strong>test end-to-end</strong>, standard di linting rigorosi, <strong>documentazione strutturata</strong>, diagrammi di flusso dove prima non esistevano.",
+    "validationSchema": "Implementati <strong>schemi di validazione dei documenti</strong> per tutte le operazioni di I/O (database, API, blob storage…) per garantire l’integrità dei dati."
+  },
   "config": {
     "dark": "Scuro",
     "darkMode": "Modalità scura",
@@ -85,23 +117,23 @@
   "contactInfo": {
     "download": "Scarica PDF",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "CTO di startup, Capo Architetto, Ingegnere principale, <1></1>Ingegnere fondatore, Ingegnere staff senior",
+    "professionalTitles": "CTO di startup, Chief Architect, Ingegnere principale, <1></1>Ingegnere fondatore, Ingegnere senior di staff",
     "relocation": "Disponibile al trasferimento",
     "residency": "Residente permanente negli Stati Uniti, cittadino UE",
-    "translationAlertMessage": "Questo curriculum è stato tradotto automaticamente tramite traduzione automatica. Alcune parti potrebbero non essere tradotte accuratamente. Si prega di fare riferimento alla <1><strong>versione originale in inglese</strong></1> per le informazioni più accurate.",
+    "translationAlertMessage": "Questo CV è stato tradotto automaticamente tramite traduzione automatica. Alcune parti potrebbero non essere tradotte accuratamente. Si prega di fare riferimento alla <1><strong>versione originale in inglese</strong></1> per le informazioni più accurate.",
     "translationAlertTitle": "Avviso sulla traduzione"
   },
   "error": {
     "errorTitle": "Errore",
-    "notFoundDetails": "Impossibile trovare la pagina richiesta.",
+    "notFoundDetails": "La pagina richiesta non è stata trovata.",
     "notFoundTitle": "404",
     "oops": "Ops!",
     "unexpected": "Si è verificato un errore imprevisto."
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>Oltre 20 anni</strong> di leadership software <strong>pratica</strong>.",
-    "creativeTechnologist": "Tecnologo senior che <strong>porta a termine iniziative tecnologiche complesse</strong>. Traduce idee ambigue in <strong>piattaforme scalabili e pronte per la produzione</strong>, – inclusi prodotti rivolti ai clienti, sistemi agentici e ambienti cloud distribuiti.",
-    "engagement": "Comprovata esperienza in <strong>0→1, 1→N e nei punti di inflessione di scale-up</strong>. Di recente ha realizzato un sistema che trasforma <strong>oltre 100 ore di audio</strong> in inferenza strutturata <strong>ogni minuto</strong>.",
+    "20YearsOfExperience": "<strong>20+ anni</strong> di leadership software <strong>pratica</strong>.",
+    "creativeTechnologist": "Tecnologo senior che <strong>realizza iniziative tecnologiche complesse</strong>. Traduce idee ambigue in <strong>piattaforme scalabili, pronte per la produzione</strong>, – inclusi prodotti rivolti ai clienti, sistemi agentici e ambienti cloud distribuiti.",
+    "engagement": "Comprovata esperienza in <strong>0→1, 1→N e nei punti di inflessione della fase di scale-up</strong>. Di recente ha realizzato un sistema che trasforma <strong>100+ ore di audio</strong> in inferenze strutturate <strong>ogni minuto</strong>.",
     "managementResource": "Coinvolto per <strong>alzare l’asticella tecnica, definire la direzione tecnica, eseguire lavoro complesso e scalare team e sistemi</strong>. Consulente per <strong>founder, C-level e VP</strong>.",
     "practicalExperienceOnAllLayers": "Generalista tecnologico: backend, web, mobile, desktop, dati, ML/AI, QA, piattaforma, infrastruttura e DevOps. Esperienza in prodotto, design e UX. Ama <strong>costruire</strong>.",
     "problemSolver": "La tua soluzione a: <i>\"Come lo costruiamo?\"</i>",
@@ -117,11 +149,11 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "Questo curriculum come codice. Estremamente sovraingegnerizzato. Inizia qui.",
-      "name": "Curriculum"
+      "description": "Questo CV come codice. Estremamente sovra-ingegnerizzato. Inizia qui.",
+      "name": "CV"
     },
     "tartarus": {
-      "description": "Framework di deep learning per TypeScript realizzato da zero.",
+      "description": "Framework di deep learning costruito da zero per TypeScript.",
       "name": "Tartarus Deep Learning Framework"
     },
     "title": "Progetti di riferimento"
@@ -129,72 +161,72 @@
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "Guidato la direzione tecnica principale conducendo decisioni architetturali e selezionando tecnologie fondamentali (ad es., Temporal) che sono scalate con l’azienda.",
-        "growth": "Operato durante l’iper-crescita e molteplici fasi di finanziamento (A16Z, Khosla Ventures, Elad Gil, IVP).",
-        "missions": "Guidato iniziative interne ad alto rischio e alta precisione, come importanti migrazioni di database, con responsabilità di progettazione, esecuzione e risultati di affidabilità end-to-end.",
-        "proposals": "Proposto, progettato a livello architetturale e implementato sistemi core critici, inclusa l’orchestrazione su larga scala dell’audio in note cliniche strutturate.",
-        "role": "Entrato in Abridge con ~30 dipendenti. Primo senior staff engineer dell’azienda."
+        "architecture": "Ha guidato la direzione tecnica di base conducendo le decisioni architetturali e selezionando tecnologie fondamentali (ad es., Temporal) che si sono scalate con il business.",
+        "growth": "Ha operato durante l’iper-crescita e in più fasi di finanziamento (A16Z, Khosla Ventures, Elad Gil, IVP).",
+        "missions": "Ha guidato iniziative interne ad alto rischio e ad alta precisione, come importanti migrazioni di database, assumendosi la responsabilità end-to-end di progettazione, esecuzione e risultati di affidabilità.",
+        "proposals": "Ha proposto, progettato l’architettura e implementato sistemi core critici, inclusa l’orchestrazione su larga scala dell’audio in note cliniche strutturate.",
+        "role": "È entrato in Abridge quando aveva ~30 dipendenti. Primo senior staff engineer dell’azienda."
       },
-      "summary": "Startup di AI per la sanità | 300 dipendenti | $700M serie C-E",
+      "summary": "Startup di AI in ambito healthcare | 300 dipendenti | $700M serie B-E",
       "title": "Senior Staff Software Engineer"
     },
     "arena": {
       "details": {
-        "optimization": "Ridotti i costi delle operazioni tecniche di oltre il 40%.",
+        "optimization": "Ha ridotto i costi delle operations tecniche di oltre il 40%.",
         "ownership": "Responsabile di engineering, architettura e IT.",
-        "practices": "Definite pratiche di engineering: code review, CI, pianificazione, operazioni guidate da metriche e processi tecnici standardizzati.",
-        "scale": "Scalata la piattaforma fino alla Series A guidata da CRV, Craft Ventures, Artisanal Ventures e Vela Partners."
+        "practices": "Ha definito pratiche di engineering: code review, CI, pianificazione, operations guidate da metriche e processi tecnici standardizzati.",
+        "scale": "Ha scalato la piattaforma durante la Series A guidata da CRV, Craft Ventures, Artisanal Ventures e Vela Partners."
       },
-      "summary": "Startup di audience engagement | 50 dipendenti | $13.6M series A",
+      "summary": "Startup di audience engagement | 50 dipendenti | $13.6M serie A",
       "title": "Chief Technology Officer"
     },
     "hpi": {
       "details": {
-        "leader": "Leader di mercato nel Regno Unito nei controlli della storia dei veicoli.",
-        "products": "Guidato lo sviluppo e la delivery end-to-end di nuovi prodotti consumer, dal concept al lancio."
+        "leader": "Leader del mercato UK nei controlli della storia dei veicoli.",
+        "products": "Ha guidato lo sviluppo e la delivery end-to-end di nuovi prodotti consumer, dal concept al lancio."
       },
-      "notes": "(Società controllata di Solera)",
+      "notes": "(Sussidiaria di Solera)",
       "summary": "Azienda privata | Dati automotive e protezione degli asset | £20M di fatturato",
       "title": "Head of Technology"
     },
     "madbid": {
       "details": {
-        "cofounder": "Co-fondato MadBid.",
-        "orgScale": "Costruito e guidato l’intera organizzazione di engineering durante una rapida crescita.",
-        "technlogyLeadership": "Guidato tutta la tecnologia e lo sviluppo software dal bootstrap alla scala."
+        "cofounder": "Ha co-fondato MadBid.",
+        "orgScale": "Ha costruito e gestito l’intera organizzazione di engineering durante una rapida crescita.",
+        "technlogyLeadership": "Ha guidato tutta la tecnologia e lo sviluppo software dal bootstrap alla scalabilità."
       },
-      "summary": "Startup di shopping di intrattenimento | 75 dipendenti | £4M Series A | £10M di fatturato",
+      "summary": "Startup di entertainment shopping | 75 dipendenti | £4M Series A | £10M di fatturato",
       "title": "Direttore Tecnico"
     },
     "optym": {
       "details": {
-        "arch": "Definite architetture condivise, policy e standard di delivery per consentire rapidi lanci di prodotto.",
-        "customers": "Lavorato direttamente con clienti, partner ed executive per progettare nuovi prodotti e fornire soluzioni su misura.",
-        "mentor": "Mentorato senior engineer e leader tecnici, rafforzando la qualità dell’esecuzione e la cultura di engineering.",
-        "saas": "Supportate le iniziative tecnologiche SaaS di Optym."
+        "arch": "Ha definito architetture condivise, policy e standard di delivery per abilitare lanci rapidi di prodotto.",
+        "customers": "Ha lavorato direttamente con clienti, partner ed executive per progettare nuovi prodotti e fornire soluzioni su misura.",
+        "mentor": "Ha fatto da mentor a senior engineer e leader tecnici, rafforzando la qualità dell’esecuzione e la cultura di engineering.",
+        "saas": "Ha supportato le iniziative tecnologiche SaaS di Optym."
       },
-      "summary": "B2B SaaS | Ottimizzazione & Decision Science | 250 dipendenti | $25M di fatturato",
+      "summary": "SaaS B2B | Ottimizzazione & Decision Science | 250 dipendenti | $25M di fatturato",
       "title": "Chief Technology Officer"
     },
     "presentlyWorkingHere": "Presente",
     "solera": {
       "details": {
-        "emerging": "Valutate tecnologie emergenti per l’adozione in ambito enterprise, incluse ML, blockchain, AR/VR, IoT/telematics, identità digitale, piattaforme dati su larga scala e SaaS cloud-native (AWS).",
-        "rnd": "Guidato iniziative strategiche di R&D e incubazione di prodotto per l’ufficio del CEO."
+        "emerging": "Ha valutato tecnologie emergenti per l’adozione in ambito enterprise, incluse ML, blockchain, AR/VR, IoT/telematics, identità digitale, piattaforme dati su larga scala e SaaS cloud-native (AWS).",
+        "rnd": "Ha guidato iniziative strategiche di R&S e di incubazione prodotto per l’ufficio del CEO."
       },
       "summary": "Multinazionale | Gestione del rischio e protezione degli asset | 6.000 dipendenti | $1.1B di fatturato",
       "title": "Chief Architect"
     },
     "talmix": {
       "details": {
-        "itTech": "Responsabile di tutte le operazioni tecniche.",
-        "rebuild": "Ricostruita una piattaforma legacy in un marketplace scalabile a due lati. Guidati miglioramenti di ricerca e matching per aumentare la pertinenza delle raccomandazioni dei consulenti.",
-        "search": "Guidati miglioramenti di ricerca e matching per aumentare la pertinenza delle raccomandazioni dei consulenti."
+        "itTech": "Responsabile di tutte le operations tecniche.",
+        "rebuild": "Ha ricostruito una piattaforma legacy trasformandola in un marketplace scalabile a due lati. Ha guidato miglioramenti di ricerca e matching per aumentare la pertinenza delle raccomandazioni dei consulenti.",
+        "search": "Ha guidato miglioramenti di ricerca e matching per aumentare la pertinenza delle raccomandazioni dei consulenti."
       },
-      "notes": "(In precedenza noto come MBA & Company)",
-      "summary": "Startup di consulenza manageriale | Ricerca talenti | £2M series A",
+      "notes": "(Precedentemente nota come MBA & Company)",
+      "summary": "Startup di consulenza manageriale | Talent search | £2M serie A",
       "title": "Chief Technology Officer"
     },
-    "title": "Esperienza lavorativa"
+    "title": "Esperienza Professionale"
   }
 }

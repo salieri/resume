@@ -1,23 +1,23 @@
 {
   "atAGlance": {
     "focusFit": {
-      "architecture": "آرکیٹیکچر",
-      "collaboration": "تعاون",
+      "architecture": "معماری",
+      "collaboration": "اشتراکِ کار",
       "deepWork": "گہرا کام",
       "devops": "DevOps",
-      "mgmtAdmin": "مینجمنٹ اور انتظامیہ",
+      "mgmtAdmin": "انتظام و نظم",
       "programming": "پروگرامنگ",
       "strategy": "حکمتِ عملی",
-      "title": "فوکس"
+      "title": "توجہ"
     },
     "industryExperience": {
-      "automotive": "آٹوموٹیو",
+      "automotive": "آٹو موٹیو",
       "b2b": "B2B",
       "b2c": "B2C",
       "fintech": "Fintech",
       "healthcare": "صحت کی دیکھ بھال",
       "homeAutomation": "ہوم آٹومیشن",
-      "hwEmbedded": "HW اور ایمبیڈڈ",
+      "hwEmbedded": "HW اور Embedded",
       "paymentSolutions": "ادائیگی کے حل",
       "realtime": "ریئل ٹائم",
       "talentSearch": "ٹیلنٹ سرچ",
@@ -25,28 +25,28 @@
       "videoGames": "ویڈیو گیمز"
     },
     "leadershipExperience": {
-      "mentoringTraining": "مینٹورنگ اور ٹریننگ",
-      "MgmtAdmin": "مینجمنٹ اور انتظامیہ",
+      "mentoringTraining": "رہنمائی و تربیت",
+      "MgmtAdmin": "انتظام و نظم",
       "planning": "منصوبہ بندی",
-      "productDevelopment": "پروڈکٹ ڈیولپمنٹ",
+      "productDevelopment": "پروڈکٹ ڈویلپمنٹ",
       "recruitment": "بھرتی",
-      "techLeadership": "ٹیک. قیادت",
-      "techStrategy": "ٹیک. حکمتِ عملی",
+      "techLeadership": "تکنیکی قیادت",
+      "techStrategy": "تکنیکی حکمتِ عملی",
       "title": "قیادت"
     },
     "missionFit": {
-      "devInfraTooling": "ڈیولپمنٹ انفراسٹرکچر اور ٹولنگ",
-      "fixTeamsProjects": "ٹیموں/پروجیکٹس کو درست کرنا",
+      "devInfraTooling": "Dev. انفراسٹرکچر اور ٹولنگ",
+      "fixTeamsProjects": "ٹیمز/پروجیکٹس کی اصلاح",
       "greenField": "گرین فیلڈ",
-      "maintenance": "مینٹیننس",
+      "maintenance": "نگہداشت",
       "nextGen20": "نیکسٹ جن اور 2.0",
       "productionOps": "پروڈکشن آپریشنز",
       "rnd": "R&D",
       "scaling": "اسکیلنگ",
-      "title": "مشن فِٹ"
+      "title": "مشِن فٹ"
     },
     "technicalExperience": {
-      "architecture": "آرکیٹیکچر",
+      "architecture": "معماری",
       "backend": "بیک اینڈ",
       "devops": "DevOps",
       "frontend": "فرنٹ اینڈ",
@@ -74,41 +74,73 @@
       "typeScript": "TypeScript",
       "vue": "Vue"
     },
-    "title": "ایک نظر میں"
+    "title": "مختصر جائزہ"
+  },
+  "caseStudy": {
+    "collaborationContent": "انجینئرنگ کے VP کے ساتھ قریبی شراکت میں کام کیا، جنہوں نے اس اقدام کی سرپرستی ایک اہم کاروباری معاون کے طور پر کی۔ یہ پروجیکٹ خود شروع کیا گیا، تجویز کیا گیا، اور ابتدا میں اکیلے نافذ کیا گیا، پھر طویل مدتی ملکیت کے لیے اسے ایک وقف ٹیم کے حوالے کر دیا گیا۔",
+    "collaborationTitle": "اشتراکِ عمل",
+    "contextContent": "Series B ($30M) کے فوراً بعد شامل ہوئے، جب کمپنی اپنا پہلا بڑا انٹرپرائز کسٹمر آن بورڈ کرنے کی تیاری کر رہی تھی۔ انجینئرنگ ادارہ (~10–15 انجینئرز) نے پروڈکٹ-مارکیٹ فِٹ تک پہنچنے کے لیے تیزی سے تکرار کی تھی، جس کے نتیجے میں بنیادی آڈیو-سے-نوٹس پائپ لائن نازک، غیر شفاف، اور اسکیل کرنے کے لیے بڑھتی ہوئی خطرناک حالت میں رہ گئی تھی۔",
+    "contextTitle": "پس منظر",
+    "contributionsDecisionsTitle": "اہم شراکتیں اور فیصلے",
+    "outcomesArchitecture": "آرکیٹیکچر <strong>کمپنی کی نمو کے ساتھ اسکیل ہوا</strong> اور بعد کے پائپ لائن کام کی بنیاد بن گیا۔",
+    "outcomesCustomerMigration": "پہلے انٹرپرائز کسٹمر کو تقریباً 7 ماہ کے اندر نئی پائپ لائن پر کامیابی سے منتقل کیا؛ خطرہ کم کرنے کے لیے اگلے تقریباً 2 ماہ میں تدریجی طور پر <strong>مکمل کسٹمر مائیگریشن</strong> مکمل کی۔",
+    "outcomesMonitoring": "پروڈکشن مسائل پر ردِعمل کے وقت کو کم کرنے کے لیے ٹیلیمیٹری کے خلاف <strong>مانیٹرنگ اور الارمز</strong> بنانے کی صلاحیت ممکن بنائی۔",
+    "outcomesPipelineThroughput": "یہ پائپ لائن اب <strong>فی منٹ 100 گھنٹے سے زائد آڈیو</strong> پروسیس کرتی ہے۔",
+    "outcomesReliability": "<strong>سسٹم کی قابلِ اعتمادیت، ڈیبگ کرنے کی صلاحیت، اور آپریشنل نمایاںیت</strong> میں نمایاں بہتری حاصل کی؛ پہلی بار، انجینئرز لائیو ورک فلو اسٹیٹ کا معائنہ کر سکتے تھے، ناکامیوں کی تعیناتی طور پر تشخیص کر سکتے تھے، اور محفوظ طریقے سے بحالی کر سکتے تھے۔",
+    "outcomesTemplates": "<strong>قابلِ اعادہ پروجیکٹ ٹیمپلیٹس</strong> (CI/CD، Helm charts، سروس لے آؤٹ) قائم کیے جنہیں پوری انجینئرنگ تنظیم میں اپنایا گیا۔",
+    "outcomesTemporalAdoption": "Temporal ایک <strong>معیاری پلیٹ فارم primitive</strong> بن گیا جو اصل پائپ لائن پروجیکٹ سے کہیں آگے تک دوبارہ استعمال ہوا۔",
+    "outcomesTitle": "نتائج",
+    "roleScopeContent": "ایک افقی سینیئر تکنیکی رہنما کے طور پر کردار ادا کیا، ایسے کراس کٹنگ سسٹمز کی ملکیت سنبھالی جن کا کوئی فطری پروڈکٹ اونر نہیں تھا۔ متعدد پروڈکٹ ورٹیکلز کے زیرِ استعمال بنیادی آڈیو-سے-نوٹس پروسیسنگ پائپ لائن کا اینڈ ٹو اینڈ ری ڈیزائن لیڈ کیا؛ وقف ٹیم کو ملکیت منتقل ہونے تک بنیادی تکنیکی فیصلہ ساز اور آن کال ایسکلیشن پوائنٹ کے طور پر خدمات انجام دیں۔",
+    "roleScopeTitle": "کردار اور دائرۂ کار",
+    "title": "اثر کیس اسٹڈی – Abridge"
+  },
+  "caseStudyDecisions": {
+    "apiBoundary": "تمام پائپ لائن انٹری پوائنٹس کے لیے ایک واحد <strong>معیاری API حد بندی</strong> نافذ کی، جس سے مختلف النوع امپلیمنٹیشنز ختم ہوئیں اور سسٹم کے رویّے کو قابلِ مشاہدہ اور پیش گوئی کے قابل بنایا۔",
+    "kubernetes": "ڈی بگ ایبلٹی، آپریشنل کنٹرول، اور وینڈر سے آزادی دوبارہ حاصل کرنے کے لیے ایکزی کیوشن کو cloud functions سے <strong>Kubernetes-based services</strong> پر منتقل کیا۔",
+    "loadTests": "وسیع پیمانے پر کسٹمر مائیگریشن سے پہلے اسکیلنگ کے رویّے کی توثیق کے لیے <strong>load tests</strong> تیار کیے اور چلائے۔",
+    "orchestration": "<strong>domain-driven design</strong> استعمال کرتے ہوئے ایک نئی، الگ تھلگ orchestration سروس ڈیزائن اور نافذ کی، اور blast radius اور cognitive load کم کرنے کے لیے پائپ لائن کے معاملات کو جان بوجھ کر پروڈکٹ کوڈ سے الگ رکھا۔",
+    "reframing": "آڈیو سے نوٹس تک کی پائپ لائن کو ad-hoc فنکشنز کے مجموعے کے بجائے ایک <strong>مشن کریٹیکل اندرونی پروڈکٹ</strong> کے طور پر از سرِ نو فریم کیا۔",
+    "reverseEngineering": "لیگیسی کوڈ سے مضمر سسٹم رویّے کی <strong>ریورس انجینئرنگ</strong> کر کے واضح baseline ضروریات قائم کیں، پھر غیر یقینی اسکیل اور بدلتی پروڈکٹ ضروریات کے تحت مستقبل بین ضروریات کی تعریف کی۔",
+    "singleWriter": "پائپ لائن کے پیچھے <strong>تمام ڈیٹابیس رائٹس کو مرکزی بنایا</strong>، اور ڈیٹا کرپشن، race conditions، اور side effects سے بچاؤ کے لیے ML کی براہِ راست رسائی کو واضح طور پر روکا۔",
+    "telemetry": "وسیع انجینئرنگ تنظیم کے لیے سسٹم کے رویّے کو قابلِ فہم بنانے کے لیے <strong>جامع telemetry</strong> (logs، metrics، workflow visibility) متعارف کرائی۔",
+    "templates": "<strong>دوبارہ قابلِ استعمال انفراسٹرکچر</strong> اور <strong>پروجیکٹ ٹیمپلیٹس</strong> (CI/CD، Helm charts، service scaffolding) ڈیزائن کیے جو بعد میں دیگر انجینئرنگ کوششوں کی بنیاد بنے۔",
+    "temporal": "ری پلے قابلیت کے ساتھ deterministic، ڈی بگ ایبل workflows کو ممکن بنانے کے لیے workflow execution layer کے طور پر <strong>Temporal منتخب کیا</strong> — قلیل مدتی سیکھنے کی لاگت کے بدلے طویل مدتی reliability اور operability حاصل کی۔",
+    "testingLintingDocs": "<strong>end-to-end testing</strong>، سخت linting معیارات، <strong>ساختہ دستاویزات</strong>، اور flow diagrams متعارف کرائے جہاں پہلے کوئی موجود نہیں تھے۔",
+    "validationSchema": "ڈیٹا کی سالمیت یقینی بنانے کے لیے تمام I/O آپریشنز (database، APIs، blob storage…) کے لیے <strong>document validation schemas</strong> نافذ کیے۔"
   },
   "config": {
-    "dark": "ڈارک",
-    "darkMode": "ڈارک موڈ",
-    "light": "لائٹ",
-    "lightMode": "لائٹ موڈ"
+    "dark": "تاریک",
+    "darkMode": "تاریک موڈ",
+    "light": "روشن",
+    "lightMode": "روشن موڈ"
   },
   "contactInfo": {
     "download": "PDF ڈاؤن لوڈ کریں",
     "name": "Aleksi Asikainen",
-    "professionalTitles": "Startup CTO، چیف آرکیٹیکٹ، پرنسپل انجینئر، <1></1>بانی انجینئر، سینئر اسٹاف انجینئر",
-    "relocation": "منتقل ہو سکتا/سکتی ہوں",
-    "residency": "امریکی مستقل رہائشی، EU شہری",
-    "translationAlertMessage": "یہ ریزیومے خودکار طور پر مشینی ترجمہ کے ذریعے ترجمہ کیا گیا ہے۔ کچھ حصے درست طور پر ترجمہ نہ ہوئے ہوں۔ براہِ کرم سب سے درست معلومات کے لیے <1><strong>اصل انگریزی ورژن</strong></1> سے رجوع کریں۔",
-    "translationAlertTitle": "ترجمہ سے متعلق ہدایت"
+    "professionalTitles": "Startup CTO، چیف آرکیٹیکٹ، پرنسپل انجینئر، <1></1>فاؤنڈنگ انجینئر، سینئر اسٹاف انجینئر",
+    "relocation": "منتقلی ممکن ہے",
+    "residency": "امریکہ کا مستقل رہائشی، یورپی یونین کا شہری",
+    "translationAlertMessage": "یہ ریزیومے مشینی ترجمے کے ذریعے خودکار طور پر ترجمہ کیا گیا ہے۔ کچھ حصے درست طور پر ترجمہ نہیں ہوئے ہو سکتے۔ سب سے درست معلومات کے لیے براہِ کرم <1><strong>اصل انگریزی ورژن</strong></1> ملاحظہ کریں۔",
+    "translationAlertTitle": "ترجمے سے متعلق مشورہ"
   },
   "error": {
-    "errorTitle": "خرابی",
+    "errorTitle": "خطا",
     "notFoundDetails": "درخواست کردہ صفحہ نہیں مل سکا۔",
     "notFoundTitle": "404",
-    "oops": "اوہ!",
-    "unexpected": "ایک غیر متوقع خرابی پیش آئی۔"
+    "oops": "افسوس!",
+    "unexpected": "ایک غیر متوقع خطا پیش آئی۔"
   },
   "exsum": {
-    "20YearsOfExperience": "<strong>20+ سال</strong> کی <strong>عملی</strong> سافٹ ویئر قیادت۔",
-    "creativeTechnologist": "سینئر ٹیکنالوجسٹ جو <strong>پیچیدہ ٹیکنالوجی اقدامات</strong> مکمل کراتا ہے۔ مبہم خیالات کو <strong>اسکیل ایبل، پروڈکشن گریڈ پلیٹ فارمز</strong> میں تبدیل کرتا ہے — جن میں صارف-سامنے والی مصنوعات، ایجنٹک سسٹمز، اور تقسیم شدہ کلاؤڈ ماحول شامل ہیں۔",
-    "engagement": "<strong>0→1، 1→N، اور اسکیل اپ کے انفلیکشن پوائنٹس</strong> پر ثابت شدہ۔ حال ہی میں ایک ایسا سسٹم بنایا جو <strong>100+ گھنٹے کی آڈیو</strong> کو <strong>ہر منٹ</strong> ساختہ استنتاج میں تبدیل کرتا ہے۔",
-    "managementResource": "<strong>ٹیکنیکل معیار بلند کرنے، تکنیکی سمت متعین کرنے، پیچیدہ کام انجام دینے، اور ٹیموں و سسٹمز کو اسکیل کرنے</strong> کے لیے لایا جاتا ہے۔ <strong>بانیوں، C-level، اور VPs</strong> کے لیے مشیر۔",
-    "practicalExperienceOnAllLayers": "ٹیکنالوجی جنرلِسٹ: backend، web، mobile، desktop، data، ML/AI، QA، platform، infrastructure، اور DevOps۔ product، design، اور UX میں تجربہ۔ <strong>تعمیر</strong> سے محبت۔",
-    "problemSolver": "آپ کے سوال کا حل: <i>\"ہم یہ کیسے بنائیں؟\"</i>",
-    "title": "ایگزیکٹو خلاصہ"
+    "20YearsOfExperience": "<strong>20+ سال</strong> کی <strong>عملاً</strong> سافٹ ویئر لیڈرشپ۔",
+    "creativeTechnologist": "سینئر ٹیکنالوجسٹ جو <strong>پیچیدہ ٹیکنالوجی اقدامات کی تکمیل</strong> کرتا ہے۔ مبہم خیالات کو <strong>اسکیل ایبل، پروڈکشن گریڈ پلیٹ فارمز</strong> میں ڈھالتا ہے — جن میں کسٹمر-فیسنگ پروڈکٹس، ایجنٹک سسٹمز، اور تقسیم شدہ کلاؤڈ ماحول شامل ہیں۔",
+    "engagement": "<strong>0→1، 1→N، اور اسکیل اپ کے اہم موڑ</strong> پر ثابت شدہ کارکردگی۔ حال ہی میں ایک ایسا سسٹم بنایا جو <strong>100+ گھنٹے آڈیو</strong> کو <strong>ہر منٹ</strong> اسٹرکچرڈ اِنفرینس میں تبدیل کرتا ہے۔",
+    "managementResource": "<strong>تکنیکی معیار بلند کرنے، تکنیکی سمت متعین کرنے، پیچیدہ کام انجام دینے، اور ٹیموں و سسٹمز کو اسکیل کرنے</strong> کے لیے لایا جاتا ہے۔ <strong>بانیان، C-level، اور VPs</strong> کے لیے مشیر۔",
+    "practicalExperienceOnAllLayers": "ٹیکنالوجی جنرلِسٹ: backend، web، mobile، desktop، data، ML/AI، QA، platform، infrastructure، اور DevOps۔ پروڈکٹ، ڈیزائن، اور UX میں بھی تجربہ۔ <strong>بنانا</strong> پسند ہے۔",
+    "problemSolver": "اس سوال کا آپ کا حل: <i>\"ہم یہ کیسے بنائیں؟\"</i>",
+    "title": "انتظامی خلاصہ"
   },
   "page": {
-    "resume": "رزومہ | Aleksi Asikainen | سافٹ ویئر آرکیٹیکچر اور ڈویلپمنٹ",
+    "resume": "ریزیومے | Aleksi Asikainen | سافٹ ویئر آرکیٹیکچر اور ڈیولپمنٹ",
     "untitled": "بلا عنوان صفحہ"
   },
   "projects": {
@@ -117,84 +149,84 @@
       "name": "JS VFX"
     },
     "resume": {
-      "description": "یہ ریزیومے بطور کوڈ۔ حد سے زیادہ اوور-انجینئرڈ۔ یہاں سے شروع کریں۔",
-      "name": "ریزیومے"
+      "description": "یہ رزومہ بطور کوڈ۔ حد درجہ اوور-انجینئرڈ۔ یہاں سے شروع کریں۔",
+      "name": "رزومہ"
     },
     "tartarus": {
-      "description": "TypeScript کے لیے صفر سے تیار کردہ ڈیپ لرننگ فریم ورک۔",
-      "name": "Tartarus Deep Learning Framework"
+      "description": "TypeScript کے لیے ابتدا سے تیار کردہ ڈیپ لرننگ فریم ورک۔",
+      "name": "Tartarus ڈیپ لرننگ فریم ورک"
     },
     "title": "حوالہ جاتی پروجیکٹس"
   },
   "workHistory": {
     "abridge": {
       "details": {
-        "architecture": "آرکیٹیکچر فیصلوں کی قیادت کرتے ہوئے اور بنیادی ٹیکنالوجیز (مثلاً Temporal) کا انتخاب کرتے ہوئے مرکزی تکنیکی سمت کو آگے بڑھایا، جو کاروبار کے ساتھ اسکیل ہوئیں۔",
+        "architecture": "آرکیٹیکچر سے متعلق فیصلوں کی قیادت کرتے ہوئے اور بنیادی ٹیکنالوجیز (مثلاً Temporal) منتخب کرتے ہوئے بنیادی تکنیکی سمت آگے بڑھائی جو کاروبار کے ساتھ اسکیل ہوئیں۔",
         "growth": "ہائپر-گروتھ اور متعدد فنڈنگ مراحل (A16Z, Khosla Ventures, Elad Gil, IVP) کے دوران کام کیا۔",
-        "missions": "بڑے ڈیٹابیس مائیگریشنز جیسی ہائی رسک، ہائی پریسیژن داخلی initiatives کی قیادت کی، اور ڈیزائن، عملدرآمد، اور reliability نتائج کو ابتدا سے انتہا تک خود سنبھالا۔",
-        "proposals": "اہم بنیادی سسٹمز تجویز کیے، ان کا آرکیٹیکچر تیار کیا، اور انہیں نافذ کیا، جن میں آڈیو کی بڑے پیمانے پر orchestration کو اسٹرکچرڈ کلینیکل نوٹس میں تبدیل کرنا شامل ہے۔",
-        "role": "~30 ملازمین کے وقت Abridge میں شامل ہوئے۔ کمپنی کے پہلے senior staff engineer۔"
+        "missions": "بڑے ڈیٹابیس مائیگریشنز جیسے ہائی رسک، ہائی پریسیژن اندرونی اقدامات کی قیادت کی، ڈیزائن، عمل درآمد، اور قابلِ اعتماد نتائج کو ابتدا سے انتہا تک خود سنبھالا۔",
+        "proposals": "اہم بنیادی سسٹمز کی تجویز دی، آرکیٹیکچر تیار کیا اور عمل درآمد کیا، جس میں آڈیو کو اسٹرکچرڈ کلینیکل نوٹس میں بڑے پیمانے پر آرکسٹریشن شامل ہے۔",
+        "role": "~30 ملازمین کے وقت Abridge میں شمولیت اختیار کی۔ کمپنی کے پہلے سینئر اسٹاف انجینئر۔"
       },
-      "summary": "Healthcare AI startup | 300 employees | $700M series C-E",
-      "title": "Senior Staff Software Engineer"
+      "summary": "Healthcare AI اسٹارٹ اپ | 300 ملازمین | $700M سیریز B-E",
+      "title": "سینئر اسٹاف سافٹ ویئر انجینئر"
     },
     "arena": {
       "details": {
-        "optimization": "تکنیکی آپریشنز کے اخراجات 40%+ کم کیے۔",
+        "optimization": "تکنیکی آپریشنز کے اخراجات میں 40%+ کمی کی۔",
         "ownership": "انجینئرنگ، آرکیٹیکچر، اور IT کی ذمہ داری سنبھالی۔",
-        "practices": "انجینئرنگ کے طریقۂ کار قائم کیے: code reviews، CI، planning، metrics-driven operations، اور معیاری تکنیکی processes۔",
-        "scale": "CRV، Craft Ventures، Artisanal Ventures، اور Vela Partners کی قیادت میں Series A کے ذریعے پلیٹ فارم کو اسکیل کیا۔"
+        "practices": "انجینئرنگ طریقۂ کار قائم کیے: کوڈ ریویوز، CI، پلاننگ، میٹرکس پر مبنی آپریشنز، اور معیاری تکنیکی پراسیسز۔",
+        "scale": "CRV, Craft Ventures, Artisanal Ventures, اور Vela Partners کی قیادت میں سیریز A تک پلیٹ فارم کو اسکیل کیا۔"
       },
-      "summary": "Audience engagement startup | 50 employees | $13.6M series A",
-      "title": "Chief Technology Officer"
+      "summary": "آڈیئنس انگیجمنٹ اسٹارٹ اپ | 50 ملازمین | $13.6M سیریز A",
+      "title": "چیف ٹیکنالوجی آفیسر"
     },
     "hpi": {
       "details": {
-        "leader": "UK میں گاڑیوں کی ہسٹری چیکس کے لیے مارکیٹ لیڈر۔",
-        "products": "نئی کنزیومر پروڈکٹس کے لیے تصور سے لے کر لانچ تک end-to-end پروڈکٹ ڈیولپمنٹ اور ڈیلیوری کی قیادت کی۔"
+        "leader": "UK میں وہیکل ہسٹری چیکس کے لیے مارکیٹ لیڈر۔",
+        "products": "نئے کنزیومر پروڈکٹس کے لیے تصور سے لے کر لانچ تک اینڈ ٹو اینڈ پروڈکٹ ڈیولپمنٹ اور ڈیلیوری کی قیادت کی۔"
       },
       "notes": "(Solera کی ذیلی کمپنی)",
-      "summary": "Private company | Automotive data & asset protection | £20M revenue",
-      "title": "Head of Technology"
+      "summary": "پرائیویٹ کمپنی | آٹوموٹیو ڈیٹا اور اثاثہ جاتی تحفظ | £20M ریونیو",
+      "title": "ہیڈ آف ٹیکنالوجی"
     },
     "madbid": {
       "details": {
-        "cofounder": "MadBid کی مشترکہ بنیاد رکھی۔",
-        "orgScale": "تیز رفتار گروتھ کے دوران پوری انجینئرنگ تنظیم بنائی اور چلائی۔",
-        "technlogyLeadership": "bootstrap سے اسکیل تک تمام ٹیکنالوجی اور سافٹ ویئر ڈیولپمنٹ کی قیادت کی۔"
+        "cofounder": "MadBid کی شریک بنیاد رکھی۔",
+        "orgScale": "تیز رفتار نمو کے دوران پوری انجینئرنگ تنظیم تیار کی اور چلائی۔",
+        "technlogyLeadership": "بوٹ اسٹرَیپ سے اسکیل تک تمام ٹیکنالوجی اور سافٹ ویئر ڈیولپمنٹ کی قیادت کی۔"
       },
-      "summary": "Entertainment shopping startup | 75 employees | £4M Series A | £10M revenue",
-      "title": "Technical Director"
+      "summary": "انٹرٹینمنٹ شاپنگ اسٹارٹ اپ | 75 ملازمین | £4M سیریز A | £10M ریونیو",
+      "title": "ٹیکنیکل ڈائریکٹر"
     },
     "optym": {
       "details": {
-        "arch": "تیز رفتار پروڈکٹ لانچز کو ممکن بنانے کے لیے مشترکہ architectures، policies، اور delivery standards قائم کیے۔",
-        "customers": "نئی پروڈکٹس ڈیزائن کرنے اور bespoke solutions فراہم کرنے کے لیے صارفین، پارٹنرز، اور ایگزیکٹوز کے ساتھ براہِ راست کام کیا۔",
-        "mentor": "سینئر انجینئرز اور تکنیکی لیڈرز کی رہنمائی کی، عملدرآمد کے معیار اور انجینئرنگ کلچر کو مضبوط بنایا۔",
-        "saas": "Optym کے SaaS ٹیکنالوجی وینچرز کی معاونت کی۔"
+        "arch": "تیز پروڈکٹ لانچز کو ممکن بنانے کے لیے مشترکہ آرکیٹیکچرز، پالیسیز، اور ڈیلیوری اسٹینڈرڈز قائم کیے۔",
+        "customers": "نئے پروڈکٹس ڈیزائن کرنے اور کسٹم حل فراہم کرنے کے لیے صارفین، پارٹنرز، اور ایگزیکٹوز کے ساتھ براہِ راست کام کیا۔",
+        "mentor": "سینئر انجینئرز اور تکنیکی لیڈرز کی رہنمائی کی، عمل درآمد کے معیار اور انجینئرنگ کلچر کو مضبوط بنایا۔",
+        "saas": "Optym کی SaaS ٹیکنالوجی وینچرز کی معاونت کی۔"
       },
-      "summary": "B2B SaaS | Optimization & Decision Science | 250 employees | $25M revenue",
-      "title": "Chief Technology Officer"
+      "summary": "B2B SaaS | Optimization & Decision Science | 250 ملازمین | $25M ریونیو",
+      "title": "چیف ٹیکنالوجی آفیسر"
     },
     "presentlyWorkingHere": "موجودہ",
     "solera": {
       "details": {
-        "emerging": "انٹرپرائز adoption کے لیے ابھرتی ہوئی ٹیکنالوجیز کا جائزہ لیا، جن میں ML، blockchain، AR/VR، IoT/telematics، digital identity، بڑے پیمانے کے data platforms، اور cloud-native SaaS (AWS) شامل ہیں۔",
-        "rnd": "CEO کے دفتر کے لیے اسٹریٹجک R&D اور پروڈکٹ incubation initiatives کی قیادت کی۔"
+        "emerging": "انٹرپرائز اپنانے کے لیے ابھرتی ٹیکنالوجیز کا جائزہ لیا، جن میں ML، blockchain، AR/VR، IoT/telematics، digital identity، بڑے پیمانے کے ڈیٹا پلیٹ فارمز، اور cloud-native SaaS (AWS) شامل ہیں۔",
+        "rnd": "CEO کے دفتر کے لیے اسٹریٹجک R&D اور پروڈکٹ انکیوبیشن اقدامات کی قیادت کی۔"
       },
-      "summary": "Multinational | Risk management & asset protection | 6,000 employees | $1.1B revenue",
-      "title": "Chief Architect"
+      "summary": "ملٹی نیشنل | رسک مینجمنٹ اور اثاثہ جاتی تحفظ | 6,000 ملازمین | $1.1B ریونیو",
+      "title": "چیف آرکیٹیکٹ"
     },
     "talmix": {
       "details": {
         "itTech": "تمام تکنیکی آپریشنز کی ذمہ داری سنبھالی۔",
-        "rebuild": "لیگیسی پلیٹ فارم کو دوبارہ بنا کر ایک اسکیل ایبل two-sided marketplace میں تبدیل کیا۔ کنسلٹنٹ سفارشات کی مطابقت بڑھانے کے لیے سرچ اور matching میں بہتریوں کی قیادت کی۔",
-        "search": "کنسلٹنٹ سفارشات کی مطابقت بڑھانے کے لیے سرچ اور matching میں بہتریوں کی قیادت کی۔"
+        "rebuild": "لیگیسی پلیٹ فارم کو دوبارہ بنا کر ایک اسکیل ایبل دو طرفہ مارکیٹ پلیس میں تبدیل کیا۔ کنسلٹنٹ سفارشات کی مطابقت بڑھانے کے لیے سرچ اور میچنگ میں بہتری کی قیادت کی۔",
+        "search": "کنسلٹنٹ سفارشات کی مطابقت بڑھانے کے لیے سرچ اور میچنگ میں بہتری کی قیادت کی۔"
       },
-      "notes": "(اس سے پہلے MBA & Company کے نام سے جانا جاتا تھا)",
-      "summary": "Management consulting startup | Talent search | £2M series A",
-      "title": "Chief Technology Officer"
+      "notes": "(پہلے MBA & Company کے نام سے معروف)",
+      "summary": "مینجمنٹ کنسلٹنگ اسٹارٹ اپ | Talent search | £2M سیریز A",
+      "title": "چیف ٹیکنالوجی آفیسر"
     },
-    "title": "Work History"
+    "title": "ورک ہسٹری"
   }
 }
