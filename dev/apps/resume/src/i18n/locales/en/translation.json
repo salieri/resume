@@ -108,6 +108,7 @@
     "orchestration": "Architected the new isolated orchestration service using <strong>domain-driven design</strong>, deliberately separating pipeline concerns from product code to reduce blast radius and cognitive load.",
     "reframing": "Reframed the audio-to-notes pipeline as a <strong>mission-critical internal product</strong> rather than a collection of ad-hoc functions.",
     "singleWriter": "<strong>Centralized all database writes</strong> behind the pipeline, explicitly blocking direct ML access to prevent data corruption, race conditions, and side effects.",
+    "telemetryObservability": "Required <strong>telemetry</strong> and <strong>observability</strong> mechanisms to ensure reliability at scale.",
     "temporal": "<strong>Selected Temporal</strong> as the workflow execution layer to enable deterministic, debuggable workflows with replay capability — trading short-term learning cost for long-term reliability and operability.",
     "title": "Key Decisions"
   },
